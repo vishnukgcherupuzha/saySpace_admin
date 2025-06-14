@@ -5,6 +5,7 @@ import {
   CheckCircle, 
   Users,
 } from 'lucide-react';
+import { imageConstants } from '../../../public/images';
 
 const OurStory = () => {
   const highlights = [
@@ -63,7 +64,7 @@ const OurStory = () => {
               </p>
               
               <p className="font-body text-lg text-muted-foreground leading-relaxed">
-                Founded by <strong className="text-logo-teal">Dr. Sangram Pawar</strong>, an industry professional with extensive expertise in global capability centers, we bring specialized knowledge across the entire GCC lifecycle - from initial strategy and business case development to implementation and ongoing management.
+                Founded by <strong className="text-logo-teal">Era Chaturvedi</strong>, an industry professional with extensive expertise in global capability centers, we bring specialized knowledge across the entire GCC lifecycle - from initial strategy and business case development to implementation and ongoing management.
               </p>
               
               <p className="font-body text-lg text-muted-foreground leading-relaxed">
@@ -99,15 +100,16 @@ const OurStory = () => {
               <div className="relative">
                 {/* Image Placeholder */}
                 <div className="aspect-[4/3] bg-gradient-to-br from-logo-beige/10 to-logo-teal/10 rounded-2xl border-2 border-dashed border-logo-teal/30 flex flex-col items-center justify-center space-y-4 mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-logo-teal to-logo-teal/80 rounded-2xl flex items-center justify-center shadow-lg">
-                    <Users className="w-10 h-10 text-white" />
+                  <div className="w-20 h-20 bg-gradient-to-br from-logo-teal to-logo-teal/80 rounded-2xl flex items-center justify-center shadow-lg overflow-hidden">
+                    {/* <Users className="w-10 h-10 text-white" /> */}
+                    <img src={imageConstants.ABOUT.ERA} className='className="w-10'/>
                   </div>
                   <div className="text-center">
                     <div className="font-header font-semibold text-lg text-logo-teal mb-2">
-                      Founder Photo
+                      {/* Founder Photo */}
                     </div>
                     <div className="font-body text-sm text-muted-foreground max-w-xs">
-                      Dr. Sangram Pawar, Founder & CEO
+                      Era Chaturvedi, Founder & CEO, Say Space
                     </div>
                   </div>
                 </div>
@@ -123,7 +125,7 @@ const OurStory = () => {
                         "Leveraging India's talent ecosystem to create world-class capability centers that drive global business transformation."
                       </blockquote>
                       <div className="font-header font-medium text-sm text-foreground">
-                        Dr. Sangram Pawar
+                        Era Chaturvedi
                       </div>
                       <div className="font-body text-xs text-muted-foreground">
                         Founder & CEO, Say Space

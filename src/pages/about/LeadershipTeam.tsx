@@ -7,50 +7,53 @@ import {
   Globe,
   TrendingUp
 } from 'lucide-react';
+import { imageConstants } from '../../../public/images';
 
 const LeadershipTeam = () => {
-  const teamMembers = [
+    const teamMembers = [
     {
       id: 1,
-      name: "Dr. Sangram Pawar",
-      role: "Founder & CEO",
-      expertise: "GCC Strategy & Operations",
-      color: "from-logo-teal to-logo-teal/80"
+      name: "Era Chaturvedi​",
+      role: "Founder & CEO, SaySpace",
+      expertise: "Tempor Incididunt Ut Labore",
+      color: "from-logo-teal to-logo-teal/80",
+      url: imageConstants.ABOUT.ERA
     },
     {
       id: 2,
-      name: "Priya Sharma",
-      role: "Head of Consulting",
-      expertise: "Business Transformation",
-      color: "from-cta-coral to-cta-coral/80"
+      name: "Lorem Ipsum",
+      role: "Dolor Sit Amet",
+      expertise: "Consectetur Adipiscing Elit",
+      color: "from-cta-coral to-cta-coral/80",
     },
     {
       id: 3,
-      name: "Rajesh Kumar",
-      role: "VP of Technology",
-      expertise: "IT Infrastructure & Digital Solutions",
-      color: "from-logo-beige to-logo-beige/80"
+      name: "Lorem Ipsum",
+      role: "Sed Do Eiusmod",
+      expertise: "Tempor Incididunt Ut Labore",
+      color: "from-logo-beige to-logo-beige/80",
     },
     {
       id: 4,
-      name: "Sarah Johnson",
-      role: "Director of Talent Acquisition",
-      expertise: "Leadership Hiring & Team Building",
-      color: "from-logo-teal to-cta-coral"
+      name: "Lorem Ipsum",
+      role: "Ut Enim Ad Minim",
+      expertise: "Veniam Quis Nostrud Exercitation",
+      color: "from-logo-teal to-cta-coral",
     },
     {
       id: 5,
-      name: "Michael Chen",
-      role: "Head of Operations",
-      expertise: "Process Optimization & Compliance",
-      color: "from-cta-coral to-logo-beige"
+      name: "Lorem Ipsum",
+      role: "Duis Aute Irure",
+      expertise: "Dolor In Reprehenderit",
+      color: "from-cta-coral to-logo-beige",
+      url: "PLACEHOLDER_URL"
     },
     {
       id: 6,
-      name: "Anita Desai",
-      role: "VP of Client Relations",
-      expertise: "Stakeholder Management & Growth",
-      color: "from-logo-beige to-logo-teal"
+      name: "Lorem Ipsum",
+      role: "Excepteur Sint",
+      expertise: "Occaecat Cupidatat Non Proident",
+      color: "from-logo-beige to-logo-teal",
     }
   ];
 
@@ -94,9 +97,8 @@ const LeadershipTeam = () => {
               {/* Image Placeholder */}
               <div className={`bg-gradient-to-br ${member.color} aspect-[4/3] flex items-center justify-center relative overflow-hidden`}>
                 <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                  <span className="font-header font-bold text-white text-2xl">
-                    {getInitials(member.name)}
-                  </span>
+                    {member.url ? <img src={member.url} className='rounded-full' /> : <span className="font-header font-bold text-white text-2xl">{getInitials(member.name)} </span>}
+
                 </div>
                 
                 {/* Hover Overlay */}

@@ -30,7 +30,7 @@ const HeroSection = () => {
 
                         {/* Main Title */}
                         <div className="space-y-4">
-                            <h1 className="font-header font-bold text-5xl sm:text-6xl text-foreground leading-tight">
+                            <h1 className="font-header font-bold text-5xl text-foreground leading-tight">
                                 Your{' '}
                                 <span className="bg-gradient-to-r from-logo-teal to-logo-teal bg-clip-text text-transparent">
                                     GCC Partner
@@ -40,7 +40,7 @@ const HeroSection = () => {
                             </h1>
 
                             {/* Subtitle */}
-                            <p className="font-body text-xl sm:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+                            <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-2xl">
                                 Seamless Global Capability Center setup in India's innovation hub. Transform your business operations with strategic GCC consulting, development and management services.
                             </p>
                         </div>
