@@ -163,7 +163,7 @@ const OurPurpose = () => {
                         "Our vision extends beyond just setting up centers - we aim to redefine how the world builds global talent hubs."
                       </p>
                       <div className="font-header font-medium text-sm text-foreground">
-                        Era Chaturvedi​r
+                        Era Chaturvedi
                       </div>
                       <div className="font-body text-xs text-muted-foreground">
                         Founder & CEO, Say Space

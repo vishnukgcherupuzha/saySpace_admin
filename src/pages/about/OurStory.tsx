@@ -2,8 +2,7 @@ import {
   BookOpen, 
   Award, 
   Globe, 
-  CheckCircle, 
-  Users,
+  CheckCircle,
 } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
 
