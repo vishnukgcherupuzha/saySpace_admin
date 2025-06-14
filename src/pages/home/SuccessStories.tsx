@@ -20,14 +20,14 @@ const SuccessStories = () => {
       company: "Fortune 500 Technology Company",
       role: "CTO",
       name: "Sarah Johnson",
-      quote: "Our GCC in Pune became operational in just 90 days with their expert guidance. The talent quality and cost savings have exceeded our expectations. We've been able to scale our operations faster than anticipated.",
+      quote: "Our GCC in India became operational in just 90 days with their expert guidance. The talent quality and cost savings have exceeded our expectations. We've been able to scale our operations faster than anticipated.",
       stats: {
         timeline: "90 days",
         savings: "40%",
         teamSize: "250+"
       },
       industry: "Technology",
-      location: "Pune",
+      location: "India",
       rating: 5
     },
     {

@@ -16,21 +16,21 @@ const LatestInsights = () => {
     {
       id: 1,
       date: "March 5, 2025",
-      title: "5 Reasons Why Pune's GCC Ecosystem Is Booming in 2025",
-      excerpt: "Explore the key factors driving Pune's emergence as India's premier GCC destination.",
+      title: "5 Reasons Why India's GCC Ecosystem Is Booming in 2025",
+      excerpt: "Explore the key factors driving India's emergence as India's premier GCC destination.",
       category: "Market Trends",
       readTime: "5 min read",
       featured: true,
       icon: TrendingUp,
       color: "from-logo-teal to-logo-teal/80",
       bgColor: "from-logo-teal/10 to-logo-teal/5",
-      tags: ["GCC", "Pune", "Market Analysis"]
+      tags: ["GCC", "India", "Market Analysis"]
     },
     {
       id: 2,
       date: "February 18, 2025",
-      title: "GCC Talent Landscape in Pune: 2025 Edition",
-      excerpt: "An in-depth analysis of the talent pool and recruitment strategies for GCCs in Pune.",
+      title: "GCC Talent Landscape in India: 2025 Edition",
+      excerpt: "An in-depth analysis of the talent pool and recruitment strategies for GCCs in India.",
       category: "Talent Management",
       readTime: "7 min read",
       featured: false,
@@ -42,7 +42,7 @@ const LatestInsights = () => {
     {
       id: 3,
       date: "January 30, 2025",
-      title: "How to Optimize Costs in Your Pune GCC Operations",
+      title: "How to Optimize Costs in Your India GCC Operations",
       excerpt: "Practical strategies to maximize ROI while maintaining quality in your GCC.",
       category: "Cost Optimization",
       readTime: "6 min read",
@@ -309,7 +309,7 @@ const LatestInsights = () => {
               <div className="space-y-4">
                 {[
                   "GCC Setup Checklist 2025",
-                  "Top 10 Pune Tech Parks",
+                  "Top 10 India Tech Parks",
                   "Talent Retention Strategies"
                 ].map((title, index) => (
                   <button 

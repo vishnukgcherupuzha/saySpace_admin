@@ -1,4 +1,4 @@
-import { ArrowRight, Building2, Users } from 'lucide-react';
+import { ArrowRight, Building2, Settings2, Users } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
 
 const HeroSection = () => {
@@ -22,23 +22,26 @@ const HeroSection = () => {
                     <div className="space-y-8">
                         {/* Badge using your palette */}
                         <div className="inline-flex items-center px-4 py-2 bg-logo-beige/20 backdrop-blur-sm border border-logo-beige/40 rounded-full">
-                            <Building2 className="w-4 h-4 text-logo-teal mr-2" />
+                            <Settings2 className="w-4 h-4 text-logo-teal mr-2" />
                             <span className="font-body text-sm font-medium text-logo-teal">
-                                About Say space
+                                End-to-End Solutions
                             </span>
                         </div>
 
                         {/* Main Title */}
                         <div className="space-y-4">
-                            <h1 className="font-header font-bold text-4xl sm:text-5xl text-foreground leading-tight">
-                                Architecting Global
+                            <h1 className="font-header font-bold text-4xl text-foreground leading-tight">
+                                Tailored GCC Services for
                                 <br />
-                                Capability Centers
+                                Global Organizations
                             </h1>
 
                             {/* Subtitle */}
-                            <p className="font-body text-xl sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                                We are India's premier GCC Consulting & IT Services Organization, dedicated to helping global companies establish and optimize successful capability centers in India's innovation hub.
+                            <p className="font-body text-xl sm:text-lg text-muted-foreground leading-relaxed max-w-2xl font-semibold">
+                                We offer comprehensive services to establish, operate, and optimize your GCC in India, ensuring seamless implementation and sustainable growth.
+                                <br />
+                                <br />
+                                <span className='text-sm text-gray-500 font-normal'>Our integrated approach covers the entire GCC lifecycle—from initial strategy development to ongoing optimization—ensuring a smooth transition and maximum value creation. We customize our services based on your specific requirements, industry context, and organizational objectives.</span>
                             </p>
                         </div>
 
@@ -61,9 +64,9 @@ const HeroSection = () => {
                     {/* Image/Illustration Side */}
                     <div className="relative">
                         {/* Main Image Placeholder */}
-                        <div className="relative  backdrop-blur-sm">
+                        <div className="relative  backdrop-blur-xl bg-accent rounded-3xl shadow-2xl">
                             {/* Image placeholder using your exact colors */}
-                            <img src={imageConstants.ABOUT.HERO} className='rounded-3xl' />
+                            <img src={imageConstants.SERVICES.HERO} className='rounded-3xl mix-blend-luminosity' />
                         </div>
 
                         {/* Additional floating elements using your palette */}

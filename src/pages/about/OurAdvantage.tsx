@@ -32,10 +32,10 @@ const OurAdvantage = () => {
             id: 3,
             icon: Globe,
             title: "Local Expertise, Global Perspective",
-            description: "Our team combines deep knowledge of the Pune ecosystem with global insights, ensuring culturally aligned solutions that bridge international operations effectively.",
+            description: "Our team combines deep knowledge of the Indian ecosystem with global insights, ensuring culturally aligned solutions that bridge international operations effectively.",
             color: "from-logo-beige to-logo-beige/80",
             bgColor: "from-logo-beige/10 to-logo-beige/5",
-            highlights: ["Pune Ecosystem", "Global Insights", "Cultural Alignment"]
+            highlights: ["Indian Ecosystem", "Global Insights", "Cultural Alignment"]
         },
         {
             id: 4,
@@ -50,7 +50,7 @@ const OurAdvantage = () => {
             id: 5,
             icon: Network,
             title: "Strong Partner Network",
-            description: "We've developed relationships with key real estate developers, legal firms, technology providers, and educational institutions in Pune, providing our clients with a ready ecosystem for success.",
+            description: "We've developed relationships with key real estate developers, legal firms, technology providers, and educational institutions in India, providing our clients with a ready ecosystem for success.",
             color: "from-cta-coral to-logo-beige",
             bgColor: "from-cta-coral/5 to-logo-beige/5",
             highlights: ["Ready Ecosystem", "Key Partnerships", "Instant Access"]

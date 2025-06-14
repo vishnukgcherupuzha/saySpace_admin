@@ -26,7 +26,7 @@ const OurStory = () => {
     "Initial strategy and business case development",
     "Implementation and ongoing management",
     "Deep local insights with global best practices",
-    "Pune's exceptional talent ecosystem leverage"
+    "India's exceptional talent ecosystem leverage"
   ];
 
   return (
@@ -59,7 +59,7 @@ const OurStory = () => {
             {/* Main Story */}
             <div className="space-y-6">
               <p className="font-body text-lg text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Say Space</strong> is a specialized consulting Organization led by industry veterans dedicated to helping global organizations establish and optimize their Global Capability Centers in Pune, India.
+                <strong className="text-foreground">Say Space</strong> is a specialized consulting Organization led by industry veterans dedicated to helping global organizations establish and optimize their Global Capability Centers in India, India.
               </p>
               
               <p className="font-body text-lg text-muted-foreground leading-relaxed">
@@ -67,7 +67,7 @@ const OurStory = () => {
               </p>
               
               <p className="font-body text-lg text-muted-foreground leading-relaxed">
-                Our team combines deep local insights with global best practices, positioning us to help multinational companies leverage Pune's exceptional talent ecosystem to drive innovation, operational excellence, and business transformation.
+                Our team combines deep local insights with global best practices, positioning us to help multinational companies leverage India's exceptional talent ecosystem to drive innovation, operational excellence, and business transformation.
               </p>
             </div>
 
@@ -120,7 +120,7 @@ const OurStory = () => {
                     </div>
                     <div>
                       <blockquote className="font-body text-sm text-muted-foreground italic mb-2">
-                        "Leveraging Pune's talent ecosystem to create world-class capability centers that drive global business transformation."
+                        "Leveraging India's talent ecosystem to create world-class capability centers that drive global business transformation."
                       </blockquote>
                       <div className="font-header font-medium text-sm text-foreground">
                         Dr. Sangram Pawar

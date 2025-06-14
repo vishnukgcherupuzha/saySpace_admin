@@ -31,7 +31,7 @@ const ProvenProcess = () => {
     {
       id: 2,
       title: "Location Selection",
-      description: "Identifying the optimal Pune location for your needs",
+      description: "Identifying the optimal India location for your needs",
       icon: MapPin,
       color: "from-cta-coral to-cta-coral/80",
       bgColor: "from-cta-coral/10 to-cta-coral/5",

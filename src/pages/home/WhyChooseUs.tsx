@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
     {
       icon: Users,
       title: "Talent Acquisition",
-      description: "Specialized leadership & CXO hiring services along with access to Pune's 4+ million skilled professionals across domains and functions.",
+      description: "Specialized leadership & CXO hiring services along with access to India's 4+ million skilled professionals across domains and functions.",
       color: "from-cta-coral to-cta-coral/80"
     },
     {
@@ -68,7 +68,7 @@ const WhyChooseUs = () => {
     {
       icon: MapPin,
       title: "Real Estate Solutions",
-      description: "Prime location selection in Pune's thriving tech corridors with world-class infrastructure and amenities.",
+      description: "Prime location selection in India's thriving tech corridors with world-class infrastructure and amenities.",
       features: ["Prime Locations", "Tech Corridors", "World-class Infrastructure"]
     }
   ];

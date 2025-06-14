@@ -15,7 +15,7 @@ const SuccessStoriesTestimonials = () => {
   const testimonials = [
     {
       id: 1,
-      quote: "Say Space's expertise was instrumental in establishing our GCC in Pune. Their deep local knowledge and strategic approach helped us navigate complex challenges and build a high-performing center that has become a cornerstone of our global operations.",
+      quote: "Say Space's expertise was instrumental in establishing our GCC in India. Their deep local knowledge and strategic approach helped us navigate complex challenges and build a high-performing center that has become a cornerstone of our global operations.",
       name: "Olivia Smith",
       role: "CTO",
       company: "Global Tech Solutions",
@@ -31,7 +31,7 @@ const SuccessStoriesTestimonials = () => {
     },
     {
       id: 2,
-      quote: "The Say Space team delivered beyond our expectations. Their end-to-end approach to GCC establishment - from strategy to talent acquisition and operational setup - was seamless and highly effective. We now have a thriving innovation center in Pune.",
+      quote: "The Say Space team delivered beyond our expectations. Their end-to-end approach to GCC establishment - from strategy to talent acquisition and operational setup - was seamless and highly effective. We now have a thriving innovation center in India.",
       name: "Jonathan Williams",
       role: "VP of Global Operations",
       company: "Financial Services Inc.",

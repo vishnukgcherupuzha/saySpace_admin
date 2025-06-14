@@ -15,7 +15,7 @@ const OurNetwork = () => {
       id: 1,
       icon: Building2,
       title: "Real Estate Partners",
-      description: "Premium office spaces and infrastructure solutions in Pune's top IT hubs",
+      description: "Premium office spaces and infrastructure solutions in India's top IT hubs",
       color: "from-logo-teal to-logo-teal/80",
       bgColor: "from-logo-teal/10 to-logo-teal/5",
       partners: [

@@ -64,9 +64,9 @@ const HeroSection = () => {
                     {/* Image/Illustration Side */}
                     <div className="relative">
                         {/* Main Image Placeholder */}
-                        <div className="relative bg-gradient-to-br from-card to-accent/20 rounded-3xl border border-border backdrop-blur-sm">
+                        <div className="relative  backdrop-blur-sm">
                             {/* Image placeholder using your exact colors */}
-                            <img src={imageConstants.HOME.HERO} className='rounded-3xl opacity-80' />
+                            <img src={imageConstants.HOME.HERO} className='rounded-3xl' />
                         </div>
 
                         {/* Additional floating elements using your palette */}

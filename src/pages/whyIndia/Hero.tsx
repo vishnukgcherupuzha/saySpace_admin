@@ -1,4 +1,4 @@
-import { ArrowRight, Building2, Users } from 'lucide-react';
+import { ArrowRight, Building2, IndianRupee } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
 
 const HeroSection = () => {
@@ -22,23 +22,26 @@ const HeroSection = () => {
                     <div className="space-y-8">
                         {/* Badge using your palette */}
                         <div className="inline-flex items-center px-4 py-2 bg-logo-beige/20 backdrop-blur-sm border border-logo-beige/40 rounded-full">
-                            <Building2 className="w-4 h-4 text-logo-teal mr-2" />
+                            <IndianRupee className="w-4 h-4 text-logo-teal mr-2" />
                             <span className="font-body text-sm font-medium text-logo-teal">
-                                About Say space
+                                Global Leader
                             </span>
                         </div>
 
                         {/* Main Title */}
                         <div className="space-y-4">
-                            <h1 className="font-header font-bold text-4xl sm:text-5xl text-foreground leading-tight">
-                                Architecting Global
+                            <h1 className="font-header font-bold text-4xl text-foreground leading-tight">
+                                India: The World's Premier
                                 <br />
-                                Capability Centers
+                                GCC Destination
                             </h1>
 
                             {/* Subtitle */}
-                            <p className="font-body text-xl sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                                We are India's premier GCC Consulting & IT Services Organization, dedicated to helping global companies establish and optimize successful capability centers in India's innovation hub.
+                            <p className="font-body text-xl sm:text-lg text-muted-foreground leading-relaxed max-w-2xl font-semibold">
+                                India has firmly established itself as the global leader for Global Capability Centers, hosting over 1,500 GCCs that employ more than 1.3 million professionals across diverse sectors.
+                                <br />
+                                <br />
+                                <span className='text-sm text-gray-500 font-normal'>Companies choose India for their strategic capability centers due to an unmatched combination of scale, talent, cost advantages, and innovation potential. With decades of experience in global service delivery, India offers a mature ecosystem that supports seamless GCC operations.</span>
                             </p>
                         </div>
 
@@ -46,13 +49,7 @@ const HeroSection = () => {
                         <div className="flex flex-col sm:flex-row gap-4 pt-6">
                             <button className="group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 rounded-xl font-header font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-cta-coral/25 transform hover:-translate-y-1 flex items-center justify-center">
                                 <Building2 className="w-5 h-5 mr-3" />
-                                Start your Journey
-                                <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-200" />
-                            </button>
-
-                            <button className="group border-2 border-logo-teal text-logo-teal hover:bg-logo-teal hover:text-white px-8 py-4 rounded-xl font-header font-semibold text-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center">
-                                <Users className="w-5 h-5 mr-3" />
-                                Meet our team
+                                Discover India's Advantages
                                 <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-200" />
                             </button>
                         </div>
@@ -61,9 +58,9 @@ const HeroSection = () => {
                     {/* Image/Illustration Side */}
                     <div className="relative">
                         {/* Main Image Placeholder */}
-                        <div className="relative  backdrop-blur-sm">
+                        <div className="relative shadow-2xl rounded-3xl">
                             {/* Image placeholder using your exact colors */}
-                            <img src={imageConstants.ABOUT.HERO} className='rounded-3xl' />
+                            <img src={imageConstants.WHY_INDIA.HERO} className='rounded-3xl opacity-80' />
                         </div>
 
                         {/* Additional floating elements using your palette */}
