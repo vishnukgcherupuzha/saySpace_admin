@@ -185,7 +185,7 @@ const CityComparison = () => {
       quality: 80
     },
     {
-      city: 'Pune',
+      city: 'India',
       pros: ['Cost-effective', 'Quality of life', 'Educational institutions', 'Low attrition', 'Pleasant climate', 'Proximity to Mumbai'],
       cons: ['Smaller ecosystem', 'Limited infrastructure', 'Weather dependency', 'Fewer global companies'],
       score: 82,

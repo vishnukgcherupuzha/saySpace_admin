@@ -22,7 +22,7 @@ const ServiceCategories = () => {
       id: 2,
       icon: MapPin,
       title: "Location Advisory",
-      description: "Identify the optimal Pune location and infrastructure for your GCC",
+      description: "Identify the optimal India location and infrastructure for your GCC",
       color: "from-cta-coral to-cta-coral/80",
       bgColor: "from-cta-coral/10 to-cta-coral/5"
     },
