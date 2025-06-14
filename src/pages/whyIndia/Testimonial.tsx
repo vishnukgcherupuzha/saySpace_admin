@@ -153,7 +153,7 @@ const ClientTestimonials = () => {
 
             {/* Testimonial Content */}
             <div className="text-center mb-8">
-              <blockquote className="font-body text-lg lg:text-xl text-foreground leading-relaxed italic mb-8 max-w-4xl mx-auto">
+              <blockquote className="font-body  text-lg text-foreground leading-relaxed italic mb-8 max-w-4xl mx-auto">
                 "{currentTestimonial.quote}"
               </blockquote>
 
@@ -286,7 +286,7 @@ const ClientTestimonials = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-logo-teal/5 to-cta-coral/5 border border-logo-teal/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="font-header font-bold text-2xl text-foreground mb-4">
+            <h3 className="font-header font-bold text-xl text-foreground mb-4">
               Ready to Join Our Success Stories?
             </h3>
             <p className="font-body text-muted-foreground mb-6">

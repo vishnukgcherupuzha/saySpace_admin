@@ -30,14 +30,14 @@ const HeroSection = () => {
 
                         {/* Main Title */}
                         <div className="space-y-4">
-                            <h1 className="font-header font-bold text-4xl sm:text-5xl text-foreground leading-tight">
+                            <h1 className="font-header font-bold text-4xl text-foreground leading-tight">
                                 Architecting Global
                                 <br />
                                 Capability Centers
                             </h1>
 
                             {/* Subtitle */}
-                            <p className="font-body text-xl sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
+                            <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-2xl">
                                 We are India's premier GCC Consulting & IT Services Organization, dedicated to helping global companies establish and optimize successful capability centers in India's innovation hub.
                             </p>
                         </div>

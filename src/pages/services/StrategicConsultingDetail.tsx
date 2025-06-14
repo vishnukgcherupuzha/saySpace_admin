@@ -63,7 +63,7 @@ const StrategicConsultingDetail = () => {
             </span>
           </div>
           
-          <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
             Strategic <span className="text-logo-teal">Consulting</span>
           </h2>
           
@@ -114,7 +114,7 @@ const StrategicConsultingDetail = () => {
                       
                       {/* Description */}
                       <div className="lg:col-span-1">
-                        <p className="font-body text-muted-foreground leading-relaxed text-lg">
+                        <p className="font-body text-muted-foreground leading-relaxed">
                           {service.description}
                         </p>
                       </div>

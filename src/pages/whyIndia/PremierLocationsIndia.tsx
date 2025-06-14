@@ -83,7 +83,7 @@ const PremierLocationsIndia = () => {
             </span>
           </div>
           
-          <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
             India's Strategic <span className="text-logo-teal">GCC Hubs</span>
           </h2>
           
@@ -97,10 +97,10 @@ const PremierLocationsIndia = () => {
           <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-logo-teal/10 to-transparent rounded-full blur-3xl"></div>
           
           <div className="relative text-center">
-            <h3 className="font-header font-bold text-2xl lg:text-3xl text-foreground mb-6">
+            <h3 className="font-header font-bold text-xl text-foreground mb-6">
               Why Choose Strategic Locations in India's GCC Landscape?
             </h3>
-            <p className="font-body text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="font-body  text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               India's strategic GCC locations have emerged as premier destinations, offering distinct advantages over traditional metropolitan centers for establishing Global Capability Centers. These locations provide optimal balance of talent, cost, infrastructure, and quality of life.
             </p>
           </div>

@@ -66,7 +66,7 @@ const ServiceCategories = () => {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
             Our Service <span className="text-cta-coral">Categories</span>
           </h2>
           

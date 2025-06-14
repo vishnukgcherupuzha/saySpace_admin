@@ -37,7 +37,7 @@ const HeroSection = () => {
                             </h1>
 
                             {/* Subtitle */}
-                            <p className="font-body text-xl sm:text-lg text-muted-foreground leading-relaxed max-w-2xl font-semibold">
+                            <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-2xl">
                                 We offer comprehensive services to establish, operate, and optimize your GCC in India, ensuring seamless implementation and sustainable growth.
                                 <br />
                                 <br />

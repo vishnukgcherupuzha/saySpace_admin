@@ -75,7 +75,7 @@ const EngagementModels = () => {
             </span>
           </div>
           
-          <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
             Our Engagement <span className="text-cta-coral">Models</span>
           </h2>
           
@@ -198,13 +198,13 @@ const EngagementModels = () => {
                 <div className="font-body font-medium text-foreground">
                   {row.feature}
                 </div>
-                <div className="text-center font-body text-sm text-muted-foreground">
+                <div className="text-center font-body text-muted-foreground">
                   {row.project}
                 </div>
-                <div className="text-center font-body text-sm text-muted-foreground">
+                <div className="text-center font-body text-muted-foreground">
                   {row.retained}
                 </div>
-                <div className="text-center font-body text-sm text-muted-foreground">
+                <div className="text-center font-body text-muted-foreground">
                   {row.managed}
                 </div>
               </div>

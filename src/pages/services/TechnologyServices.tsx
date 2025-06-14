@@ -82,7 +82,7 @@ const TechnologyServices = () => {
             </span>
           </div>
           
-          <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
             Technology <span className="text-logo-teal">Services</span>
           </h2>
           
@@ -142,7 +142,7 @@ const TechnologyServices = () => {
                         {service.capabilities.map((capability, idx) => (
                           <div key={idx} className="flex items-center space-x-2">
                             <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full`}></div>
-                            <span className="font-body text-xs text-muted-foreground">
+                            <span className="font-body text-sm text-muted-foreground">
                               {capability}
                             </span>
                           </div>
@@ -165,14 +165,14 @@ const TechnologyServices = () => {
         {/* Bottom CTA */}
         <div className="text-center">
           <div className="bg-gradient-to-br from-logo-teal/5 to-cta-coral/5 border border-logo-teal/20 rounded-3xl p-8 lg:p-12 max-w-4xl mx-auto">
-            <h3 className="font-header font-bold text-2xl lg:text-3xl text-foreground mb-4">
+            <h3 className="font-header font-bold text-xl text-foreground mb-4">
               Ready to build your technology capabilities?
             </h3>
-            <p className="font-body text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="font-body text-muted-foreground mb-8 max-w-2xl mx-auto">
               Our technology experts will help you establish cutting-edge capabilities that drive innovation and competitive advantage for your GCC operations.
             </p>
             
-            <button className="group bg-gradient-to-r from-logo-teal to-cta-coral hover:from-logo-teal/90 hover:to-cta-coral/90 text-white px-10 py-4 rounded-xl font-header font-semibold text-xl transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 flex items-center mx-auto">
+            <button className="group bg-gradient-to-r from-logo-teal to-cta-coral hover:from-logo-teal/90 hover:to-cta-coral/90 text-white px-10 py-3 rounded-xl font-header font-semibold  transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 flex items-center mx-auto">
               <Cpu className="w-6 h-6 mr-3" />
               Discuss Your Technology Needs
               <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-200" />

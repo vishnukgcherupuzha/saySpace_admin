@@ -100,7 +100,7 @@ const LocationAdvisoryDetail = () => {
                   </h3>
                   
                   {/* Description */}
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
+                  <p className="font-body text-muted-foreground leading-relaxed mb-4">
                     {service.description}
                   </p>
                   
@@ -109,7 +109,7 @@ const LocationAdvisoryDetail = () => {
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-cta-coral flex-shrink-0" />
-                        <span className="font-body text-xs text-muted-foreground">
+                        <span className="font-body text-sm text-muted-foreground">
                           {feature}
                         </span>
                       </div>

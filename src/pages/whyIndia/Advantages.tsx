@@ -145,14 +145,14 @@ const Advantages = () => {
             </span>
           </div>
           
-          <h1 className="font-header font-bold text-5xl sm:text-6xl lg:text-7xl text-foreground leading-tight mb-8">
+          <h1 className="font-header font-bold text-4xl text-foreground leading-tight mb-8">
             Key Advantages of <br />
             <span className="bg-gradient-to-r from-logo-teal to-cta-coral bg-clip-text text-transparent">
               India for GCCs
             </span>
           </h1>
           
-          <p className="font-body text-xl sm:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="font-body text-xl  text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Discover why leading global organizations choose India for their capability centers
           </p>
         </div>
@@ -180,7 +180,7 @@ const Advantages = () => {
                       </div>
                       
                       {/* Title */}
-                      <h3 className="font-header font-bold text-2xl text-card-foreground mb-4">
+                      <h3 className="font-header font-bold text-xl text-card-foreground mb-4">
                         {advantage.title}
                       </h3>
                       
@@ -226,7 +226,7 @@ const Advantages = () => {
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   
-                  <div className="font-header font-black text-4xl lg:text-5xl text-foreground mb-4">
+                  <div className="font-header font-black text-4xl text-foreground mb-4">
                     {stat.number}
                   </div>
                   

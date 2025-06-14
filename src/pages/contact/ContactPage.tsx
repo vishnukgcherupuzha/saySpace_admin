@@ -528,7 +528,7 @@ const ContactPage = () => {
               </span>
             </div>
             
-            <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+            <h2 className="font-header font-bold text-4xl text-foreground mb-6">
               Find Answers to <span className="text-cta-coral">Common Questions</span>
             </h2>
             

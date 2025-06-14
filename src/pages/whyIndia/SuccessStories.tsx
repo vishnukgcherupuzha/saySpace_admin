@@ -216,7 +216,7 @@ const SuccessStories = () => {
             </span>
           </div>
           
-          <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
             Leading <span className="text-logo-teal">GCCs in Bangalore</span>
           </h2>
           
@@ -411,7 +411,7 @@ const SuccessStories = () => {
         <div className="text-center bg-gradient-to-r from-logo-teal/5 to-cta-coral/5 border border-logo-teal/20 rounded-3xl p-8">
           <div className="flex items-center justify-center mb-4">
             <Award className="w-6 h-6 text-logo-teal mr-2" />
-            <span className="font-header font-bold text-lg text-foreground">
+            <span className="font-header font-bold text-xl text-foreground">
               Join the Success Story
             </span>
           </div>

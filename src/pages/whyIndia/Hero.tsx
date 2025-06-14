@@ -37,7 +37,7 @@ const HeroSection = () => {
                             </h1>
 
                             {/* Subtitle */}
-                            <p className="font-body text-xl sm:text-lg text-muted-foreground leading-relaxed max-w-2xl font-semibold">
+                            <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-2xl ">
                                 India has firmly established itself as the global leader for Global Capability Centers, hosting over 1,500 GCCs that employ more than 1.3 million professionals across diverse sectors.
                                 <br />
                                 <br />

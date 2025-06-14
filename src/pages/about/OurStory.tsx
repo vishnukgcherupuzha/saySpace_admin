@@ -42,7 +42,7 @@ const OurStory = () => {
             </span>
           </div>
           
-          <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
             Our <span className="text-logo-teal">Story</span>
           </h2>
           
@@ -58,15 +58,15 @@ const OurStory = () => {
             
             {/* Main Story */}
             <div className="space-y-6">
-              <p className="font-body text-lg text-muted-foreground leading-relaxed">
+              <p className="font-body text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">Say Space</strong> is a specialized consulting Organization led by industry veterans dedicated to helping global organizations establish and optimize their Global Capability Centers in India, India.
               </p>
               
-              <p className="font-body text-lg text-muted-foreground leading-relaxed">
+              <p className="font-body text-muted-foreground leading-relaxed">
                 Founded by <strong className="text-logo-teal">Era Chaturvedi</strong>, an industry professional with extensive expertise in global capability centers, we bring specialized knowledge across the entire GCC lifecycle - from initial strategy and business case development to implementation and ongoing management.
               </p>
               
-              <p className="font-body text-lg text-muted-foreground leading-relaxed">
+              <p className="font-body text-muted-foreground leading-relaxed">
                 Our team combines deep local insights with global best practices, positioning us to help multinational companies leverage India's exceptional talent ecosystem to drive innovation, operational excellence, and business transformation.
               </p>
             </div>
@@ -154,7 +154,7 @@ const OurStory = () => {
                   {highlight.title}
                 </h3>
                 
-                <p className="font-body text-lg text-muted-foreground">
+                <p className="font-body text-muted-foreground">
                   {highlight.description}
                 </p>
               </div>

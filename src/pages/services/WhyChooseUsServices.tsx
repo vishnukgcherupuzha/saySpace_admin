@@ -60,7 +60,7 @@ const WhyChooseUsServices = () => {
             </span>
           </div>
           
-          <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
             Why Choose <span className="text-cta-coral">Us</span>
           </h2>
           
@@ -125,16 +125,16 @@ const WhyChooseUsServices = () => {
           <div className="bg-gradient-to-br from-cta-coral/5 to-logo-teal/5 border border-cta-coral/20 rounded-3xl p-8 lg:p-12 max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">
               <Shield className="w-8 h-8 text-cta-coral mr-3" />
-              <span className="font-header font-semibold text-2xl lg:text-3xl text-foreground">
+              <span className="font-header font-semibold text-xl text-foreground">
                 Ready to experience the difference?
               </span>
             </div>
             
-            <p className="font-body text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="font-body  text-muted-foreground mb-8 max-w-2xl mx-auto">
               Join the growing number of organizations who have chosen our specialized approach for their GCC success. See how our proven methodology can accelerate your journey.
             </p>
             
-            <button className="group bg-gradient-to-r from-cta-coral to-cta-coral/90 hover:from-cta-coral/90 hover:to-cta-coral text-white px-10 py-4 rounded-xl font-header font-semibold text-xl transition-all duration-300 hover:shadow-xl hover:shadow-cta-coral/25 transform hover:-translate-y-1 flex items-center mx-auto">
+            <button className="group bg-gradient-to-r from-cta-coral to-cta-coral/90 hover:from-cta-coral/90 hover:to-cta-coral text-white px-10 py-3 rounded-xl font-header font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cta-coral/25 transform hover:-translate-y-1 flex items-center mx-auto">
               <Award className="w-6 h-6 mr-3" />
               View Success Stories
               <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-200" />

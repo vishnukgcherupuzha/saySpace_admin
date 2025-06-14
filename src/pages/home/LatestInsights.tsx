@@ -83,7 +83,7 @@ const LatestInsights = () => {
             </span>
           </div>
           
-          <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
             Latest <span className="text-cta-coral">Insights</span>
           </h2>
           
@@ -139,12 +139,12 @@ const LatestInsights = () => {
                           </div>
                           
                           {/* Title */}
-                          <h3 className="font-header font-bold text-2xl lg:text-3xl text-foreground leading-tight group-hover:text-logo-teal transition-colors duration-200">
+                          <h3 className="font-header font-bold text-2xl text-foreground leading-tight group-hover:text-logo-teal transition-colors duration-200">
                             {insight.title}
                           </h3>
                           
                           {/* Excerpt */}
-                          <p className="font-body text-lg text-muted-foreground leading-relaxed">
+                          <p className="font-body text-muted-foreground leading-relaxed">
                             {insight.excerpt}
                           </p>
                           

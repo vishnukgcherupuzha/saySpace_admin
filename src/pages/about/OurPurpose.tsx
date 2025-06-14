@@ -43,7 +43,7 @@ const OurPurpose = () => {
             </span>
           </div>
           
-          <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
             Our <span className="text-cta-coral">Purpose</span>
           </h2>
           
@@ -77,7 +77,7 @@ const OurPurpose = () => {
 
               {/* Mission Statement */}
               <div className="space-y-6">
-                <p className="font-body text-lg text-muted-foreground leading-relaxed">
+                <p className="font-body  text-muted-foreground leading-relaxed">
                   At <strong className="text-logo-teal">SAY SPACE</strong>, our mission is to architect and operationalize world-class Global Capability Centers that accelerate innovation, scale, and strategic advantage for enterprises across the globe.
                 </p>
                 
@@ -132,11 +132,11 @@ const OurPurpose = () => {
 
               {/* Vision Statement */}
               <div className="space-y-6">
-                <p className="font-body text-lg text-muted-foreground leading-relaxed">
+                <p className="font-body text-muted-foreground leading-relaxed">
                   To be the world's most trusted enabler of Global Capability Centers (GCCs), empowering over 50 organizations across geographies by 2030 — engineered for sustainable growth, operational excellence, and transformational value.
                 </p>
                 
-                <p className="font-body text-lg text-muted-foreground leading-relaxed">
+                <p className="font-body text-muted-foreground leading-relaxed">
                   Our vision extends beyond just setting up centers - we aim to redefine how the world builds global talent hubs.
                 </p>
 

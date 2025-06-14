@@ -241,7 +241,7 @@ const CareersPage = () => {
               </span>
             </div>
             
-            <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+            <h2 className="font-header font-bold text-4xl text-foreground mb-6">
               Discover the <span className="text-logo-teal">Benefits</span> of Building Your Career with Us
             </h2>
             
@@ -292,7 +292,7 @@ const CareersPage = () => {
               </span>
             </div>
             
-            <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+            <h2 className="font-header font-bold text-4xl text-foreground mb-6">
               Explore Our <span className="text-cta-coral">Available Positions</span>
             </h2>
             

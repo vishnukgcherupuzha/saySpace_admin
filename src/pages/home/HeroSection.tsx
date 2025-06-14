@@ -30,7 +30,7 @@ const HeroSection = () => {
 
                         {/* Main Title */}
                         <div className="space-y-4">
-                            <h1 className="font-header font-bold text-5xl text-foreground leading-tight">
+                            <h1 className="font-header font-bold text-4xl text-foreground leading-tight">
                                 Your{' '}
                                 <span className="bg-gradient-to-r from-logo-teal to-logo-teal bg-clip-text text-transparent">
                                     GCC Partner

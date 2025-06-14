@@ -86,7 +86,7 @@ const SuccessStories = () => {
             </span>
           </div>
           
-          <h2 className="font-header font-bold text-4xl lg:text-5xl text-foreground mb-6">
+          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
             Success <span className="text-cta-coral">Stories</span>
           </h2>
           
@@ -115,7 +115,7 @@ const SuccessStories = () => {
                   </div>
                   
                   {/* Quote */}
-                  <blockquote className="font-body text-xl lg:text-2xl text-foreground leading-relaxed">
+                  <blockquote className="font-body text-foreground leading-relaxed">
                     "{current.quote}"
                   </blockquote>
                   

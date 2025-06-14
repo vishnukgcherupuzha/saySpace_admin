@@ -21,7 +21,7 @@ const Error = () => {
 
         {/* Error Message */}
         <div className="space-y-6 mb-12">
-          <h1 className="font-header font-bold text-3xl sm:text-4xl lg:text-5xl text-foreground">
+          <h1 className="font-header font-bold text-3xl sm:text-4xl text-foreground">
             Page Not Found
           </h1>
           
