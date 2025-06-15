@@ -120,40 +120,56 @@ const ClientTestimonials = () => {
   const getIndustryColor = (industry: string) => {
     switch (industry.toLowerCase()) {
       case 'technology':
-        return 'text-logo-teal bg-logo-teal';
+        return 'text-white bg-logo-teal';
       case 'financial services':
-        return 'text-cta-coral bg-cta-coral';
+        return 'text-white bg-cta-coral';
       case 'manufacturing':
-        return 'text-logo-beige bg-logo-beige';
+        return 'text-white bg-gray-600';
       case 'healthcare':
-        return 'text-cta-coral/80 bg-cta-coral/80';
+        return 'text-white bg-cta-coral';
       default:
-        return 'text-logo-teal bg-logo-teal';
+        return 'text-white bg-logo-teal';
     }
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-dividers/20 to-background">
+    <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* Header */}
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
+            <Quote className="w-4 h-4 mr-2" />
+            CLIENT TESTIMONIALS
+          </div>
+          
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
+            Success Stories from <span className="font-semibold text-logo-teal">Global Leaders</span>
+          </h2>
+          
+          <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
+            Hear from industry executives who have successfully established GCCs in Bangalore
+          </p>
+        </div>
+
         {/* Main Testimonial Display */}
-        <div className="relative mb-12">
+        <div className="relative mb-12 lg:mb-16">
           <div 
-            className="bg-card border border-dividers rounded-3xl p-8 lg:p-12 shadow-xl"
+            className="bg-white border border-gray-200 p-8 lg:p-12"
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
           >
             
             {/* Quote Icon */}
             <div className="flex justify-center mb-8">
-              <div className="bg-logo-teal/10 rounded-full p-4">
+              <div className="bg-logo-teal/10 p-4">
                 <Quote className="w-8 h-8 text-logo-teal" />
               </div>
             </div>
 
             {/* Testimonial Content */}
             <div className="text-center mb-8">
-              <blockquote className="font-body  text-lg text-foreground leading-relaxed italic mb-8 max-w-4xl mx-auto">
+              <blockquote className="text-lg lg:text-xl text-gray-700 leading-relaxed italic mb-8 max-w-4xl mx-auto font-light">
                 "{currentTestimonial.quote}"
               </blockquote>
 
@@ -166,22 +182,22 @@ const ClientTestimonials = () => {
 
               {/* Author Info */}
               <div className="mb-8">
-                <h4 className="font-header font-bold text-xl text-foreground mb-1">
+                <h4 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-1">
                   {currentTestimonial.author}
                 </h4>
-                <p className="font-body text-muted-foreground mb-2">
+                <p className="text-gray-600 font-light mb-3">
                   {currentTestimonial.position}
                 </p>
-                <div className="flex items-center justify-center space-x-2">
-                  <span className="font-body text-sm text-muted-foreground">
+                <div className="flex items-center justify-center space-x-2 flex-wrap">
+                  <span className="text-sm text-gray-600 font-light">
                     {currentTestimonial.company}
                   </span>
-                  <span className="text-dividers">•</span>
-                  <span className={`font-body text-xs px-2 py-1 rounded-full text-white ${getIndustryColor(currentTestimonial.industry).split(' ')[1]}`}>
+                  <span className="text-gray-400">•</span>
+                  <span className={`text-xs px-2 py-1 ${getIndustryColor(currentTestimonial.industry)}`}>
                     {currentTestimonial.industry}
                   </span>
-                  <span className="text-dividers">•</span>
-                  <span className="font-body text-xs px-2 py-1 bg-dividers/50 text-muted-foreground rounded-full">
+                  <span className="text-gray-400">•</span>
+                  <span className="text-xs px-2 py-1 bg-gray-200 text-gray-600">
                     {currentTestimonial.companyType}
                   </span>
                 </div>
@@ -196,11 +212,11 @@ const ClientTestimonials = () => {
                       <div key={index} className="text-center">
                         <div className="flex items-center justify-center mb-2">
                           <IconComponent className="w-5 h-5 text-logo-teal mr-2" />
-                          <span className="font-header font-bold text-2xl text-foreground">
+                          <span className="text-2xl font-light text-gray-900">
                             {metric.value}
                           </span>
                         </div>
-                        <p className="font-body text-sm text-muted-foreground">
+                        <p className="text-sm text-gray-600 font-medium">
                           {metric.label}
                         </p>
                       </div>
@@ -214,7 +230,7 @@ const ClientTestimonials = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-card border border-dividers rounded-full p-3 hover:bg-logo-teal hover:text-white hover:border-logo-teal transition-all duration-200 shadow-lg"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white border border-gray-200 p-3 hover:bg-logo-teal hover:text-white hover:border-logo-teal transition-all duration-200 shadow-lg"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -222,7 +238,7 @@ const ClientTestimonials = () => {
           
           <button
             onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-card border border-dividers rounded-full p-3 hover:bg-logo-teal hover:text-white hover:border-logo-teal transition-all duration-200 shadow-lg"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white border border-gray-200 p-3 hover:bg-logo-teal hover:text-white hover:border-logo-teal transition-all duration-200 shadow-lg"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-5 h-5" />
@@ -230,15 +246,15 @@ const ClientTestimonials = () => {
         </div>
 
         {/* Testimonial Indicators */}
-        <div className="flex justify-center items-center space-x-3 mb-12">
+        <div className="flex justify-center items-center space-x-3 mb-12 lg:mb-16">
           {testimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${
+              className={`w-3 h-3 transition-all duration-200 ${
                 index === currentIndex 
                   ? 'bg-logo-teal scale-110' 
-                  : 'bg-dividers hover:bg-muted-foreground'
+                  : 'bg-gray-300 hover:bg-gray-400'
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
             />
@@ -246,35 +262,35 @@ const ClientTestimonials = () => {
         </div>
 
         {/* Testimonial Grid Preview */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 lg:mb-20">
           {testimonials.map((testimonial, index) => (
             <button
               key={testimonial.id}
               onClick={() => setCurrentIndex(index)}
-              className={`text-left bg-card border rounded-xl p-6 transition-all duration-200 hover:shadow-lg ${
+              className={`text-left bg-white border p-6 transition-all duration-200 hover:shadow-lg ${
                 index === currentIndex 
-                  ? 'border-logo-teal ring-2 ring-logo-teal/20' 
-                  : 'border-dividers hover:border-muted-foreground'
+                  ? 'border-logo-teal shadow-lg' 
+                  : 'border-gray-200 hover:border-gray-300'
               }`}
             >
               {/* Mini Quote */}
               <div className="mb-4">
                 <Quote className="w-4 h-4 text-logo-teal mb-2" />
-                <p className="font-body text-sm text-muted-foreground line-clamp-3">
+                <p className="text-sm text-gray-600 font-light line-clamp-3">
                   {testimonial.quote.substring(0, 120)}...
                 </p>
               </div>
 
               {/* Mini Author */}
               <div>
-                <h5 className="font-header font-semibold text-sm text-foreground">
+                <h5 className="text-sm font-semibold text-gray-900">
                   {testimonial.author}
                 </h5>
-                <p className="font-body text-xs text-muted-foreground">
+                <p className="text-xs text-gray-600 font-light">
                   {testimonial.position}
                 </p>
                 <div className="flex items-center mt-2">
-                  <span className={`font-body text-xs px-2 py-1 rounded-full text-white ${getIndustryColor(testimonial.industry).split(' ')[1]}`}>
+                  <span className={`text-xs px-2 py-1 ${getIndustryColor(testimonial.industry)}`}>
                     {testimonial.industry}
                   </span>
                 </div>
@@ -284,18 +300,26 @@ const ClientTestimonials = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-logo-teal/5 to-cta-coral/5 border border-logo-teal/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="font-header font-bold text-xl text-foreground mb-4">
-              Ready to Join Our Success Stories?
-            </h3>
-            <p className="font-body text-muted-foreground mb-6">
-              Discover how your organization can achieve similar success in Bangalore. 
-              Let's discuss your GCC establishment strategy today.
-            </p>
-            <button className="inline-flex items-center px-8 py-3 bg-logo-teal text-white font-header font-medium rounded-xl hover:bg-logo-teal/90 transition-all duration-200 shadow-lg hover:shadow-xl">
-              <span>Start Your Success Story</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
+        <div className="bg-white border border-gray-200 p-8 lg:p-12 text-center">
+          <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
+            Ready to Join Our <span className="font-semibold text-logo-teal">Success Stories?</span>
+          </h3>
+          <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
+            Discover how your organization can achieve similar success in Bangalore. 
+            Let's discuss your GCC establishment strategy today.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+              <Quote className="w-5 h-5 mr-3" />
+              Start Your Success Story
+              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+            </button>
+
+            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
+              <Building2 className="w-5 h-5 mr-3" />
+              Schedule Consultation
+              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
             </button>
           </div>
         </div>

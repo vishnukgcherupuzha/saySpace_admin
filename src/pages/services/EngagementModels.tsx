@@ -1,4 +1,3 @@
-
 import { 
   CheckCircle, 
   ArrowRight,
@@ -22,8 +21,6 @@ const EngagementModels = () => {
         "Typical duration: 3-6 months",
         "Ideal for specific GCC initiatives"
       ],
-      color: "from-logo-teal to-logo-teal/80",
-      bgColor: "from-logo-teal/10 to-logo-teal/5",
       buttonText: "Learn More",
       highlight: "Best for targeted initiatives"
     },
@@ -38,8 +35,6 @@ const EngagementModels = () => {
         "Scalable engagement scope",
         "Ideal for ongoing GCC management"
       ],
-      color: "from-cta-coral to-cta-coral/80",
-      bgColor: "from-cta-coral/10 to-cta-coral/5",
       buttonText: "Learn More",
       highlight: "Most popular choice",
       popular: true
@@ -55,37 +50,33 @@ const EngagementModels = () => {
         "Long-term partnership (12+ months)",
         "Ideal for rapid GCC deployment"
       ],
-      color: "from-logo-beige to-logo-beige/80",
-      bgColor: "from-logo-beige/10 to-logo-beige/5",
       buttonText: "Learn More",
       highlight: "Complete hands-off solution"
     }
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-dividers/10 to-background">
+    <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-cta-coral/20 backdrop-blur-sm border border-cta-coral/40 rounded-full mb-6">
-            <Users className="w-4 h-4 text-cta-coral mr-2" />
-            <span className="font-body text-sm font-medium text-cta-coral">
-              Partnership Options
-            </span>
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
+            <Users className="w-4 h-4 mr-2" />
+            PARTNERSHIP OPTIONS
           </div>
           
-          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
-            Our Engagement <span className="text-cta-coral">Models</span>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
+            Our Engagement <span className="font-semibold text-cta-coral">Models</span>
           </h2>
           
-          <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
             Flexible partnership options to suit your specific requirements
           </p>
         </div>
 
         {/* Engagement Models Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-16 lg:mb-20">
           {engagementModels.map((model) => {
             const IconComponent = model.icon;
             return (
@@ -96,33 +87,28 @@ const EngagementModels = () => {
                 {/* Popular Badge */}
                 {model.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="bg-gradient-to-r from-cta-coral to-cta-coral/90 text-white px-4 py-2 rounded-full shadow-lg">
-                      <span className="font-header font-semibold text-sm">Most Popular</span>
+                    <div className="bg-cta-coral text-white px-4 py-2 shadow-lg">
+                      <span className="font-semibold text-sm">Most Popular</span>
                     </div>
                   </div>
                 )}
 
                 {/* Main Card */}
-                <div className={`bg-gradient-to-br ${model.bgColor} border ${model.popular ? 'border-cta-coral/30 shadow-xl' : 'border-border'} rounded-3xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden h-full`}>
+                <div className={`bg-white border ${model.popular ? 'border-cta-coral shadow-xl' : 'border-gray-200'} p-6 lg:p-8 hover:shadow-lg transition-all duration-300 hover:border-gray-300 h-full`}>
                   
-                  {/* Background Pattern */}
-                  <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
-                    <div className={`w-full h-full bg-gradient-to-br ${model.color} rounded-full blur-3xl`}></div>
-                  </div>
-                  
-                  <div className="relative h-full flex flex-col">
+                  <div className="h-full flex flex-col">
                     {/* Header */}
                     <div className="flex items-center justify-between mb-6">
-                      <div className={`w-16 h-16 bg-gradient-to-br ${model.color} rounded-2xl flex items-center justify-center shadow-lg`}>
-                        <IconComponent className="w-8 h-8 text-white" />
+                      <div className={`w-14 h-14 ${model.popular ? 'bg-cta-coral' : 'bg-logo-teal'} flex items-center justify-center`}>
+                        <IconComponent className="w-7 h-7 text-white" />
                       </div>
                       <div className="text-right">
-                        <span className="font-body text-xs text-muted-foreground block mb-1">
+                        <span className="text-xs text-gray-600 block mb-1">
                           {model.highlight}
                         </span>
                         <div className="flex items-center">
-                          <Clock className="w-4 h-4 text-muted-foreground mr-1" />
-                          <span className="font-body text-xs text-muted-foreground">
+                          <Clock className="w-4 h-4 text-gray-400 mr-1" />
+                          <span className="text-xs text-gray-600">
                             Flexible Duration
                           </span>
                         </div>
@@ -130,21 +116,24 @@ const EngagementModels = () => {
                     </div>
                     
                     {/* Title */}
-                    <h3 className="font-header font-bold text-2xl text-card-foreground mb-4">
+                    <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 leading-tight">
                       {model.title}
                     </h3>
                     
                     {/* Description */}
-                    <p className="font-body text-muted-foreground leading-relaxed mb-6 flex-grow">
+                    <p className="text-gray-600 font-light leading-relaxed mb-6 flex-grow">
                       {model.description}
                     </p>
                     
                     {/* Features */}
-                    <div className="space-y-3 mb-8">
+                    <div className="space-y-3 mb-8 pt-4 border-t border-gray-200">
+                      <h4 className="font-semibold text-sm text-gray-900 mb-3">
+                        Key Features:
+                      </h4>
                       {model.features.map((feature, idx) => (
                         <div key={idx} className="flex items-start space-x-3">
-                          <CheckCircle className="w-5 h-5 text-cta-coral flex-shrink-0 mt-0.5" />
-                          <span className="font-body text-sm text-muted-foreground">
+                          <CheckCircle className="w-4 h-4 text-logo-teal flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-gray-600 font-light">
                             {feature}
                           </span>
                         </div>
@@ -152,13 +141,13 @@ const EngagementModels = () => {
                     </div>
                     
                     {/* CTA Button */}
-                    <button className={`group/btn w-full py-3 px-6 rounded-xl font-header font-semibold transition-all duration-300 flex items-center justify-center ${
+                    <button className={`group/btn w-full py-3 px-6 font-semibold text-base transition-all duration-300 flex items-center justify-center ${
                       model.popular 
-                        ? 'bg-gradient-to-r from-cta-coral to-cta-coral/90 text-white hover:shadow-lg' 
-                        : 'border-2 border-border text-foreground hover:border-cta-coral hover:text-cta-coral'
+                        ? 'bg-cta-coral hover:bg-cta-coral/90 text-white shadow-sm hover:shadow-md' 
+                        : 'border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal hover:bg-logo-teal/5'
                     }`}>
                       {model.buttonText}
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-0.5 transition-transform duration-200" />
                     </button>
                   </div>
                 </div>
@@ -167,23 +156,24 @@ const EngagementModels = () => {
           })}
         </div>
 
-        {/* Comparison Table */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="font-header font-bold text-2xl lg:text-3xl text-foreground mb-4">
-              Choose the Right Model for You
+        {/* Comparison Section */}
+        <div className="bg-white border border-gray-200 p-8 lg:p-12">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
+              Choose the Right <span className="font-semibold text-cta-coral">Model for You</span>
             </h3>
-            <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto">
+            <div className="w-16 h-px bg-cta-coral mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 font-light max-w-3xl mx-auto">
               Compare our engagement models to find the perfect fit for your GCC requirements
             </p>
           </div>
 
-          <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-lg">
-            <div className="grid grid-cols-4 bg-gradient-to-r from-logo-teal to-cta-coral text-white p-6">
-              <div className="font-header font-semibold">Features</div>
-              <div className="font-header font-semibold text-center">Project-Based</div>
-              <div className="font-header font-semibold text-center">Retained Services</div>
-              <div className="font-header font-semibold text-center">Managed GCC</div>
+          <div className="bg-white border border-gray-200 overflow-hidden">
+            <div className="grid grid-cols-4 bg-gray-50 border-b border-gray-200 p-4 lg:p-6">
+              <div className="font-semibold text-gray-900">Features</div>
+              <div className="font-semibold text-gray-900 text-center">Project-Based</div>
+              <div className="font-semibold text-gray-900 text-center">Retained Services</div>
+              <div className="font-semibold text-gray-900 text-center">Managed GCC</div>
             </div>
             
             {[
@@ -192,23 +182,49 @@ const EngagementModels = () => {
               { feature: "Scope Flexibility", project: "Fixed", retained: "Scalable", managed: "Comprehensive" },
               { feature: "Investment Level", project: "Low-Medium", retained: "Medium", managed: "Medium-High" }
             ].map((row, index) => (
-              <div key={index} className={`grid grid-cols-4 p-6 border-b border-dividers last:border-b-0 ${
-                index % 2 === 0 ? 'bg-background' : 'bg-dividers/10'
+              <div key={index} className={`grid grid-cols-4 p-4 lg:p-6 border-b border-gray-200 last:border-b-0 ${
+                index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
               }`}>
-                <div className="font-body font-medium text-foreground">
+                <div className="font-medium text-gray-900">
                   {row.feature}
                 </div>
-                <div className="text-center font-body text-muted-foreground">
+                <div className="text-center text-gray-600 font-light">
                   {row.project}
                 </div>
-                <div className="text-center font-body text-muted-foreground">
+                <div className="text-center text-gray-600 font-light">
                   {row.retained}
                 </div>
-                <div className="text-center font-body text-muted-foreground">
+                <div className="text-center text-gray-600 font-light">
                   {row.managed}
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Bottom CTA Section */}
+        <div className="mt-16 lg:mt-20 bg-gray-50 p-8 lg:p-12 text-center">
+          <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
+            Not Sure Which Model <span className="font-semibold text-logo-teal">Fits Best?</span>
+          </h3>
+          
+          <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
+            Our experts will help you choose the optimal engagement model based on your specific requirements, 
+            timeline, and business objectives.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+              <Users className="w-5 h-5 mr-3" />
+              Schedule Consultation
+              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+            </button>
+
+            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
+              <Target className="w-5 h-5 mr-3" />
+              Compare All Models
+              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+            </button>
           </div>
         </div>
       </div>

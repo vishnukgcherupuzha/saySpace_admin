@@ -1,87 +1,148 @@
-import { ArrowRight, Calendar, MapPin, Sparkles } from 'lucide-react';
+import { ArrowRight, Calendar, MapPin, CheckCircle } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
 
 const HeroSection = () => {
     return (
-        <section className="relative bg-gradient-to-br from-background via-background to-accent/5 overflow-hidden">
-            {/* Background Elements */}
+        <section className="relative bg-white overflow-hidden">
+            {/* Subtle Background Elements */}
             <div className="absolute inset-0">
-                {/* Animated gradient orbs using your exact colors */}
-                <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-logo-teal/20 to-logo-teal/10 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-cta-coral/15 to-logo-beige/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-dividers/20 to-transparent rounded-full blur-3xl"></div>
+                {/* Minimal geometric patterns */}
+                <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-gray-50/50 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-gradient-to-t from-logo-teal/3 to-transparent"></div>
             </div>
 
-            {/* Grid Pattern Overlay */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.02)_1px,transparent_1px)] bg-[size:72px_72px]"></div>
+            {/* Subtle grid overlay */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,.015)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.015)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[90vh]">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[85vh] py-16 lg:py-20">
 
-                    {/* Content Side */}
-                    <div className="space-y-8">
-                        {/* Badge using your palette */}
-                        <div className="inline-flex items-center px-4 py-2 bg-logo-beige/20 backdrop-blur-sm border border-logo-beige/40 rounded-full">
-                            <Sparkles className="w-4 h-4 text-logo-teal mr-2" />
-                            <span className="font-body text-sm font-medium text-logo-teal">
-                                India's Leading GCC Consultancy
-                            </span>
+                    {/* Content Side - 7 columns */}
+                    <div className="lg:col-span-7 space-y-8">
+                        {/* Professional Badge */}
+                        <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide">
+                            <div className="w-2 h-2 bg-logo-teal rounded-full mr-2"></div>
+                            TRUSTED GCC CONSULTING PARTNER
                         </div>
 
-                        {/* Main Title */}
-                        <div className="space-y-4">
-                            <h1 className="font-header font-bold text-4xl text-foreground leading-tight">
-                                Your{' '}
-                                <span className="bg-gradient-to-r from-logo-teal to-logo-teal bg-clip-text text-transparent">
-                                    GCC Partner
+                        {/* Main Headline - Enterprise Typography */}
+                        <div className="space-y-6">
+                            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 leading-[1.1] tracking-tight">
+                                Establish Your
+                                <br />
+                                <span className="font-semibold text-logo-teal">
+                                    Global Capability Center
                                 </span>
                                 <br />
-                                in India
+                                <span className="text-gray-700">in India</span>
                             </h1>
 
-                            {/* Subtitle */}
-                            <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                                Seamless Global Capability Center setup in India's innovation hub. Transform your business operations with strategic GCC consulting, development and management services.
+                            {/* Professional Subtitle */}
+                            <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl font-light">
+                                Strategic consulting and end-to-end support for establishing and scaling 
+                                your Global Capability Center in India's thriving business ecosystem.
                             </p>
                         </div>
 
-                        {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                            <button className="group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 rounded-xl font-header font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-cta-coral/25 transform hover:-translate-y-1 flex items-center justify-center">
+                        {/* Key Value Props */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-4">
+                            <div className="flex items-center space-x-3">
+                                <CheckCircle className="w-5 h-5 text-logo-teal flex-shrink-0" />
+                                <span className="text-gray-700 font-medium">Policy Compliance</span>
+                            </div>
+                            <div className="flex items-center space-x-3">
+                                <CheckCircle className="w-5 h-5 text-logo-teal flex-shrink-0" />
+                                <span className="text-gray-700 font-medium">Talent Acquisition</span>
+                            </div>
+                            <div className="flex items-center space-x-3">
+                                <CheckCircle className="w-5 h-5 text-logo-teal flex-shrink-0" />
+                                <span className="text-gray-700 font-medium">Operational Setup</span>
+                            </div>
+                            <div className="flex items-center space-x-3">
+                                <CheckCircle className="w-5 h-5 text-logo-teal flex-shrink-0" />
+                                <span className="text-gray-700 font-medium">Strategic Growth</span>
+                            </div>
+                        </div>
+
+                        {/* Professional CTA Section */}
+                        <div className="flex flex-col sm:flex-row gap-4 pt-8">
+                            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
                                 <Calendar className="w-5 h-5 mr-3" />
                                 Schedule Consultation
-                                <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-200" />
+                                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
                             </button>
 
-                            <button className="group border-2 border-logo-teal text-logo-teal hover:bg-logo-teal hover:text-white px-8 py-4 rounded-xl font-header font-semibold text-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center">
+                            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
                                 <MapPin className="w-5 h-5 mr-3" />
                                 Why India
-                                <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-200" />
+                                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
                             </button>
+                        </div>
+
+                        {/* Trust Indicators */}
+                        <div className="pt-8 border-t border-gray-200">
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-8 space-y-4 sm:space-y-0">
+                                <div className="flex items-center space-x-2">
+                                    <div className="text-2xl font-bold text-logo-teal">50+</div>
+                                    <div className="text-sm text-gray-600 leading-tight">
+                                        Successful<br />GCC Setups
+                                    </div>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <div className="text-2xl font-bold text-logo-teal">7</div>
+                                    <div className="text-sm text-gray-600 leading-tight">
+                                        State Policy<br />Partnerships
+                                    </div>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <div className="text-2xl font-bold text-logo-teal">100%</div>
+                                    <div className="text-sm text-gray-600 leading-tight">
+                                        Compliance<br />Success Rate
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Image/Illustration Side */}
-                    <div className="relative">
-                        {/* Main Image Placeholder */}
-                        <div className="relative  backdrop-blur-sm">
-                            {/* Image placeholder using your exact colors */}
-                            <img src={imageConstants.HOME.HERO} className='rounded-3xl' />
+                    {/* Image Side - 5 columns */}
+                    <div className="lg:col-span-5 relative">
+                        <div className="relative">
+                            {/* Professional image container */}
+                            <div className="relative bg-white shadow-2xl shadow-gray-900/10">
+                                <img 
+                                    src={imageConstants.HOME.HERO} 
+                                    alt="Global Capability Center in India"
+                                    className="w-full h-auto"
+                                />
+                                {/* Subtle overlay for professional look */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+                            </div>
+
+                            {/* Professional accent elements */}
+                            <div className="absolute -top-4 -left-4 w-8 h-8 border-l-4 border-t-4 border-logo-teal"></div>
+                            <div className="absolute -bottom-4 -right-4 w-8 h-8 border-r-4 border-b-4 border-cta-coral"></div>
                         </div>
 
-                        {/* Additional floating elements using your palette */}
-                        <div className="absolute top-10 -left-6 w-32 h-32 bg-gradient-to-br from-logo-beige/20 to-transparent rounded-full blur-xl"></div>
-                        <div className="absolute bottom-10 -right-6 w-40 h-40 bg-gradient-to-br from-logo-teal/20 to-transparent rounded-full blur-xl"></div>
+                        {/* Professional floating card */}
+                        <div className="absolute -bottom-8 -left-8 bg-white p-6 shadow-xl border border-gray-100 max-w-xs">
+                            <div className="flex items-center space-x-4">
+                                <div className="w-12 h-12 bg-logo-teal/10 flex items-center justify-center">
+                                    <MapPin className="w-6 h-6 text-logo-teal" />
+                                </div>
+                                <div>
+                                    <div className="font-semibold text-gray-900 text-sm">Prime Locations</div>
+                                    <div className="text-gray-600 text-xs">Bangalore • Hyderabad • Chennai</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                {/* Scroll indicator */}
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-                    <div className="flex flex-col items-center space-y-2">
-                        <div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex justify-center">
-                            <div className="w-1 h-3 bg-muted-foreground rounded-full mt-2 animate-pulse"></div>
-                        </div>
-                        <span className="font-body text-xs text-muted-foreground">Scroll to explore</span>
+                {/* Professional scroll indicator */}
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+                    <div className="flex flex-col items-center space-y-2 opacity-60">
+                        <div className="w-px h-8 bg-gray-400"></div>
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"></div>
                     </div>
                 </div>
             </div>

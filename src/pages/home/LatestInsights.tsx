@@ -5,10 +5,10 @@ import {
   Users,
   DollarSign,
   BookOpen,
-  Eye,
   Clock,
   Tag,
-  ExternalLink
+  ExternalLink,
+  Mail
 } from 'lucide-react';
 
 const LatestInsights = () => {
@@ -17,51 +17,45 @@ const LatestInsights = () => {
       id: 1,
       date: "March 5, 2025",
       title: "5 Reasons Why India's GCC Ecosystem Is Booming in 2025",
-      excerpt: "Explore the key factors driving India's emergence as India's premier GCC destination.",
+      excerpt: "Explore the key factors driving India's emergence as the world's premier GCC destination, from talent availability to cost advantages.",
       category: "Market Trends",
       readTime: "5 min read",
       featured: true,
       icon: TrendingUp,
-      color: "from-logo-teal to-logo-teal/80",
-      bgColor: "from-logo-teal/10 to-logo-teal/5",
       tags: ["GCC", "India", "Market Analysis"]
     },
     {
       id: 2,
       date: "February 18, 2025",
       title: "GCC Talent Landscape in India: 2025 Edition",
-      excerpt: "An in-depth analysis of the talent pool and recruitment strategies for GCCs in India.",
+      excerpt: "An in-depth analysis of the talent pool and recruitment strategies for GCCs in India's major technology hubs.",
       category: "Talent Management",
       readTime: "7 min read",
       featured: false,
       icon: Users,
-      color: "from-cta-coral to-cta-coral/80",
-      bgColor: "from-cta-coral/10 to-cta-coral/5",
       tags: ["Talent", "Recruitment", "HR Strategy"]
     },
     {
       id: 3,
       date: "January 30, 2025",
       title: "How to Optimize Costs in Your India GCC Operations",
-      excerpt: "Practical strategies to maximize ROI while maintaining quality in your GCC.",
+      excerpt: "Practical strategies to maximize ROI while maintaining quality and compliance in your Global Capability Center.",
       category: "Cost Optimization",
       readTime: "6 min read",
       featured: false,
       icon: DollarSign,
-      color: "from-logo-beige to-logo-beige/80",
-      bgColor: "from-logo-beige/10 to-logo-beige/5",
       tags: ["Cost Management", "ROI", "Operations"]
     }
   ];
 
   const categories = [
-    { name: "Market Trends", count: 12, color: "bg-logo-teal" },
-    { name: "Talent Management", count: 8, color: "bg-cta-coral" },
-    { name: "Cost Optimization", count: 6, color: "bg-logo-beige" },
-    { name: "Compliance", count: 5, color: "bg-logo-teal/80" }
+    { name: "Market Trends", count: 12 },
+    { name: "Talent Management", count: 8 },
+    { name: "Cost Optimization", count: 6 },
+    { name: "Compliance", count: 5 }
   ];
 
-  const formatDate = (dateString: string ) => {
+  const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       month: 'long', 
@@ -71,31 +65,27 @@ const LatestInsights = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-background to-dividers/20">
+    <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-cta-coral/20 backdrop-blur-sm border border-cta-coral/40 rounded-full mb-6">
-            <BookOpen className="w-4 h-4 text-cta-coral mr-2" />
-            <span className="font-body text-sm font-medium text-cta-coral">
-              Knowledge Hub
-            </span>
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
+            <BookOpen className="w-4 h-4 mr-2" />
+            KNOWLEDGE HUB
           </div>
           
-          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
-            Latest <span className="text-cta-coral">Insights</span>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
+            Latest <span className="font-semibold text-cta-coral">Insights</span>
           </h2>
           
-          <div className="flex items-center justify-center space-x-4 mb-8">
-            <p className="font-body text-xl text-muted-foreground">
-              Stay updated with GCC trends and best practices
-            </p>
-          </div>
+          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed mb-8">
+            Stay informed with expert analysis, industry trends, and strategic guidance for your GCC journey
+          </p>
 
-          <button className="group bg-gradient-to-r from-logo-teal to-logo-teal/90 hover:from-logo-teal/90 hover:to-logo-teal text-white px-6 py-3 rounded-xl font-header font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 flex items-center mx-auto">
-            View All
-            <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+          <button className="cursor-pointer group bg-logo-teal hover:bg-logo-teal/90 text-white px-6 py-3 font-semibold transition-all duration-200 inline-flex items-center">
+            View All Insights
+            <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-0.5 transition-transform duration-200" />
           </button>
         </div>
 
@@ -111,77 +101,68 @@ const LatestInsights = () => {
                 return (
                   <article 
                     key={insight.id}
-                    className={`bg-gradient-to-br ${insight.bgColor} border border-border rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}
+                    className="bg-white border border-gray-200 p-8 lg:p-12 hover:shadow-lg transition-all duration-300 group"
                   >
-                    <div className="p-8 lg:p-12">
-                      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                      
+                      {/* Content - 8 columns */}
+                      <div className="lg:col-span-8 space-y-6">
                         
-                        {/* Content */}
-                        <div className="lg:col-span-2 space-y-6">
-                          
-                          {/* Meta Info */}
-                          <div className="flex items-center space-x-4 text-sm">
-                            <div className="flex items-center space-x-2">
-                              <Calendar className="w-4 h-4 text-muted-foreground" />
-                              <span className="font-body text-muted-foreground">
-                                {formatDate(insight.date)}
-                              </span>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                              <Clock className="w-4 h-4 text-muted-foreground" />
-                              <span className="font-body text-muted-foreground">
-                                {insight.readTime}
-                              </span>
-                            </div>
-                            <span className={`px-3 py-1 bg-gradient-to-r ${insight.color} text-white text-xs font-medium rounded-full`}>
-                              Featured
-                            </span>
-                          </div>
-                          
-                          {/* Title */}
-                          <h3 className="font-header font-bold text-2xl text-foreground leading-tight group-hover:text-logo-teal transition-colors duration-200">
-                            {insight.title}
-                          </h3>
-                          
-                          {/* Excerpt */}
-                          <p className="font-body text-muted-foreground leading-relaxed">
-                            {insight.excerpt}
-                          </p>
-                          
-                          {/* Tags */}
-                          <div className="flex flex-wrap gap-2">
-                            {insight.tags.map((tag, index) => (
-                              <span 
-                                key={index}
-                                className="inline-flex items-center px-3 py-1 bg-white/50 text-muted-foreground text-xs font-medium rounded-full border border-border"
-                              >
-                                <Tag className="w-3 h-3 mr-1" />
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                          
-                          {/* Read More Button */}
-                          <button className="group/btn inline-flex items-center text-logo-teal hover:text-logo-teal/80 font-header font-semibold transition-colors duration-200">
-                            Read More
-                            <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />
-                          </button>
+                        {/* Featured Badge */}
+                        <div className="inline-flex items-center px-3 py-1 bg-cta-coral text-white text-sm font-medium">
+                          FEATURED ARTICLE
                         </div>
+                        
+                        {/* Meta Info */}
+                        <div className="flex items-center space-x-6 text-sm text-gray-500">
+                          <div className="flex items-center space-x-2">
+                            <Calendar className="w-4 h-4" />
+                            <span>{formatDate(insight.date)}</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Clock className="w-4 h-4" />
+                            <span>{insight.readTime}</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Tag className="w-4 h-4" />
+                            <span>{insight.category}</span>
+                          </div>
+                        </div>
+                        
+                        {/* Title */}
+                        <h3 className="text-2xl lg:text-3xl font-light text-gray-900 leading-tight group-hover:text-logo-teal transition-colors duration-200">
+                          {insight.title}
+                        </h3>
+                        
+                        {/* Excerpt */}
+                        <p className="text-lg text-gray-600 leading-relaxed font-light">
+                          {insight.excerpt}
+                        </p>
+                        
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2">
+                          {insight.tags.map((tag, index) => (
+                            <span 
+                              key={index}
+                              className="px-3 py-1 bg-gray-100 text-gray-600 text-sm font-medium"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                        
+                        {/* Read More Button */}
+                        <button className="cursor-pointer group/btn inline-flex items-center text-logo-teal hover:text-logo-teal/80 font-semibold transition-colors duration-200">
+                          Read Full Article
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-0.5 transition-transform duration-200" />
+                        </button>
+                      </div>
 
-                        {/* Visual */}
-                        <div className="relative">
-                          <div className={`bg-gradient-to-br ${insight.bgColor} rounded-2xl border-2 border-dashed border-logo-teal/30 aspect-[4/3] flex flex-col items-center justify-center space-y-4`}>
-                            <div className={`w-20 h-20 bg-gradient-to-br ${insight.color} rounded-2xl flex items-center justify-center shadow-lg`}>
-                              <IconComponent className="w-10 h-10 text-white" />
-                            </div>
-                            <div className="text-center">
-                              <div className="font-header font-semibold text-lg text-logo-teal mb-2">
-                                Article Image
-                              </div>
-                              <div className="font-body text-sm text-muted-foreground max-w-xs">
-                                Featured article illustration
-                              </div>
-                            </div>
+                      {/* Visual - 4 columns */}
+                      <div className="lg:col-span-4">
+                        <div className="bg-gray-100 aspect-[4/3] flex items-center justify-center">
+                          <div className="w-16 h-16 bg-logo-teal flex items-center justify-center">
+                            <IconComponent className="w-8 h-8 text-white" />
                           </div>
                         </div>
                       </div>
@@ -192,23 +173,23 @@ const LatestInsights = () => {
             </div>
 
             {/* Regular Articles */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {insights.filter(insight => !insight.featured).map((insight) => {
                 const IconComponent = insight.icon;
                 return (
                   <article 
                     key={insight.id}
-                    className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
+                    className="bg-white border border-gray-200 hover:shadow-lg transition-all duration-300 group"
                   >
                     {/* Image Placeholder */}
-                    <div className={`bg-gradient-to-br ${insight.bgColor} aspect-[16/9] flex items-center justify-center relative overflow-hidden`}>
-                      <div className={`w-16 h-16 bg-gradient-to-br ${insight.color} rounded-xl flex items-center justify-center shadow-lg`}>
-                        <IconComponent className="w-8 h-8 text-white" />
+                    <div className="bg-gray-100 aspect-[16/9] flex items-center justify-center relative">
+                      <div className="w-12 h-12 bg-logo-teal flex items-center justify-center">
+                        <IconComponent className="w-6 h-6 text-white" />
                       </div>
                       
                       {/* Category Badge */}
                       <div className="absolute top-4 left-4">
-                        <span className={`px-3 py-1 bg-gradient-to-r ${insight.color} text-white text-xs font-medium rounded-full`}>
+                        <span className="px-3 py-1 bg-white text-gray-700 text-xs font-medium shadow-sm">
                           {insight.category}
                         </span>
                       </div>
@@ -218,31 +199,31 @@ const LatestInsights = () => {
                     <div className="p-6 space-y-4">
                       
                       {/* Meta */}
-                      <div className="flex items-center justify-between text-sm text-muted-foreground">
+                      <div className="flex items-center justify-between text-sm text-gray-500">
                         <div className="flex items-center space-x-2">
                           <Calendar className="w-4 h-4" />
-                          <span className="font-body">{formatDate(insight.date)}</span>
+                          <span>{formatDate(insight.date)}</span>
                         </div>
                         <div className="flex items-center space-x-2">
                           <Clock className="w-4 h-4" />
-                          <span className="font-body">{insight.readTime}</span>
+                          <span>{insight.readTime}</span>
                         </div>
                       </div>
                       
                       {/* Title */}
-                      <h3 className="font-header font-semibold text-xl text-foreground leading-tight group-hover:text-logo-teal transition-colors duration-200">
+                      <h3 className="text-lg font-semibold text-gray-900 leading-tight group-hover:text-logo-teal transition-colors duration-200">
                         {insight.title}
                       </h3>
                       
                       {/* Excerpt */}
-                      <p className="font-body text-muted-foreground leading-relaxed">
+                      <p className="text-gray-600 leading-relaxed font-light text-sm">
                         {insight.excerpt}
                       </p>
                       
                       {/* Read More */}
-                      <button className="group/btn inline-flex items-center text-cta-coral hover:text-cta-coral/80 font-header font-medium transition-colors duration-200">
+                      <button className="cursor-pointer group/btn inline-flex items-center text-cta-coral hover:text-cta-coral/80 font-medium transition-colors duration-200 text-sm">
                         Read More
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-0.5 transition-transform duration-200" />
                       </button>
                     </div>
                   </article>
@@ -255,8 +236,8 @@ const LatestInsights = () => {
           <div className="space-y-8">
             
             {/* Categories */}
-            <div className="bg-card border border-border rounded-2xl p-6">
-              <h3 className="font-header font-semibold text-lg text-foreground mb-6 flex items-center">
+            <div className="bg-white border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-6 pb-4 border-b border-gray-200 flex items-center">
                 <BookOpen className="w-5 h-5 mr-2 text-logo-teal" />
                 Categories
               </h3>
@@ -264,15 +245,12 @@ const LatestInsights = () => {
                 {categories.map((category, index) => (
                   <button 
                     key={index}
-                    className="group w-full flex items-center justify-between p-3 rounded-lg hover:bg-accent transition-colors duration-200"
+                    className="group w-full flex items-center justify-between p-3 hover:bg-gray-50 transition-colors duration-200"
                   >
-                    <div className="flex items-center space-x-3">
-                      <div className={`w-3 h-3 ${category.color} rounded-full`}></div>
-                      <span className="font-body text-foreground group-hover:text-logo-teal transition-colors duration-200">
-                        {category.name}
-                      </span>
-                    </div>
-                    <span className="font-body text-sm text-muted-foreground">
+                    <span className="text-gray-700 group-hover:text-logo-teal transition-colors duration-200 font-medium">
+                      {category.name}
+                    </span>
+                    <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 min-w-[2rem] text-center">
                       {category.count}
                     </span>
                   </button>
@@ -281,46 +259,47 @@ const LatestInsights = () => {
             </div>
 
             {/* Newsletter Signup */}
-            <div className="bg-gradient-to-br from-logo-teal/5 to-cta-coral/5 border border-logo-teal/20 rounded-2xl p-6">
-              <h3 className="font-header font-semibold text-lg text-foreground mb-4">
+            <div className="bg-logo-teal text-white p-6">
+              <h3 className="text-lg font-semibold mb-4 flex items-center">
+                <Mail className="w-5 h-5 mr-2" />
                 Stay Updated
               </h3>
-              <p className="font-body text-sm text-muted-foreground mb-6">
-                Get the latest GCC insights and industry trends delivered to your inbox.
+              <p className="text-sm opacity-90 mb-6 leading-relaxed">
+                Get the latest GCC insights and industry trends delivered to your inbox monthly.
               </p>
               <div className="space-y-3">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-4 py-3 border border-border rounded-lg font-body text-sm focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent"
+                  className="w-full px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/20"
                 />
-                <button className="w-full bg-gradient-to-r from-logo-teal to-logo-teal/90 hover:from-logo-teal/90 hover:to-logo-teal text-white py-3 rounded-lg font-header font-medium transition-all duration-300">
+                <button className="cursor-pointer w-full bg-white text-logo-teal py-3 font-semibold hover:bg-gray-50 transition-colors duration-200">
                   Subscribe
                 </button>
               </div>
             </div>
 
             {/* Popular Posts */}
-            <div className="bg-card border border-border rounded-2xl p-6">
-              <h3 className="font-header font-semibold text-lg text-foreground mb-6 flex items-center">
-                <Eye className="w-5 h-5 mr-2 text-cta-coral" />
+            <div className="bg-white border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-6 pb-4 border-b border-gray-200 flex items-center">
+                <TrendingUp className="w-5 h-5 mr-2 text-cta-coral" />
                 Popular This Month
               </h3>
               <div className="space-y-4">
                 {[
                   "GCC Setup Checklist 2025",
-                  "Top 10 India Tech Parks",
-                  "Talent Retention Strategies"
+                  "Top 10 India Tech Parks for GCCs",
+                  "Talent Retention Strategies That Work"
                 ].map((title, index) => (
                   <button 
                     key={index}
-                    className="group text-left w-full p-3 rounded-lg hover:bg-accent transition-colors duration-200"
+                    className="group text-left w-full p-3 hover:bg-gray-50 transition-colors duration-200"
                   >
                     <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-cta-coral to-cta-coral/80 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">
+                      <div className="w-6 h-6 bg-cta-coral text-white flex items-center justify-center text-sm font-semibold flex-shrink-0">
                         {index + 1}
                       </div>
-                      <span className="font-body text-sm text-foreground group-hover:text-logo-teal transition-colors duration-200">
+                      <span className="text-sm text-gray-700 group-hover:text-logo-teal transition-colors duration-200 font-medium leading-relaxed">
                         {title}
                       </span>
                     </div>

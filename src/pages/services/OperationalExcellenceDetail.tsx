@@ -1,4 +1,3 @@
-
 import { 
   Settings, 
   CheckCircle, 
@@ -20,8 +19,7 @@ const OperationalExcellenceDetail = () => {
         "Standard operating procedures development",
         "Quality management frameworks",
         "Implementation strategies"
-      ],
-      color: "from-logo-beige to-logo-beige/80"
+      ]
     },
     {
       id: 2,
@@ -32,8 +30,7 @@ const OperationalExcellenceDetail = () => {
         "IT systems selection and implementation",
         "Digital transformation initiatives",
         "Automation opportunities identification"
-      ],
-      color: "from-logo-teal to-logo-teal/80"
+      ]
     },
     {
       id: 3,
@@ -45,72 +42,71 @@ const OperationalExcellenceDetail = () => {
         "Productivity enhancement initiatives",
         "Continuous improvement programs",
         "Sustainable growth strategies"
-      ],
-      color: "from-cta-coral to-cta-coral/80"
+      ]
     }
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-dividers/10 to-background">
+    <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 bg-logo-beige/20 backdrop-blur-sm border border-logo-beige/40 rounded-full mb-4">
-            <Settings className="w-4 h-4 text-logo-teal mr-2" />
-            <span className="font-body text-sm font-medium text-logo-teal">
-              Service Category
-            </span>
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
+            <Settings className="w-4 h-4 mr-2" />
+            SERVICE CATEGORY
           </div>
           
-          <h2 className="font-header font-bold text-3xl lg:text-4xl text-foreground mb-4">
-            Operational <span className="text-logo-beige">Excellence</span>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
+            Operational <span className="font-semibold text-logo-teal">Excellence</span>
           </h2>
           
-          <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
             Establish efficient processes and systems for optimal GCC performance.
           </p>
         </div>
 
-        {/* Horizontal Cards Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+        {/* Sub-Services Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-16 lg:mb-20">
           {subServices.map((service) => {
             const IconComponent = service.icon;
             return (
               <div 
                 key={service.id}
-                className="group bg-card border border-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                className="bg-white border border-gray-200 p-6 lg:p-8 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
               >
-                {/* Background Gradient */}
-                <div className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${service.color} opacity-5 rounded-full blur-2xl`}></div>
-                
-                <div className="relative">
+                <div className="h-full flex flex-col">
                   {/* Header */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center shadow-md`}>
-                      <IconComponent className="w-6 h-6 text-white" />
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-14 h-14 bg-logo-teal flex items-center justify-center">
+                      <IconComponent className="w-7 h-7 text-white" />
                     </div>
-                    <span className="font-header font-bold text-2xl text-dividers">
-                      0{service.id}
-                    </span>
+                    <div className="w-8 h-8 bg-gray-200 flex items-center justify-center">
+                      <span className="font-semibold text-sm text-gray-600">
+                        {service.id}
+                      </span>
+                    </div>
                   </div>
                   
                   {/* Title */}
-                  <h3 className="font-header font-bold text-xl text-foreground mb-3">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                     {service.title}
                   </h3>
                   
                   {/* Description */}
-                  <p className="font-body text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-gray-600 font-light leading-relaxed mb-6 flex-grow">
                     {service.description}
                   </p>
                   
                   {/* Features */}
-                  <div className="space-y-2">
+                  <div className="space-y-3 pt-4 border-t border-gray-200">
+                    <h4 className="font-semibold text-sm text-gray-900 mb-3">
+                      Key Components:
+                    </h4>
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-logo-beige flex-shrink-0" />
-                        <span className="font-body text-sm text-muted-foreground">
+                      <div key={idx} className="flex items-start space-x-3">
+                        <CheckCircle className="w-4 h-4 text-cta-coral flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-gray-600 font-light">
                           {feature}
                         </span>
                       </div>
@@ -122,21 +118,130 @@ const OperationalExcellenceDetail = () => {
           })}
         </div>
 
-        {/* Compact CTA */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-logo-beige/5 to-logo-teal/5 border border-logo-beige/20 rounded-2xl p-6 max-w-3xl mx-auto">
-            <h3 className="font-header font-bold text-xl text-foreground mb-3">
-              Ready to optimize your GCC operations?
-            </h3>
-            <p className="font-body text-muted-foreground mb-6 max-w-xl mx-auto">
-              Our operational excellence experts will help you establish efficient processes and systems for sustainable high performance.
-            </p>
-            
-            <button className="group bg-gradient-to-r from-logo-beige to-logo-beige/90 hover:from-logo-beige/90 hover:to-logo-beige text-white px-8 py-3 rounded-xl font-header font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 flex items-center mx-auto">
+        {/* Bottom CTA Section */}
+        <div className="bg-white border border-gray-200 p-8 lg:p-12 text-center">
+          <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
+            Ready to Optimize Your <span className="font-semibold text-logo-teal">GCC Operations?</span>
+          </h3>
+          
+          <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
+            Our operational excellence experts will help you establish efficient processes and systems 
+            for sustainable high performance and continuous improvement.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
               <Settings className="w-5 h-5 mr-3" />
               Optimize Your GCC Operations
-              <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-200" />
+              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
             </button>
+
+            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
+              <TrendingUp className="w-5 h-5 mr-3" />
+              Performance Assessment
+              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+            </button>
+          </div>
+        </div>
+
+        {/* Operational Framework Section */}
+        <div className="mt-16 lg:mt-20 bg-gray-50 p-8 lg:p-12">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
+              Proven <span className="font-semibold text-logo-teal">Operational Framework</span>
+            </h3>
+            <div className="w-16 h-px bg-logo-teal mx-auto"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-logo-teal/10 mx-auto mb-4 flex items-center justify-center">
+                <Cog className="w-6 h-6 text-logo-teal" />
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">Process Excellence</h4>
+              <p className="text-gray-600 font-light text-sm">Standardized workflows optimized for efficiency and quality</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-12 h-12 bg-cta-coral/10 mx-auto mb-4 flex items-center justify-center">
+                <Monitor className="w-6 h-6 text-cta-coral" />
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">Digital Transformation</h4>
+              <p className="text-gray-600 font-light text-sm">Advanced technology solutions for operational efficiency</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gray-200 mx-auto mb-4 flex items-center justify-center">
+                <TrendingUp className="w-6 h-6 text-gray-600" />
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">Continuous Improvement</h4>
+              <p className="text-gray-600 font-light text-sm">Data-driven insights for ongoing performance enhancement</p>
+            </div>
+          </div>
+
+          {/* Performance Metrics */}
+          <div className="mt-12 pt-8 border-t border-gray-200">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-4">Key Performance Areas</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-logo-teal flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-600 font-light">Quality assurance and control systems</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-logo-teal flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-600 font-light">Productivity optimization and measurement</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-logo-teal flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-600 font-light">Cost efficiency and resource optimization</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-4">Technology Integration</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-cta-coral flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-600 font-light">Automation and workflow optimization</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-cta-coral flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-600 font-light">Real-time monitoring and analytics</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-cta-coral flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-600 font-light">Digital infrastructure and systems integration</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Success Metrics */}
+        <div className="mt-16 lg:mt-20 bg-white border border-gray-200 p-8 lg:p-12">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
+              Measurable <span className="font-semibold text-cta-coral">Success Metrics</span>
+            </h3>
+            <div className="w-16 h-px bg-cta-coral mx-auto"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">30%</div>
+              <div className="text-sm text-gray-600 font-medium">Average Productivity Increase</div>
+            </div>
+            <div>
+              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">50%</div>
+              <div className="text-sm text-gray-600 font-medium">Process Efficiency Improvement</div>
+            </div>
+            <div>
+              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">95%</div>
+              <div className="text-sm text-gray-600 font-medium">Quality Standards Achievement</div>
+            </div>
           </div>
         </div>
       </div>

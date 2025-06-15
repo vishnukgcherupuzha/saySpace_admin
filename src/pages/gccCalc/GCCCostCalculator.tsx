@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calculator, FileText, Phone, Target } from 'lucide-react';
+import { Calculator, FileText, Phone, Target, ArrowRight } from 'lucide-react';
 
 // Type definitions
 interface CalculatorData {
@@ -66,24 +66,61 @@ interface ResultsDisplayProps {
 // Hero Section Component
 const HeroSection: React.FC = () => {
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-br from-logo-teal to-cta-coral text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-6">
-            <Calculator className="w-8 h-8 mr-3" />
-            <span className="font-body text-lg font-medium uppercase tracking-wide">
-              GCC Cost Calculator
-            </span>
-          </div>
+    <section className="relative bg-white overflow-hidden">
+      {/* Subtle Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-gray-50/50 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-gradient-to-t from-logo-teal/3 to-transparent"></div>
+      </div>
+
+      {/* Subtle grid overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,.015)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.015)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="py-20 lg:py-24 text-center">
           
-          <h1 className="font-header font-bold text-5xl lg:text-7xl mb-6">
+          {/* Professional Badge */}
+          <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
+            <Calculator className="w-4 h-4 mr-2" />
+            GCC COST CALCULATOR
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 leading-[1.1] tracking-tight mb-6">
             Estimate Your
-            <span className="block text-logo-beige">GCC Investment</span>
+            <br />
+            <span className="font-semibold text-logo-teal">GCC Investment</span>
           </h1>
           
-          <p className="font-body text-xl lg:text-2xl mb-8 max-w-4xl mx-auto opacity-90">
-            Get a preliminary cost estimate for establishing and operating your Global Capability Center in Bangalore with our interactive calculator.
+          {/* Professional Subtitle */}
+          <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto font-light mb-8">
+            Get a preliminary cost estimate for establishing and operating your Global Capability Center in India's premier business destination.
           </p>
+
+          {/* Key Value Props */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-logo-teal/10 mx-auto mb-3 flex items-center justify-center">
+                <Calculator className="w-6 h-6 text-logo-teal" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1 text-sm">Instant Estimates</h3>
+              <p className="text-gray-600 text-xs font-light">Real-time cost calculations</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-cta-coral/10 mx-auto mb-3 flex items-center justify-center">
+                <Target className="w-6 h-6 text-cta-coral" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1 text-sm">Accurate Projections</h3>
+              <p className="text-gray-600 text-xs font-light">Market-based pricing data</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gray-200 mx-auto mb-3 flex items-center justify-center">
+                <FileText className="w-6 h-6 text-gray-600" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-1 text-sm">Detailed Breakdown</h3>
+              <p className="text-gray-600 text-xs font-light">Comprehensive cost analysis</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -104,15 +141,15 @@ const TeamSizeInput: React.FC<TeamSizeInputProps> = ({
   ];
 
   return (
-    <div className="bg-background border border-dividers rounded-2xl p-6">
-      <h3 className="font-header font-bold text-xl text-foreground mb-6 flex items-center">
+    <div className="bg-white border border-gray-200 p-6 lg:p-8">
+      <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
         <Calculator className="w-5 h-5 text-logo-teal mr-2" />
         GCC Scale
       </h3>
       
       <div className="space-y-6">
         <div>
-          <label className="block font-body font-medium text-foreground mb-2">
+          <label className="block font-medium text-gray-900 mb-2">
             Initial Team Size *
           </label>
           <input
@@ -121,13 +158,13 @@ const TeamSizeInput: React.FC<TeamSizeInputProps> = ({
             max="1000"
             value={teamSize}
             onChange={(e) => onTeamSizeChange(parseInt(e.target.value) || 0)}
-            className="w-full px-4 py-3 border border-dividers rounded-xl font-body text-foreground focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent"
+            className="w-full px-4 py-3 border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent"
             placeholder="e.g., 50"
           />
         </div>
 
         <div>
-          <label className="block font-body font-medium text-foreground mb-3">
+          <label className="block font-medium text-gray-900 mb-3">
             Growth Plan
           </label>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -141,12 +178,12 @@ const TeamSizeInput: React.FC<TeamSizeInputProps> = ({
                   onChange={(e) => onGrowthPlanChange(e.target.value)}
                   className="sr-only"
                 />
-                <div className={`p-4 border rounded-xl text-center transition-all duration-200 ${
+                <div className={`p-4 border text-center transition-all duration-200 ${
                   growthPlan === plan.value
-                    ? 'border-logo-teal bg-logo-teal/10 text-logo-teal'
-                    : 'border-dividers hover:border-muted-foreground'
+                    ? 'border-logo-teal bg-logo-teal/5 text-logo-teal'
+                    : 'border-gray-200 hover:border-gray-300 text-gray-700'
                 }`}>
-                  <span className="font-body text-sm font-medium">{plan.label}</span>
+                  <span className="text-sm font-medium">{plan.label}</span>
                 </div>
               </label>
             ))}
@@ -172,13 +209,13 @@ const FunctionsSelection: React.FC<FunctionsSelectionProps> = ({
   ];
 
   return (
-    <div className="bg-background border border-dividers rounded-2xl p-6">
-      <h3 className="font-header font-bold text-xl text-foreground mb-6 flex items-center">
+    <div className="bg-white border border-gray-200 p-6 lg:p-8">
+      <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
         <Calculator className="w-5 h-5 text-cta-coral mr-2" />
         GCC Functions
       </h3>
       
-      <p className="font-body text-muted-foreground mb-4">
+      <p className="text-gray-600 font-light mb-4">
         Select all functions that will be part of your GCC
       </p>
 
@@ -191,15 +228,15 @@ const FunctionsSelection: React.FC<FunctionsSelectionProps> = ({
               onChange={() => onFunctionToggle(func)}
               className="sr-only"
             />
-            <div className={`p-4 border rounded-xl transition-all duration-200 flex items-center ${
+            <div className={`p-4 border transition-all duration-200 flex items-center ${
               selectedFunctions.includes(func)
-                ? 'border-cta-coral bg-cta-coral/10 text-cta-coral'
-                : 'border-dividers hover:border-muted-foreground'
+                ? 'border-cta-coral bg-cta-coral/5 text-cta-coral'
+                : 'border-gray-200 hover:border-gray-300 text-gray-700'
             }`}>
-              <div className={`w-5 h-5 mr-3 rounded ${
-                selectedFunctions.includes(func) ? 'bg-cta-coral' : 'bg-dividers'
+              <div className={`w-5 h-5 mr-3 ${
+                selectedFunctions.includes(func) ? 'bg-cta-coral' : 'bg-gray-200'
               }`} />
-              <span className="font-body text-sm font-medium">{func}</span>
+              <span className="text-sm font-medium">{func}</span>
             </div>
           </label>
         ))}
@@ -229,15 +266,15 @@ const InfrastructureSelection: React.FC<InfrastructureSelectionProps> = ({
   ];
 
   return (
-    <div className="bg-background border border-dividers rounded-2xl p-6">
-      <h3 className="font-header font-bold text-xl text-foreground mb-6 flex items-center">
-        <Calculator className="w-5 h-5 text-logo-beige mr-2" />
+    <div className="bg-white border border-gray-200 p-6 lg:p-8">
+      <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+        <Calculator className="w-5 h-5 text-gray-600 mr-2" />
         Infrastructure Requirements
       </h3>
       
       <div className="space-y-6">
         <div>
-          <label className="block font-body font-medium text-foreground mb-3">
+          <label className="block font-medium text-gray-900 mb-3">
             Office Type
           </label>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -251,12 +288,12 @@ const InfrastructureSelection: React.FC<InfrastructureSelectionProps> = ({
                   onChange={(e) => onOfficeTypeChange(e.target.value)}
                   className="sr-only"
                 />
-                <div className={`p-4 border rounded-xl text-center transition-all duration-200 ${
+                <div className={`p-4 border text-center transition-all duration-200 ${
                   officeType === type.value
-                    ? 'border-logo-beige bg-logo-beige/10 text-logo-beige'
-                    : 'border-dividers hover:border-muted-foreground'
+                    ? 'border-logo-teal bg-logo-teal/5 text-logo-teal'
+                    : 'border-gray-200 hover:border-gray-300 text-gray-700'
                 }`}>
-                  <span className="font-body text-sm font-medium">{type.label}</span>
+                  <span className="text-sm font-medium">{type.label}</span>
                 </div>
               </label>
             ))}
@@ -264,7 +301,7 @@ const InfrastructureSelection: React.FC<InfrastructureSelectionProps> = ({
         </div>
 
         <div>
-          <label className="block font-body font-medium text-foreground mb-3">
+          <label className="block font-medium text-gray-900 mb-3">
             Location Preference
           </label>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -278,12 +315,12 @@ const InfrastructureSelection: React.FC<InfrastructureSelectionProps> = ({
                   onChange={(e) => onLocationChange(e.target.value)}
                   className="sr-only"
                 />
-                <div className={`p-4 border rounded-xl text-center transition-all duration-200 ${
+                <div className={`p-4 border text-center transition-all duration-200 ${
                   location === loc.value
-                    ? 'border-logo-teal bg-logo-teal/10 text-logo-teal'
-                    : 'border-dividers hover:border-muted-foreground'
+                    ? 'border-logo-teal bg-logo-teal/5 text-logo-teal'
+                    : 'border-gray-200 hover:border-gray-300 text-gray-700'
                 }`}>
-                  <span className="font-body text-sm font-medium">{loc.label}</span>
+                  <span className="text-sm font-medium">{loc.label}</span>
                 </div>
               </label>
             ))}
@@ -314,15 +351,15 @@ const TimelineSelection: React.FC<TimelineSelectionProps> = ({
   ];
 
   return (
-    <div className="bg-background border border-dividers rounded-2xl p-6">
-      <h3 className="font-header font-bold text-xl text-foreground mb-6 flex items-center">
+    <div className="bg-white border border-gray-200 p-6 lg:p-8">
+      <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
         <Calculator className="w-5 h-5 text-logo-teal mr-2" />
         Setup Timeline
       </h3>
       
       <div className="space-y-6">
         <div>
-          <label className="block font-body font-medium text-foreground mb-3">
+          <label className="block font-medium text-gray-900 mb-3">
             Desired Timeframe
           </label>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -336,12 +373,12 @@ const TimelineSelection: React.FC<TimelineSelectionProps> = ({
                   onChange={(e) => onTimelineChange(e.target.value)}
                   className="sr-only"
                 />
-                <div className={`p-4 border rounded-xl text-center transition-all duration-200 ${
+                <div className={`p-4 border text-center transition-all duration-200 ${
                   timeline === time.value
-                    ? 'border-logo-teal bg-logo-teal/10 text-logo-teal'
-                    : 'border-dividers hover:border-muted-foreground'
+                    ? 'border-logo-teal bg-logo-teal/5 text-logo-teal'
+                    : 'border-gray-200 hover:border-gray-300 text-gray-700'
                 }`}>
-                  <span className="font-body text-sm font-medium">{time.label}</span>
+                  <span className="text-sm font-medium">{time.label}</span>
                 </div>
               </label>
             ))}
@@ -349,7 +386,7 @@ const TimelineSelection: React.FC<TimelineSelectionProps> = ({
         </div>
 
         <div>
-          <label className="block font-body font-medium text-foreground mb-3">
+          <label className="block font-medium text-gray-900 mb-3">
             Services Required
           </label>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -363,12 +400,12 @@ const TimelineSelection: React.FC<TimelineSelectionProps> = ({
                   onChange={(e) => onServicesChange(e.target.value)}
                   className="sr-only"
                 />
-                <div className={`p-4 border rounded-xl text-center transition-all duration-200 ${
+                <div className={`p-4 border text-center transition-all duration-200 ${
                   services === service.value
-                    ? 'border-cta-coral bg-cta-coral/10 text-cta-coral'
-                    : 'border-dividers hover:border-muted-foreground'
+                    ? 'border-cta-coral bg-cta-coral/5 text-cta-coral'
+                    : 'border-gray-200 hover:border-gray-300 text-gray-700'
                 }`}>
-                  <span className="font-body text-sm font-medium">{service.label}</span>
+                  <span className="text-sm font-medium">{service.label}</span>
                 </div>
               </label>
             ))}
@@ -385,15 +422,15 @@ const InformationSidebar: React.FC = () => {
     <div className="space-y-8">
       
       {/* What's Included */}
-      <div className="bg-card border border-dividers rounded-2xl p-8 shadow-lg">
-        <h3 className="font-header font-bold text-xl text-foreground mb-6 flex items-center">
+      <div className="bg-white border border-gray-200 p-8 shadow-lg">
+        <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
           <Calculator className="w-5 h-5 text-logo-teal mr-2" />
           What's Included
         </h3>
         
         <div className="space-y-6">
           <div>
-            <h4 className="font-header font-semibold text-foreground mb-3">Setup Costs</h4>
+            <h4 className="font-semibold text-gray-900 mb-3">Setup Costs</h4>
             <ul className="space-y-2">
               {[
                 'Entity formation and registration',
@@ -403,15 +440,15 @@ const InformationSidebar: React.FC = () => {
                 'Legal and compliance setup'
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <div className="w-2 h-2 bg-logo-teal rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="font-body text-sm text-muted-foreground">{item}</span>
+                  <div className="w-2 h-2 bg-logo-teal mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-sm text-gray-600 font-light">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="font-header font-semibold text-foreground mb-3">Operating Costs</h4>
+            <h4 className="font-semibold text-gray-900 mb-3">Operating Costs</h4>
             <ul className="space-y-2">
               {[
                 'Office lease and maintenance',
@@ -421,8 +458,8 @@ const InformationSidebar: React.FC = () => {
                 'Ongoing compliance management'
               ].map((item, index) => (
                 <li key={index} className="flex items-start">
-                  <div className="w-2 h-2 bg-cta-coral rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="font-body text-sm text-muted-foreground">{item}</span>
+                  <div className="w-2 h-2 bg-cta-coral mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-sm text-gray-600 font-light">{item}</span>
                 </li>
               ))}
             </ul>
@@ -431,45 +468,46 @@ const InformationSidebar: React.FC = () => {
       </div>
 
       {/* Did You Know */}
-      <div className="bg-gradient-to-r from-logo-teal/5 to-cta-coral/5 border border-logo-teal/20 rounded-2xl p-8">
-        <h3 className="font-header font-bold text-xl text-foreground mb-6 flex items-center">
+      <div className="bg-white border border-gray-200 p-8">
+        <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
           <Calculator className="w-5 h-5 text-cta-coral mr-2" />
-          Did You Know?
+          Key Benefits
         </h3>
         
         <div className="space-y-4">
           <div className="flex items-start">
-            <div className="w-5 h-5 text-logo-teal mt-0.5 mr-3 flex-shrink-0 bg-logo-teal rounded"></div>
-            <p className="font-body text-sm text-muted-foreground">
-              Companies can achieve <strong className="text-foreground">30-40% cost savings</strong> by establishing their GCC in Bangalore compared to Western locations.
+            <div className="w-5 h-5 bg-logo-teal mt-0.5 mr-3 flex-shrink-0"></div>
+            <p className="text-sm text-gray-600 font-light">
+              Companies can achieve <strong className="text-gray-900">30-40% cost savings</strong> by establishing their GCC in Bangalore compared to Western locations.
             </p>
           </div>
           <div className="flex items-start">
-            <div className="w-5 h-5 text-cta-coral mt-0.5 mr-3 flex-shrink-0 bg-cta-coral rounded"></div>
-            <p className="font-body text-sm text-muted-foreground">
-              Bangalore offers <strong className="text-foreground">15-20% lower operational costs</strong> than other major Indian cities like Mumbai or Delhi.
+            <div className="w-5 h-5 bg-cta-coral mt-0.5 mr-3 flex-shrink-0"></div>
+            <p className="text-sm text-gray-600 font-light">
+              Bangalore offers <strong className="text-gray-900">15-20% lower operational costs</strong> than other major Indian cities like Mumbai or Delhi.
             </p>
           </div>
           <div className="flex items-start">
-            <div className="w-5 h-5 text-logo-beige mt-0.5 mr-3 flex-shrink-0 bg-logo-beige rounded"></div>
-            <p className="font-body text-sm text-muted-foreground">
-              The average time to achieve full operational capability for a GCC in Bangalore is <strong className="text-foreground">3-6 months</strong>.
+            <div className="w-5 h-5 bg-gray-400 mt-0.5 mr-3 flex-shrink-0"></div>
+            <p className="text-sm text-gray-600 font-light">
+              The average time to achieve full operational capability for a GCC in Bangalore is <strong className="text-gray-900">3-6 months</strong>.
             </p>
           </div>
         </div>
       </div>
 
       {/* Contact CTA */}
-      <div className="bg-card border border-dividers rounded-2xl p-8 shadow-lg text-center">
-        <h3 className="font-header font-bold text-xl text-foreground mb-4">
+      <div className="bg-white border border-gray-200 p-8 shadow-lg text-center">
+        <h3 className="text-xl font-semibold text-gray-900 mb-4">
           Need a Detailed Assessment?
         </h3>
-        <p className="font-body text-muted-foreground mb-6">
+        <p className="text-gray-600 font-light mb-6">
           Our GCC experts can provide a comprehensive cost analysis tailored to your specific requirements.
         </p>
-        <button className="w-full flex items-center justify-center px-6 py-3 bg-cta-coral text-white font-header font-medium rounded-xl hover:bg-cta-coral/90 transition-all duration-200 shadow-lg hover:shadow-xl">
+        <button className="cursor-pointer group w-full bg-cta-coral hover:bg-cta-coral/90 text-white px-6 py-3 font-semibold transition-all duration-200 shadow-sm hover:shadow-md flex items-center justify-center">
           <Phone className="w-4 h-4 mr-2" />
           Contact Our Team
+          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-0.5 transition-transform duration-200" />
         </button>
       </div>
     </div>
@@ -490,13 +528,13 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ estimate, teamSize }) =
   if (!estimate) return null;
 
   return (
-    <section className="py-20 bg-dividers/20">
+    <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="font-header font-bold text-3xl lg:text-4xl text-foreground mb-4">
-            Your GCC <span className="text-logo-teal">Cost Estimate</span>
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight">
+            Your GCC <span className="font-semibold text-logo-teal">Cost Estimate</span>
           </h2>
-          <p className="font-body text-xl text-muted-foreground">
+          <p className="text-lg lg:text-xl text-gray-600 font-light">
             Based on your requirements for a {teamSize}-person GCC in Bangalore
           </p>
         </div>
@@ -504,96 +542,96 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ estimate, teamSize }) =
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           
           {/* Setup Costs */}
-          <div className="bg-card border border-dividers rounded-2xl p-8 shadow-lg">
+          <div className="bg-white border border-gray-200 p-8 shadow-lg">
             <div className="text-center mb-6">
-              <div className="bg-logo-teal rounded-full p-4 w-fit mx-auto mb-4">
+              <div className="bg-logo-teal p-4 w-fit mx-auto mb-4">
                 <Calculator className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-header font-bold text-xl text-foreground mb-2">Setup Costs</h3>
-              <div className="font-header font-bold text-3xl text-logo-teal">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Setup Costs</h3>
+              <div className="text-3xl font-light text-logo-teal">
                 {formatCurrency(estimate.setupCosts.total)}
               </div>
             </div>
             
             <div className="space-y-3">
               <div className="flex justify-between">
-                <span className="font-body text-sm text-muted-foreground">Entity Formation</span>
-                <span className="font-body text-sm font-medium text-foreground">{formatCurrency(estimate.setupCosts.entity)}</span>
+                <span className="text-sm text-gray-600">Entity Formation</span>
+                <span className="text-sm font-medium text-gray-900">{formatCurrency(estimate.setupCosts.entity)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-body text-sm text-muted-foreground">Office Setup</span>
-                <span className="font-body text-sm font-medium text-foreground">{formatCurrency(estimate.setupCosts.office)}</span>
+                <span className="text-sm text-gray-600">Office Setup</span>
+                <span className="text-sm font-medium text-gray-900">{formatCurrency(estimate.setupCosts.office)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-body text-sm text-muted-foreground">IT Infrastructure</span>
-                <span className="font-body text-sm font-medium text-foreground">{formatCurrency(estimate.setupCosts.infrastructure)}</span>
+                <span className="text-sm text-gray-600">IT Infrastructure</span>
+                <span className="text-sm font-medium text-gray-900">{formatCurrency(estimate.setupCosts.infrastructure)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-body text-sm text-muted-foreground">Talent Acquisition</span>
-                <span className="font-body text-sm font-medium text-foreground">{formatCurrency(estimate.setupCosts.talent)}</span>
+                <span className="text-sm text-gray-600">Talent Acquisition</span>
+                <span className="text-sm font-medium text-gray-900">{formatCurrency(estimate.setupCosts.talent)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-body text-sm text-muted-foreground">Legal & Compliance</span>
-                <span className="font-body text-sm font-medium text-foreground">{formatCurrency(estimate.setupCosts.legal)}</span>
+                <span className="text-sm text-gray-600">Legal & Compliance</span>
+                <span className="text-sm font-medium text-gray-900">{formatCurrency(estimate.setupCosts.legal)}</span>
               </div>
             </div>
           </div>
 
           {/* Operating Costs */}
-          <div className="bg-card border border-dividers rounded-2xl p-8 shadow-lg">
+          <div className="bg-white border border-gray-200 p-8 shadow-lg">
             <div className="text-center mb-6">
-              <div className="bg-cta-coral rounded-full p-4 w-fit mx-auto mb-4">
+              <div className="bg-cta-coral p-4 w-fit mx-auto mb-4">
                 <Calculator className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-header font-bold text-xl text-foreground mb-2">Annual Operating</h3>
-              <div className="font-header font-bold text-3xl text-cta-coral">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Annual Operating</h3>
+              <div className="text-3xl font-light text-cta-coral">
                 {formatCurrency(estimate.operatingCosts.total)}
               </div>
             </div>
             
             <div className="space-y-3">
               <div className="flex justify-between">
-                <span className="font-body text-sm text-muted-foreground">Salaries & Benefits</span>
-                <span className="font-body text-sm font-medium text-foreground">{formatCurrency(estimate.operatingCosts.salaries)}</span>
+                <span className="text-sm text-gray-600">Salaries & Benefits</span>
+                <span className="text-sm font-medium text-gray-900">{formatCurrency(estimate.operatingCosts.salaries)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-body text-sm text-muted-foreground">Office Lease</span>
-                <span className="font-body text-sm font-medium text-foreground">{formatCurrency(estimate.operatingCosts.office)}</span>
+                <span className="text-sm text-gray-600">Office Lease</span>
+                <span className="text-sm font-medium text-gray-900">{formatCurrency(estimate.operatingCosts.office)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-body text-sm text-muted-foreground">IT Services</span>
-                <span className="font-body text-sm font-medium text-foreground">{formatCurrency(estimate.operatingCosts.infrastructure)}</span>
+                <span className="text-sm text-gray-600">IT Services</span>
+                <span className="text-sm font-medium text-gray-900">{formatCurrency(estimate.operatingCosts.infrastructure)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-body text-sm text-muted-foreground">Administration</span>
-                <span className="font-body text-sm font-medium text-foreground">{formatCurrency(estimate.operatingCosts.admin)}</span>
+                <span className="text-sm text-gray-600">Administration</span>
+                <span className="text-sm font-medium text-gray-900">{formatCurrency(estimate.operatingCosts.admin)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-body text-sm text-muted-foreground">Compliance</span>
-                <span className="font-body text-sm font-medium text-foreground">{formatCurrency(estimate.operatingCosts.compliance)}</span>
+                <span className="text-sm text-gray-600">Compliance</span>
+                <span className="text-sm font-medium text-gray-900">{formatCurrency(estimate.operatingCosts.compliance)}</span>
               </div>
             </div>
           </div>
 
           {/* Total Investment */}
-          <div className="bg-gradient-to-br from-logo-teal to-cta-coral text-white rounded-2xl p-8 shadow-lg">
+          <div className="bg-logo-teal text-white p-8 shadow-lg">
             <div className="text-center mb-6">
-              <div className="bg-white/20 rounded-full p-4 w-fit mx-auto mb-4">
+              <div className="bg-white/20 p-4 w-fit mx-auto mb-4">
                 <Calculator className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-header font-bold text-xl mb-2">Total First Year</h3>
-              <div className="font-header font-bold text-4xl">
+              <h3 className="text-xl font-semibold mb-2">Total First Year</h3>
+              <div className="text-4xl font-light">
                 {formatCurrency(estimate.totalFirstYear)}
               </div>
             </div>
             
             <div className="text-center">
-              <p className="font-body text-sm opacity-90 mb-4">
+              <p className="text-sm opacity-90 mb-4">
                 This includes all setup costs plus first year operations
               </p>
-              <div className="bg-white/10 rounded-lg p-3">
-                <div className="font-body text-xs opacity-75 mb-1">Monthly Operating Cost</div>
-                <div className="font-header font-bold text-lg">
+              <div className="bg-white/10 p-3">
+                <div className="text-xs opacity-75 mb-1">Monthly Operating Cost</div>
+                <div className="text-lg font-semibold">
                   {formatCurrency(estimate.operatingCosts.total / 12)}
                 </div>
               </div>
@@ -602,12 +640,12 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ estimate, teamSize }) =
         </div>
 
         {/* Disclaimer */}
-        <div className="bg-gradient-to-r from-logo-teal/5 to-cta-coral/5 border border-logo-teal/20 rounded-2xl p-6 text-center">
+        <div className="bg-white border border-gray-200 p-6 text-center">
           <div className="flex items-center justify-center mb-3">
             <Calculator className="w-5 h-5 text-logo-teal mr-2" />
-            <span className="font-header font-semibold text-foreground">Important Note</span>
+            <span className="font-semibold text-gray-900">Important Note</span>
           </div>
-          <p className="font-body text-sm text-muted-foreground">
+          <p className="text-sm text-gray-600 font-light">
             This is an indicative estimate based on typical market rates and your inputs. Actual costs may vary based on specific requirements, market conditions, and negotiated rates.
           </p>
         </div>
@@ -724,21 +762,21 @@ const GCCCostCalculator: React.FC = () => {
                               calculatorData.location !== '';
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <HeroSection />
       
-      <section className="py-20 lg:py-32">
+      <section className="py-20 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             
             {/* Calculator Form */}
             <div className="lg:col-span-2">
-              <div className="bg-card border border-dividers rounded-3xl p-8 lg:p-12 shadow-xl">
+              <div className="bg-white border border-gray-200 p-8 lg:p-12 shadow-xl">
                 <div className="mb-8">
-                  <h2 className="font-header font-bold text-3xl text-foreground mb-4">
-                    Estimate Your GCC Costs
+                  <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight">
+                    Estimate Your <span className="font-semibold text-logo-teal">GCC Costs</span>
                   </h2>
-                  <p className="font-body text-muted-foreground">
+                  <p className="text-gray-600 font-light">
                     Fill in the details below to get a preliminary cost estimate for setting up and operating your GCC in Bangalore.
                   </p>
                 </div>
@@ -774,14 +812,15 @@ const GCCCostCalculator: React.FC = () => {
                   <button
                     onClick={calculateEstimate}
                     disabled={!isFormValid}
-                    className={`w-full flex items-center justify-center px-8 py-4 font-header font-bold text-lg rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl ${
+                    className={`w-full flex items-center justify-center px-8 py-4 font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl ${
                       isFormValid
-                        ? 'bg-logo-teal text-white hover:bg-logo-teal/90'
-                        : 'bg-dividers text-muted-foreground cursor-not-allowed'
+                        ? 'bg-cta-coral hover:bg-cta-coral/90 text-white'
+                        : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                     }`}
                   >
                     <Calculator className="w-5 h-5 mr-2" />
                     Calculate Estimate
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </button>
                 </div>
               </div>
@@ -800,32 +839,34 @@ const GCCCostCalculator: React.FC = () => {
       )}
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-logo-teal/5 to-cta-coral/5 border-t border-dividers">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-card border border-dividers rounded-3xl p-8 lg:p-12 shadow-xl">
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white border border-gray-200 p-8 lg:p-12 shadow-xl text-center">
             <div className="flex items-center justify-center mb-6">
               <Target className="w-8 h-8 text-cta-coral mr-3" />
-              <span className="font-header font-bold text-2xl text-foreground">
+              <span className="text-2xl font-semibold text-gray-900">
                 Ready for a Personalized Cost Analysis?
               </span>
             </div>
             
-            <h3 className="font-header font-bold text-3xl lg:text-4xl text-foreground mb-6">
-              Get a Detailed Cost Breakdown
+            <h3 className="text-3xl lg:text-4xl font-light text-gray-900 mb-6 tracking-tight">
+              Get a Detailed <span className="font-semibold text-logo-teal">Cost Breakdown</span>
             </h3>
             
-            <p className="font-body text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg lg:text-xl text-gray-600 font-light mb-8 max-w-3xl mx-auto">
               Our GCC experts can provide a detailed cost breakdown and ROI projection tailored to your specific business requirements.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="inline-flex items-center px-8 py-4 bg-logo-teal text-white font-header font-bold rounded-xl hover:bg-logo-teal/90 transition-all duration-200 shadow-lg hover:shadow-xl">
-                <FileText className="w-5 h-5 mr-2" />
+              <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                <FileText className="w-5 h-5 mr-3" />
                 Schedule a Consultation
+                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
               </button>
-              <button className="inline-flex items-center px-8 py-4 border-2 border-cta-coral text-cta-coral font-header font-bold rounded-xl hover:bg-cta-coral hover:text-white transition-all duration-200">
-                <Phone className="w-5 h-5 mr-2" />
+              <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
+                <Phone className="w-5 h-5 mr-3" />
                 Contact Us
+                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
               </button>
             </div>
           </div>

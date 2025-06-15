@@ -120,8 +120,8 @@ const SuccessStories = () => {
       id: 'manufacturing',
       name: 'Manufacturing',
       icon: Factory,
-      color: 'text-logo-beige',
-      bgColor: 'bg-logo-beige',
+      color: 'text-gray-600',
+      bgColor: 'bg-gray-600',
       description: 'Bangalore\'s manufacturing heritage attracts global industrial companies to establish R&D and engineering centers.',
       companies: [
         {
@@ -160,8 +160,8 @@ const SuccessStories = () => {
       id: 'healthcare',
       name: 'Healthcare',
       icon: Heart,
-      color: 'text-cta-coral/80',
-      bgColor: 'bg-cta-coral/80',
+      color: 'text-cta-coral',
+      bgColor: 'bg-cta-coral',
       description: 'Global healthcare and pharmaceutical companies leverage Bangalore\'s life sciences ecosystem and skilled workforce.',
       companies: [
         {
@@ -204,23 +204,21 @@ const SuccessStories = () => {
       empSum + parseInt(company.employees?.replace(/[^0-9]/g, '') || '0'), 0), 0);
 
   return (
-    <section className="py-16 bg-gradient-to-b from-background to-dividers/20">
+    <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-4">
-            <MapPin className="w-6 h-6 text-logo-teal mr-2" />
-            <span className="font-body text-sm font-medium text-muted-foreground uppercase tracking-wide">
-              Success Stories
-            </span>
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
+            <MapPin className="w-4 h-4 mr-2" />
+            SUCCESS STORIES
           </div>
           
-          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
-            Leading <span className="text-logo-teal">GCCs in Bangalore</span>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
+            Leading <span className="font-semibold text-logo-teal">GCCs in Bangalore</span>
           </h2>
           
-          <p className="font-body text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
+          <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto mb-8 font-light leading-relaxed">
             Bangalore hosts GCCs from Fortune 500 companies across various industries, establishing itself as a premier destination for global operations.
           </p>
 
@@ -229,29 +227,29 @@ const SuccessStories = () => {
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <Building2 className="w-5 h-5 text-logo-teal mr-2" />
-                <span className="font-header font-bold text-3xl text-foreground">{totalCompanies}+</span>
+                <span className="text-3xl font-light text-gray-900">{totalCompanies}+</span>
               </div>
-              <p className="font-body text-sm text-muted-foreground">Global Companies</p>
+              <p className="text-sm text-gray-600 font-medium">Global Companies</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <Users className="w-5 h-5 text-cta-coral mr-2" />
-                <span className="font-header font-bold text-3xl text-foreground">{Math.round(totalEmployees/1000)}K+</span>
+                <span className="text-3xl font-light text-gray-900">{Math.round(totalEmployees/1000)}K+</span>
               </div>
-              <p className="font-body text-sm text-muted-foreground">Employees</p>
+              <p className="text-sm text-gray-600 font-medium">Employees</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
-                <Globe className="w-5 h-5 text-logo-beige mr-2" />
-                <span className="font-header font-bold text-3xl text-foreground">4</span>
+                <Globe className="w-5 h-5 text-gray-600 mr-2" />
+                <span className="text-3xl font-light text-gray-900">4</span>
               </div>
-              <p className="font-body text-sm text-muted-foreground">Key Industries</p>
+              <p className="text-sm text-gray-600 font-medium">Key Industries</p>
             </div>
           </div>
         </div>
 
         {/* Industry Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 lg:mb-16">
           {industries.map((industry) => {
             const IconComponent = industry.icon;
             const isActive = activeIndustry === industry.id;
@@ -264,27 +262,27 @@ const SuccessStories = () => {
                 }`}
                 onClick={() => setActiveIndustry(isActive ? null : industry.id)}
               >
-                <div className={`bg-card border border-dividers rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 ${
-                  isActive ? 'ring-2 ring-logo-teal ring-opacity-50' : ''
+                <div className={`bg-white border p-6  hover:shadow-xl transition-all duration-300 ${
+                  isActive ? 'border-logo-teal shadow-xl' : 'border-gray-200 hover:border-gray-300'
                 }`}>
                   
                   {/* Industry Header */}
                   <div className="flex items-center justify-between mb-4">
-                    <div className={`${industry.bgColor} rounded-xl p-3`}>
+                    <div className={`${industry.bgColor} p-3`}>
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     <div className="text-right">
-                      <div className="font-header font-bold text-lg text-foreground">
+                      <div className="text-lg font-light text-gray-900">
                         {industry.companies.length}
                       </div>
-                      <div className="font-body text-xs text-muted-foreground">
+                      <div className="text-xs text-gray-600 font-medium">
                         Companies
                       </div>
                     </div>
                   </div>
 
                   {/* Industry Name */}
-                  <h3 className="font-header font-bold text-lg text-foreground mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {industry.name}
                   </h3>
 
@@ -292,16 +290,16 @@ const SuccessStories = () => {
                   <div className="space-y-1 mb-4">
                     {industry.companies.slice(0, 3).map((company, idx) => (
                       <div key={idx} className="flex items-center text-sm">
-                        <div className={`w-2 h-2 ${industry.bgColor} rounded-full mr-2 flex-shrink-0`}></div>
-                        <span className="font-body text-muted-foreground truncate">
+                        <div className={`w-2 h-2 ${industry.bgColor} mr-2 flex-shrink-0`}></div>
+                        <span className="text-gray-600 font-light truncate">
                           {company.name}
                         </span>
                       </div>
                     ))}
                     {industry.companies.length > 3 && (
                       <div className="flex items-center text-sm">
-                        <div className="w-2 h-2 bg-dividers rounded-full mr-2 flex-shrink-0"></div>
-                        <span className="font-body text-muted-foreground">
+                        <div className="w-2 h-2 bg-gray-400 mr-2 flex-shrink-0"></div>
+                        <span className="text-gray-600 font-light">
                           +{industry.companies.length - 3} more
                         </span>
                       </div>
@@ -309,12 +307,12 @@ const SuccessStories = () => {
                   </div>
 
                   {/* View More Button */}
-                  <button className={`w-full flex items-center justify-center py-2 px-4 rounded-lg border transition-all duration-200 ${
+                  <button className={`w-full flex items-center justify-center py-2 px-4 border transition-all duration-200 ${
                     isActive 
                       ? `${industry.bgColor} text-white border-transparent` 
-                      : `border-dividers text-muted-foreground hover:${industry.color} hover:border-current`
+                      : `border-gray-300 text-gray-700 hover:border-logo-teal hover:text-logo-teal hover:bg-logo-teal/5`
                   }`}>
-                    <span className="font-body text-sm font-medium mr-2">
+                    <span className="text-sm font-medium mr-2">
                       {isActive ? 'Hide Details' : 'View Details'}
                     </span>
                     <ArrowRight className={`w-4 h-4 transition-transform duration-200 ${
@@ -329,25 +327,25 @@ const SuccessStories = () => {
 
         {/* Detailed Industry View */}
         {activeIndustry && (
-          <div className="mb-12 animate-in slide-in-from-top-4 duration-500">
+          <div className="mb-12 lg:mb-16 animate-in slide-in-from-top-4 duration-500">
             {industries
               .filter(industry => industry.id === activeIndustry)
               .map((industry) => {
                 const IconComponent = industry.icon;
                 
                 return (
-                  <div key={industry.id} className="bg-card border border-dividers rounded-3xl p-8 shadow-xl">
+                  <div key={industry.id} className="bg-white border border-gray-200 p-8 lg:p-10 shadow-xl">
                     
                     {/* Industry Header */}
-                    <div className="flex items-center mb-6">
-                      <div className={`${industry.bgColor} rounded-xl p-3 mr-4`}>
+                    <div className="flex items-center mb-8">
+                      <div className={`${industry.bgColor} p-3 mr-4`}>
                         <IconComponent className="w-8 h-8 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-header font-bold text-2xl text-foreground">
+                        <h3 className="text-2xl lg:text-3xl font-semibold text-gray-900">
                           {industry.name}
                         </h3>
-                        <p className="font-body text-muted-foreground mt-1">
+                        <p className="text-gray-600 font-light mt-1 leading-relaxed">
                           {industry.description}
                         </p>
                       </div>
@@ -356,21 +354,21 @@ const SuccessStories = () => {
                     {/* Companies Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {industry.companies.map((company, idx) => (
-                        <div key={idx} className="bg-background border border-dividers rounded-xl p-6 hover:shadow-md transition-all duration-200">
+                        <div key={idx} className="bg-gray-50 border border-gray-200 p-6 hover:shadow-md transition-all duration-200">
                           
                           {/* Company Header */}
                           <div className="flex items-start justify-between mb-4">
                             <div>
-                              <h4 className="font-header font-bold text-lg text-foreground mb-1">
+                              <h4 className="text-lg font-semibold text-gray-900 mb-1">
                                 {company.name}
                               </h4>
                               {company.description && (
-                                <p className="font-body text-sm text-muted-foreground">
+                                <p className="text-sm text-gray-600 font-light">
                                   {company.description}
                                 </p>
                               )}
                             </div>
-                            <ExternalLink className="w-4 h-4 text-muted-foreground hover:text-logo-teal cursor-pointer transition-colors" />
+                            <ExternalLink className="w-4 h-4 text-gray-400 hover:text-logo-teal cursor-pointer transition-colors" />
                           </div>
 
                           {/* Company Stats */}
@@ -379,9 +377,9 @@ const SuccessStories = () => {
                               <div className="flex items-center justify-between">
                                 <div className="flex items-center">
                                   <Users className="w-4 h-4 text-logo-teal mr-2" />
-                                  <span className="font-body text-sm text-muted-foreground">Employees</span>
+                                  <span className="text-sm text-gray-600">Employees</span>
                                 </div>
-                                <span className="font-body text-sm font-medium text-foreground">
+                                <span className="text-sm font-medium text-gray-900">
                                   {company.employees}
                                 </span>
                               </div>
@@ -390,9 +388,9 @@ const SuccessStories = () => {
                               <div className="flex items-center justify-between">
                                 <div className="flex items-center">
                                   <Briefcase className="w-4 h-4 text-cta-coral mr-2" />
-                                  <span className="font-body text-sm text-muted-foreground">Established</span>
+                                  <span className="text-sm text-gray-600">Established</span>
                                 </div>
-                                <span className="font-body text-sm font-medium text-foreground">
+                                <span className="text-sm font-medium text-gray-900">
                                   {company.established}
                                 </span>
                               </div>
@@ -408,23 +406,32 @@ const SuccessStories = () => {
         )}
 
         {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-logo-teal/5 to-cta-coral/5 border border-logo-teal/20 rounded-3xl p-8">
+        <div className="text-center bg-white border border-gray-200 p-8 lg:p-12">
           <div className="flex items-center justify-center mb-4">
             <Award className="w-6 h-6 text-logo-teal mr-2" />
-            <span className="font-header font-bold text-xl text-foreground">
+            <span className="text-xl lg:text-2xl font-semibold text-gray-900">
               Join the Success Story
             </span>
           </div>
           
-          <p className="font-body text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-600 font-light mb-8 max-w-3xl mx-auto leading-relaxed">
             Discover how these leading companies have built successful operations in Bangalore. 
             Learn from their experiences and explore opportunities for your organization.
           </p>
           
-          <button className="inline-flex items-center px-8 py-3 bg-logo-teal text-white font-header font-medium rounded-xl hover:bg-logo-teal/90 transition-all duration-200 shadow-lg hover:shadow-xl">
-            <span>View Success Stories</span>
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+              <Award className="w-5 h-5 mr-3" />
+              View Success Stories
+              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+            </button>
+
+            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
+              <Building2 className="w-5 h-5 mr-3" />
+              Explore Opportunities
+              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

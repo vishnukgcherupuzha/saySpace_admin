@@ -5,55 +5,61 @@ import {
   Award,
   Building2,
   Globe,
-  TrendingUp
+  TrendingUp,
+  ExternalLink
 } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
 
 const LeadershipTeam = () => {
-    const teamMembers = [
+  const teamMembers = [
     {
       id: 1,
-      name: "Era Chaturvedi​",
-      role: "Founder & CEO, SaySpace",
-      expertise: "Tempor Incididunt Ut Labore",
-      color: "from-logo-teal to-logo-teal/80",
+      name: "Era Chaturvedi",
+      role: "Founder & CEO",
+      company: "Say Space",
+      expertise: "GCC Strategy & Implementation",
+      experience: "15+ Years Experience",
       url: imageConstants.ABOUT.ERA
     },
     {
       id: 2,
-      name: "Lorem Ipsum",
-      role: "Dolor Sit Amet",
-      expertise: "Consectetur Adipiscing Elit",
-      color: "from-cta-coral to-cta-coral/80",
+      name: "Sarah Mitchell",
+      role: "VP of Operations",
+      company: "Say Space",
+      expertise: "Operational Excellence & Process Design",
+      experience: "12+ Years Experience"
     },
     {
       id: 3,
-      name: "Lorem Ipsum",
-      role: "Sed Do Eiusmod",
-      expertise: "Tempor Incididunt Ut Labore",
-      color: "from-logo-beige to-logo-beige/80",
+      name: "Rajesh Kumar",
+      role: "Head of Talent Acquisition",
+      company: "Say Space", 
+      expertise: "Executive Search & Team Building",
+      experience: "10+ Years Experience"
     },
     {
       id: 4,
-      name: "Lorem Ipsum",
-      role: "Ut Enim Ad Minim",
-      expertise: "Veniam Quis Nostrud Exercitation",
-      color: "from-logo-teal to-cta-coral",
+      name: "Michael Chen",
+      role: "Director of Legal Affairs",
+      company: "Say Space",
+      expertise: "Regulatory Compliance & Corporate Law",
+      experience: "14+ Years Experience"
     },
     {
       id: 5,
-      name: "Lorem Ipsum",
-      role: "Duis Aute Irure",
-      expertise: "Dolor In Reprehenderit",
-      color: "from-cta-coral to-logo-beige",
-      url: "PLACEHOLDER_URL"
+      name: "Priya Sharma",
+      role: "Head of Client Success",
+      company: "Say Space",
+      expertise: "Client Relations & Strategic Growth",
+      experience: "11+ Years Experience"
     },
     {
       id: 6,
-      name: "Lorem Ipsum",
-      role: "Excepteur Sint",
-      expertise: "Occaecat Cupidatat Non Proident",
-      color: "from-logo-beige to-logo-teal",
+      name: "David Rodriguez",
+      role: "Technology Director",
+      company: "Say Space",
+      expertise: "IT Infrastructure & Digital Solutions",
+      experience: "13+ Years Experience"
     }
   ];
 
@@ -62,54 +68,51 @@ const LeadershipTeam = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-background to-dividers/20">
+    <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-cta-coral/20 backdrop-blur-sm border border-cta-coral/40 rounded-full mb-6">
-            <Users className="w-4 h-4 text-cta-coral mr-2" />
-            <span className="font-body text-sm font-medium text-cta-coral">
-              Leadership Team
-            </span>
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
+            <Users className="w-4 h-4 mr-2" />
+            LEADERSHIP TEAM
           </div>
           
-          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
-            Our <span className="text-cta-coral">Experts</span>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
+            Our <span className="font-semibold text-cta-coral">Expert Leaders</span>
           </h2>
           
-          <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-            Leadership Team
-          </p>
-          
-          <p className="font-body text-lg text-muted-foreground max-w-4xl mx-auto">
-            Meet the experienced professionals driving our GCC consultancy
+          <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
+            Meet the experienced professionals driving innovation and excellence in Global Capability Center consulting
           </p>
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16 lg:mb-20">
           {teamMembers.map((member) => (
             <div 
               key={member.id}
-              className="group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              className="group bg-white border border-gray-200 hover:shadow-lg transition-all duration-300"
             >
-              {/* Image Placeholder */}
-              <div className={`bg-gradient-to-br ${member.color} aspect-[4/3] flex items-center justify-center relative overflow-hidden`}>
-                <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                    {member.url ? <img src={member.url} className='rounded-full' /> : <span className="font-header font-bold text-white text-2xl">{getInitials(member.name)} </span>}
-
+              {/* Image Section */}
+              <div className="bg-gray-100 aspect-[4/3] flex items-center justify-center relative overflow-hidden">
+                <div className="w-24 h-24 bg-gray-200 border border-gray-300 flex items-center justify-center overflow-hidden">
+                  {member.url ? (
+                    <img src={member.url} alt={member.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <span className="text-gray-600 font-semibold text-lg">{getInitials(member.name)}</span>
+                  )}
                 </div>
                 
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* Social Links Overlay */}
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="flex justify-center space-x-3">
-                      <button className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors duration-200">
-                        <Linkedin className="w-5 h-5 text-white" />
+                      <button className="cursor-pointer w-10 h-10 bg-white/90 hover:bg-white flex items-center justify-center transition-colors duration-200">
+                        <Linkedin className="w-4 h-4 text-gray-700" />
                       </button>
-                      <button className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors duration-200">
-                        <Mail className="w-5 h-5 text-white" />
+                      <button className="cursor-pointer w-10 h-10 bg-white/90 hover:bg-white flex items-center justify-center transition-colors duration-200">
+                        <Mail className="w-4 h-4 text-gray-700" />
                       </button>
                     </div>
                   </div>
@@ -119,19 +122,30 @@ const LeadershipTeam = () => {
               {/* Content */}
               <div className="p-6 space-y-4">
                 <div>
-                  <h3 className="font-header font-bold text-xl text-foreground mb-1">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-1">
                     {member.name}
                   </h3>
-                  <p className="font-body text-sm text-cta-coral font-medium">
+                  <p className="text-sm text-cta-coral font-medium mb-1">
                     {member.role}
+                  </p>
+                  <p className="text-xs text-gray-500">
+                    {member.company}
                   </p>
                 </div>
                 
-                <div className="flex items-center space-x-2">
-                  <Award className="w-4 h-4 text-logo-teal flex-shrink-0" />
-                  <p className="font-body text-sm text-muted-foreground">
-                    {member.expertise}
-                  </p>
+                <div className="space-y-2">
+                  <div className="flex items-start space-x-2">
+                    <Award className="w-4 h-4 text-logo-teal flex-shrink-0 mt-0.5" />
+                    <p className="text-sm text-gray-600 font-light">
+                      {member.expertise}
+                    </p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <TrendingUp className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                    <p className="text-xs text-gray-500">
+                      {member.experience}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -139,92 +153,97 @@ const LeadershipTeam = () => {
         </div>
 
         {/* Team Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="text-center p-8 bg-gradient-to-br from-card to-logo-teal/5 border border-border rounded-2xl">
-            <div className="w-16 h-16 bg-gradient-to-br from-logo-teal to-logo-teal/80 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <Users className="w-8 h-8 text-white" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16 lg:mb-20">
+          <div className="text-center p-8 bg-gray-50 border border-gray-200">
+            <div className="w-14 h-14 bg-logo-teal flex items-center justify-center mx-auto mb-6">
+              <Users className="w-7 h-7 text-white" />
             </div>
-            <h3 className="font-header font-bold text-2xl text-foreground mb-2">50+</h3>
-            <p className="font-body text-muted-foreground">Years Combined Experience</p>
+            <h3 className="text-3xl font-light text-gray-900 mb-2">75+</h3>
+            <p className="text-gray-600 font-medium">Years Combined Experience</p>
           </div>
           
-          <div className="text-center p-8 bg-gradient-to-br from-card to-cta-coral/5 border border-border rounded-2xl">
-            <div className="w-16 h-16 bg-gradient-to-br from-cta-coral to-cta-coral/80 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <Building2 className="w-8 h-8 text-white" />
+          <div className="text-center p-8 bg-gray-50 border border-gray-200">
+            <div className="w-14 h-14 bg-cta-coral flex items-center justify-center mx-auto mb-6">
+              <Building2 className="w-7 h-7 text-white" />
             </div>
-            <h3 className="font-header font-bold text-2xl text-foreground mb-2">100+</h3>
-            <p className="font-body text-muted-foreground">GCCs Established</p>
+            <h3 className="text-3xl font-light text-gray-900 mb-2">50+</h3>
+            <p className="text-gray-600 font-medium">Successful GCC Implementations</p>
           </div>
           
-          <div className="text-center p-8 bg-gradient-to-br from-card to-logo-beige/5 border border-border rounded-2xl">
-            <div className="w-16 h-16 bg-gradient-to-br from-logo-beige to-logo-beige/80 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <Globe className="w-8 h-8 text-white" />
+          <div className="text-center p-8 bg-gray-50 border border-gray-200">
+            <div className="w-14 h-14 bg-gray-600 flex items-center justify-center mx-auto mb-6">
+              <Globe className="w-7 h-7 text-white" />
             </div>
-            <h3 className="font-header font-bold text-2xl text-foreground mb-2">15+</h3>
-            <p className="font-body text-muted-foreground">Countries Served</p>
+            <h3 className="text-3xl font-light text-gray-900 mb-2">15+</h3>
+            <p className="text-gray-600 font-medium">Countries Served</p>
           </div>
         </div>
 
         {/* Leadership Philosophy */}
-        <div className="bg-gradient-to-br from-logo-teal/5 to-cta-coral/5 border border-logo-teal/20 rounded-3xl p-8 lg:p-12">
-          <div className="text-center mb-8">
-            <h3 className="font-header font-bold text-2xl lg:text-3xl text-foreground mb-4">
-              Leadership Philosophy
+        <div className="bg-gray-50 border border-gray-200 p-8 lg:p-12 mb-16 lg:mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
+              Leadership <span className="font-semibold text-logo-teal">Philosophy</span>
             </h3>
-            <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our leadership team believes in collaborative excellence, bringing together diverse expertise to deliver exceptional results for our clients.
+            <div className="w-16 h-px bg-logo-teal mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+              Our leadership team believes in collaborative excellence, bringing together diverse expertise 
+              to deliver exceptional results for our clients worldwide.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 icon: Users,
                 title: "Collaborative Leadership",
-                description: "Working together to leverage collective expertise and drive innovation."
+                description: "Working together to leverage collective expertise and drive innovation across all client engagements."
               },
               {
                 icon: TrendingUp,
                 title: "Continuous Growth",
-                description: "Committed to personal and professional development for sustained excellence."
+                description: "Committed to personal and professional development for sustained excellence and industry leadership."
               },
               {
                 icon: Globe,
                 title: "Global Perspective",
-                description: "Bringing international insights to local execution for comprehensive solutions."
+                description: "Bringing international insights to local execution for comprehensive, world-class solutions."
               }
-            ].map((philosophy, index) => {
-              const IconComponent = philosophy.icon;
-              return (
-                <div key={index} className="text-center p-6 bg-white/50 rounded-xl border border-dividers">
-                  <div className="w-12 h-12 bg-gradient-to-br from-logo-teal to-cta-coral rounded-xl flex items-center justify-center mx-auto mb-4 shadow-md">
-                    <IconComponent className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="font-header font-semibold text-lg text-foreground mb-3">
-                    {philosophy.title}
-                  </h4>
-                  <p className="font-body text-sm text-muted-foreground">
-                    {philosophy.description}
-                  </p>
+            ].map((philosophy, index) => (
+              <div key={index} className="text-center p-6 bg-white border border-gray-200">
+                <div className="w-12 h-12 bg-logo-teal mx-auto mb-4 flex items-center justify-center">
+                  <philosophy.icon className="w-6 h-6 text-white" />
                 </div>
-              );
-            })}
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                  {philosophy.title}
+                </h4>
+                <p className="text-gray-600 font-light leading-relaxed">
+                  {philosophy.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Join Our Team CTA */}
-        <div className="text-center mt-16">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="font-header font-bold text-2xl text-foreground mb-4">
-              Want to join our expert team?
-            </h3>
-            <p className="font-body text-lg text-muted-foreground mb-8">
-              We're always looking for talented professionals who share our passion for GCC excellence.
-            </p>
-            <button className="group bg-gradient-to-r from-cta-coral to-cta-coral/90 hover:from-cta-coral/90 hover:to-cta-coral text-white px-8 py-4 rounded-xl font-header font-semibold text-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 flex items-center mx-auto">
-              <Users className="w-5 h-5 mr-3" />
-              View Career Opportunities
-            </button>
+        <div className="bg-logo-teal text-white p-8 lg:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl lg:text-3xl font-light mb-4">
+                Join Our <span className="font-semibold">Expert Team</span>
+              </h3>
+              <p className="text-lg opacity-90 font-light leading-relaxed">
+                We're always seeking talented professionals who share our passion for GCC excellence 
+                and transformational client outcomes.
+              </p>
+            </div>
+            <div className="lg:text-right">
+              <button className="cursor-pointer group bg-white text-logo-teal hover:bg-gray-50 px-8 py-4 font-semibold transition-all duration-200 inline-flex items-center">
+                <Users className="w-5 h-5 mr-3" />
+                View Career Opportunities
+                <ExternalLink className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
