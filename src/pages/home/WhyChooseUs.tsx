@@ -8,7 +8,6 @@ import {
   Scale,
   Calculator,
   MapPin,
-  CheckCircle,
   ArrowRight
 } from 'lucide-react';
 
@@ -18,37 +17,37 @@ const WhyChooseUs = () => {
       icon: Target,
       title: "Strategic GCC Consulting",
       description: "Tailored strategies aligned with your global business objectives to maximize ROI and operational excellence.",
-      color: "from-logo-teal to-logo-teal/80"
+      number: "01"
     },
     {
       icon: Users,
       title: "Talent Acquisition",
       description: "Specialized leadership & CXO hiring services along with access to India's 4+ million skilled professionals across domains and functions.",
-      color: "from-cta-coral to-cta-coral/80"
+      number: "02"
     },
     {
       icon: Code,
       title: "IT Services",
       description: "Comprehensive technology infrastructure setup, custom software solutions, and digital transformation initiatives for your GCC operations.",
-      color: "from-logo-beige to-logo-beige/80"
+      number: "03"
     },
     {
       icon: Settings,
       title: "Operational Excellence",
       description: "Streamlined setup with comprehensive compliance and legal support for a hassle-free experience.",
-      color: "from-logo-teal to-logo-teal/80"
+      number: "04"
     },
     {
       icon: TrendingUp,
       title: "Ongoing Management",
       description: "Continuous optimization of your GCC operations for maximum ROI and sustainable growth.",
-      color: "from-cta-coral to-cta-coral/80"
+      number: "05"
     },
     {
       icon: Shield,
       title: "Risk Management",
       description: "Comprehensive risk assessment and mitigation strategies to ensure business continuity.",
-      color: "from-logo-beige to-logo-beige/80"
+      number: "06"
     }
   ];
 
@@ -74,62 +73,65 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-background to-dividers/20">
+    <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-logo-beige/20 backdrop-blur-sm border border-logo-beige/40 rounded-full mb-6">
-            <CheckCircle className="w-4 h-4 text-logo-teal mr-2" />
-            <span className="font-body text-sm font-medium text-logo-teal">
-              Your Trusted GCC Partner
-            </span>
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
+            <div className="w-2 h-2 bg-logo-teal rounded-full mr-2"></div>
+            YOUR TRUSTED GCC PARTNER
           </div>
           
-          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
-            Why Choose <span className="text-logo-teal">Us?</span>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
+            Why Choose <span className="font-semibold text-logo-teal">Our Expertise</span>
           </h2>
           
-          <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto">
-            End-to-end GCC solutions tailored to your business needs
+          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+            End-to-end GCC solutions designed for global enterprises seeking strategic advantage in India's innovation ecosystem
           </p>
         </div>
 
         {/* Core Expertise */}
-        <div className="mb-24">
-          <h3 className="font-header font-bold text-3xl text-foreground text-center mb-12">
-            Our Core <span className="text-cta-coral">Expertise</span>
-          </h3>
+        <div className="mb-20 lg:mb-24">
+          <div className="text-center mb-12 lg:mb-16">
+            <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
+              Our Core <span className="font-semibold text-cta-coral">Capabilities</span>
+            </h3>
+            <div className="w-24 h-px bg-cta-coral mx-auto"></div>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {coreExpertise.map((item, index) => {
               const IconComponent = item.icon;
               return (
                 <div 
                   key={index}
-                  className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+                  className="group bg-white border border-gray-200 p-8 lg:p-10 hover:shadow-lg transition-all duration-300 relative"
                 >
-                  {/* Background gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-transparent to-dividers/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Number indicator */}
+                  <div className="absolute top-6 right-6 text-6xl font-light text-gray-100 group-hover:text-logo-teal/20 transition-colors duration-300">
+                    {item.number}
+                  </div>
                   
                   <div className="relative">
                     {/* Icon */}
-                    <div className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center mb-6 shadow-lg`}>
-                      <IconComponent className="w-8 h-8 text-white" />
+                    <div className="w-14 h-14 bg-logo-teal text-white flex items-center justify-center mb-6">
+                      <IconComponent className="w-7 h-7" />
                     </div>
                     
                     {/* Content */}
-                    <h4 className="font-header font-semibold text-xl text-card-foreground mb-4">
+                    <h4 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                       {item.title}
                     </h4>
                     
-                    <p className="font-body text-muted-foreground leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed font-light">
                       {item.description}
                     </p>
                     
-                    {/* Hover arrow */}
+                    {/* Professional hover indicator */}
                     <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <ArrowRight className="w-5 h-5 text-logo-teal" />
+                      <div className="w-8 h-px bg-logo-teal"></div>
                     </div>
                   </div>
                 </div>
@@ -140,29 +142,32 @@ const WhyChooseUs = () => {
 
         {/* Alliance Expertise */}
         <div>
-          <h3 className="font-header font-bold text-3xl text-foreground text-center mb-12">
-            Alliance <span className="text-logo-teal">Expertise</span>
-          </h3>
+          <div className="text-center mb-12 lg:mb-16">
+            <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
+              Strategic <span className="font-semibold text-logo-teal">Partnerships</span>
+            </h3>
+            <div className="w-24 h-px bg-logo-teal mx-auto"></div>
+          </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             {allianceExpertise.map((item, index) => {
               const IconComponent = item.icon;
               return (
                 <div 
                   key={index}
-                  className="bg-gradient-to-br from-card to-dividers/10 border border-border rounded-2xl p-8 hover:shadow-xl transition-all duration-300"
+                  className="bg-white border border-gray-200 p-8 lg:p-10 hover:shadow-lg transition-all duration-300 group"
                 >
                   {/* Icon */}
-                  <div className="w-16 h-16 bg-gradient-to-br from-logo-teal to-logo-teal/80 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className="w-14 h-14 bg-gray-100 group-hover:bg-logo-teal text-gray-600 group-hover:text-white flex items-center justify-center mb-6 transition-all duration-300">
+                    <IconComponent className="w-7 h-7" />
                   </div>
                   
                   {/* Content */}
-                  <h4 className="font-header font-semibold text-xl text-card-foreground mb-4">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                     {item.title}
                   </h4>
                   
-                  <p className="font-body text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-gray-600 leading-relaxed font-light mb-8">
                     {item.description}
                   </p>
                   
@@ -170,8 +175,8 @@ const WhyChooseUs = () => {
                   <div className="space-y-3">
                     {item.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center">
-                        <div className="w-2 h-2 bg-cta-coral rounded-full mr-3"></div>
-                        <span className="font-body text-sm text-muted-foreground">
+                        <div className="w-1.5 h-1.5 bg-cta-coral mr-3 flex-shrink-0"></div>
+                        <span className="text-sm text-gray-600 font-medium">
                           {feature}
                         </span>
                       </div>
@@ -180,6 +185,26 @@ const WhyChooseUs = () => {
                 </div>
               );
             })}
+          </div>
+        </div>
+
+        {/* Call to Action Bar */}
+        <div className="mt-16 lg:mt-20 bg-logo-teal text-white p-8 lg:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h4 className="text-2xl lg:text-3xl font-light mb-4">
+                Ready to establish your <span className="font-semibold">GCC in India?</span>
+              </h4>
+              <p className="text-lg opacity-90 font-light">
+                Let's discuss your strategic objectives and create a tailored roadmap for success.
+              </p>
+            </div>
+            <div className="lg:text-right">
+              <button className="cursor-pointer group bg-white text-logo-teal hover:bg-gray-50 px-8 py-4 font-semibold transition-all duration-200 inline-flex items-center">
+                Schedule Strategic Consultation
+                <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

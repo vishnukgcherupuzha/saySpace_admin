@@ -8,7 +8,8 @@ import {
   Calendar,
   TrendingUp,
   Award,
-  CheckCircle2
+  Building2,
+  MapPin
 } from 'lucide-react';
 
 const SuccessStories = () => {
@@ -18,7 +19,7 @@ const SuccessStories = () => {
     {
       id: 1,
       company: "Fortune 500 Technology Company",
-      role: "CTO",
+      role: "Chief Technology Officer",
       name: "Sarah Johnson",
       quote: "Our GCC in India became operational in just 90 days with their expert guidance. The talent quality and cost savings have exceeded our expectations. We've been able to scale our operations faster than anticipated.",
       stats: {
@@ -27,7 +28,7 @@ const SuccessStories = () => {
         teamSize: "250+"
       },
       industry: "Technology",
-      location: "India",
+      location: "Bangalore",
       rating: 5
     },
     {
@@ -42,7 +43,7 @@ const SuccessStories = () => {
         teamSize: "180+"
       },
       industry: "Financial Services",
-      location: "Bangalore",
+      location: "Hyderabad",
       rating: 5
     },
     {
@@ -57,11 +58,10 @@ const SuccessStories = () => {
         teamSize: "320+"
       },
       industry: "Healthcare",
-      location: "Hyderabad",
+      location: "Chennai",
       rating: 5
     }
   ];
-
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -74,161 +74,189 @@ const SuccessStories = () => {
   const current = testimonials[currentTestimonial];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-background to-dividers/10">
+    <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-cta-coral/20 backdrop-blur-sm border border-cta-coral/40 rounded-full mb-6">
-            <Award className="w-4 h-4 text-cta-coral mr-2" />
-            <span className="font-body text-sm font-medium text-cta-coral">
-              Proven Track Record
-            </span>
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
+            <Award className="w-4 h-4 mr-2" />
+            PROVEN TRACK RECORD
           </div>
           
-          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
-            Success <span className="text-cta-coral">Stories</span>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
+            Client <span className="font-semibold text-cta-coral">Success Stories</span>
           </h2>
           
-          <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto">
-            Trusted by leading global organizations
+          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+            Trusted by leading global organizations to establish and scale their operations in India
           </p>
         </div>
 
         {/* Main Testimonial */}
-        <div className="mb-16">
-          <div className="bg-gradient-to-br from-card to-dividers/10 border border-border rounded-3xl p-8 lg:p-12 relative overflow-hidden">
-            
-            {/* Background Elements */}
-            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-logo-teal/10 to-transparent rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-br from-cta-coral/10 to-transparent rounded-full blur-3xl"></div>
-            
-            <div className="relative z-10">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <div className="mb-12">
+          <div className="bg-white border border-gray-200 p-8 lg:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+              
+              {/* Testimonial Content - 8 columns */}
+              <div className="lg:col-span-8 space-y-8">
                 
-                {/* Testimonial Content */}
-                <div className="lg:col-span-2 space-y-6">
-                  
-                  {/* Quote Icon */}
-                  <div className="w-16 h-16 bg-gradient-to-br from-cta-coral to-cta-coral/80 rounded-2xl flex items-center justify-center shadow-lg">
-                    <Quote className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  {/* Quote */}
-                  <blockquote className="font-body text-foreground leading-relaxed">
-                    "{current.quote}"
-                  </blockquote>
-                  
-                  {/* Attribution */}
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-logo-teal to-logo-teal/80 rounded-full flex items-center justify-center">
-                      <span className="font-header font-bold text-white text-lg">
-                        {current.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
-                    <div>
-                      <div className="font-header font-semibold text-lg text-foreground">
-                        {current.role}
-                      </div>
-                      <div className="font-body text-muted-foreground">
-                        {current.company}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Rating */}
-                  <div className="flex items-center space-x-2">
-                    {[...Array(current.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-cta-coral fill-current" />
-                    ))}
-                    <span className="font-body text-sm text-muted-foreground ml-2">
-                      {current.rating}.0 Rating
+                {/* Quote Icon */}
+                <div className="w-12 h-12 bg-cta-coral flex items-center justify-center">
+                  <Quote className="w-6 h-6 text-white" />
+                </div>
+                
+                {/* Quote */}
+                <blockquote className="text-xl lg:text-2xl text-gray-800 leading-relaxed font-light italic">
+                  "{current.quote}"
+                </blockquote>
+                
+                {/* Attribution */}
+                <div className="flex items-center space-x-4 pt-6 border-t border-gray-200">
+                  <div className="w-12 h-12 bg-logo-teal flex items-center justify-center">
+                    <span className="font-semibold text-white text-sm">
+                      {current.name.split(' ').map(n => n[0]).join('')}
                     </span>
+                  </div>
+                  <div>
+                    <div className="text-lg font-semibold text-gray-900">
+                      {current.role}
+                    </div>
+                    <div className="text-gray-600 font-light">
+                      {current.company}
+                    </div>
                   </div>
                 </div>
                 
-                {/* Stats Card */}
-                <div className="bg-gradient-to-br from-logo-teal/5 to-cta-coral/5 border border-logo-teal/20 rounded-2xl p-6">
-                  <h4 className="font-header font-semibold text-lg text-foreground mb-6">
-                    Project Highlights
+                {/* Rating */}
+                <div className="flex items-center space-x-2">
+                  {[...Array(current.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-cta-coral fill-current" />
+                  ))}
+                  <span className="text-sm text-gray-600 ml-2 font-medium">
+                    Excellent Rating
+                  </span>
+                </div>
+              </div>
+              
+              {/* Stats Card - 4 columns */}
+              <div className="lg:col-span-4">
+                <div className="bg-gray-50 border border-gray-200 p-6 lg:p-8">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-6 pb-4 border-b border-gray-200">
+                    Project Outcomes
                   </h4>
                   
                   <div className="space-y-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
-                        <Calendar className="w-5 h-5 text-logo-teal" />
-                        <span className="font-body text-sm text-muted-foreground">Setup Time</span>
+                        <div className="w-8 h-8 bg-logo-teal/10 flex items-center justify-center">
+                          <Calendar className="w-4 h-4 text-logo-teal" />
+                        </div>
+                        <span className="text-sm text-gray-600 font-medium">Setup Timeline</span>
                       </div>
-                      <span className="font-header font-bold text-lg text-cta-coral">
+                      <span className="text-lg font-bold text-gray-900">
                         {current.stats.timeline}
                       </span>
                     </div>
                     
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
-                        <TrendingUp className="w-5 h-5 text-logo-teal" />
-                        <span className="font-body text-sm text-muted-foreground">Cost Savings</span>
+                        <div className="w-8 h-8 bg-cta-coral/10 flex items-center justify-center">
+                          <TrendingUp className="w-4 h-4 text-cta-coral" />
+                        </div>
+                        <span className="text-sm text-gray-600 font-medium">Cost Reduction</span>
                       </div>
-                      <span className="font-header font-bold text-lg text-cta-coral">
+                      <span className="text-lg font-bold text-gray-900">
                         {current.stats.savings}
                       </span>
                     </div>
                     
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
-                        <Users className="w-5 h-5 text-logo-teal" />
-                        <span className="font-body text-sm text-muted-foreground">Team Size</span>
+                        <div className="w-8 h-8 bg-gray-200 flex items-center justify-center">
+                          <Users className="w-4 h-4 text-gray-600" />
+                        </div>
+                        <span className="text-sm text-gray-600 font-medium">Team Scale</span>
                       </div>
-                      <span className="font-header font-bold text-lg text-cta-coral">
+                      <span className="text-lg font-bold text-gray-900">
                         {current.stats.teamSize}
                       </span>
                     </div>
                     
-                    <div className="pt-4 border-t border-dividers">
-                      <div className="flex items-center space-x-2 mb-2">
-                        <CheckCircle2 className="w-4 h-4 text-logo-teal" />
-                        <span className="font-body text-sm text-muted-foreground">Industry: {current.industry}</span>
+                    <div className="pt-6 border-t border-gray-200 space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <Building2 className="w-4 h-4 text-gray-500" />
+                        <span className="text-sm text-gray-600">
+                          <span className="font-medium">Industry:</span> {current.industry}
+                        </span>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle2 className="w-4 h-4 text-logo-teal" />
-                        <span className="font-body text-sm text-muted-foreground">Location: {current.location}</span>
+                      <div className="flex items-center space-x-3">
+                        <MapPin className="w-4 h-4 text-gray-500" />
+                        <span className="text-sm text-gray-600">
+                          <span className="font-medium">Location:</span> {current.location}
+                        </span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              
-              {/* Navigation */}
-              <div className="flex items-center justify-between mt-8">
-                <div className="flex space-x-2">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentTestimonial(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === currentTestimonial 
-                          ? 'bg-cta-coral scale-125' 
-                          : 'bg-dividers hover:bg-logo-teal'
-                      }`}
-                    />
-                  ))}
-                </div>
-                
-                <div className="flex space-x-2">
-                  <button
-                    onClick={prevTestimonial}
-                    className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:bg-accent transition-colors duration-200"
-                  >
-                    <ChevronLeft className="w-5 h-5 text-muted-foreground" />
-                  </button>
-                  <button
-                    onClick={nextTestimonial}
-                    className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:bg-accent transition-colors duration-200"
-                  >
-                    <ChevronRight className="w-5 h-5 text-muted-foreground" />
-                  </button>
-                </div>
-              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Controls */}
+        <div className="flex items-center justify-between">
+          {/* Pagination Dots */}
+          <div className="flex space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentTestimonial(index)}
+                className={`w-2 h-2 transition-all duration-200 ${
+                  index === currentTestimonial 
+                    ? 'bg-cta-coral' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+            <span className="ml-4 text-sm text-gray-500 font-medium">
+              {currentTestimonial + 1} of {testimonials.length}
+            </span>
+          </div>
+          
+          {/* Arrow Navigation */}
+          <div className="flex space-x-2">
+            <button
+              onClick={prevTestimonial}
+              className="cursor-pointer w-10 h-10 bg-white border border-gray-300 hover:border-gray-400 flex items-center justify-center transition-colors duration-200"
+              disabled={currentTestimonial === 0}
+            >
+              <ChevronLeft className="w-5 h-5 text-gray-600" />
+            </button>
+            <button
+              onClick={nextTestimonial}
+              className="cursor-pointer w-10 h-10 bg-white border border-gray-300 hover:border-gray-400 flex items-center justify-center transition-colors duration-200"
+              disabled={currentTestimonial === testimonials.length - 1}
+            >
+              <ChevronRight className="w-5 h-5 text-gray-600" />
+            </button>
+          </div>
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="mt-16 lg:mt-20 pt-12 border-t border-gray-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">50+</div>
+              <div className="text-sm text-gray-600 font-medium tracking-wide">SUCCESSFUL GCC SETUPS</div>
+            </div>
+            <div>
+              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">98%</div>
+              <div className="text-sm text-gray-600 font-medium tracking-wide">CLIENT SATISFACTION RATE</div>
+            </div>
+            <div>
+              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">15+</div>
+              <div className="text-sm text-gray-600 font-medium tracking-wide">YEARS OF EXPERTISE</div>
             </div>
           </div>
         </div>

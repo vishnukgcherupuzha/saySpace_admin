@@ -1,4 +1,3 @@
-
 import { 
   Users, 
   DollarSign, 
@@ -23,9 +22,7 @@ const Advantages = () => {
         "740,000+ engineering graduates each year",
         "Strong proficiency in emerging technologies",
         "Excellent English communication skills"
-      ],
-      color: "from-logo-teal to-logo-teal/80",
-      bgColor: "from-logo-teal/10 to-logo-teal/5"
+      ]
     },
     {
       id: 2,
@@ -37,9 +34,7 @@ const Advantages = () => {
         "Competitive compensation structures",
         "Lower infrastructure and operational costs",
         "Excellent ROI metrics (200-300% over 5 years)"
-      ],
-      color: "from-cta-coral to-cta-coral/80",
-      bgColor: "from-cta-coral/10 to-cta-coral/5"
+      ]
     },
     {
       id: 3,
@@ -51,9 +46,7 @@ const Advantages = () => {
         "Established process excellence methodologies",
         "Innovation culture and creative problem-solving",
         "Experience with global digital initiatives"
-      ],
-      color: "from-logo-beige to-logo-beige/80",
-      bgColor: "from-logo-beige/10 to-logo-beige/5"
+      ]
     },
     {
       id: 4,
@@ -65,9 +58,7 @@ const Advantages = () => {
         "Established knowledge-sharing communities",
         "Specialized service providers and vendors",
         "Decades of institutional GCC knowledge"
-      ],
-      color: "from-logo-teal to-cta-coral",
-      bgColor: "from-logo-teal/5 to-cta-coral/5"
+      ]
     },
     {
       id: 5,
@@ -79,9 +70,7 @@ const Advantages = () => {
         "Address issues overnight for Western headquarters",
         "Enhanced global service delivery capabilities",
         "Seamless collaboration across global teams"
-      ],
-      color: "from-cta-coral to-logo-beige",
-      bgColor: "from-cta-coral/5 to-logo-beige/5"
+      ]
     },
     {
       id: 6,
@@ -93,9 +82,7 @@ const Advantages = () => {
         "Strong disaster recovery capabilities",
         "Sophisticated business continuity frameworks",
         "Balanced global operational footprint"
-      ],
-      color: "from-logo-beige to-logo-teal",
-      bgColor: "from-logo-beige/5 to-logo-teal/5"
+      ]
     }
   ];
 
@@ -103,103 +90,87 @@ const Advantages = () => {
     {
       number: "1,500+",
       label: "GCCs Operating in India",
-      icon: Building2,
-      color: "from-logo-teal to-logo-teal/80"
+      icon: Building2
     },
     {
       number: "1.3M+",
       label: "Professionals Employed",
-      icon: Users,
-      color: "from-cta-coral to-cta-coral/80"
+      icon: Users
     },
     {
       number: "$33B+",
       label: "Annual GCC Revenue",
-      icon: DollarSign,
-      color: "from-logo-beige to-logo-beige/80"
+      icon: DollarSign
     },
     {
       number: "200+",
       label: "Fortune 500 Companies",
-      icon: Award,
-      color: "from-logo-teal to-cta-coral"
+      icon: Award
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5 py-16">
+    <div className="bg-white py-20 lg:py-24">
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-logo-teal/20 to-logo-teal/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-cta-coral/15 to-logo-beige/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center px-4 py-2 bg-logo-teal/20 backdrop-blur-sm border border-logo-teal/40 rounded-full mb-8">
-            <Globe className="w-4 h-4 text-logo-teal mr-2" />
-            <span className="font-body text-sm font-medium text-logo-teal">
-              Global Capability Centers
-            </span>
+      <section className="relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Header */}
+          <div className="text-center mb-16 lg:mb-20">
+            <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
+              <Globe className="w-4 h-4 mr-2" />
+              GLOBAL CAPABILITY CENTERS
+            </div>
+            
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 leading-tight mb-8 tracking-tight">
+              Key Advantages of <br />
+              <span className="font-semibold text-logo-teal">India for GCCs</span>
+            </h1>
+            
+            <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
+              Discover why leading global organizations choose India for their capability centers
+            </p>
           </div>
-          
-          <h1 className="font-header font-bold text-4xl text-foreground leading-tight mb-8">
-            Key Advantages of <br />
-            <span className="bg-gradient-to-r from-logo-teal to-cta-coral bg-clip-text text-transparent">
-              India for GCCs
-            </span>
-          </h1>
-          
-          <p className="font-body text-xl  text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Discover why leading global organizations choose India for their capability centers
-          </p>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          {/* Advantages Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16 lg:mb-20">
             {advantages.map((advantage) => {
               const IconComponent = advantage.icon;
               return (
                 <div 
                   key={advantage.id}
-                  className="group relative"
+                  className="group bg-white border border-gray-200 p-8 lg:p-10 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
                 >
-                  {/* Main Card */}
-                  <div className={`bg-gradient-to-br ${advantage.bgColor} border border-border rounded-3xl p-8 lg:p-10 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden h-full`}>
-                    
-                    {/* Background Pattern */}
-                    <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
-                      <div className={`w-full h-full bg-gradient-to-br ${advantage.color} rounded-full blur-3xl`}></div>
+                  <div className="h-full flex flex-col">
+                    {/* Icon */}
+                    <div className="w-14 h-14 bg-logo-teal flex items-center justify-center mb-6">
+                      <IconComponent className="w-7 h-7 text-white" />
                     </div>
                     
-                    <div className="relative h-full flex flex-col">
-                      {/* Icon */}
-                      <div className={`w-16 h-16 bg-gradient-to-br ${advantage.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
-                        <IconComponent className="w-8 h-8 text-white" />
-                      </div>
-                      
-                      {/* Title */}
-                      <h3 className="font-header font-bold text-xl text-card-foreground mb-4">
-                        {advantage.title}
-                      </h3>
-                      
-                      {/* Description */}
-                      <p className="font-body text-muted-foreground leading-relaxed mb-6">
-                        {advantage.description}
-                      </p>
-                      
-                      {/* Bullet Points */}
-                      <div className="space-y-3 flex-grow">
-                        {advantage.bullets.map((bullet, idx) => (
-                          <div key={idx} className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-cta-coral flex-shrink-0 mt-0.5" />
-                            <span className="font-body text-sm text-muted-foreground">
-                              {bullet}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
+                    {/* Title */}
+                    <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 leading-tight">
+                      {advantage.title}
+                    </h3>
+                    
+                    {/* Description */}
+                    <p className="text-gray-600 font-light leading-relaxed mb-6">
+                      {advantage.description}
+                    </p>
+                    
+                    {/* Bullet Points */}
+                    <div className="space-y-3 flex-grow pt-4 border-t border-gray-200">
+                      <h4 className="font-semibold text-sm text-gray-900 mb-3">
+                        Key Benefits:
+                      </h4>
+                      {advantage.bullets.map((bullet, idx) => (
+                        <div key={idx} className="flex items-start space-x-3">
+                          <CheckCircle className="w-4 h-4 text-cta-coral flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-gray-600 font-light">
+                            {bullet}
+                          </span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -210,32 +181,119 @@ const Advantages = () => {
       </section>
 
       {/* Statistics Section */}
-      <section className="bg-gradient-to-br from-card to-dividers/10 mt-12">
+      <section className="bg-gray-50 py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Stats Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
+              India's <span className="font-semibold text-cta-coral">GCC Landscape</span>
+            </h2>
+            <div className="w-16 h-px bg-cta-coral mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 font-light max-w-3xl mx-auto">
+              The numbers that demonstrate India's position as the world's leading GCC destination
+            </p>
+          </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon;
               return (
                 <div 
                   key={index}
-                  className="text-center p-8 bg-card border border-border rounded-3xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                  className="text-center p-6 lg:p-8 bg-white border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}>
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className="w-12 h-12 bg-cta-coral flex items-center justify-center mx-auto mb-6">
+                    <IconComponent className="w-6 h-6 text-white" />
                   </div>
                   
-                  <div className="font-header font-black text-4xl text-foreground mb-4">
+                  <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-4">
                     {stat.number}
                   </div>
                   
-                  <div className="font-body text-muted-foreground font-medium">
+                  <div className="text-gray-600 font-medium text-sm">
                     {stat.label}
                   </div>
                 </div>
               );
             })}
+          </div>
+
+          {/* Additional Insights */}
+          <div className="mt-16 lg:mt-20 bg-white border border-gray-200 p-8 lg:p-12">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
+                Strategic <span className="font-semibold text-logo-teal">Business Impact</span>
+              </h3>
+              <div className="w-16 h-px bg-logo-teal mx-auto"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-logo-teal/10 mx-auto mb-4 flex items-center justify-center">
+                  <DollarSign className="w-6 h-6 text-logo-teal" />
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Cost Optimization</h4>
+                <p className="text-gray-600 font-light text-sm">Achieve 40-60% cost savings while maintaining quality</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-12 h-12 bg-cta-coral/10 mx-auto mb-4 flex items-center justify-center">
+                  <Users className="w-6 h-6 text-cta-coral" />
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Talent Access</h4>
+                <p className="text-gray-600 font-light text-sm">Tap into the world's largest technical talent pool</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gray-200 mx-auto mb-4 flex items-center justify-center">
+                  <Cpu className="w-6 h-6 text-gray-600" />
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Innovation Hub</h4>
+                <p className="text-gray-600 font-light text-sm">Drive digital transformation and technology innovation</p>
+              </div>
+            </div>
+
+            {/* Key Success Factors */}
+            <div className="mt-12 pt-8 border-t border-gray-200">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-4">Competitive Advantages</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-logo-teal flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-600 font-light">Largest pool of English-speaking technical professionals</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-logo-teal flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-600 font-light">Proven track record across all industry sectors</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-logo-teal flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-600 font-light">Strong intellectual property protection framework</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-4">Business Outcomes</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-cta-coral flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-600 font-light">24/7 global service delivery capabilities</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-cta-coral flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-600 font-light">Accelerated innovation and time-to-market</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-cta-coral flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-600 font-light">Enhanced business continuity and risk management</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

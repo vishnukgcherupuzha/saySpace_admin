@@ -6,6 +6,9 @@ import {
   MapPin,
   ArrowRight,
   Globe,
+  CheckCircle,
+  Users,
+  Award
 } from 'lucide-react';
 
 const WhyBangalore = () => {
@@ -15,167 +18,221 @@ const WhyBangalore = () => {
       number: "200+",
       title: "Global Capability Centers",
       description: "Thriving ecosystem of multinational companies",
-      color: "from-logo-teal to-logo-teal/80",
-      bgColor: "from-logo-teal/10 to-logo-teal/5"
+      metric: "Active GCCs"
     },
     {
       icon: TrendingUp,
       number: "57%",
-      title: "growth in office space leasing",
-      description: "Expanding infrastructure for business needs",
-      color: "from-cta-coral to-cta-coral/80",
-      bgColor: "from-cta-coral/10 to-cta-coral/5"
+      title: "Office Space Growth",
+      description: "Year-over-year expansion in commercial infrastructure",
+      metric: "YoY Growth"
     },
     {
       icon: GraduationCap,
       number: "80,000+",
-      title: "graduates annually",
+      title: "Annual Graduates",
       description: "Top-tier educational institutions producing skilled talent",
-      color: "from-logo-beige to-logo-beige/80",
-      bgColor: "from-logo-beige/10 to-logo-beige/5"
+      metric: "Skilled Professionals"
     },
     {
       icon: DollarSign,
       number: "30-40%",
-      title: "cost advantages",
-      description: "Compared to other global tech hubs",
-      color: "from-logo-teal to-logo-teal/80",
-      bgColor: "from-logo-teal/10 to-logo-teal/5"
+      title: "Cost Advantage",
+      description: "Compared to other global technology hubs",
+      metric: "Cost Savings"
+    }
+  ];
+
+  const keyAdvantages = [
+    {
+      icon: Users,
+      title: "Talent Density",
+      description: "India's largest concentration of technology professionals and engineering talent"
+    },
+    {
+      icon: Globe,
+      title: "Global Connectivity", 
+      description: "Strategic time zone advantages and excellent international connectivity"
+    },
+    {
+      icon: Award,
+      title: "Government Support",
+      description: "Progressive policies and dedicated support for international businesses"
     }
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-dividers/20 to-background">
+    <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-cta-coral/20 backdrop-blur-sm border border-cta-coral/40 rounded-full mb-6">
-            <MapPin className="w-4 h-4 text-cta-coral mr-2" />
-            <span className="font-body text-sm font-medium text-cta-coral">
-              India's Silicon Valley
-            </span>
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
+            <MapPin className="w-4 h-4 mr-2" />
+            INDIA'S SILICON VALLEY
           </div>
           
-          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
-            Why <span className="bg-gradient-to-r from-logo-teal to-cta-coral bg-clip-text text-transparent">Bangalore</span> in India?
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
+            Why <span className="font-semibold text-logo-teal">Bangalore</span> for Your GCC
           </h2>
           
-          <p className="font-body text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Bangalore has emerged as India's premier GCC destination, offering unmatched advantages for global companies:
+          <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
+            Bangalore has emerged as India's premier GCC destination, offering unmatched strategic advantages for global enterprises
           </p>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
           {advantages.map((advantage, index) => {
             const IconComponent = advantage.icon;
             return (
               <div 
                 key={index}
-                className="group relative"
+                className="group bg-white border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 relative"
               >
-                {/* Main Card */}
-                <div className={`bg-gradient-to-br ${advantage.bgColor} border border-border rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden`}>
-                  
-                  {/* Background Pattern */}
-                  <div className="absolute top-0 right-0 w-20 h-20 opacity-10">
-                    <div className={`w-full h-full bg-gradient-to-br ${advantage.color} rounded-full blur-2xl`}></div>
+                <div className="relative">
+                  {/* Icon */}
+                  <div className="w-12 h-12 bg-logo-teal text-white flex items-center justify-center mb-6">
+                    <IconComponent className="w-6 h-6" />
                   </div>
                   
-                  <div className="relative">
-                    {/* Icon */}
-                    <div className={`w-14 h-14 bg-gradient-to-br ${advantage.color} rounded-xl flex items-center justify-center mb-6 shadow-lg`}>
-                      <IconComponent className="w-7 h-7 text-white" />
+                  {/* Number */}
+                  <div className="mb-4">
+                    <span className="text-3xl lg:text-4xl font-light text-gray-900">
+                      {advantage.number}
+                    </span>
+                    <div className="text-xs text-gray-500 font-medium tracking-wide mt-1">
+                      {advantage.metric}
                     </div>
-                    
-                    {/* Number */}
-                    <div className="mb-4">
-                      <span className="font-header font-bold text-3xl lg:text-4xl text-foreground">
-                        {advantage.number}
-                      </span>
-                    </div>
-                    
-                    {/* Title */}
-                    <h3 className="font-header font-semibold text-lg text-card-foreground mb-3 leading-tight">
-                      {advantage.title}
-                    </h3>
-                    
-                    {/* Description */}
-                    <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                      {advantage.description}
-                    </p>
                   </div>
                   
-                  {/* Hover indicator */}
-                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className={`w-8 h-8 bg-gradient-to-br ${advantage.color} rounded-full flex items-center justify-center`}>
-                      <ArrowRight className="w-4 h-4 text-white" />
-                    </div>
-                  </div>
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight">
+                    {advantage.title}
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-sm text-gray-600 leading-relaxed font-light">
+                    {advantage.description}
+                  </p>
+                </div>
+                
+                {/* Professional hover indicator */}
+                <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-6 h-px bg-logo-teal"></div>
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* Visual Enhancement Section */}
-        <div className="bg-gradient-to-br from-card to-logo-teal/5 border border-border rounded-3xl p-8 lg:p-12 mb-12">
+        {/* Strategic Advantages Section */}
+        <div className="bg-gray-50 p-8 lg:p-12 mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             {/* Content Side */}
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-logo-teal to-cta-coral rounded-xl flex items-center justify-center">
-                  <Globe className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-header font-bold text-2xl text-foreground">
-                    Global Innovation Hub
-                  </h3>
-                  <p className="font-body text-sm text-muted-foreground">
-                    Where world-class talent meets cutting-edge technology
-                  </p>
-                </div>
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
+                  Strategic <span className="font-semibold text-logo-teal">Advantages</span>
+                </h3>
+                <div className="w-16 h-px bg-logo-teal mb-6"></div>
+                <p className="text-lg text-gray-600 font-light leading-relaxed">
+                  Bangalore offers a unique combination of talent, infrastructure, and business environment 
+                  that makes it the ideal location for your Global Capability Center.
+                </p>
               </div>
               
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-cta-coral rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="font-body text-muted-foreground">
-                    Home to India's largest concentration of tech companies and startups
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-logo-teal rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="font-body text-muted-foreground">
-                    World-class infrastructure with modern office spaces and amenities
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-logo-beige rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="font-body text-muted-foreground">
-                    Strategic location with excellent connectivity to global markets
-                  </p>
-                </div>
+              <div className="space-y-6">
+                {keyAdvantages.map((advantage, index) => {
+                  const IconComponent = advantage.icon;
+                  return (
+                    <div key={index} className="flex items-start space-x-4">
+                      <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                        <IconComponent className="w-5 h-5 text-logo-teal" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                          {advantage.title}
+                        </h4>
+                        <p className="text-gray-600 font-light leading-relaxed">
+                          {advantage.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
-            {/* Visual Side */}
+            {/* Map Side */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-logo-teal/10 to-cta-coral/10 rounded-2xl border-2 border-dashed border-logo-teal/30 aspect-[4/3] flex flex-col items-center justify-center space-y-4">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325319.40169235034!2d77.46613117853798!3d12.953945617307905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka%2C%20India!5e1!3m2!1sen!2suk!4v1749823203534!5m2!1sen!2suk" width="100%" height="100%" style={{border:0}} loading="lazy" ></iframe>
+              <div className="bg-white border border-gray-200 p-4">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325319.40169235034!2d77.46613117853798!3d12.953945617307905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka%2C%20India!5e1!3m2!1sen!2suk!4v1749823203534!5m2!1sen!2suk" 
+                  width="100%" 
+                  height="300" 
+                  style={{border:0}} 
+                  loading="lazy"
+                  title="Bangalore Location Map">
+                </iframe>
               </div>
 
-              {/* Floating Stats */}
-              <div className="absolute -top-4 -right-4 bg-cta-coral text-white px-4 py-2 rounded-xl shadow-lg transform rotate-12">
-                <div className="font-header font-bold text-sm">#1 Tech Hub</div>
+              {/* Professional info cards */}
+              <div className="absolute -top-4 -right-4 bg-cta-coral text-white px-4 py-2 text-sm font-semibold">
+                #1 Tech Hub
               </div>
               
-              <div className="absolute -bottom-4 -left-4 bg-logo-teal text-white px-4 py-2 rounded-xl shadow-lg transform -rotate-12">
-                <div className="font-header font-bold text-sm">Global Ready</div>
+              <div className="absolute -bottom-4 -left-4 bg-logo-teal text-white px-4 py-2 text-sm font-semibold">
+                Global Ready
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Key Facts Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="text-center p-6 lg:p-8">
+            <div className="w-16 h-16 bg-logo-teal/10 mx-auto mb-4 flex items-center justify-center">
+              <Building2 className="w-8 h-8 text-logo-teal" />
+            </div>
+            <h4 className="text-xl font-semibold text-gray-900 mb-2">Infrastructure</h4>
+            <p className="text-gray-600 font-light leading-relaxed">
+              World-class office spaces, technology parks, and modern amenities designed for global operations
+            </p>
+          </div>
+
+          <div className="text-center p-6 lg:p-8">
+            <div className="w-16 h-16 bg-cta-coral/10 mx-auto mb-4 flex items-center justify-center">
+              <CheckCircle className="w-8 h-8 text-cta-coral" />
+            </div>
+            <h4 className="text-xl font-semibold text-gray-900 mb-2">Ecosystem</h4>
+            <p className="text-gray-600 font-light leading-relaxed">
+              Established network of suppliers, partners, and service providers supporting GCC operations
+            </p>
+          </div>
+
+          <div className="text-center p-6 lg:p-8">
+            <div className="w-16 h-16 bg-gray-100 mx-auto mb-4 flex items-center justify-center">
+              <Globe className="w-8 h-8 text-gray-600" />
+            </div>
+            <h4 className="text-xl font-semibold text-gray-900 mb-2">Connectivity</h4>
+            <p className="text-gray-600 font-light leading-relaxed">
+              Excellent international connectivity with direct flights to major global business centers
+            </p>
+          </div>
+        </div>
+
+        {/* Professional CTA */}
+        <div className="mt-16 lg:mt-20 text-center">
+          <div className="inline-flex flex-col sm:flex-row gap-4">
+            <button className="cursor-pointer group bg-logo-teal hover:bg-logo-teal/90 text-white px-8 py-4 font-semibold transition-all duration-200 inline-flex items-center">
+              Explore Bangalore Locations
+              <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+            </button>
+            <button className="cursor-pointer border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold transition-all duration-200 hover:bg-logo-teal/5">
+              Download Location Guide
+            </button>
           </div>
         </div>
       </div>

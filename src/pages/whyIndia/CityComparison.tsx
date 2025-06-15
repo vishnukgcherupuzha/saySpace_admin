@@ -55,10 +55,10 @@ const CityComparison = () => {
   const cities: City[] = [
     { name: 'Bangalore', color: 'bg-logo-teal', textColor: 'text-logo-teal' },
     { name: 'Hyderabad', color: 'bg-cta-coral', textColor: 'text-cta-coral' },
-    { name: 'Delhi NCR', color: 'bg-logo-beige', textColor: 'text-logo-beige' },
-    { name: 'Mumbai', color: 'bg-logo-teal/80', textColor: 'text-logo-teal' },
-    { name: 'Chennai', color: 'bg-cta-coral/80', textColor: 'text-cta-coral' },
-    { name: 'Pune', color: 'bg-logo-beige/80', textColor: 'text-logo-beige' }
+    { name: 'Delhi NCR', color: 'bg-gray-600', textColor: 'text-gray-600' },
+    { name: 'Mumbai', color: 'bg-logo-teal', textColor: 'text-logo-teal' },
+    { name: 'Chennai', color: 'bg-cta-coral', textColor: 'text-cta-coral' },
+    { name: 'Pune', color: 'bg-gray-600', textColor: 'text-gray-600' }
   ];
 
   const comparisonData: ComparisonParameter[] = [
@@ -185,7 +185,7 @@ const CityComparison = () => {
       quality: 80
     },
     {
-      city: 'India',
+      city: 'Pune',
       pros: ['Cost-effective', 'Quality of life', 'Educational institutions', 'Low attrition', 'Pleasant climate', 'Proximity to Mumbai'],
       cons: ['Smaller ecosystem', 'Limited infrastructure', 'Weather dependency', 'Fewer global companies'],
       score: 82,
@@ -201,13 +201,13 @@ const CityComparison = () => {
   const talentPoolData = cities.map((city, index) => ({
     name: city.name,
     value: parseFloat(comparisonData[0].data[index].replace(/[^0-9.]/g, '')),
-    fill: index === 0 ? '#37474F' : index === 1 ? '#E07A5F' : index === 2 ? '#C9B29F' : index === 3 ? '#37474F' : index === 4 ? '#E07A5F' : '#C9B29F'
+    fill: index === 0 ? '#37474F' : index === 1 ? '#E07A5F' : index === 2 ? '#6B7280' : index === 3 ? '#37474F' : index === 4 ? '#E07A5F' : '#6B7280'
   }));
 
   const gccData = cities.map((city, index) => ({
     name: city.name,
     value: parseFloat(comparisonData[4].data[index].replace(/[^0-9.]/g, '')),
-    fill: index === 0 ? '#37474F' : index === 1 ? '#E07A5F' : index === 2 ? '#C9B29F' : index === 3 ? '#37474F' : index === 4 ? '#E07A5F' : '#C9B29F'
+    fill: index === 0 ? '#37474F' : index === 1 ? '#E07A5F' : index === 2 ? '#6B7280' : index === 3 ? '#37474F' : index === 4 ? '#E07A5F' : '#6B7280'
   }));
 
   const radarData = qualitativeAnalysis.map(city => ({
@@ -222,8 +222,8 @@ const CityComparison = () => {
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-card p-3 border border-dividers rounded-lg shadow-lg">
-          <p className="font-body font-medium text-foreground">{`${label}: ${payload[0].value}`}</p>
+        <div className="bg-white p-3 border border-gray-200 rounded-lg">
+          <p className="font-medium text-gray-900">{`${label}: ${payload[0].value}`}</p>
         </div>
       );
     }
@@ -231,31 +231,36 @@ const CityComparison = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-dividers/10 to-background">
+    <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
-            Bangalore vs. <span className="text-logo-teal">Other Indian Cities</span>
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
+            <MapPin className="w-4 h-4 mr-2" />
+            LOCATION ANALYSIS
+          </div>
+          
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
+            Bangalore vs. <span className="font-semibold text-logo-teal">Other Indian Cities</span>
           </h2>
           
-          <p className="font-body text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
+          <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto mb-8 font-light leading-relaxed">
             A comprehensive comparison of key GCC factors across major Indian tech hubs
           </p>
 
           {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 bg-card border border-dividers rounded-2xl p-2 max-w-2xl mx-auto shadow-sm">
+          <div className="flex flex-wrap justify-center gap-2 bg-white border border-gray-200 p-2 max-w-2xl mx-auto">
             {tabs.map((tab) => {
               const IconComponent = tab.icon;
               return (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center px-4 py-3 rounded-xl font-header font-medium transition-all duration-200 ${
+                  className={`flex items-center px-4 py-3 font-medium transition-all duration-200 ${
                     activeTab === tab.id
-                      ? 'bg-logo-teal text-white shadow-md'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-accent/10'
+                      ? 'bg-logo-teal text-white'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   }`}
                 >
                   <IconComponent className="w-4 h-4 mr-2" />
@@ -271,13 +276,13 @@ const CityComparison = () => {
           <div className="space-y-8">
             
             {/* Comparison Table */}
-            <div className="bg-card border border-dividers rounded-3xl overflow-hidden shadow-lg">
+            <div className="bg-white border border-gray-200 overflow-hidden">
               
               {/* Table Header */}
-              <div className="grid grid-cols-7 bg-gradient-to-r from-logo-teal to-cta-coral text-white p-4">
-                <div className="font-header font-semibold text-sm lg:text-base">Parameter</div>
+              <div className="grid grid-cols-7 bg-gray-50 border-b border-gray-200 p-4">
+                <div className="font-semibold text-sm lg:text-base text-gray-900">Parameter</div>
                 {cities.map((city, index) => (
-                  <div key={index} className="font-header font-semibold text-sm lg:text-base text-center">
+                  <div key={index} className="font-semibold text-sm lg:text-base text-center text-gray-900">
                     {city.name}
                   </div>
                 ))}
@@ -289,21 +294,21 @@ const CityComparison = () => {
                 const bestIndex = getBestValue(row.data, row.better);
                 
                 return (
-                  <div key={rowIndex} className={`grid grid-cols-7 p-4 border-b border-dividers last:border-b-0 ${
-                    rowIndex % 2 === 0 ? 'bg-background' : 'bg-dividers/20'
+                  <div key={rowIndex} className={`grid grid-cols-7 p-4 border-b border-gray-200 last:border-b-0 ${
+                    rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'
                   }`}>
                     <div className="flex items-center space-x-2">
                       <IconComponent className="w-4 h-4 text-logo-teal flex-shrink-0" />
-                      <span className="font-body font-medium text-foreground text-sm">
+                      <span className="font-medium text-gray-900 text-sm">
                         {row.parameter}
                       </span>
                     </div>
                     {row.data.map((value, cellIndex) => (
                       <div key={cellIndex} className="text-center">
-                        <span className={`font-body text-sm ${
+                        <span className={`text-sm ${
                           cellIndex === bestIndex 
-                            ? 'font-bold text-cta-coral bg-cta-coral/10 px-2 py-1 rounded-lg' 
-                            : 'text-muted-foreground'
+                            ? 'font-bold text-cta-coral bg-cta-coral/10 px-2 py-1' 
+                            : 'text-gray-600 font-light'
                         }`}>
                           {value}
                         </span>
@@ -315,12 +320,12 @@ const CityComparison = () => {
             </div>
 
             {/* Note */}
-            <div className="bg-gradient-to-r from-logo-teal/5 to-cta-coral/5 border border-logo-teal/20 rounded-2xl p-6">
+            <div className="bg-white border border-gray-200 p-6">
               <div className="flex items-start space-x-3">
                 <Info className="w-5 h-5 text-logo-teal flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-body text-sm text-muted-foreground">
-                    <strong className="text-foreground">Note:</strong> Data compiled from industry reports, government statistics, and real estate surveys (2024-2025). Lower values for costs, attrition, and congestion are better.
+                  <p className="text-sm text-gray-600 font-light">
+                    <strong className="text-gray-900">Note:</strong> Data compiled from industry reports, government statistics, and real estate surveys (2024-2025). Lower values for costs, attrition, and congestion are better.
                   </p>
                 </div>
               </div>
@@ -333,8 +338,8 @@ const CityComparison = () => {
           <div className="space-y-8">
             
             {/* Overall Radar Chart */}
-            <div className="bg-card border border-dividers rounded-2xl p-8 shadow-lg">
-              <h3 className="font-header font-bold text-xl text-foreground mb-6 flex items-center">
+            <div className="bg-white border border-gray-200 p-8">
+              <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-logo-teal" />
                 Overall Performance Radar
               </h3>
@@ -342,8 +347,8 @@ const CityComparison = () => {
                 <ResponsiveContainer width="100%" height="100%">
                   <RadarChart data={radarData}>
                     <PolarGrid gridType="polygon" />
-                    <PolarAngleAxis dataKey="city" className="font-body text-sm fill-muted-foreground" />
-                    <PolarRadiusAxis angle={90} domain={[0, 100]} className="font-body text-xs fill-muted-foreground" />
+                    <PolarAngleAxis dataKey="city" className="text-sm fill-gray-600" />
+                    <PolarRadiusAxis angle={90} domain={[0, 100]} className="text-xs fill-gray-600" />
                     <Radar
                       name="Performance"
                       dataKey="Ecosystem"
@@ -361,19 +366,19 @@ const CityComparison = () => {
             {/* City Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {qualitativeAnalysis.map((city, index) => (
-                <div key={index} className="bg-card border border-dividers rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
+                <div key={index} className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all duration-300">
                   
                   {/* City Header */}
                   <div className="flex items-center justify-between mb-6">
-                    <h3 className="font-header font-bold text-xl text-foreground flex items-center">
+                    <h3 className="text-xl font-semibold text-gray-900 flex items-center">
                       <MapPin className="w-5 h-5 mr-2 text-logo-teal" />
                       {city.city}
                     </h3>
                     <div className="text-center">
-                      <div className="font-header font-bold text-2xl text-cta-coral">
+                      <div className="text-2xl font-light text-gray-900">
                         {city.score}
                       </div>
-                      <div className="font-body text-xs text-muted-foreground">
+                      <div className="text-xs text-gray-600 font-medium">
                         Score
                       </div>
                     </div>
@@ -381,24 +386,24 @@ const CityComparison = () => {
 
                   {/* Score Breakdown */}
                   <div className="mb-6 space-y-2">
-                    <div className="font-body text-xs text-muted-foreground mb-2">Performance Metrics:</div>
+                    <div className="text-xs text-gray-600 mb-2 font-medium">Performance Metrics:</div>
                     {[
                       { label: 'Ecosystem', value: city.ecosystem, color: 'bg-logo-teal' },
-                      { label: 'Infrastructure', value: city.infrastructure, color: 'bg-logo-beige' },
+                      { label: 'Infrastructure', value: city.infrastructure, color: 'bg-gray-400' },
                       { label: 'Talent', value: city.talent, color: 'bg-cta-coral' },
-                      { label: 'Cost', value: city.cost, color: 'bg-logo-teal/70' },
-                      { label: 'Quality', value: city.quality, color: 'bg-cta-coral/70' }
+                      { label: 'Cost', value: city.cost, color: 'bg-logo-teal' },
+                      { label: 'Quality', value: city.quality, color: 'bg-cta-coral' }
                     ].map((metric, idx) => (
-                      <div key={idx} className="flex items-center justify-between font-body text-xs">
-                        <span className="text-muted-foreground">{metric.label}</span>
+                      <div key={idx} className="flex items-center justify-between text-xs">
+                        <span className="text-gray-600">{metric.label}</span>
                         <div className="flex items-center space-x-2">
-                          <div className="w-16 bg-dividers rounded-full h-1.5">
+                          <div className="w-16 bg-gray-200 h-1.5">
                             <div 
-                              className={`${metric.color} h-1.5 rounded-full transition-all duration-1000`}
+                              className={`${metric.color} h-1.5 transition-all duration-1000`}
                               style={{ width: `${metric.value}%` }}
                             />
                           </div>
-                          <span className="text-muted-foreground w-8">{metric.value}</span>
+                          <span className="text-gray-600 w-8">{metric.value}</span>
                         </div>
                       </div>
                     ))}
@@ -406,15 +411,15 @@ const CityComparison = () => {
 
                   {/* Pros */}
                   <div className="mb-6">
-                    <h4 className="font-header font-semibold text-sm text-foreground mb-3 flex items-center">
+                    <h4 className="font-semibold text-sm text-gray-900 mb-3 flex items-center">
                       <CheckCircle className="w-4 h-4 mr-2 text-logo-teal" />
                       Advantages
                     </h4>
                     <div className="space-y-2">
                       {city.pros.map((pro, idx) => (
                         <div key={idx} className="flex items-start space-x-2">
-                          <div className="w-2 h-2 bg-logo-teal rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="font-body text-sm text-muted-foreground">
+                          <div className="w-2 h-2 bg-logo-teal mt-2 flex-shrink-0"></div>
+                          <span className="text-sm text-gray-600 font-light">
                             {pro}
                           </span>
                         </div>
@@ -424,15 +429,15 @@ const CityComparison = () => {
 
                   {/* Cons */}
                   <div>
-                    <h4 className="font-header font-semibold text-sm text-foreground mb-3 flex items-center">
+                    <h4 className="font-semibold text-sm text-gray-900 mb-3 flex items-center">
                       <Info className="w-4 h-4 mr-2 text-cta-coral" />
                       Considerations
                     </h4>
                     <div className="space-y-2">
                       {city.cons.map((con, idx) => (
                         <div key={idx} className="flex items-start space-x-2">
-                          <div className="w-2 h-2 bg-cta-coral rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="font-body text-sm text-muted-foreground">
+                          <div className="w-2 h-2 bg-cta-coral mt-2 flex-shrink-0"></div>
+                          <span className="text-sm text-gray-600 font-light">
                             {con}
                           </span>
                         </div>
@@ -450,8 +455,8 @@ const CityComparison = () => {
           <div className="space-y-8">
             
             {/* Talent Pool Bar Chart */}
-            <div className="bg-card border border-dividers rounded-2xl p-8 shadow-lg">
-              <h3 className="font-header font-bold text-xl text-foreground mb-6 flex items-center">
+            <div className="bg-white border border-gray-200 p-8 ">
+              <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-6 flex items-center">
                 <Users className="w-5 h-5 mr-2 text-logo-teal" />
                 Tech Talent Pool Comparison (Millions)
               </h3>
@@ -459,9 +464,9 @@ const CityComparison = () => {
               <div className="h-80">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={talentPoolData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#E0E0E0" />
-                    <XAxis dataKey="name" className="font-body text-sm fill-muted-foreground" />
-                    <YAxis className="font-body text-sm fill-muted-foreground" />
+                    <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
+                    <XAxis dataKey="name" className="text-sm fill-gray-600" />
+                    <YAxis className="text-sm fill-gray-600" />
                     <Tooltip content={<CustomTooltip />} />
                     <Bar dataKey="value" radius={[4, 4, 0, 0]}>
                       {talentPoolData.map((entry, index) => (
@@ -474,8 +479,8 @@ const CityComparison = () => {
             </div>
 
             {/* GCC Count Bar Chart */}
-            <div className="bg-card border border-dividers rounded-2xl p-8 shadow-lg">
-              <h3 className="font-header font-bold text-xl text-foreground mb-6 flex items-center">
+            <div className="bg-white border border-gray-200 p-8">
+              <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-6 flex items-center">
                 <Building2 className="w-5 h-5 mr-2 text-cta-coral" />
                 Active GCCs Comparison
               </h3>
@@ -483,9 +488,9 @@ const CityComparison = () => {
               <div className="h-80">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={gccData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#E0E0E0" />
-                    <XAxis dataKey="name" className="font-body text-sm fill-muted-foreground" />
-                    <YAxis className="font-body text-sm fill-muted-foreground" />
+                    <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
+                    <XAxis dataKey="name" className="text-sm fill-gray-600" />
+                    <YAxis className="text-sm fill-gray-600" />
                     <Tooltip content={<CustomTooltip />} />
                     <Bar dataKey="value" radius={[4, 4, 0, 0]}>
                       {gccData.map((entry, index) => (
@@ -501,8 +506,8 @@ const CityComparison = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               
               {/* Air Quality Comparison */}
-              <div className="bg-card border border-dividers rounded-2xl p-6 shadow-lg">
-                <h4 className="font-header font-bold text-lg text-foreground mb-4 flex items-center">
+              <div className="bg-white border border-gray-200 p-6">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                   <Wind className="w-5 h-5 mr-2 text-logo-teal" />
                   Air Quality Index
                 </h4>
@@ -513,21 +518,21 @@ const CityComparison = () => {
                     const numericValue = parseFloat(aqiValue.split('-')[0]);
                     const maxValue = 200;
                     const percentage = (numericValue / maxValue) * 100;
-                    const colorClass = numericValue < 100 ? 'bg-logo-teal' : numericValue < 150 ? 'bg-logo-beige' : 'bg-cta-coral';
+                    const colorClass = numericValue < 100 ? 'bg-logo-teal' : numericValue < 150 ? 'bg-gray-400' : 'bg-cta-coral';
                     
                     return (
                       <div key={index}>
                         <div className="flex justify-between items-center mb-1">
-                          <span className="font-body font-medium text-foreground text-sm">
+                          <span className="font-medium text-gray-900 text-sm">
                             {city.name}
                           </span>
-                          <span className="font-body text-sm text-muted-foreground">
+                          <span className="text-sm text-gray-600 font-light">
                             {aqiValue}
                           </span>
                         </div>
-                        <div className="w-full bg-dividers rounded-full h-2">
+                        <div className="w-full bg-gray-200 h-2">
                           <div 
-                            className={`${colorClass} h-2 rounded-full transition-all duration-1000`}
+                            className={`${colorClass} h-2 transition-all duration-1000`}
                             style={{ width: `${percentage}%` }}
                           ></div>
                         </div>
@@ -538,8 +543,8 @@ const CityComparison = () => {
               </div>
 
               {/* Traffic Congestion */}
-              <div className="bg-card border border-dividers rounded-2xl p-6 shadow-lg">
-                <h4 className="font-header font-bold text-lg text-foreground mb-4 flex items-center">
+              <div className="bg-white border border-gray-200 p-6">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                   <Car className="w-5 h-5 mr-2 text-cta-coral" />
                   Traffic Congestion
                 </h4>
@@ -549,21 +554,21 @@ const CityComparison = () => {
                     const trafficValue = comparisonData[5].data[index];
                     const numericValue = parseFloat(trafficValue.replace('%', ''));
                     const percentage = numericValue;
-                    const colorClass = numericValue < 50 ? 'bg-logo-teal' : numericValue < 60 ? 'bg-logo-beige' : 'bg-cta-coral';
+                    const colorClass = numericValue < 50 ? 'bg-logo-teal' : numericValue < 60 ? 'bg-gray-400' : 'bg-cta-coral';
                     
                     return (
                       <div key={index}>
                         <div className="flex justify-between items-center mb-1">
-                          <span className="font-body font-medium text-foreground text-sm">
+                          <span className="font-medium text-gray-900 text-sm">
                             {city.name}
                           </span>
-                          <span className="font-body text-sm text-muted-foreground">
+                          <span className="text-sm text-gray-600 font-light">
                             {trafficValue}
                           </span>
                         </div>
-                        <div className="w-full bg-dividers rounded-full h-2">
+                        <div className="w-full bg-gray-200 h-2">
                           <div 
-                            className={`${colorClass} h-2 rounded-full transition-all duration-1000`}
+                            className={`${colorClass} h-2 transition-all duration-1000`}
                             style={{ width: `${percentage}%` }}
                           ></div>
                         </div>

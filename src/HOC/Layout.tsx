@@ -23,7 +23,7 @@ const Layout = () => {
                     onClick={handleCalculatorClick}
                     onMouseEnter={() => setShowTooltip(true)}
                     onMouseLeave={() => setShowTooltip(false)}
-                    className="cursor-pointer group relative bg-logo-teal hover:bg-logo-teal/90 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-logo-teal/20 overflow-hidden"
+                    className="cursor-pointer group relative bg-logo-teal hover:bg-logo-teal/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-logo-teal/20 overflow-hidden"
                     aria-label="GCC Cost Estimator"
                 >
                     {/* Background Ripple Effect */}

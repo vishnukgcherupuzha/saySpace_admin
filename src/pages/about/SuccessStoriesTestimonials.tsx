@@ -7,6 +7,9 @@ import {
   Award,
   Building2,
   CheckCircle,
+  Calendar,
+  Users,
+  TrendingDown
 } from 'lucide-react';
 
 const SuccessStoriesTestimonials = () => {
@@ -17,17 +20,16 @@ const SuccessStoriesTestimonials = () => {
       id: 1,
       quote: "Say Space's expertise was instrumental in establishing our GCC in India. Their deep local knowledge and strategic approach helped us navigate complex challenges and build a high-performing center that has become a cornerstone of our global operations.",
       name: "Olivia Smith",
-      role: "CTO",
+      role: "Chief Technology Officer",
       company: "Global Tech Solutions",
       industry: "Technology",
+      location: "Bangalore",
       projectDetails: {
         timeline: "6 months",
         teamSize: "200+",
         savings: "45%",
-        satisfaction: "Excellent"
-      },
-      color: "from-logo-teal to-logo-teal/80",
-      bgColor: "from-logo-teal/10 to-logo-teal/5"
+        satisfaction: "Exceptional"
+      }
     },
     {
       id: 2,
@@ -36,14 +38,13 @@ const SuccessStoriesTestimonials = () => {
       role: "VP of Global Operations",
       company: "Financial Services Inc.",
       industry: "Financial Services",
+      location: "Hyderabad",
       projectDetails: {
         timeline: "8 months",
         teamSize: "150+",
         savings: "40%",
         satisfaction: "Outstanding"
-      },
-      color: "from-cta-coral to-cta-coral/80",
-      bgColor: "from-cta-coral/10 to-cta-coral/5"
+      }
     },
     {
       id: 3,
@@ -52,17 +53,15 @@ const SuccessStoriesTestimonials = () => {
       role: "Head of Strategic Operations",
       company: "Healthcare Innovations Ltd.",
       industry: "Healthcare",
+      location: "Chennai",
       projectDetails: {
         timeline: "7 months",
         teamSize: "180+",
         savings: "38%",
-        satisfaction: "Exceptional"
-      },
-      color: "from-logo-beige to-logo-beige/80",
-      bgColor: "from-logo-beige/10 to-logo-beige/5"
+        satisfaction: "Excellent"
+      }
     }
   ];
-
 
   const nextTestimonial = () => {
     setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -79,173 +78,207 @@ const SuccessStoriesTestimonials = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-dividers/10 to-background">
+    <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-logo-beige/20 backdrop-blur-sm border border-logo-beige/40 rounded-full mb-6">
-            <Award className="w-4 h-4 text-logo-teal mr-2" />
-            <span className="font-body text-sm font-medium text-logo-teal">
-              Client Success
-            </span>
+        <div className="text-center mb-16 lg:mb-20">
+          <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
+            <Award className="w-4 h-4 mr-2" />
+            CLIENT SUCCESS
           </div>
           
-          <h2 className="font-header font-bold text-4xl text-foreground mb-6">
-            Success <span className="text-logo-teal">Stories</span>
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
+            Client <span className="font-semibold text-logo-teal">Success Stories</span>
           </h2>
           
-          <p className="font-body text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-            Client Testimonials
-          </p>
-          
-          <p className="font-body text-lg text-muted-foreground max-w-4xl mx-auto">
-            What our clients say about our GCC consulting services
+          <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
+            Hear from enterprise leaders who have successfully established their Global Capability Centers with our guidance
           </p>
         </div>
 
         {/* Main Testimonial */}
-        <div className="mb-16">
-          <div className={`bg-gradient-to-br ${current.bgColor} border border-border rounded-3xl p-8 lg:p-12 relative overflow-hidden`}>
-            
-            {/* Background Elements */}
-            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-logo-teal/10 to-transparent rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-br from-cta-coral/10 to-transparent rounded-full blur-3xl"></div>
-            
-            <div className="relative z-10">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="mb-12">
+          <div className="bg-white border border-gray-200 p-8 lg:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+              
+              {/* Testimonial Content - 8 columns */}
+              <div className="lg:col-span-8 space-y-8">
                 
-                {/* Testimonial Content */}
-                <div className="lg:col-span-2 space-y-6">
-                  
-                  {/* Quote Icon */}
-                  <div className={`w-16 h-16 bg-gradient-to-br ${current.color} rounded-2xl flex items-center justify-center shadow-lg`}>
-                    <Quote className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  {/* Quote */}
-                  <blockquote className="font-body text-xl text-foreground leading-relaxed">
-                    "{current.quote}"
-                  </blockquote>
-                  
-                  {/* Attribution */}
-                  <div className="flex items-center space-x-4">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${current.color} rounded-full flex items-center justify-center shadow-lg`}>
-                      <span className="font-header font-bold text-white text-lg">
-                        {getInitials(current.name)}
-                      </span>
-                    </div>
-                    <div>
-                      <div className="font-header font-bold text-xl text-foreground">
-                        {current.name}
-                      </div>
-                      <div className="font-body text-lg text-cta-coral font-medium">
-                        {current.role}
-                      </div>
-                      <div className="font-body text-muted-foreground">
-                        {current.company}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Rating */}
-                  <div className="flex items-center space-x-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-cta-coral fill-current" />
-                    ))}
-                    <span className="font-body text-sm text-muted-foreground ml-2">
-                      5.0 Client Rating
+                {/* Quote Icon */}
+                <div className="w-12 h-12 bg-logo-teal flex items-center justify-center">
+                  <Quote className="w-6 h-6 text-white" />
+                </div>
+                
+                {/* Quote */}
+                <blockquote className="text-xl lg:text-2xl text-gray-800 leading-relaxed font-light italic">
+                  "{current.quote}"
+                </blockquote>
+                
+                {/* Attribution */}
+                <div className="flex items-center space-x-4 pt-6 border-t border-gray-200">
+                  <div className="w-12 h-12 bg-logo-teal flex items-center justify-center">
+                    <span className="text-white font-semibold text-sm">
+                      {getInitials(current.name)}
                     </span>
+                  </div>
+                  <div>
+                    <div className="text-lg font-semibold text-gray-900">
+                      {current.name}
+                    </div>
+                    <div className="text-logo-teal font-medium">
+                      {current.role}
+                    </div>
+                    <div className="text-gray-600 font-light">
+                      {current.company}
+                    </div>
                   </div>
                 </div>
                 
-                {/* Project Details Card */}
-                <div className="bg-gradient-to-br from-card to-white/50 border border-border rounded-2xl p-6">
-                  <h4 className="font-header font-semibold text-lg text-foreground mb-6 flex items-center">
-                    <Building2 className="w-5 h-5 mr-2 text-logo-teal" />
-                    Project Highlights
+                {/* Rating */}
+                <div className="flex items-center space-x-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-cta-coral fill-current" />
+                  ))}
+                  <span className="text-sm text-gray-600 ml-2 font-medium">
+                    Excellent Rating
+                  </span>
+                </div>
+              </div>
+              
+              {/* Project Details Card - 4 columns */}
+              <div className="lg:col-span-4">
+                <div className="bg-gray-50 border border-gray-200 p-6 lg:p-8">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-6 pb-4 border-b border-gray-200">
+                    Project Results
                   </h4>
                   
-                  <div className="space-y-4">
+                  <div className="space-y-6">
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-logo-teal rounded-full"></div>
-                        <span className="font-body text-sm text-muted-foreground">Timeline</span>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-logo-teal/10 flex items-center justify-center">
+                          <Calendar className="w-4 h-4 text-logo-teal" />
+                        </div>
+                        <span className="text-sm text-gray-600 font-medium">Delivery Timeline</span>
                       </div>
-                      <span className="font-header font-semibold text-foreground">
+                      <span className="text-lg font-semibold text-gray-900">
                         {current.projectDetails.timeline}
                       </span>
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-cta-coral rounded-full"></div>
-                        <span className="font-body text-sm text-muted-foreground">Team Size</span>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-cta-coral/10 flex items-center justify-center">
+                          <Users className="w-4 h-4 text-cta-coral" />
+                        </div>
+                        <span className="text-sm text-gray-600 font-medium">Team Scale</span>
                       </div>
-                      <span className="font-header font-semibold text-foreground">
+                      <span className="text-lg font-semibold text-gray-900">
                         {current.projectDetails.teamSize}
                       </span>
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-logo-beige rounded-full"></div>
-                        <span className="font-body text-sm text-muted-foreground">Cost Savings</span>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-gray-200 flex items-center justify-center">
+                          <TrendingDown className="w-4 h-4 text-gray-600" />
+                        </div>
+                        <span className="text-sm text-gray-600 font-medium">Cost Reduction</span>
                       </div>
-                      <span className="font-header font-semibold text-foreground">
+                      <span className="text-lg font-semibold text-gray-900">
                         {current.projectDetails.savings}
                       </span>
                     </div>
                     
-                    <div className="pt-4 border-t border-dividers">
-                      <div className="flex items-center space-x-2 mb-2">
-                        <CheckCircle className="w-4 h-4 text-logo-teal" />
-                        <span className="font-body text-sm text-muted-foreground">
-                          Industry: {current.industry}
+                    <div className="pt-6 border-t border-gray-200 space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <Building2 className="w-4 h-4 text-gray-500" />
+                        <span className="text-sm text-gray-600">
+                          <span className="font-medium">Industry:</span> {current.industry}
                         </span>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-logo-teal" />
-                        <span className="font-body text-sm text-muted-foreground">
-                          Satisfaction: {current.projectDetails.satisfaction}
+                      <div className="flex items-center space-x-3">
+                        <CheckCircle className="w-4 h-4 text-gray-500" />
+                        <span className="text-sm text-gray-600">
+                          <span className="font-medium">Location:</span> {current.location}
+                        </span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <Award className="w-4 h-4 text-gray-500" />
+                        <span className="text-sm text-gray-600">
+                          <span className="font-medium">Outcome:</span> {current.projectDetails.satisfaction}
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              
-              {/* Navigation */}
-              <div className="flex items-center justify-between mt-8">
-                <div className="flex space-x-2">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setActiveTestimonial(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === activeTestimonial 
-                          ? 'bg-cta-coral scale-125' 
-                          : 'bg-dividers hover:bg-logo-teal'
-                      }`}
-                    />
-                  ))}
-                </div>
-                
-                <div className="flex space-x-2">
-                  <button
-                    onClick={prevTestimonial}
-                    className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:bg-accent transition-colors duration-200"
-                  >
-                    <ChevronLeft className="w-5 h-5 text-muted-foreground" />
-                  </button>
-                  <button
-                    onClick={nextTestimonial}
-                    className="w-10 h-10 bg-card border border-border rounded-lg flex items-center justify-center hover:bg-accent transition-colors duration-200"
-                  >
-                    <ChevronRight className="w-5 h-5 text-muted-foreground" />
-                  </button>
-                </div>
-              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Controls */}
+        <div className="flex items-center justify-between mb-16 lg:mb-20">
+          {/* Pagination Dots */}
+          <div className="flex space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveTestimonial(index)}
+                className={`w-2 h-2 transition-all duration-200 ${
+                  index === activeTestimonial 
+                    ? 'bg-logo-teal' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+            <span className="ml-4 text-sm text-gray-500 font-medium">
+              {activeTestimonial + 1} of {testimonials.length}
+            </span>
+          </div>
+          
+          {/* Arrow Navigation */}
+          <div className="flex space-x-2">
+            <button
+              onClick={prevTestimonial}
+              className="cusrsor-pointer w-10 h-10 bg-white border border-gray-300 hover:border-gray-400 flex items-center justify-center transition-colors duration-200"
+              disabled={activeTestimonial === 0}
+            >
+              <ChevronLeft className="w-5 h-5 text-gray-600" />
+            </button>
+            <button
+              onClick={nextTestimonial}
+              className="cusrsor-pointer w-10 h-10 bg-white border border-gray-300 hover:border-gray-400 flex items-center justify-center transition-colors duration-200"
+              disabled={activeTestimonial === testimonials.length - 1}
+            >
+              <ChevronRight className="w-5 h-5 text-gray-600" />
+            </button>
+          </div>
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="bg-white border border-gray-200 p-8 lg:p-12">
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Client Success Metrics</h3>
+            <div className="w-12 h-px bg-logo-teal mx-auto"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">100%</div>
+              <div className="text-sm text-gray-600 font-medium">Client Satisfaction Rate</div>
+            </div>
+            <div>
+              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">6.8</div>
+              <div className="text-sm text-gray-600 font-medium">Avg. Setup Months</div>
+            </div>
+            <div>
+              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">41%</div>
+              <div className="text-sm text-gray-600 font-medium">Avg. Cost Savings</div>
+            </div>
+            <div>
+              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">50+</div>
+              <div className="text-sm text-gray-600 font-medium">Successful GCCs</div>
             </div>
           </div>
         </div>
@@ -254,4 +287,4 @@ const SuccessStoriesTestimonials = () => {
   );
 };
 
-export default SuccessStoriesTestimonials;
+export default SuccessStoriesTestimonials
