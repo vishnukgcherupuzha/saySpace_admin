@@ -1,7 +1,7 @@
-import { 
-  TrendingUp, 
-  CheckCircle, 
-  Headphones, 
+import {
+  TrendingUp,
+  CheckCircle,
+  Headphones,
   ArrowRight,
   BarChart3,
   RefreshCw
@@ -12,8 +12,9 @@ const OngoingManagementDetail = () => {
     {
       id: 1,
       icon: Headphones,
-      title: "Managed Services",
-      description: "Finance and accounting support, HR administration, IT management and support, and facilities management for hassle-free operations.",
+      title: "Integrated Operations Support",
+      description:
+        "Comprehensive back-office services including finance, HR, IT, and facilities oversight to ensure smooth day-to-day functioning.",
       features: [
         "Finance and accounting support",
         "HR administration",
@@ -24,8 +25,9 @@ const OngoingManagementDetail = () => {
     {
       id: 2,
       icon: BarChart3,
-      title: "Growth & Optimization",
-      description: "Capacity planning and scaling, new capability development, process optimization, and cost efficiency initiatives for continuous improvement.",
+      title: "Scaling & Efficiency",
+      description:
+        "Strategic planning to expand capabilities, refine processes, and implement cost-saving measures for ongoing growth and efficiency.",
       features: [
         "Capacity planning and scaling",
         "New capability development",
@@ -36,8 +38,9 @@ const OngoingManagementDetail = () => {
     {
       id: 3,
       icon: RefreshCw,
-      title: "Change Management",
-      description: "Organizational change strategies, cultural integration programs, and communications planning and execution for smooth transitions.",
+      title: "Organizational Transition",
+      description:
+        "End-to-end change enablement services including transformation strategy, cultural alignment, and communication planning for effective adoption.",
       features: [
         "Organizational change strategies",
         "Cultural integration programs",
@@ -49,20 +52,20 @@ const OngoingManagementDetail = () => {
   return (
     <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
             <TrendingUp className="w-4 h-4 mr-2" />
             SERVICE CATEGORY
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            Ongoing GCC <span className="font-semibold text-logo-teal">Management</span>
+            Continuous GCC <span className="font-semibold text-logo-teal">Oversight</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
-            Ensure long-term success with comprehensive management solutions.
+            Drive lasting success through end-to-end management excellence.
           </p>
         </div>
 
@@ -71,7 +74,7 @@ const OngoingManagementDetail = () => {
           {subServices.map((service) => {
             const IconComponent = service.icon;
             return (
-              <div 
+              <div
                 key={service.id}
                 className="bg-white border border-gray-200 p-6 lg:p-8 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
               >
@@ -87,17 +90,17 @@ const OngoingManagementDetail = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   {/* Title */}
                   <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                     {service.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-gray-600 font-light leading-relaxed mb-6 flex-grow">
                     {service.description}
                   </p>
-                  
+
                   {/* Features */}
                   <div className="space-y-3 pt-4 border-t border-gray-200">
                     <h4 className="font-semibold text-sm text-gray-900 mb-3">
@@ -123,9 +126,9 @@ const OngoingManagementDetail = () => {
           <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
             Ready for Comprehensive <span className="font-semibold text-logo-teal">GCC Management?</span>
           </h3>
-          
+
           <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
-            Our ongoing management experts will ensure your GCC operates efficiently and continues 
+            Our ongoing management experts will ensure your GCC operates efficiently and continues
             to deliver value through strategic oversight and optimization.
           </p>
 
@@ -227,10 +230,10 @@ const OngoingManagementDetail = () => {
               Your Long-Term Strategic Partner
             </h3>
             <p className="text-lg text-gray-300 leading-relaxed font-light mb-8">
-              We don't just manage your GCC — we become your strategic partner, ensuring continuous 
+              We don't just manage your GCC — we become your strategic partner, ensuring continuous
               evolution and growth aligned with your global business objectives.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-3xl lg:text-4xl font-light text-white mb-2">5+</div>

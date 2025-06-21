@@ -1,8 +1,8 @@
-import { 
-  Network, 
-  Building2, 
-  Scale, 
-  GraduationCap, 
+import {
+  Network,
+  Building2,
+  Scale,
+  GraduationCap,
   Cpu,
   CheckCircle,
   ArrowRight,
@@ -15,54 +15,54 @@ const OurNetwork = () => {
     {
       id: 1,
       icon: Building2,
-      title: "Real Estate Partners",
-      description: "Premium office spaces and infrastructure solutions in India's leading technology corridors and business districts",
+      title: "Real Estate Collaborators",
+      description: "High-quality office environments and infrastructure offerings situated within India's premier tech hubs and commercial zones.",
       partners: [
-        "Premium IT Parks & SEZ Zones",
-        "Grade A+ Office Spaces",
-        "Ready-to-deploy Infrastructure",
-        "Flexible Leasing Solutions"
+        "Top-tier IT Parks & SEZs",
+        "Grade A+ Commercial Spaces",
+        "Turnkey Infrastructure Ready",
+        "Flexible Leasing Options"
       ],
-      stats: { number: "25+", label: "Real Estate Partners" }
+      stats: { number: "25+", label: "Real Estate Collaborators" }
     },
     {
       id: 2,
       icon: Scale,
       title: "Legal Advisory Network",
-      description: "Expert legal guidance for GCC establishment, regulatory compliance, and ongoing operational requirements",
+      description: "Specialized legal support covering GCC setup, regulatory adherence, and ongoing compliance needs.",
       partners: [
-        "Corporate Law Specialists",
-        "Regulatory Compliance Experts",
-        "Employment Law Advisors",
-        "IP & Contract Management"
+        "Corporate Law Experts",
+        "Regulatory Compliance Specialists",
+        "Labor Law Consultants",
+        "Intellectual Property & Contract Advisors"
       ],
-      stats: { number: "15+", label: "Legal Partners" }
+      stats: { number: "15+", label: "Legal Advisors" }
     },
     {
       id: 3,
       icon: GraduationCap,
-      title: "Educational Institutions",
-      description: "Strategic partnerships with leading universities and training institutes for comprehensive talent sourcing and development",
+      title: "Academic Partnerships",
+      description: "Collaborations with leading universities and vocational institutions to facilitate effective talent acquisition and skill enhancement.",
       partners: [
-        "Top Engineering Colleges",
-        "Premier Management Institutes",
-        "Skill Development Centers",
-        "Professional Certification Programs"
+        "Premier Engineering Colleges",
+        "Top Management Schools",
+        "Skill Development Institutes",
+        "Professional Certification Bodies"
       ],
-      stats: { number: "30+", label: "Educational Partners" }
+      stats: { number: "30+", label: "Academic Partners" }
     },
     {
       id: 4,
       icon: Cpu,
-      title: "Technology Ecosystem",
-      description: "Access to cutting-edge technology solutions, service providers, and digital infrastructure for modern GCC operations",
+      title: "Technology Network",
+      description: "Connection to advanced technology providers, software services, and digital infrastructure essential for contemporary GCC operations.",
       partners: [
-        "Cloud Infrastructure Providers",
-        "Enterprise Software Solutions",
-        "Cybersecurity Specialists",
-        "Digital Transformation Tools"
+        "Cloud Service Providers",
+        "Enterprise Software Vendors",
+        "Cybersecurity Experts",
+        "Digital Innovation Tools"
       ],
-      stats: { number: "40+", label: "Technology Partners" }
+      stats: { number: "40+", label: "Technology Providers" }
     }
   ];
 
@@ -87,18 +87,18 @@ const OurNetwork = () => {
   return (
     <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
             <Network className="w-4 h-4 mr-2" />
             STRATEGIC PARTNERSHIPS
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
             Our Partner <span className="font-semibold text-cta-coral">Network</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
             A comprehensive ecosystem of trusted partners providing integrated solutions for successful GCC establishment and operations
           </p>
@@ -109,7 +109,7 @@ const OurNetwork = () => {
           {networkCategories.map((category) => {
             const IconComponent = category.icon;
             return (
-              <div 
+              <div
                 key={category.id}
                 className="group bg-white border border-gray-200 p-8 lg:p-10 hover:shadow-lg transition-all duration-300 relative"
               >
@@ -127,7 +127,7 @@ const OurNetwork = () => {
                         <div className="w-12 h-px bg-logo-teal"></div>
                       </div>
                     </div>
-                    
+
                     {/* Stats Badge */}
                     <div className="text-center ml-4">
                       <div className="text-2xl font-light text-gray-900">
@@ -138,12 +138,12 @@ const OurNetwork = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Description */}
                   <p className="text-gray-600 leading-relaxed font-light mb-6">
                     {category.description}
                   </p>
-                  
+
                   {/* Partner Types */}
                   <div className="space-y-3 mb-6">
                     {category.partners.map((partner, idx) => (
@@ -155,7 +155,7 @@ const OurNetwork = () => {
                       </div>
                     ))}
                   </div>
-                  
+
                   {/* Professional hover indicator */}
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-8 h-px bg-logo-teal"></div>
@@ -174,7 +174,7 @@ const OurNetwork = () => {
             </h3>
             <div className="w-16 h-px bg-logo-teal mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 font-light leading-relaxed max-w-3xl mx-auto">
-              Our carefully curated partner network provides you with immediate access to best-in-class 
+              Our carefully curated partner network provides you with immediate access to best-in-class
               service providers, eliminating the time and risk of vendor selection and vetting
             </p>
           </div>
@@ -234,11 +234,11 @@ const OurNetwork = () => {
                 Access our <span className="font-semibold">Partner Network</span>
               </h3>
               <p className="text-lg opacity-90 font-light leading-relaxed">
-                Leverage our established relationships to accelerate your GCC setup with 
+                Leverage our established relationships to accelerate your GCC setup with
                 pre-vetted, high-quality service providers across all domains.
               </p>
             </div>
-            
+
             <div className="lg:text-right">
               <div className="inline-flex flex-col sm:flex-row gap-4">
                 <button className="cursor-pointer bg-white text-logo-teal hover:bg-gray-50 px-8 py-4 font-semibold transition-all duration-200 inline-flex items-center justify-center">

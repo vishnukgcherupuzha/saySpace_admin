@@ -50,39 +50,39 @@ const CareersPage = () => {
   const benefits: Benefit[] = [
     {
       icon: Target,
-      title: 'Impactful Work',
-      description: 'Make a real difference by helping global organizations establish strategic capability centers that drive innovation and growth.',
-      color: 'text-logo-teal bg-logo-teal'
+      title: "Meaningful Impact",
+      description: "Drive tangible change by supporting global companies in creating strategic capability centers that foster innovation and expansion.",
+      color: "text-logo-teal bg-logo-teal"
     },
     {
       icon: TrendingUp,
-      title: 'Career Growth',
-      description: 'Benefit from structured career paths, mentorship programs, and opportunities to develop your skills across diverse projects and industries.',
-      color: 'text-cta-coral bg-cta-coral'
+      title: "Professional Advancement",
+      description: "Gain from clear career trajectories, guidance programs, and opportunities to enhance your expertise across varied projects and sectors.",
+      color: "text-cta-coral bg-cta-coral"
     },
     {
       icon: Users,
-      title: 'Collaborative Culture',
-      description: 'Join a diverse team of professionals who work together to solve complex challenges in a supportive and inclusive environment.',
-      color: 'text-logo-beige bg-logo-beige'
+      title: "Team-Oriented Environment",
+      description: "Become part of a diverse group of experts collaborating to tackle intricate challenges in a welcoming and inclusive setting.",
+      color: "text-logo-beige bg-logo-beige"
     },
     {
       icon: Globe,
-      title: 'Global Exposure',
-      description: 'Work with multinational clients and gain valuable international business experience that enhances your professional profile.',
-      color: 'text-logo-teal bg-logo-teal'
+      title: "International Opportunities",
+      description: "Engage with global clients and acquire valuable cross-border business experience that elevates your career profile.",
+      color: "text-logo-teal bg-logo-teal"
     },
     {
       icon: Lightbulb,
-      title: 'Innovation Focus',
-      description: 'Contribute to cutting-edge solutions and strategic initiatives in one of India\'s fastest-growing business sectors.',
-      color: 'text-cta-coral bg-cta-coral'
+      title: "Focus on Innovation",
+      description: "Play a role in developing pioneering solutions and strategic efforts within one of India’s rapidly expanding business domains.",
+      color: "text-cta-coral bg-cta-coral"
     },
     {
       icon: Heart,
-      title: 'Work-Life Balance',
-      description: 'Enjoy flexible work arrangements, competitive benefits, and a company culture that values wellbeing and personal development.',
-      color: 'text-logo-beige bg-logo-beige'
+      title: "Balanced Lifestyle",
+      description: "Benefit from adaptable work options, attractive perks, and a workplace culture that prioritizes well-being and personal growth.",
+      color: "text-logo-beige bg-logo-beige"
     }
   ];
 
@@ -211,7 +211,7 @@ const CareersPage = () => {
               {/* Main Headline - Enterprise Typography */}
               <div className="space-y-6">
                 <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 leading-[1.1] tracking-tight">
-                  Build Your Career with
+                  Shape Your Future with
                   <br />
                   <span className="font-semibold text-logo-teal">
                     Say Space
@@ -220,7 +220,7 @@ const CareersPage = () => {
 
                 {/* Professional Subtitle */}
                 <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl font-light">
-                  Join India's leading GCC consulting firm and shape the future of global capability centers through meaningful work and professional growth.
+                  Become part of India’s premier GCC consulting firm and drive the evolution of global capability centers with impactful work and career development.
                 </p>
               </div>
 

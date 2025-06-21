@@ -1,5 +1,5 @@
-import { 
-  CheckCircle, 
+import {
+  CheckCircle,
   ArrowRight,
   Target,
   Repeat,
@@ -13,65 +13,65 @@ const EngagementModels = () => {
     {
       id: 1,
       icon: Target,
-      title: "Project-Based",
-      description: "Clearly defined scope, deliverables, and timeline for specific GCC initiatives like setup, expansion, or optimization.",
+      title: "Fixed-Term Projects",
+      description: "Defined objectives, clear deliverables, and a set timeline for focused GCC activities such as launch, scaling, or process enhancement.",
       features: [
-        "Fixed scope and budget",
-        "Defined deliverables and milestones",
-        "Typical duration: 3-6 months",
-        "Ideal for specific GCC initiatives"
+        "Pre-established scope and budget",
+        "Clear milestones and outcomes",
+        "Typical timeframe: 3-6 months",
+        "Perfect for targeted GCC efforts"
       ],
-      buttonText: "Learn More",
-      highlight: "Best for targeted initiatives"
+      buttonText: "Discover More",
+      highlight: "Ideal for focused goals"
     },
     {
       id: 2,
       icon: Repeat,
-      title: "Retained Services",
-      description: "Ongoing advisory and implementation support for GCC strategy, operations, and optimization with dedicated resources.",
+      title: "Ongoing Advisory",
+      description: "Continuous strategic guidance and execution support for your GCC operations, backed by a dedicated expert team.",
       features: [
-        "Monthly retainer model",
-        "Dedicated advisory team",
-        "Scalable engagement scope",
-        "Ideal for ongoing GCC management"
+        "Monthly retainer arrangement",
+        "Committed advisory group",
+        "Flexible engagement scale",
+        "Best suited for sustained GCC oversight"
       ],
-      buttonText: "Learn More",
-      highlight: "Most popular choice",
+      buttonText: "Discover More",
+      highlight: "Preferred by most clients",
       popular: true
     },
     {
       id: 3,
       icon: Settings,
-      title: "Managed GCC",
-      description: "End-to-end management of your GCC where we handle all aspects of setup, operations, and optimization on your behalf.",
+      title: "Fully Managed GCC",
+      description: "Comprehensive management handling every aspect of your GCC setup, day-to-day operations, and performance optimization.",
       features: [
-        "Turnkey solution",
-        "Comprehensive service offering",
-        "Long-term partnership (12+ months)",
-        "Ideal for rapid GCC deployment"
+        "End-to-end turnkey service",
+        "All-inclusive management",
+        "Long-term collaboration (12+ months)",
+        "Optimal for swift GCC launch"
       ],
-      buttonText: "Learn More",
-      highlight: "Complete hands-off solution"
+      buttonText: "Discover More",
+      highlight: "Total hands-free management"
     }
   ];
 
   return (
     <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
             <Users className="w-4 h-4 mr-2" />
             PARTNERSHIP OPTIONS
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            Our Engagement <span className="font-semibold text-cta-coral">Models</span>
+            Client Collaboration Models
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
-            Flexible partnership options to suit your specific requirements
+            Tailored engagement solutions aligned with your unique business needs
           </p>
         </div>
 
@@ -80,7 +80,7 @@ const EngagementModels = () => {
           {engagementModels.map((model) => {
             const IconComponent = model.icon;
             return (
-              <div 
+              <div
                 key={model.id}
                 className={`group relative ${model.popular ? 'transform scale-105' : ''}`}
               >
@@ -95,7 +95,7 @@ const EngagementModels = () => {
 
                 {/* Main Card */}
                 <div className={`bg-white border ${model.popular ? 'border-cta-coral shadow-xl' : 'border-gray-200'} p-6 lg:p-8 hover:shadow-lg transition-all duration-300 hover:border-gray-300 h-full`}>
-                  
+
                   <div className="h-full flex flex-col">
                     {/* Header */}
                     <div className="flex items-center justify-between mb-6">
@@ -114,17 +114,17 @@ const EngagementModels = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     {/* Title */}
                     <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 leading-tight">
                       {model.title}
                     </h3>
-                    
+
                     {/* Description */}
                     <p className="text-gray-600 font-light leading-relaxed mb-6 flex-grow">
                       {model.description}
                     </p>
-                    
+
                     {/* Features */}
                     <div className="space-y-3 mb-8 pt-4 border-t border-gray-200">
                       <h4 className="font-semibold text-sm text-gray-900 mb-3">
@@ -139,13 +139,12 @@ const EngagementModels = () => {
                         </div>
                       ))}
                     </div>
-                    
+
                     {/* CTA Button */}
-                    <button className={`group/btn w-full py-3 px-6 font-semibold text-base transition-all duration-300 flex items-center justify-center ${
-                      model.popular 
-                        ? 'bg-cta-coral hover:bg-cta-coral/90 text-white shadow-sm hover:shadow-md' 
-                        : 'border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal hover:bg-logo-teal/5'
-                    }`}>
+                    <button className={`group/btn w-full py-3 px-6 font-semibold text-base transition-all duration-300 flex items-center justify-center ${model.popular
+                      ? 'bg-cta-coral hover:bg-cta-coral/90 text-white shadow-sm hover:shadow-md'
+                      : 'border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal hover:bg-logo-teal/5'
+                      }`}>
                       {model.buttonText}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-0.5 transition-transform duration-200" />
                     </button>
@@ -175,16 +174,15 @@ const EngagementModels = () => {
               <div className="font-semibold text-gray-900 text-center">Retained Services</div>
               <div className="font-semibold text-gray-900 text-center">Managed GCC</div>
             </div>
-            
+
             {[
               { feature: "Engagement Duration", project: "3-6 months", retained: "Ongoing", managed: "12+ months" },
               { feature: "Resource Allocation", project: "As needed", retained: "Dedicated team", managed: "Full team" },
               { feature: "Scope Flexibility", project: "Fixed", retained: "Scalable", managed: "Comprehensive" },
               { feature: "Investment Level", project: "Low-Medium", retained: "Medium", managed: "Medium-High" }
             ].map((row, index) => (
-              <div key={index} className={`grid grid-cols-4 p-4 lg:p-6 border-b border-gray-200 last:border-b-0 ${
-                index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
-              }`}>
+              <div key={index} className={`grid grid-cols-4 p-4 lg:p-6 border-b border-gray-200 last:border-b-0 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
+                }`}>
                 <div className="font-medium text-gray-900">
                   {row.feature}
                 </div>
@@ -207,9 +205,9 @@ const EngagementModels = () => {
           <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
             Not Sure Which Model <span className="font-semibold text-logo-teal">Fits Best?</span>
           </h3>
-          
+
           <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
-            Our experts will help you choose the optimal engagement model based on your specific requirements, 
+            Our experts will help you choose the optimal engagement model based on your specific requirements,
             timeline, and business objectives.
           </p>
 

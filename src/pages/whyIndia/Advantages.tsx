@@ -1,9 +1,9 @@
-import { 
-  Users, 
-  DollarSign, 
-  Cpu, 
-  Building2, 
-  Clock, 
+import {
+  Users,
+  DollarSign,
+  Cpu,
+  Building2,
+  Clock,
   Shield,
   CheckCircle,
   Globe,
@@ -15,73 +15,73 @@ const Advantages = () => {
     {
       id: 1,
       icon: Users,
-      title: "Unparalleled Talent Pool",
-      description: "Access to the world's largest technical talent pipeline with specialized skills across domains.",
+      title: "Exceptional Talent Reservoir",
+      description: "Tap into a globally renowned pool of technical expertise with specialized competencies across various disciplines.",
       bullets: [
-        "5.8 million STEM graduates annually",
-        "740,000+ engineering graduates each year",
-        "Strong proficiency in emerging technologies",
-        "Excellent English communication skills"
+        "5.8 million STEM graduates produced yearly",
+        "Over 740,000 engineering graduates annually",
+        "High proficiency in cutting-edge technologies",
+        "Superior English language proficiency"
       ]
     },
     {
       id: 2,
       icon: DollarSign,
-      title: "Compelling Cost Advantages",
-      description: "Significant cost benefits compared to Western markets, enabling substantial operational savings.",
+      title: "Significant Cost Efficiencies",
+      description: "Achieve substantial financial benefits compared to Western markets, optimizing operational expenditures.",
       bullets: [
-        "40-60% cost savings vs Western locations",
-        "Competitive compensation structures",
-        "Lower infrastructure and operational costs",
-        "Excellent ROI metrics (200-300% over 5 years)"
+        "40-60% cost reductions compared to Western regions",
+        "Attractive salary frameworks",
+        "Reduced infrastructure and operational expenses",
+        "Impressive ROI projections (200-300% over 5 years)"
       ]
     },
     {
       id: 3,
       icon: Cpu,
-      title: "Digital Transformation Expertise",
-      description: "Proven experience in driving innovation and transformation initiatives for global organizations.",
+      title: "Advanced Digital Innovation",
+      description: "Demonstrated expertise in spearheading transformative initiatives and innovation for multinational enterprises.",
       bullets: [
-        "Strong capabilities in emerging technologies",
-        "Established process excellence methodologies",
-        "Innovation culture and creative problem-solving",
-        "Experience with global digital initiatives"
+        "Robust capabilities in next-generation technologies",
+        "Proven methodologies for process optimization",
+        "Culture of innovation and strategic problem-solving",
+        "Extensive experience in global digital transformation"
       ]
     },
     {
       id: 4,
       icon: Building2,
-      title: "Mature GCC Ecosystem",
-      description: "Well-developed support infrastructure with specialized service providers and industry expertise.",
+      title: "Established GCC Infrastructure",
+      description: "A mature ecosystem supported by specialized service providers and deep industry knowledge.",
       bullets: [
-        "Robust regulatory framework for global operations",
-        "Established knowledge-sharing communities",
-        "Specialized service providers and vendors",
-        "Decades of institutional GCC knowledge"
+        "Comprehensive regulatory support for global operations",
+        "Thriving knowledge-exchange networks",
+        "Access to niche service providers and vendors",
+        "Decades of accumulated GCC expertise"
       ]
     },
     {
       id: 5,
       icon: Clock,
-      title: "Strategic Time Zone Advantage",
-      description: "Ideal positioning for \"follow-the-sun\" operational models enabling 24/7 business continuity.",
+      title: "Optimal Time Zone Alignment",
+      description: "Strategically positioned for continuous global operations through a 'follow-the-sun' model.",
       bullets: [
-        "8-12 hour overlap with Western time zones",
-        "Address issues overnight for Western headquarters",
-        "Enhanced global service delivery capabilities",
-        "Seamless collaboration across global teams"
+        "8-12 hour synchronization with Western time zones",
+        "Overnight resolution capabilities for Western hubs",
+        "Enhanced global service delivery efficiency",
+        "Effortless collaboration across international teams"
       ]
     },
     {
       id: 6,
       icon: Shield,
-      title: "Enhanced Risk Diversification",
-      description: "Strategic risk management through geographic diversification and business continuity planning.",
+      title: "Robust Risk Mitigation",
+      description: "Effective risk management through geographic diversification and comprehensive continuity strategies.",
       bullets: [
-        "Multiple location options within India",
-        "Strong disaster recovery capabilities",
-        "Sophisticated business continuity frameworks",
-        "Balanced global operational footprint"
+        "Multiple operational locations within India",
+        "Advanced disaster recovery systems",
+        "Sophisticated business continuity protocols",
+        "Balanced global operational presence"
       ]
     }
   ];
@@ -111,25 +111,25 @@ const Advantages = () => {
 
   return (
     <div className="bg-white py-20 lg:py-24">
-      
+
       {/* Hero Section */}
       <section className="relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Header */}
           <div className="text-center mb-16 lg:mb-20">
             <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
               <Globe className="w-4 h-4 mr-2" />
               GLOBAL CAPABILITY CENTERS
             </div>
-            
+
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 leading-tight mb-8 tracking-tight">
-              Key Advantages of <br />
-              <span className="font-semibold text-logo-teal">India for GCCs</span>
+              Top Reasons to Build Your <br />
+              <span className="font-semibold text-logo-teal">GCC in India</span>
             </h1>
-            
+
             <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
-              Discover why leading global organizations choose India for their capability centers
+              Uncover the Strategic Reasons Global Leaders Establish GCCs in India
             </p>
           </div>
 
@@ -138,7 +138,7 @@ const Advantages = () => {
             {advantages.map((advantage) => {
               const IconComponent = advantage.icon;
               return (
-                <div 
+                <div
                   key={advantage.id}
                   className="group bg-white border border-gray-200 p-8 lg:p-10 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
                 >
@@ -147,17 +147,17 @@ const Advantages = () => {
                     <div className="w-14 h-14 bg-logo-teal flex items-center justify-center mb-6">
                       <IconComponent className="w-7 h-7 text-white" />
                     </div>
-                    
+
                     {/* Title */}
                     <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 leading-tight">
                       {advantage.title}
                     </h3>
-                    
+
                     {/* Description */}
                     <p className="text-gray-600 font-light leading-relaxed mb-6">
                       {advantage.description}
                     </p>
-                    
+
                     {/* Bullet Points */}
                     <div className="space-y-3 flex-grow pt-4 border-t border-gray-200">
                       <h4 className="font-semibold text-sm text-gray-900 mb-3">
@@ -183,7 +183,7 @@ const Advantages = () => {
       {/* Statistics Section */}
       <section className="bg-gray-50 py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Stats Header */}
           <div className="text-center mb-12">
             <h2 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
@@ -200,18 +200,18 @@ const Advantages = () => {
             {stats.map((stat, index) => {
               const IconComponent = stat.icon;
               return (
-                <div 
+                <div
                   key={index}
                   className="text-center p-6 lg:p-8 bg-white border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
                 >
                   <div className="w-12 h-12 bg-cta-coral flex items-center justify-center mx-auto mb-6">
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
-                  
+
                   <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-4">
                     {stat.number}
                   </div>
-                  
+
                   <div className="text-gray-600 font-medium text-sm">
                     {stat.label}
                   </div>

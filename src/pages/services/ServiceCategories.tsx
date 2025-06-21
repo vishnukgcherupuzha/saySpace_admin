@@ -1,9 +1,9 @@
-import { 
-  Target, 
-  MapPin, 
-  Users, 
-  Scale, 
-  Settings, 
+import {
+  Target,
+  MapPin,
+  Users,
+  Scale,
+  Settings,
   TrendingUp,
   ArrowRight
 } from 'lucide-react';
@@ -13,43 +13,43 @@ const ServiceCategories = () => {
     {
       id: 1,
       icon: Target,
-      title: "Strategic Consulting",
-      description: "Develop a comprehensive GCC strategy aligned with your business objectives",
+      title: "Strategic Advisory",
+      description: "Craft a detailed GCC strategy that aligns with your company’s goals",
       accent: "logo-teal"
     },
     {
       id: 2,
       icon: MapPin,
-      title: "Location Advisory",
-      description: "Identify the optimal India location and infrastructure for your GCC",
+      title: "Location Consulting",
+      description: "Select the best Indian location and infrastructure suited for your GCC",
       accent: "cta-coral"
     },
     {
       id: 3,
       icon: Users,
-      title: "Talent Acquisition",
-      description: "Build high-performing teams with specialized skills for your GCC",
+      title: "Talent Sourcing",
+      description: "Assemble skilled, high-impact teams tailored for your GCC needs",
       accent: "logo-teal"
     },
     {
       id: 4,
       icon: Scale,
-      title: "Legal & Compliance",
-      description: "Navigate regulatory requirements for establishing and operating your GCC",
+      title: "Compliance & Legal Support",
+      description: "Guide you through regulatory frameworks and legal requirements for GCC setup and operations",
       accent: "cta-coral"
     },
     {
       id: 5,
       icon: Settings,
-      title: "Operational Excellence",
-      description: "Establish efficient processes and systems for optimal GCC performance",
+      title: "Operational Efficiency",
+      description: "Implement streamlined processes and systems to maximize your GCC’s effectiveness",
       accent: "logo-teal"
     },
     {
       id: 6,
       icon: TrendingUp,
-      title: "Ongoing Management",
-      description: "Ensure long-term success with comprehensive management solutions",
+      title: "Continuous Management",
+      description: "Deliver end-to-end management services to sustain long-term growth and success",
       accent: "cta-coral"
     }
   ];
@@ -57,20 +57,20 @@ const ServiceCategories = () => {
   return (
     <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
             <Settings className="w-4 h-4 mr-2" />
-            OUR CAPABILITIES
+            OUR EXPERTISE
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            Our Service <span className="font-semibold text-cta-coral">Categories</span>
+            Service <span className="font-semibold text-cta-coral">Offerings</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
-            From strategy to execution, we support every aspect of your GCC journey
+            Comprehensive support covering all phases of your GCC development and growth
           </p>
         </div>
 
@@ -79,7 +79,7 @@ const ServiceCategories = () => {
           {serviceCategories.map((service) => {
             const IconComponent = service.icon;
             return (
-              <div 
+              <div
                 key={service.id}
                 className="group bg-white border border-gray-200 p-6 lg:p-8 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
               >
@@ -88,12 +88,12 @@ const ServiceCategories = () => {
                   <div className={`w-14 h-14 bg-${service.accent} flex items-center justify-center mb-6`}>
                     <IconComponent className="w-7 h-7 text-white" />
                   </div>
-                  
+
                   {/* Title */}
                   <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                     {service.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-gray-600 font-light leading-relaxed flex-grow">
                     {service.description}
@@ -117,9 +117,9 @@ const ServiceCategories = () => {
           <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
             Ready to Build Your <span className="font-semibold text-logo-teal">Global Capability Center?</span>
           </h3>
-          
+
           <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
-            Our comprehensive approach ensures your GCC delivers strategic value from day one. 
+            Our comprehensive approach ensures your GCC delivers strategic value from day one.
             Let's discuss how we can accelerate your global expansion.
           </p>
 

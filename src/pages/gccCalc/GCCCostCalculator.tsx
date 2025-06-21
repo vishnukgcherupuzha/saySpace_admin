@@ -774,7 +774,7 @@ const GCCCostCalculator: React.FC = () => {
               <div className="bg-white border border-gray-200 p-8 lg:p-12 shadow-xl">
                 <div className="mb-8">
                   <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight">
-                    Estimate Your <span className="font-semibold text-logo-teal">GCC Costs</span>
+                    Calculate the Costs of Setting Up Your <span className="font-semibold text-logo-teal">Global Capability Center</span>
                   </h2>
                   <p className="text-gray-600 font-light">
                     Fill in the details below to get a preliminary cost estimate for setting up and operating your GCC in Bangalore.

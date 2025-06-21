@@ -1,9 +1,9 @@
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  BarChart3, 
-  Smartphone, 
+import {
+  Brain,
+  Shield,
+  Cloud,
+  BarChart3,
+  Smartphone,
   Zap,
   ArrowRight,
   Cpu,
@@ -15,44 +15,44 @@ const TechnologyServices = () => {
     {
       id: 1,
       icon: Brain,
-      title: "Artificial Intelligence & ML",
-      description: "Build AI capabilities within your GCC including machine learning solutions, predictive analytics, natural language processing, and computer vision applications.",
+      title: "AI & Machine Learning",
+      description: "Develop cutting-edge AI capabilities in your GCC, including ML models, predictive insights, language understanding, and computer vision systems.",
       capabilities: ["Machine Learning Solutions", "Predictive Analytics", "Natural Language Processing", "Computer Vision"],
       trending: true
     },
     {
       id: 2,
       icon: Shield,
-      title: "Cybersecurity",
-      description: "Implement robust security frameworks with threat detection, vulnerability management, security operations centers, and compliance monitoring for your GCC.",
+      title: "Enterprise Cybersecurity",
+      description: "Establish strong security protocols with proactive threat management, vulnerability assessment, SOC implementation, and compliance tracking.",
       capabilities: ["Threat Detection", "Vulnerability Management", "Security Operations", "Compliance Monitoring"]
     },
     {
       id: 3,
       icon: Cloud,
-      title: "Cloud & DevOps",
-      description: "Establish cloud engineering teams focused on migration, optimization, infrastructure as code, and continuous integration/deployment pipelines.",
+      title: "Cloud Engineering & DevOps",
+      description: "Set up cloud-native teams for seamless migrations, infrastructure automation, performance tuning, and streamlined CI/CD workflows.",
       capabilities: ["Cloud Migration", "Infrastructure as Code", "CI/CD Pipelines", "Optimization"]
     },
     {
       id: 4,
       icon: BarChart3,
-      title: "Data Analytics",
-      description: "Create advanced analytics capabilities with data engineering, business intelligence, data visualization, and big data processing expertise.",
+      title: "Data Science & Analytics",
+      description: "Enable powerful data capabilities including scalable pipelines, business intelligence tools, visual dashboards, and big data technologies.",
       capabilities: ["Data Engineering", "Business Intelligence", "Data Visualization", "Big Data Processing"]
     },
     {
       id: 5,
       icon: Smartphone,
-      title: "Digital Experience",
-      description: "Build capabilities in mobile development, UX/UI design, progressive web applications, and cross-platform solutions for your digital initiatives.",
+      title: "Digital Product Experience",
+      description: "Design and build user-centric digital solutions with mobile apps, responsive web platforms, intuitive UX/UI, and cross-platform products.",
       capabilities: ["Mobile Development", "UX/UI Design", "Progressive Web Apps", "Cross-Platform Solutions"]
     },
     {
       id: 6,
       icon: Zap,
-      title: "Automation & RPA",
-      description: "Implement robotic process automation, workflow optimization, intelligent automation, and process mining to drive operational efficiencies.",
+      title: "Process Automation & RPA",
+      description: "Streamline operations by introducing RPA bots, process intelligence, intelligent automation systems, and workflow enhancements.",
       capabilities: ["Robotic Process Automation", "Workflow Optimization", "Intelligent Automation", "Process Mining"]
     }
   ];
@@ -60,20 +60,20 @@ const TechnologyServices = () => {
   return (
     <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
             <Cpu className="w-4 h-4 mr-2" />
             TECHNOLOGY CAPABILITIES
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            Technology <span className="font-semibold text-logo-teal">Services</span>
+            Digital Innovation <span className="font-semibold text-logo-teal">Services</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
-            Cutting-edge technology capabilities for your GCC operations
+            Equipping your Global Capability Center with state-of-the-art technologies to enhance operations and accelerate growth.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ const TechnologyServices = () => {
           {techServices.map((service) => {
             const IconComponent = service.icon;
             return (
-              <div 
+              <div
                 key={service.id}
                 className="group relative"
               >
@@ -97,23 +97,23 @@ const TechnologyServices = () => {
 
                 {/* Main Card */}
                 <div className="bg-white border border-gray-200 p-6 lg:p-8 hover:shadow-lg transition-all duration-300 hover:border-gray-300 h-full">
-                  
+
                   <div className="h-full flex flex-col">
                     {/* Icon */}
                     <div className="w-14 h-14 bg-logo-teal flex items-center justify-center mb-6">
                       <IconComponent className="w-7 h-7 text-white" />
                     </div>
-                    
+
                     {/* Title */}
                     <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                       {service.title}
                     </h3>
-                    
+
                     {/* Description */}
                     <p className="text-gray-600 font-light leading-relaxed mb-6 flex-grow">
                       {service.description}
                     </p>
-                    
+
                     {/* Capabilities */}
                     <div className="space-y-3 mb-6 pt-4 border-t border-gray-200">
                       <h4 className="font-semibold text-sm text-gray-900 mb-3">
@@ -130,7 +130,7 @@ const TechnologyServices = () => {
                         ))}
                       </div>
                     </div>
-                    
+
                     {/* Learn More Button */}
                     <button className="cursor-pointer group/btn w-full mt-auto py-3 px-6 border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal font-semibold text-base transition-all duration-300 flex items-center justify-center hover:bg-logo-teal/5">
                       Learn More
@@ -151,7 +151,7 @@ const TechnologyServices = () => {
             </h3>
             <div className="w-16 h-px bg-logo-teal mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 font-light max-w-3xl mx-auto">
-              Leverage India's technology talent and innovation ecosystem to build world-class 
+              Leverage India's technology talent and innovation ecosystem to build world-class
               capabilities that drive digital transformation and competitive advantage.
             </p>
           </div>
@@ -228,9 +228,9 @@ const TechnologyServices = () => {
           <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
             Ready to Build Your <span className="font-semibold text-logo-teal">Technology Capabilities?</span>
           </h3>
-          
+
           <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
-            Our technology experts will help you establish cutting-edge capabilities that drive 
+            Our technology experts will help you establish cutting-edge capabilities that drive
             innovation and competitive advantage for your GCC operations.
           </p>
 

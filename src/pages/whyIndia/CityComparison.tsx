@@ -257,7 +257,7 @@ const CityComparison = () => {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center px-4 py-3 font-medium transition-all duration-200 ${
+                  className={`flex items-center px-4 py-3 font-medium transition-all duration-200 cursor-pointer ${
                     activeTab === tab.id
                       ? 'bg-logo-teal text-white'
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'

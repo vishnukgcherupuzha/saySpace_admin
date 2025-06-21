@@ -1,7 +1,7 @@
-import { 
-  Users, 
-  CheckCircle, 
-  Target, 
+import {
+  Users,
+  CheckCircle,
+  Target,
   ArrowRight,
   UserPlus,
   GraduationCap
@@ -12,7 +12,7 @@ const TalentAcquisitionDetail = () => {
     {
       id: 1,
       icon: Target,
-      title: "Recruitment Strategy",
+      title: "Talent Planning & Positioning",
       description: "Talent mapping and market analysis, employer branding and value proposition development, and recruitment process design tailored to your GCC.",
       features: [
         "Talent mapping and market analysis",
@@ -24,7 +24,7 @@ const TalentAcquisitionDetail = () => {
     {
       id: 2,
       icon: UserPlus,
-      title: "Talent Acquisition",
+      title: "Strategic Hiring Solutions",
       description: "Executive and leadership hiring, technical and functional recruitment, and campus recruitment programs with premier educational institutions.",
       features: [
         "Executive and leadership hiring",
@@ -35,7 +35,7 @@ const TalentAcquisitionDetail = () => {
     {
       id: 3,
       icon: GraduationCap,
-      title: "Learning & Development",
+      title: "Capability Development",
       description: "Customized training programs, knowledge transfer frameworks, performance management systems, and career progression planning.",
       features: [
         "Customized training programs",
@@ -49,18 +49,18 @@ const TalentAcquisitionDetail = () => {
   return (
     <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
             <Users className="w-4 h-4 mr-2" />
             SERVICE CATEGORY
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            Talent Acquisition & <span className="font-semibold text-logo-teal">Development</span>
+            Workforce Strategy & <span className="font-semibold text-logo-teal">Growth</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
             Build high-performing teams with specialized skills tailored to your requirements.
           </p>
@@ -71,7 +71,7 @@ const TalentAcquisitionDetail = () => {
           {subServices.map((service) => {
             const IconComponent = service.icon;
             return (
-              <div 
+              <div
                 key={service.id}
                 className="bg-white border border-gray-200 p-6 lg:p-8 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
               >
@@ -87,17 +87,17 @@ const TalentAcquisitionDetail = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   {/* Title */}
                   <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                     {service.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-gray-600 font-light leading-relaxed mb-6 flex-grow">
                     {service.description}
                   </p>
-                  
+
                   {/* Features */}
                   <div className="space-y-3 pt-4 border-t border-gray-200">
                     <h4 className="font-semibold text-sm text-gray-900 mb-3">
@@ -123,9 +123,9 @@ const TalentAcquisitionDetail = () => {
           <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
             Ready to Build Your High-Performing <span className="font-semibold text-logo-teal">GCC Team?</span>
           </h3>
-          
+
           <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
-            Our talent acquisition experts will help you attract, hire, and develop the specialized skills 
+            Our talent acquisition experts will help you attract, hire, and develop the specialized skills
             your GCC needs to succeed in today's competitive landscape.
           </p>
 

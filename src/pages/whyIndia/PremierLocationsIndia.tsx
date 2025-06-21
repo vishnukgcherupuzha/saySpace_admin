@@ -1,8 +1,8 @@
-import { 
-  MapPin, 
-  Users, 
-  DollarSign, 
-  Building2, 
+import {
+  MapPin,
+  Users,
+  DollarSign,
+  Building2,
   Heart,
   CheckCircle,
   ArrowRight
@@ -13,49 +13,49 @@ const PremierLocationsIndia = () => {
     {
       id: 1,
       icon: Users,
-      title: "Superior Talent Quality and Stability",
-      description: "Access to millions of professionals with competitive attrition rates, supported by thousands of annual graduates from premier educational institutions across India's technology hubs.",
+      title: "Outstanding Talent Pool and Retention",
+      description: "Tap into millions of skilled professionals with low turnover rates, bolstered by thousands of graduates from top-tier academic institutions across India’s tech ecosystems.",
       highlights: [
-        "4+ million tech professionals across major hubs",
-        "Lower attrition rates in tier-2 cities",
-        "80,000+ annual graduates from premier institutions",
-        "Diverse skill sets across domains and technologies"
+        "Over 4 million tech experts in key hubs",
+        "Reduced turnover in secondary cities",
+        "More than 80,000 graduates yearly from elite institutions",
+        "Wide-ranging expertise across industries and technologies"
       ]
     },
     {
       id: 2,
       icon: DollarSign,
-      title: "Cost Optimization",
-      description: "Significant cost advantages across India's strategic locations with competitive operational costs, office rentals, and compensation structures offering excellent retention metrics.",
+      title: "Cost Efficiency",
+      description: "Substantial savings in India’s prime locations, with affordable operational expenses, office leases, and salary structures that ensure strong retention outcomes.",
       highlights: [
-        "15-30% lower operational costs vs tier-1 cities",
-        "20-35% lower office rentals in strategic locations",
-        "Competitive compensation structures",
-        "Excellent cost-to-talent ratio"
+        "15-30% cost savings compared to tier-1 cities",
+        "20-35% reduced office rental costs in key areas",
+        "Attractive salary frameworks",
+        "Superior talent-to-cost value"
       ]
     },
     {
       id: 3,
       icon: Building2,
-      title: "Exceptional Infrastructure",
-      description: "Multiple specialized IT parks and SEZs with Grade A facilities, reliable utilities with redundant power and connectivity, and advanced telecommunications infrastructure.",
+      title: "Top-Tier Infrastructure",
+      description: "Numerous dedicated IT zones and SEZs equipped with premium facilities, dependable utilities including backup power and connectivity, and cutting-edge telecom systems.",
       highlights: [
-        "Grade A IT parks and SEZ facilities",
-        "Redundant power and connectivity infrastructure",
-        "Advanced telecommunications networks",
-        "Modern office spaces with global standards"
+        "Premium IT zones and SEZ infrastructure",
+        "Backup power and robust connectivity systems",
+        "State-of-the-art telecom networks",
+        "Contemporary office spaces meeting global benchmarks"
       ]
     },
     {
       id: 4,
       icon: Heart,
-      title: "Superior Quality of Life",
-      description: "Pleasant climate across various Indian locations, lower pollution and congestion in tier-2 cities, rich cultural heritage with cosmopolitan lifestyle, and excellent expatriate facilities.",
+      title: "Enhanced Living Standards",
+      description: "Favorable weather in various Indian cities, reduced pollution and traffic in tier-2 hubs, vibrant cultural traditions with a global lifestyle, and top-notch facilities for expatriates.",
       highlights: [
-        "Pleasant climate in strategic locations",
-        "Lower pollution in emerging tech hubs",
-        "Rich cultural heritage and lifestyle",
-        "Excellent international facilities"
+        "Favorable weather in key locations",
+        "Cleaner environments in growing tech centers",
+        "Vibrant cultural traditions and modern living",
+        "Top-quality international amenities"
       ]
     }
   ];
@@ -63,20 +63,20 @@ const PremierLocationsIndia = () => {
   return (
     <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
             <MapPin className="w-4 h-4 mr-2" />
             PREMIER LOCATIONS
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
             India's Strategic <span className="font-semibold text-logo-teal">GCC Hubs</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
-            Among India's many technology hubs, several locations stand out as preferred choices for forward-thinking organizations
+            Several locations in India’s numerous tech hubs are top picks for innovative organizations.
           </p>
         </div>
 
@@ -84,10 +84,10 @@ const PremierLocationsIndia = () => {
         <div className="bg-gray-50 border border-gray-200 p-8 lg:p-12 mb-16 lg:mb-20">
           <div className="text-center">
             <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-6">
-              Why Choose Strategic Locations in India's GCC Landscape?
+              Why Opt for Prime Locations in India's GCC Ecosystem?
             </h3>
             <p className="text-gray-600 font-light max-w-4xl mx-auto leading-relaxed">
-              India's strategic GCC locations have emerged as premier destinations, offering distinct advantages over traditional metropolitan centers for establishing Global Capability Centers. These locations provide optimal balance of talent, cost, infrastructure, and quality of life.
+              India's key GCC locations have become top destinations, surpassing traditional metro hubs for setting up Global Capability Centers. They offer an ideal mix of talent, affordability, infrastructure, and livability.
             </p>
           </div>
         </div>
@@ -97,7 +97,7 @@ const PremierLocationsIndia = () => {
           {locationAdvantages.map((advantage) => {
             const IconComponent = advantage.icon;
             return (
-              <div 
+              <div
                 key={advantage.id}
                 className="group bg-white border border-gray-200 p-8 lg:p-10 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
               >
@@ -106,17 +106,17 @@ const PremierLocationsIndia = () => {
                   <div className="w-14 h-14 bg-logo-teal flex items-center justify-center mb-6">
                     <IconComponent className="w-7 h-7 text-white" />
                   </div>
-                  
+
                   {/* Title */}
                   <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 leading-tight">
                     {advantage.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-gray-600 font-light leading-relaxed mb-6">
                     {advantage.description}
                   </p>
-                  
+
                   {/* Highlights */}
                   <div className="space-y-3 flex-grow pt-4 border-t border-gray-200">
                     <h4 className="font-semibold text-sm text-gray-900 mb-3">
@@ -145,7 +145,7 @@ const PremierLocationsIndia = () => {
             </h3>
             <div className="w-16 h-px bg-cta-coral mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 font-light max-w-3xl mx-auto">
-              India's premier GCC locations offer compelling advantages that drive business success 
+              India's premier GCC locations offer compelling advantages that drive business success
               and operational excellence for global organizations.
             </p>
           </div>
@@ -222,9 +222,9 @@ const PremierLocationsIndia = () => {
           <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
             Ready to Explore India's <span className="font-semibold text-logo-teal">Premier GCC Locations?</span>
           </h3>
-          
+
           <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
-            Our location advisory experts will help you identify the optimal location that aligns with 
+            Our location advisory experts will help you identify the optimal location that aligns with
             your business objectives, talent requirements, and operational goals.
           </p>
 

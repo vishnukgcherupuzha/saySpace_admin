@@ -11,23 +11,23 @@ const OurPurpose = () => {
   const missionPoints = [
     {
       icon: Building2,
-      text: "Designing and delivering scalable Build-Operate-Transfer (BOT) models tailored to client ambitions"
+      text: "Developing custom-fit Build-Operate-Transfer (BOT) models that align with each client’s vision and growth goals"
     },
     {
       icon: Globe,
-      text: "Managing seamless transitions and transformation journeys across locations and cultures"
+      text: "Enabling smooth transitions across regions, ensuring cultural integration and operational alignment"
     },
     {
       icon: Settings,
-      text: "Engineering high-performance ecosystems with robust talent, governance, and capability structures"
+      text: "Building resilient ecosystems driven by skilled talent, strong governance, and scalable capabilities"
     }
   ];
 
   const visionHighlights = [
-    "50+ organizations across geographies by 2030",
-    "Sustainable growth and operational excellence",
-    "Transformational value creation for global enterprises",
-    "Redefining global talent hub development standards"
+    "Support 50+ enterprises across borders by 2030",
+    "Enable long-term growth with streamlined operations",
+    "Deliver transformative outcomes for global businesses",
+    "Elevate standards for building global talent hubs"
   ];
 
   return (
@@ -46,7 +46,7 @@ const OurPurpose = () => {
           </h2>
           
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
-            The mission and vision that drive our commitment to GCC excellence and transformational outcomes
+            The mission and vision that shape our approach to enabling GCC success and delivering lasting value for our partners
           </p>
         </div>
 
@@ -72,14 +72,13 @@ const OurPurpose = () => {
               {/* Mission Statement */}
               <div className="space-y-8">
                 <p className="text-lg text-gray-700 leading-relaxed font-light">
-                  At <span className="font-semibold text-logo-teal">Say Space</span>, our mission is to architect 
-                  and operationalize world-class Global Capability Centers that accelerate innovation, scale, 
-                  and strategic advantage for enterprises across the globe.
+                  At <span className="font-semibold text-logo-teal">Say Space</span>, our mission is to design and implement 
+                  world-class GCCs that drive innovation, operational agility, and long-term strategic advantage for global companies.
                 </p>
                 
                 <div className="space-y-6">
                   <h4 className="text-lg font-semibold text-gray-900">
-                    We achieve this through:
+                    We do this by:
                   </h4>
                   
                   <div className="space-y-4">
@@ -102,7 +101,7 @@ const OurPurpose = () => {
                 {/* Mission Tagline */}
                 <div className="bg-logo-teal/5 border border-logo-teal/15 p-6">
                   <p className="text-lg font-semibold text-gray-900 text-center">
-                    We don't just set up GCCs — we engineer them for resilience, relevance, and results.
+                    We don’t just launch GCCs — we build them for impact, agility, and measurable success.
                   </p>
                 </div>
               </div>
@@ -129,19 +128,18 @@ const OurPurpose = () => {
               {/* Vision Statement */}
               <div className="space-y-8">
                 <p className="text-lg text-gray-700 leading-relaxed font-light">
-                  To be the world's most trusted enabler of Global Capability Centers, empowering over 
-                  50 organizations across geographies by 2030 — engineered for sustainable growth, 
-                  operational excellence, and transformational value.
+                  To become the most trusted GCC growth partner worldwide, enabling 50+ organizations by 2030 
+                  through operational precision, innovation, and sustainable business models.
                 </p>
                 
                 <p className="text-gray-600 leading-relaxed font-light">
-                  Our vision extends beyond establishing centers — we aim to redefine how the world 
-                  builds and scales global talent hubs for the digital economy.
+                  Our ambition is to go beyond setup — we aim to revolutionize the way businesses approach talent hubs 
+                  for global expansion in a digital-first world.
                 </p>
 
                 {/* Vision Highlights */}
                 <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-gray-900">Key Objectives</h4>
+                  <h4 className="text-lg font-semibold text-gray-900">Our Strategic Goals</h4>
                   <div className="space-y-3">
                     {visionHighlights.map((highlight, index) => (
                       <div key={index} className="flex items-start space-x-3">
@@ -162,8 +160,8 @@ const OurPurpose = () => {
                     </div>
                     <div>
                       <p className="text-gray-700 font-light italic mb-3 leading-relaxed">
-                        "Our vision is to transform how global enterprises think about capability centers — 
-                        from cost centers to innovation engines that drive competitive advantage."
+                        "Our vision is to reshape the global perception of GCCs — evolving them from operational arms 
+                        into strategic engines of innovation and excellence."
                       </p>
                       <div className="text-sm font-semibold text-gray-900">
                         Era Chaturvedi
@@ -183,29 +181,30 @@ const OurPurpose = () => {
         <div className="mt-16 lg:mt-20 bg-logo-teal text-white p-8 lg:p-12">
           <div className="text-center max-w-4xl mx-auto">
             <h3 className="text-2xl lg:text-3xl font-light mb-6">
-              Driving Global Impact
+              Enabling Global Scale
             </h3>
             <p className="text-lg text-gray-300 leading-relaxed font-light mb-8">
-              Through strategic partnerships and innovative solutions, we're building the future of 
-              global business operations — one capability center at a time.
+              Through strategic vision, execution excellence, and enduring partnerships, we help shape 
+              the future of global capability delivery — one center at a time.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-3xl lg:text-4xl font-light text-white mb-2">50+</div>
-                <div className="text-sm text-gray-400 font-medium">Target Organizations by 2030</div>
+                <div className="text-sm text-gray-400 font-medium">Organizations by 2030</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl lg:text-4xl font-light text-white mb-2">15+</div>
-                <div className="text-sm text-gray-400 font-medium">Years of Industry Expertise</div>
+                <div className="text-sm text-gray-400 font-medium">Years of Proven Expertise</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl lg:text-4xl font-light text-white mb-2">100%</div>
-                <div className="text-sm text-gray-400 font-medium">Client Success Rate</div>
+                <div className="text-sm text-gray-400 font-medium">Client Delivery Success</div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

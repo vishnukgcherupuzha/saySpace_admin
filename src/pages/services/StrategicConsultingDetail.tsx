@@ -12,36 +12,36 @@ const StrategicConsultingDetail = () => {
     {
       id: 1,
       icon: TrendingUp,
-      title: "GCC Feasibility Assessment",
-      description: "Comprehensive analysis of your organization's readiness for a GCC, including market analysis, business case development, ROI modeling, and risk assessment.",
+      title: "GCC Feasibility Study",
+      description: "In-depth evaluation of your organization's preparedness for a GCC, covering market research, business case formulation, ROI projections, and risk analysis.",
       features: [
-        "Market analysis",
-        "Business case development", 
-        "ROI modeling",
-        "Risk assessment"
+        "Market research",
+        "Business case formulation",
+        "ROI projections",
+        "Risk analysis"
       ]
     },
     {
       id: 2,
       icon: Settings,
-      title: "GCC Operating Model Design",
-      description: "Development of an optimal operating model including function selection, organizational structure planning, governance framework, and technology roadmap.",
+      title: "GCC Operating Framework Design",
+      description: "Creation of an efficient operating framework that includes function selection, organizational hierarchy planning, governance models, and technology strategies.",
       features: [
         "Function selection",
-        "Organizational structure planning",
-        "Governance framework", 
-        "Technology roadmap"
+        "Organizational hierarchy planning",
+        "Governance models",
+        "Technology strategies"
       ]
     },
     {
       id: 3,
       icon: Map,
-      title: "Transition Roadmap",
-      description: "Detailed implementation planning with phased approach, knowledge transfer methodology, and transition risk management strategies.",
+      title: "Transition Planning",
+      description: "Structured implementation roadmap with phased milestones, knowledge transfer plans, and risk mitigation tactics during transitions.",
       features: [
-        "Phased approach",
-        "Knowledge transfer methodology",
-        "Transition risk management strategies"
+        "Phased milestones",
+        "Knowledge transfer plans",
+        "Risk mitigation tactics"
       ]
     }
   ];
@@ -62,7 +62,7 @@ const StrategicConsultingDetail = () => {
           </h2>
           
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
-            Develop a customized GCC strategy aligned with your global business objectives.
+            Tailor a GCC strategy designed to align perfectly with your global business goals.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ const StrategicConsultingDetail = () => {
                   {/* Features - 4 columns */}
                   <div className="lg:col-span-4">
                     <h4 className="font-semibold text-lg text-gray-900 mb-4">
-                      Key Components:
+                      Key Elements:
                     </h4>
                     <div className="space-y-3">
                       {service.features.map((feature, idx) => (
@@ -129,24 +129,23 @@ const StrategicConsultingDetail = () => {
         {/* Bottom CTA Section */}
         <div className="bg-white border border-gray-200 p-8 lg:p-12 text-center">
           <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
-            Ready to Develop Your <span className="font-semibold text-logo-teal">GCC Strategy?</span>
+            Ready to Craft Your <span className="font-semibold text-logo-teal">GCC Strategy?</span>
           </h3>
           
           <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
-            Our strategic consulting approach ensures your GCC delivers measurable value aligned with your business objectives. 
-            Let's discuss your strategic requirements.
+            Our strategic consulting services are designed to ensure your GCC achieves measurable impact aligned with your business priorities. Reach out to explore your strategic options.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
               <Target className="w-5 h-5 mr-3" />
-              Discuss Your GCC Strategy
+              Explore Your GCC Strategy
               <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
             </button>
 
             <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
               <Settings className="w-5 h-5 mr-3" />
-              Schedule Consultation
+              Book a Consultation
               <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
             </button>
           </div>

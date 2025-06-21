@@ -1,7 +1,7 @@
-import { 
-  Target, 
-  Layers, 
-  Globe, 
+import {
+  Target,
+  Layers,
+  Globe,
   Award,
   ArrowRight,
   Shield,
@@ -13,29 +13,33 @@ const WhyChooseUsServices = () => {
     {
       id: 1,
       icon: Target,
-      title: "Specialized GCC Focus",
-      description: "Unlike generalist consultancies, we exclusively focus on GCC establishment and optimization, providing unparalleled expertise in this specific domain.",
+      title: "Exclusive GCC Expertise",
+      description:
+        "We specialize solely in Global Capability Centers, offering unmatched depth and focus that sets us apart from broad-spectrum consultancies.",
       stats: { value: "100%", label: "GCC Focused" }
     },
     {
       id: 2,
       icon: Layers,
-      title: "End-to-End Capabilities",
-      description: "We offer comprehensive services across the entire GCC lifecycle, from strategy and setup to ongoing management and optimization.",
+      title: "Comprehensive Lifecycle Support",
+      description:
+        "From initial strategy to full-scale operations, we deliver seamless services across every phase of the GCC journey.",
       stats: { value: "360°", label: "Service Coverage" }
     },
     {
       id: 3,
       icon: Globe,
-      title: "Local Expertise, Global Perspective",
-      description: "Our team combines deep knowledge of the India ecosystem with extensive international experience, ensuring culturally aligned solutions.",
+      title: "Global Insight with Local Precision",
+      description:
+        "Our approach blends in-depth understanding of India's business landscape with global business acumen to craft culturally relevant solutions.",
       stats: { value: "15+", label: "Countries Served" }
     },
     {
       id: 4,
       icon: Award,
-      title: "Proven Track Record",
-      description: "With over 50 successful GCC implementations and a 95% client retention rate, our approach has been validated across industries and scales.",
+      title: "Trusted by Industry Leaders",
+      description:
+        "With 50+ GCCs launched and a stellar client retention rate, we bring a consistent track record of success across verticals.",
       stats: { value: "95%", label: "Client Retention" }
     }
   ];
@@ -43,20 +47,20 @@ const WhyChooseUsServices = () => {
   return (
     <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
             <Award className="w-4 h-4 mr-2" />
             COMPETITIVE ADVANTAGE
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
             Why Choose <span className="font-semibold text-cta-coral">Us</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
-            Our unique approach and specialized expertise make us the ideal partner for your GCC journey in India.
+            Our distinct methodology and deep domain expertise position us as the perfect partner for your GCC journey in India.
           </p>
         </div>
 
@@ -65,7 +69,7 @@ const WhyChooseUsServices = () => {
           {advantages.map((advantage) => {
             const IconComponent = advantage.icon;
             return (
-              <div 
+              <div
                 key={advantage.id}
                 className="group bg-white border border-gray-200 p-8 lg:p-10 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
               >
@@ -75,7 +79,7 @@ const WhyChooseUsServices = () => {
                     <div className="w-14 h-14 bg-cta-coral flex items-center justify-center flex-shrink-0">
                       <IconComponent className="w-7 h-7 text-white" />
                     </div>
-                    
+
                     {/* Stats Badge */}
                     <div className="text-center">
                       <div className="text-2xl lg:text-3xl font-light text-gray-900 mb-1">
@@ -86,12 +90,12 @@ const WhyChooseUsServices = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Title */}
                   <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 leading-tight">
                     {advantage.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-gray-600 font-light leading-relaxed">
                     {advantage.description}
@@ -110,7 +114,7 @@ const WhyChooseUsServices = () => {
             </h3>
             <div className="w-16 h-px bg-logo-teal mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 font-light max-w-3xl mx-auto">
-              We deliver measurable results through our specialized approach, proven methodology, 
+              We deliver measurable results through our specialized approach, proven methodology,
               and deep understanding of the GCC landscape in India.
             </p>
           </div>
@@ -190,12 +194,12 @@ const WhyChooseUsServices = () => {
               Ready to Experience the Difference?
             </span>
           </div>
-          
+
           <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
-            Join the growing number of organizations who have chosen our specialized approach for their GCC success. 
+            Join the growing number of organizations who have chosen our specialized approach for their GCC success.
             See how our proven methodology can accelerate your journey.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
               <Award className="w-5 h-5 mr-3" />

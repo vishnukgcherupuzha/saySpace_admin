@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { 
+import {
   ChevronLeft,
   ChevronRight,
   Quote,
@@ -18,47 +18,47 @@ const SuccessStories = () => {
   const testimonials = [
     {
       id: 1,
-      company: "Fortune 500 Technology Company",
-      role: "Chief Technology Officer",
-      name: "Sarah Johnson",
-      quote: "Our GCC in India became operational in just 90 days with their expert guidance. The talent quality and cost savings have exceeded our expectations. We've been able to scale our operations faster than anticipated.",
+      company: "NovaTech Systems Inc.",
+      role: "Director of Innovation",
+      name: "Ravi Mehra",
+      quote: "Setting up our GCC with their team was smooth and highly efficient. We were operational within three months and have since expanded faster than projected.",
       stats: {
-        timeline: "90 days",
-        savings: "40%",
-        teamSize: "250+"
+        timeline: "88 days",
+        savings: "42%",
+        teamSize: "270+"
       },
-      industry: "Technology",
-      location: "Bangalore",
+      industry: "Software & AI",
+      location: "Pune",
       rating: 5
     },
     {
       id: 2,
-      company: "Global Financial Services Leader",
-      role: "Head of Operations",
-      name: "Michael Chen",
-      quote: "The comprehensive support from legal compliance to talent acquisition made our GCC setup seamless. Their deep understanding of local regulations and market dynamics was invaluable.",
+      company: "Axis Capital Partners",
+      role: "VP - Global Strategy",
+      name: "Lena Thompson",
+      quote: "Their end-to-end support — from compliance to workforce strategy — made our India expansion a strategic win. Their responsiveness and expertise stood out.",
       stats: {
-        timeline: "120 days",
-        savings: "35%",
-        teamSize: "180+"
+        timeline: "115 days",
+        savings: "38%",
+        teamSize: "200+"
       },
-      industry: "Financial Services",
-      location: "Hyderabad",
+      industry: "Investment Banking",
+      location: "Gurugram",
       rating: 5
     },
     {
       id: 3,
-      company: "European Healthcare Giant",
-      role: "VP of Global Operations",
-      name: "Emma Rodriguez",
-      quote: "From location scouting to regulatory compliance, they handled everything professionally. Our GCC is now a key strategic asset for our global operations with world-class infrastructure.",
+      company: "Medivia Group",
+      role: "Head of Global Infrastructure",
+      name: "Dr. Tomasz Kowalski",
+      quote: "They streamlined our setup process across legal, real estate, and hiring. Today, our India center plays a critical role in global R&D operations.",
       stats: {
-        timeline: "105 days",
-        savings: "45%",
-        teamSize: "320+"
+        timeline: "98 days",
+        savings: "40%",
+        teamSize: "310+"
       },
-      industry: "Healthcare",
-      location: "Chennai",
+      industry: "Pharmaceuticals",
+      location: "Ahmedabad",
       rating: 5
     }
   ];
@@ -76,18 +76,18 @@ const SuccessStories = () => {
   return (
     <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
             <Award className="w-4 h-4 mr-2" />
             PROVEN TRACK RECORD
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
             Client <span className="font-semibold text-cta-coral">Success Stories</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
             Trusted by leading global organizations to establish and scale their operations in India
           </p>
@@ -97,20 +97,20 @@ const SuccessStories = () => {
         <div className="mb-12">
           <div className="bg-white border border-gray-200 p-8 lg:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-              
+
               {/* Testimonial Content - 8 columns */}
               <div className="lg:col-span-8 space-y-8">
-                
+
                 {/* Quote Icon */}
                 <div className="w-12 h-12 bg-cta-coral flex items-center justify-center">
                   <Quote className="w-6 h-6 text-white" />
                 </div>
-                
+
                 {/* Quote */}
                 <blockquote className="text-xl lg:text-2xl text-gray-800 leading-relaxed font-light italic">
                   "{current.quote}"
                 </blockquote>
-                
+
                 {/* Attribution */}
                 <div className="flex items-center space-x-4 pt-6 border-t border-gray-200">
                   <div className="w-12 h-12 bg-logo-teal flex items-center justify-center">
@@ -127,7 +127,7 @@ const SuccessStories = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Rating */}
                 <div className="flex items-center space-x-2">
                   {[...Array(current.rating)].map((_, i) => (
@@ -138,14 +138,14 @@ const SuccessStories = () => {
                   </span>
                 </div>
               </div>
-              
+
               {/* Stats Card - 4 columns */}
               <div className="lg:col-span-4">
                 <div className="bg-gray-50 border border-gray-200 p-6 lg:p-8">
                   <h4 className="text-lg font-semibold text-gray-900 mb-6 pb-4 border-b border-gray-200">
                     Project Outcomes
                   </h4>
-                  
+
                   <div className="space-y-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
@@ -158,7 +158,7 @@ const SuccessStories = () => {
                         {current.stats.timeline}
                       </span>
                     </div>
-                    
+
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
                         <div className="w-8 h-8 bg-cta-coral/10 flex items-center justify-center">
@@ -170,7 +170,7 @@ const SuccessStories = () => {
                         {current.stats.savings}
                       </span>
                     </div>
-                    
+
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
                         <div className="w-8 h-8 bg-gray-200 flex items-center justify-center">
@@ -182,7 +182,7 @@ const SuccessStories = () => {
                         {current.stats.teamSize}
                       </span>
                     </div>
-                    
+
                     <div className="pt-6 border-t border-gray-200 space-y-3">
                       <div className="flex items-center space-x-3">
                         <Building2 className="w-4 h-4 text-gray-500" />
@@ -212,18 +212,17 @@ const SuccessStories = () => {
               <button
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}
-                className={`w-2 h-2 transition-all duration-200 ${
-                  index === currentTestimonial 
-                    ? 'bg-cta-coral' 
+                className={`w-2 h-2 transition-all duration-200 ${index === currentTestimonial
+                    ? 'bg-cta-coral'
                     : 'bg-gray-300 hover:bg-gray-400'
-                }`}
+                  }`}
               />
             ))}
             <span className="ml-4 text-sm text-gray-500 font-medium">
               {currentTestimonial + 1} of {testimonials.length}
             </span>
           </div>
-          
+
           {/* Arrow Navigation */}
           <div className="flex space-x-2">
             <button
