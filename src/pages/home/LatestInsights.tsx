@@ -1,4 +1,4 @@
-import { 
+import {
   Calendar,
   ArrowRight,
   TrendingUp,
@@ -15,36 +15,36 @@ const LatestInsights = () => {
   const insights = [
     {
       id: 1,
-      date: "March 5, 2025",
-      title: "5 Reasons Why India's GCC Ecosystem Is Booming in 2025",
-      excerpt: "Explore the key factors driving India's emergence as the world's premier GCC destination, from talent availability to cost advantages.",
+      date: "June 10, 2025",
+      title: "India's Tier-2 Cities: The New Frontier for GCC Expansion",
+      excerpt: "Discover why Tier-2 cities like Coimbatore and Vizag are emerging as hotspots for cost-effective and talent-rich GCC setups.",
       category: "Market Trends",
-      readTime: "5 min read",
+      readTime: "6 min read",
       featured: true,
       icon: TrendingUp,
-      tags: ["GCC", "India", "Market Analysis"]
+      tags: ["GCC Expansion", "India", "Emerging Markets"]
     },
     {
       id: 2,
-      date: "February 18, 2025",
-      title: "GCC Talent Landscape in India: 2025 Edition",
-      excerpt: "An in-depth analysis of the talent pool and recruitment strategies for GCCs in India's major technology hubs.",
+      date: "May 28, 2025",
+      title: "Leadership Hiring for GCCs: What CXOs Expect in 2025",
+      excerpt: "Understand the evolving expectations of global leaders and what it takes to attract CXO-level talent to your GCC.",
       category: "Talent Management",
       readTime: "7 min read",
       featured: false,
       icon: Users,
-      tags: ["Talent", "Recruitment", "HR Strategy"]
+      tags: ["CXO Hiring", "Leadership", "Talent Trends"]
     },
     {
       id: 3,
-      date: "January 30, 2025",
-      title: "How to Optimize Costs in Your India GCC Operations",
-      excerpt: "Practical strategies to maximize ROI while maintaining quality and compliance in your Global Capability Center.",
+      date: "April 15, 2025",
+      title: "Beyond Cost: Unlocking Strategic Value Through India GCCs",
+      excerpt: "A look at how leading companies are leveraging India GCCs not just for savings, but as strategic innovation hubs.",
       category: "Cost Optimization",
-      readTime: "6 min read",
+      readTime: "5 min read",
       featured: false,
       icon: DollarSign,
-      tags: ["Cost Management", "ROI", "Operations"]
+      tags: ["Strategy", "Innovation", "Value Creation"]
     }
   ];
 
@@ -57,28 +57,28 @@ const LatestInsights = () => {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      month: 'long', 
-      day: 'numeric', 
-      year: 'numeric' 
+    return date.toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
     });
   };
 
   return (
     <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
             <BookOpen className="w-4 h-4 mr-2" />
             KNOWLEDGE HUB
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
             Latest <span className="font-semibold text-cta-coral">Insights</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed mb-8">
             Stay informed with expert analysis, industry trends, and strategic guidance for your GCC journey
           </p>
@@ -90,29 +90,29 @@ const LatestInsights = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          
+
           {/* Main Content */}
           <div className="lg:col-span-3">
-            
+
             {/* Featured Article */}
             <div className="mb-12">
               {insights.filter(insight => insight.featured).map((insight) => {
                 const IconComponent = insight.icon;
                 return (
-                  <article 
+                  <article
                     key={insight.id}
                     className="bg-white border border-gray-200 p-8 lg:p-12 hover:shadow-lg transition-all duration-300 group"
                   >
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                      
+
                       {/* Content - 8 columns */}
                       <div className="lg:col-span-8 space-y-6">
-                        
+
                         {/* Featured Badge */}
                         <div className="inline-flex items-center px-3 py-1 bg-cta-coral text-white text-sm font-medium">
                           FEATURED ARTICLE
                         </div>
-                        
+
                         {/* Meta Info */}
                         <div className="flex items-center space-x-6 text-sm text-gray-500">
                           <div className="flex items-center space-x-2">
@@ -128,21 +128,21 @@ const LatestInsights = () => {
                             <span>{insight.category}</span>
                           </div>
                         </div>
-                        
+
                         {/* Title */}
                         <h3 className="text-2xl lg:text-3xl font-light text-gray-900 leading-tight group-hover:text-logo-teal transition-colors duration-200">
                           {insight.title}
                         </h3>
-                        
+
                         {/* Excerpt */}
                         <p className="text-lg text-gray-600 leading-relaxed font-light">
                           {insight.excerpt}
                         </p>
-                        
+
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2">
                           {insight.tags.map((tag, index) => (
-                            <span 
+                            <span
                               key={index}
                               className="px-3 py-1 bg-gray-100 text-gray-600 text-sm font-medium"
                             >
@@ -150,7 +150,7 @@ const LatestInsights = () => {
                             </span>
                           ))}
                         </div>
-                        
+
                         {/* Read More Button */}
                         <button className="cursor-pointer group/btn inline-flex items-center text-logo-teal hover:text-logo-teal/80 font-semibold transition-colors duration-200">
                           Read Full Article
@@ -177,7 +177,7 @@ const LatestInsights = () => {
               {insights.filter(insight => !insight.featured).map((insight) => {
                 const IconComponent = insight.icon;
                 return (
-                  <article 
+                  <article
                     key={insight.id}
                     className="bg-white border border-gray-200 hover:shadow-lg transition-all duration-300 group"
                   >
@@ -186,7 +186,7 @@ const LatestInsights = () => {
                       <div className="w-12 h-12 bg-logo-teal flex items-center justify-center">
                         <IconComponent className="w-6 h-6 text-white" />
                       </div>
-                      
+
                       {/* Category Badge */}
                       <div className="absolute top-4 left-4">
                         <span className="px-3 py-1 bg-white text-gray-700 text-xs font-medium shadow-sm">
@@ -194,10 +194,10 @@ const LatestInsights = () => {
                         </span>
                       </div>
                     </div>
-                    
+
                     {/* Content */}
                     <div className="p-6 space-y-4">
-                      
+
                       {/* Meta */}
                       <div className="flex items-center justify-between text-sm text-gray-500">
                         <div className="flex items-center space-x-2">
@@ -209,17 +209,17 @@ const LatestInsights = () => {
                           <span>{insight.readTime}</span>
                         </div>
                       </div>
-                      
+
                       {/* Title */}
                       <h3 className="text-lg font-semibold text-gray-900 leading-tight group-hover:text-logo-teal transition-colors duration-200">
                         {insight.title}
                       </h3>
-                      
+
                       {/* Excerpt */}
                       <p className="text-gray-600 leading-relaxed font-light text-sm">
                         {insight.excerpt}
                       </p>
-                      
+
                       {/* Read More */}
                       <button className="cursor-pointer group/btn inline-flex items-center text-cta-coral hover:text-cta-coral/80 font-medium transition-colors duration-200 text-sm">
                         Read More
@@ -234,7 +234,7 @@ const LatestInsights = () => {
 
           {/* Sidebar */}
           <div className="space-y-8">
-            
+
             {/* Categories */}
             <div className="bg-white border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-6 pb-4 border-b border-gray-200 flex items-center">
@@ -243,7 +243,7 @@ const LatestInsights = () => {
               </h3>
               <div className="space-y-3">
                 {categories.map((category, index) => (
-                  <button 
+                  <button
                     key={index}
                     className="group w-full flex items-center justify-between p-3 hover:bg-gray-50 transition-colors duration-200"
                   >
@@ -291,7 +291,7 @@ const LatestInsights = () => {
                   "Top 10 India Tech Parks for GCCs",
                   "Talent Retention Strategies That Work"
                 ].map((title, index) => (
-                  <button 
+                  <button
                     key={index}
                     className="group text-left w-full p-3 hover:bg-gray-50 transition-colors duration-200"
                   >

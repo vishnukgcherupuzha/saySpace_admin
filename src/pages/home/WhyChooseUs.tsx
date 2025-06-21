@@ -13,64 +13,64 @@ import {
 
 const WhyChooseUs = () => {
   const coreExpertise = [
-    {
-      icon: Target,
-      title: "Strategic GCC Consulting",
-      description: "Tailored strategies aligned with your global business objectives to maximize ROI and operational excellence.",
-      number: "01"
-    },
-    {
-      icon: Users,
-      title: "Talent Acquisition",
-      description: "Specialized leadership & CXO hiring services along with access to India's 4+ million skilled professionals across domains and functions.",
-      number: "02"
-    },
-    {
-      icon: Code,
-      title: "IT Services",
-      description: "Comprehensive technology infrastructure setup, custom software solutions, and digital transformation initiatives for your GCC operations.",
-      number: "03"
-    },
-    {
-      icon: Settings,
-      title: "Operational Excellence",
-      description: "Streamlined setup with comprehensive compliance and legal support for a hassle-free experience.",
-      number: "04"
-    },
-    {
-      icon: TrendingUp,
-      title: "Ongoing Management",
-      description: "Continuous optimization of your GCC operations for maximum ROI and sustainable growth.",
-      number: "05"
-    },
-    {
-      icon: Shield,
-      title: "Risk Management",
-      description: "Comprehensive risk assessment and mitigation strategies to ensure business continuity.",
-      number: "06"
-    }
-  ];
+  {
+    icon: Target,
+    title: "GCC Strategy Advisory",
+    description: "Customized strategies aligned with global objectives to enhance ROI and drive operational efficiency.",
+    number: "01"
+  },
+  {
+    icon: Users,
+    title: "Executive Talent Solutions",
+    description: "Expert leadership and CXO hiring, with access to India’s 4M+ skilled professionals across diverse roles and industries.",
+    number: "02"
+  },
+  {
+    icon: Code,
+    title: "Technology Enablement",
+    description: "End-to-end tech infrastructure setup, bespoke software solutions, and digital transformation support for GCCs.",
+    number: "03"
+  },
+  {
+    icon: Settings,
+    title: "Operational Setup & Compliance",
+    description: "Seamless operational setup with full legal and compliance support for a frictionless launch and scale-up.",
+    number: "04"
+  },
+  {
+    icon: TrendingUp,
+    title: "GCC Performance Management",
+    description: "Proactive management and continuous improvement of GCC operations to maximize long-term value.",
+    number: "05"
+  },
+  {
+    icon: Shield,
+    title: "Continuity & Risk Assurance",
+    description: "Robust risk identification and mitigation strategies to safeguard continuity and resilience.",
+    number: "06"
+  }
+];
 
-  const allianceExpertise = [
-    {
-      icon: Scale,
-      title: "Legal & Compliance Solutions",
-      description: "Expert guidance on company formation, regulatory requirements, and labor-related compliances for smooth GCC operations.",
-      features: ["Company Formation", "Regulatory Compliance", "Labor Law Guidance"]
-    },
-    {
-      icon: Calculator,
-      title: "Financial Advisory",
-      description: "Specialized expertise in finance and accounts setup, financial planning, tax optimization, and reporting systems for your GCC.",
-      features: ["Financial Planning", "Tax Optimization", "Reporting Systems"]
-    },
-    {
-      icon: MapPin,
-      title: "Real Estate Solutions",
-      description: "Prime location selection in India's thriving tech corridors with world-class infrastructure and amenities.",
-      features: ["Prime Locations", "Tech Corridors", "World-class Infrastructure"]
-    }
-  ];
+const allianceExpertise = [
+  {
+    icon: Scale,
+    title: "Regulatory & Legal Enablement",
+    description: "Comprehensive support for company incorporation, regulatory adherence, and labor law compliance to ensure seamless GCC setup and operations.",
+    features: ["Company Incorporation", "Regulatory Compliance", "Labor Law Advisory"]
+  },
+  {
+    icon: Calculator,
+    title: "Strategic Financial Services",
+    description: "Expert financial services covering accounts setup, strategic planning, tax efficiency, and robust financial reporting for your GCC.",
+    features: ["Strategic Financial Planning", "Tax Efficiency", "Advanced Reporting Systems"]
+  },
+  {
+    icon: MapPin,
+    title: "Location Advisory & Real Estate",
+    description: "Guidance on selecting premium locations in India's leading tech hubs, featuring top-tier infrastructure and amenities.",
+    features: ["Premium Locations", "High-Growth Tech Hubs", "Modern Infrastructure"]
+  }
+];
 
   return (
     <section className="py-20 lg:py-24 bg-gray-50">
@@ -88,7 +88,7 @@ const WhyChooseUs = () => {
           </h2>
           
           <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-            End-to-end GCC solutions designed for global enterprises seeking strategic advantage in India's innovation ecosystem
+            Comprehensive GCC solutions tailored for global enterprises aiming to leverage India’s innovation ecosystem for strategic growth.
           </p>
         </div>
 

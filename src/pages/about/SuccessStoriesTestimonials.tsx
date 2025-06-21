@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { 
+import {
   Quote,
   Star,
   ChevronLeft,
@@ -18,47 +18,47 @@ const SuccessStoriesTestimonials = () => {
   const testimonials = [
     {
       id: 1,
-      quote: "Say Space's expertise was instrumental in establishing our GCC in India. Their deep local knowledge and strategic approach helped us navigate complex challenges and build a high-performing center that has become a cornerstone of our global operations.",
-      name: "Olivia Smith",
-      role: "Chief Technology Officer",
-      company: "Global Tech Solutions",
-      industry: "Technology",
-      location: "Bangalore",
+      quote: "Partnering with Say Space was one of the best strategic decisions we made. Their insight into India's tech landscape helped us launch a highly efficient delivery center with a strong leadership pipeline.",
+      name: "Anika Patel",
+      role: "Director of Global Delivery",
+      company: "NextWave Technologies",
+      industry: "Information Technology",
+      location: "Pune",
       projectDetails: {
-        timeline: "6 months",
-        teamSize: "200+",
-        savings: "45%",
+        timeline: "5 months",
+        teamSize: "220+",
+        savings: "42%",
         satisfaction: "Exceptional"
       }
     },
     {
       id: 2,
-      quote: "The Say Space team delivered beyond our expectations. Their end-to-end approach to GCC establishment - from strategy to talent acquisition and operational setup - was seamless and highly effective. We now have a thriving innovation center in India.",
-      name: "Jonathan Williams",
-      role: "VP of Global Operations",
-      company: "Financial Services Inc.",
-      industry: "Financial Services",
-      location: "Hyderabad",
+      quote: "Say Space brought clarity and control to a very complex expansion process. From regulatory support to team onboarding, their execution was flawless. Our Indian GCC is now a core part of our global value chain.",
+      name: "Carlos Mendes",
+      role: "Chief Operations Officer",
+      company: "Sterling Capital Group",
+      industry: "Finance & Investment",
+      location: "Mumbai",
       projectDetails: {
-        timeline: "8 months",
-        teamSize: "150+",
-        savings: "40%",
-        satisfaction: "Outstanding"
+        timeline: "7 months",
+        teamSize: "160+",
+        savings: "39%",
+        satisfaction: "Excellent"
       }
     },
     {
       id: 3,
-      quote: "Working with Say Space was a game-changer for our organization. Their comprehensive understanding of the GCC landscape and meticulous attention to detail ensured our center was operational ahead of schedule and within budget.",
-      name: "Sarah Chen",
-      role: "Head of Strategic Operations",
-      company: "Healthcare Innovations Ltd.",
+      quote: "Say Space provided us with a well-rounded launch strategy that covered legal, talent, and infrastructure planning. Their team’s responsiveness and professionalism gave us full confidence throughout the journey.",
+      name: "Lina Bergström",
+      role: "VP, Business Transformation",
+      company: "Nordic Health Systems",
       industry: "Healthcare",
-      location: "Chennai",
+      location: "Coimbatore",
       projectDetails: {
-        timeline: "7 months",
-        teamSize: "180+",
-        savings: "38%",
-        satisfaction: "Excellent"
+        timeline: "6 months",
+        teamSize: "190+",
+        savings: "44%",
+        satisfaction: "Outstanding"
       }
     }
   ];
@@ -80,18 +80,18 @@ const SuccessStoriesTestimonials = () => {
   return (
     <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
             <Award className="w-4 h-4 mr-2" />
             CLIENT SUCCESS
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
             Client <span className="font-semibold text-logo-teal">Success Stories</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
             Hear from enterprise leaders who have successfully established their Global Capability Centers with our guidance
           </p>
@@ -101,20 +101,20 @@ const SuccessStoriesTestimonials = () => {
         <div className="mb-12">
           <div className="bg-white border border-gray-200 p-8 lg:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-              
+
               {/* Testimonial Content - 8 columns */}
               <div className="lg:col-span-8 space-y-8">
-                
+
                 {/* Quote Icon */}
                 <div className="w-12 h-12 bg-logo-teal flex items-center justify-center">
                   <Quote className="w-6 h-6 text-white" />
                 </div>
-                
+
                 {/* Quote */}
                 <blockquote className="text-xl lg:text-2xl text-gray-800 leading-relaxed font-light italic">
                   "{current.quote}"
                 </blockquote>
-                
+
                 {/* Attribution */}
                 <div className="flex items-center space-x-4 pt-6 border-t border-gray-200">
                   <div className="w-12 h-12 bg-logo-teal flex items-center justify-center">
@@ -134,7 +134,7 @@ const SuccessStoriesTestimonials = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Rating */}
                 <div className="flex items-center space-x-2">
                   {[...Array(5)].map((_, i) => (
@@ -145,14 +145,14 @@ const SuccessStoriesTestimonials = () => {
                   </span>
                 </div>
               </div>
-              
+
               {/* Project Details Card - 4 columns */}
               <div className="lg:col-span-4">
                 <div className="bg-gray-50 border border-gray-200 p-6 lg:p-8">
                   <h4 className="text-lg font-semibold text-gray-900 mb-6 pb-4 border-b border-gray-200">
                     Project Results
                   </h4>
-                  
+
                   <div className="space-y-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
@@ -165,7 +165,7 @@ const SuccessStoriesTestimonials = () => {
                         {current.projectDetails.timeline}
                       </span>
                     </div>
-                    
+
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
                         <div className="w-8 h-8 bg-cta-coral/10 flex items-center justify-center">
@@ -177,7 +177,7 @@ const SuccessStoriesTestimonials = () => {
                         {current.projectDetails.teamSize}
                       </span>
                     </div>
-                    
+
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
                         <div className="w-8 h-8 bg-gray-200 flex items-center justify-center">
@@ -189,7 +189,7 @@ const SuccessStoriesTestimonials = () => {
                         {current.projectDetails.savings}
                       </span>
                     </div>
-                    
+
                     <div className="pt-6 border-t border-gray-200 space-y-3">
                       <div className="flex items-center space-x-3">
                         <Building2 className="w-4 h-4 text-gray-500" />
@@ -225,18 +225,17 @@ const SuccessStoriesTestimonials = () => {
               <button
                 key={index}
                 onClick={() => setActiveTestimonial(index)}
-                className={`w-2 h-2 transition-all duration-200 ${
-                  index === activeTestimonial 
-                    ? 'bg-logo-teal' 
+                className={`w-2 h-2 transition-all duration-200 ${index === activeTestimonial
+                    ? 'bg-logo-teal'
                     : 'bg-gray-300 hover:bg-gray-400'
-                }`}
+                  }`}
               />
             ))}
             <span className="ml-4 text-sm text-gray-500 font-medium">
               {activeTestimonial + 1} of {testimonials.length}
             </span>
           </div>
-          
+
           {/* Arrow Navigation */}
           <div className="flex space-x-2">
             <button

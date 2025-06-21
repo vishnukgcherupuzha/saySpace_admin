@@ -1,7 +1,9 @@
 import { ArrowRight, Calendar, MapPin, CheckCircle } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
+    const navigate = useNavigate();
     return (
         <section className="relative bg-white overflow-hidden">
             {/* Subtle Background Elements */}
@@ -72,7 +74,9 @@ const HeroSection = () => {
                                 <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
                             </button>
 
-                            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
+                            <button 
+                            onClick={() => navigate('/why-india')}
+                            className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
                                 <MapPin className="w-5 h-5 mr-3" />
                                 Why India
                                 <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />

@@ -28,19 +28,21 @@ const HeroSection = () => {
                         {/* Main Headline - Enterprise Typography */}
                         <div className="space-y-6">
                             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 leading-[1.1] tracking-tight">
-                                Tailored GCC Services for
+                                Customized GCC Solutions for
                                 <br />
                                 <span className="font-semibold text-logo-teal">
-                                    Global Organizations
+                                    Global Enterprises
                                 </span>
                             </h1>
 
                             {/* Professional Subtitle */}
                             <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl font-light">
-                                We offer comprehensive services to establish, operate, and optimize your GCC in India, ensuring seamless implementation and sustainable growth.
+                                We provide end-to-end support to establish, manage, and enhance your GCC operations in India, ensuring flawless execution and sustained success.
                                 <br />
                                 <br />
-                                <span className='text-sm text-gray-500 font-light'>Our integrated approach covers the entire GCC lifecycle—from initial strategy development to ongoing optimization—ensuring a smooth transition and maximum value creation. We customize our services based on your specific requirements, industry context, and organizational objectives.</span>
+                                <span className='text-sm text-gray-500 font-light'>
+                                    Our holistic methodology encompasses every stage of the GCC journey—from initial strategy formulation through continuous improvement—delivering seamless integration and optimal value tailored to your industry, goals, and unique needs.
+                                </span>
                             </p>
                         </div>
 
@@ -65,8 +67,8 @@ const HeroSection = () => {
                         <div className="relative">
                             {/* Professional image container */}
                             <div className="relative bg-white shadow-2xl shadow-gray-900/10">
-                                <img 
-                                    src={imageConstants.SERVICES.HERO} 
+                                <img
+                                    src={imageConstants.SERVICES.HERO}
                                     alt="Services Hero"
                                     className="w-full h-auto"
                                 />

@@ -1,7 +1,7 @@
-import { 
-  Building2, 
-  TrendingUp, 
-  GraduationCap, 
+import {
+  Building2,
+  TrendingUp,
+  GraduationCap,
   DollarSign,
   MapPin,
   ArrowRight,
@@ -16,29 +16,29 @@ const WhyBangalore = () => {
     {
       icon: Building2,
       number: "200+",
-      title: "Global Capability Centers",
-      description: "Thriving ecosystem of multinational companies",
+      title: "Established GCC Presence",
+      description: "A dynamic hub hosting a large concentration of multinational GCCs.",
       metric: "Active GCCs"
     },
     {
       icon: TrendingUp,
       number: "57%",
-      title: "Office Space Growth",
-      description: "Year-over-year expansion in commercial infrastructure",
+      title: "Commercial Expansion Rate",
+      description: "Significant year-on-year growth in commercial real estate for tech and business operations.",
       metric: "YoY Growth"
     },
     {
       icon: GraduationCap,
       number: "80,000+",
-      title: "Annual Graduates",
-      description: "Top-tier educational institutions producing skilled talent",
+      title: "Annual Talent Output",
+      description: "A steady pipeline of talent from premier educational institutions across the region.",
       metric: "Skilled Professionals"
     },
     {
       icon: DollarSign,
-      number: "30-40%",
-      title: "Cost Advantage",
-      description: "Compared to other global technology hubs",
+      number: "30–40%",
+      title: "Operational Cost Efficiency",
+      description: "Substantial cost savings compared to global technology hubs, without compromising quality.",
       metric: "Cost Savings"
     }
   ];
@@ -51,7 +51,7 @@ const WhyBangalore = () => {
     },
     {
       icon: Globe,
-      title: "Global Connectivity", 
+      title: "Global Connectivity",
       description: "Strategic time zone advantages and excellent international connectivity"
     },
     {
@@ -64,20 +64,20 @@ const WhyBangalore = () => {
   return (
     <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
             <MapPin className="w-4 h-4 mr-2" />
             INDIA'S SILICON VALLEY
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
             Why <span className="font-semibold text-logo-teal">Bangalore</span> for Your GCC
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
-            Bangalore has emerged as India's premier GCC destination, offering unmatched strategic advantages for global enterprises
+            Bangalore has established itself as India’s leading destination for GCCs, providing exceptional strategic benefits to global enterprises.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ const WhyBangalore = () => {
           {advantages.map((advantage, index) => {
             const IconComponent = advantage.icon;
             return (
-              <div 
+              <div
                 key={index}
                 className="group bg-white border border-gray-200 p-8 hover:shadow-lg transition-all duration-300 relative"
               >
@@ -95,7 +95,7 @@ const WhyBangalore = () => {
                   <div className="w-12 h-12 bg-logo-teal text-white flex items-center justify-center mb-6">
                     <IconComponent className="w-6 h-6" />
                   </div>
-                  
+
                   {/* Number */}
                   <div className="mb-4">
                     <span className="text-3xl lg:text-4xl font-light text-gray-900">
@@ -105,18 +105,18 @@ const WhyBangalore = () => {
                       {advantage.metric}
                     </div>
                   </div>
-                  
+
                   {/* Title */}
                   <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight">
                     {advantage.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-sm text-gray-600 leading-relaxed font-light">
                     {advantage.description}
                   </p>
                 </div>
-                
+
                 {/* Professional hover indicator */}
                 <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-6 h-px bg-logo-teal"></div>
@@ -129,7 +129,7 @@ const WhyBangalore = () => {
         {/* Strategic Advantages Section */}
         <div className="bg-gray-50 p-8 lg:p-12 mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
+
             {/* Content Side */}
             <div className="space-y-8">
               <div>
@@ -138,11 +138,11 @@ const WhyBangalore = () => {
                 </h3>
                 <div className="w-16 h-px bg-logo-teal mb-6"></div>
                 <p className="text-lg text-gray-600 font-light leading-relaxed">
-                  Bangalore offers a unique combination of talent, infrastructure, and business environment 
+                  Bangalore offers a unique combination of talent, infrastructure, and business environment
                   that makes it the ideal location for your Global Capability Center.
                 </p>
               </div>
-              
+
               <div className="space-y-6">
                 {keyAdvantages.map((advantage, index) => {
                   const IconComponent = advantage.icon;
@@ -168,11 +168,11 @@ const WhyBangalore = () => {
             {/* Map Side */}
             <div className="relative">
               <div className="bg-white border border-gray-200 p-4">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325319.40169235034!2d77.46613117853798!3d12.953945617307905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka%2C%20India!5e1!3m2!1sen!2suk!4v1749823203534!5m2!1sen!2suk" 
-                  width="100%" 
-                  height="300" 
-                  style={{border:0}} 
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d325319.40169235034!2d77.46613117853798!3d12.953945617307905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka%2C%20India!5e1!3m2!1sen!2suk!4v1749823203534!5m2!1sen!2suk"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
                   loading="lazy"
                   title="Bangalore Location Map">
                 </iframe>
@@ -182,7 +182,7 @@ const WhyBangalore = () => {
               <div className="absolute -top-4 -right-4 bg-cta-coral text-white px-4 py-2 text-sm font-semibold">
                 #1 Tech Hub
               </div>
-              
+
               <div className="absolute -bottom-4 -left-4 bg-logo-teal text-white px-4 py-2 text-sm font-semibold">
                 Global Ready
               </div>

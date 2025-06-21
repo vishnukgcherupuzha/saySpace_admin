@@ -1,8 +1,8 @@
-import { 
-  Shield, 
-  Award, 
-  Lightbulb, 
-  Users, 
+import {
+  Shield,
+  Award,
+  Lightbulb,
+  Users,
   Globe,
   TrendingUp,
   Heart,
@@ -13,62 +13,62 @@ const OurPrinciples = () => {
     {
       id: 1,
       icon: Shield,
-      title: "Integrity",
-      description: "We uphold the highest ethical standards in all our interactions, maintaining transparency and honesty with our clients, partners, and team members.",
-      focus: "Ethical Excellence"
+      title: "Ethical Integrity",
+      description: "We adhere to the highest moral standards, ensuring openness and sincerity in all our relationships with clients, partners, and colleagues.",
+      focus: "Ethical Leadership"
     },
     {
       id: 2,
       icon: Award,
-      title: "Excellence",
-      description: "We are committed to delivering exceptional results that exceed expectations, setting high standards of quality and performance in everything we do.",
-      focus: "Quality Commitment"
+      title: "Pursuit of Excellence",
+      description: "Our dedication is to deliver outstanding outcomes that surpass expectations, maintaining superior quality and performance across all endeavors.",
+      focus: "Commitment to Quality"
     },
     {
       id: 3,
       icon: Lightbulb,
-      title: "Innovation",
-      description: "We embrace creative thinking and innovative approaches to solve complex challenges, continuously evolving our services to stay ahead of industry trends.",
-      focus: "Creative Solutions"
+      title: "Creative Innovation",
+      description: "We foster inventive thinking and forward-looking methods to tackle complex problems, constantly enhancing our services to lead industry advancements.",
+      focus: "Inventive Solutions"
     },
     {
       id: 4,
       icon: Users,
-      title: "Collaboration",
-      description: "We believe in the power of teamwork and partnership, working closely with our clients to achieve shared goals and create lasting value.",
-      focus: "Partnership Focus"
+      title: "Strategic Collaboration",
+      description: "We value teamwork and strategic alliances, partnering closely with clients to realize common objectives and generate enduring value.",
+      focus: "Collaborative Partnership"
     },
     {
       id: 5,
       icon: Globe,
-      title: "Global Mindset",
-      description: "We embrace diversity and global perspectives, leveraging cross-cultural expertise to build bridges between organizations and markets worldwide.",
-      focus: "Cultural Intelligence"
+      title: "Inclusive Global Perspective",
+      description: "We celebrate diversity and worldwide viewpoints, utilizing multicultural insights to connect businesses and markets on a global scale.",
+      focus: "Cross-Cultural Expertise"
     },
     {
       id: 6,
       icon: TrendingUp,
-      title: "Impact-Driven",
-      description: "We measure our success by the tangible business outcomes we create for our clients, focusing on delivering real, measurable value in everything we do.",
-      focus: "Results Oriented"
+      title: "Result-Oriented Impact",
+      description: "Our success is defined by the concrete business results we deliver, prioritizing measurable impact and real value in every project.",
+      focus: "Outcome Focused"
     }
   ];
 
   return (
     <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
             <Heart className="w-4 h-4 mr-2" />
             CORE VALUES
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
             Our Guiding <span className="font-semibold text-logo-teal">Principles</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
             The fundamental values that define our approach to business, relationships, and delivering exceptional outcomes for our clients
           </p>
@@ -79,7 +79,7 @@ const OurPrinciples = () => {
           {principles.map((principle) => {
             const IconComponent = principle.icon;
             return (
-              <div 
+              <div
                 key={principle.id}
                 className="group bg-white border border-gray-200 p-8 lg:p-10 hover:shadow-lg transition-all duration-300 relative"
               >
@@ -87,28 +87,28 @@ const OurPrinciples = () => {
                 <div className="absolute top-6 right-6 text-6xl font-light text-gray-100 group-hover:text-logo-teal/20 transition-colors duration-300">
                   {principle.id.toString().padStart(2, '0')}
                 </div>
-                
+
                 <div className="relative">
                   {/* Icon */}
                   <div className="w-14 h-14 bg-logo-teal text-white flex items-center justify-center mb-6">
                     <IconComponent className="w-7 h-7" />
                   </div>
-                  
+
                   {/* Focus Area */}
                   <div className="text-sm text-gray-500 font-medium tracking-wide mb-3">
                     {principle.focus}
                   </div>
-                  
+
                   {/* Title */}
                   <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                     {principle.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-gray-600 leading-relaxed font-light">
                     {principle.description}
                   </p>
-                  
+
                   {/* Professional hover indicator */}
                   <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-8 h-px bg-logo-teal"></div>
@@ -127,7 +127,7 @@ const OurPrinciples = () => {
             </h3>
             <div className="w-16 h-px bg-logo-teal mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 font-light leading-relaxed max-w-3xl mx-auto">
-              These principles are not just words on a page — they are the foundation of every decision we make, 
+              These principles are not just words on a page — they are the foundation of every decision we make,
               every relationship we build, and every solution we deliver.
             </p>
           </div>
@@ -170,7 +170,7 @@ const OurPrinciples = () => {
           <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8">
             <div className="flex-1">
               <blockquote className="text-xl lg:text-2xl font-light leading-relaxed mb-6">
-                "Our principles are the compass that guides us through every challenge and opportunity. 
+                "Our principles are the compass that guides us through every challenge and opportunity.
                 They ensure that as we grow, we never lose sight of what makes us who we are."
               </blockquote>
               <div className="flex items-center space-x-3">
@@ -183,7 +183,7 @@ const OurPrinciples = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="text-center lg:text-right">
               <div className="text-4xl lg:text-5xl font-light mb-2">6</div>
               <div className="text-sm opacity-80 font-medium">Core Principles</div>

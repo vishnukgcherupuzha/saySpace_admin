@@ -13,37 +13,37 @@ const OurAdvantage = () => {
         {
             id: 1,
             icon: Target,
-            title: "Specialized GCC Focus",
-            description: "Unlike generalist consultancies, we exclusively focus on GCC establishment and optimization, providing dedicated expertise in this specific domain. Our singular focus ensures deeper insights and more tailored solutions.",
-            highlights: ["100% GCC Focused", "Domain Expertise", "Tailored Solutions"]
+            title: "Dedicated GCC Expertise",
+            description: "Unlike broad-based consultancies, we concentrate solely on the establishment and enhancement of GCCs, delivering specialized knowledge and highly customized solutions for this niche area.",
+            highlights: ["Exclusively GCC Focused", "In-depth Domain Knowledge", "Customized Strategies"]
         },
         {
             id: 2,
             icon: Layers,
-            title: "End-to-End Capabilities",
-            description: "We offer comprehensive services across the entire GCC lifecycle, from strategy and setup to ongoing management and optimization. This holistic approach ensures seamless integration and long-term success.",
-            highlights: ["Full Lifecycle Support", "Seamless Integration", "Long-term Success"]
+            title: "Comprehensive Lifecycle Services",
+            description: "We provide end-to-end support throughout the entire GCC journey—from initial planning and setup to continuous management and refinement—ensuring smooth coordination and sustainable success.",
+            highlights: ["Complete Lifecycle Coverage", "Integrated Solutions", "Sustained Growth"]
         },
         {
             id: 3,
             icon: Globe,
-            title: "Local Expertise, Global Perspective",
-            description: "Our team combines deep knowledge of the Indian ecosystem with global insights, ensuring culturally aligned solutions that bridge international operations effectively.",
-            highlights: ["Indian Ecosystem", "Global Insights", "Cultural Alignment"]
+            title: "Blending Local Insight with Global Vision",
+            description: "Our team merges extensive understanding of the Indian market with international perspectives to deliver culturally aware solutions that effectively connect global operations.",
+            highlights: ["Indian Market Expertise", "Worldwide Perspective", "Culturally Tuned"]
         },
         {
             id: 4,
             icon: Zap,
-            title: "Agile Implementation",
-            description: "As a boutique consulting firm, we offer personalized attention, faster decision-making, and the flexibility to adapt to your unique requirements, ensuring a tailored GCC strategy.",
-            highlights: ["Personalized Attention", "Faster Decisions", "Flexible Solutions"]
+            title: "Flexible and Responsive Execution",
+            description: "As a boutique consultancy, we provide focused support, quick decision-making, and agility to adapt strategies to your specific needs, ensuring a personalized GCC approach.",
+            highlights: ["Focused Support", "Swift Decision Process", "Adaptable Approaches"]
         },
         {
             id: 5,
             icon: Network,
-            title: "Strategic Partner Network",
-            description: "We've developed relationships with key real estate developers, legal firms, technology providers, and educational institutions in India, providing our clients with a ready ecosystem for success.",
-            highlights: ["Ready Ecosystem", "Key Partnerships", "Instant Access"]
+            title: "Robust Partner Ecosystem",
+            description: "We have cultivated strong alliances with prominent real estate developers, legal experts, technology vendors, and educational bodies in India, granting clients immediate access to a thriving ecosystem.",
+            highlights: ["Established Network", "Trusted Alliances", "Ready-Made Infrastructure"]
         }
     ];
 
@@ -172,11 +172,11 @@ const OurAdvantage = () => {
                                 Ready to leverage our <span className="font-semibold">strategic advantages</span>?
                             </h3>
                             <p className="text-lg opacity-90 font-light leading-relaxed">
-                                Let's discuss how our specialized expertise and proven methodology can accelerate 
+                                Let's discuss how our specialized expertise and proven methodology can accelerate
                                 your GCC establishment and drive transformational business outcomes.
                             </p>
                         </div>
-                        
+
                         <div className="lg:text-right space-y-4">
                             <div className="space-y-2">
                                 <div className="text-sm opacity-80">Next Step</div>

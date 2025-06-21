@@ -28,19 +28,17 @@ const HeroSection = () => {
                         {/* Main Headline - Enterprise Typography */}
                         <div className="space-y-6">
                             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 leading-[1.1] tracking-tight">
-                                Architecting
+                                Designing the Future of
                                 <br />
                                 <span className="font-semibold text-logo-teal">
                                     Global Capability Centers
                                 </span>
-                                <br />
-                                <span className="text-gray-700">for Tomorrow</span>
                             </h1>
 
                             {/* Professional Subtitle */}
                             <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl font-light">
-                                We are India's premier GCC consulting and IT services organization, dedicated to helping 
-                                global enterprises establish and optimize successful capability centers in India's thriving innovation ecosystem.
+                                India’s leading GCC consulting and IT services partner, empowering global enterprises to build, scale,
+                                and optimize capability centers within the country’s vibrant innovation ecosystem.
                             </p>
                         </div>
 
@@ -87,8 +85,8 @@ const HeroSection = () => {
                         <div className="relative">
                             {/* Professional image container */}
                             <div className="relative bg-white shadow-2xl shadow-gray-900/10">
-                                <img 
-                                    src={imageConstants.ABOUT.HERO} 
+                                <img
+                                    src={imageConstants.ABOUT.HERO}
                                     alt="Say Space GCC Consulting Team"
                                     className="w-full h-auto"
                                 />
