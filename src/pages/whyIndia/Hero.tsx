@@ -28,19 +28,19 @@ const HeroSection = () => {
                         {/* Main Headline - Enterprise Typography */}
                         <div className="space-y-6">
                             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 leading-[1.1] tracking-tight">
-                                India: The World's Premier
+                                Why India Leads as the Top
                                 <br />
                                 <span className="font-semibold text-logo-teal">
-                                    GCC Destination
+                                     GCC Location
                                 </span>
                             </h1>
 
                             {/* Professional Subtitle */}
                             <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl font-light">
-                                India has firmly established itself as the global leader for Global Capability Centers, hosting over 1,500 GCCs that employ more than 1.3 million professionals across diverse sectors.
+                                With more than 1,500 Global Capability Centers and a talent pool exceeding 1.3 million professionals, India stands as the world’s leading destination for GCCs across multiple sectors.
                                 <br />
                                 <br />
-                                <span className='text-sm text-gray-500 font-light'>Companies choose India for their strategic capability centers due to an unmatched combination of scale, talent, cost advantages, and innovation potential. With decades of experience in global service delivery, India offers a mature ecosystem that supports seamless GCC operations.</span>
+                                <span className='text-sm text-gray-500 font-light'>India remains the top choice for strategic capability centers, offering an unparalleled blend of scale, skilled talent, cost efficiency, and innovation potential. Backed by decades of experience in global service delivery, the country provides a mature and robust ecosystem that enables seamless GCC operations.</span>
                             </p>
                         </div>
 
