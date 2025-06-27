@@ -3,7 +3,7 @@ import WhyChooseUs from './WhyChooseUs'
 import WhyBangalore from './WhyBangalore'
 import SuccessStories from './SuccessStories'
 import ProvenProcess from './ProvenProcess'
-import LatestInsights from './LatestInsights'
+// import LatestInsights from './LatestInsights'
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
         <WhyBangalore />
         <SuccessStories />
         <ProvenProcess />
-        <LatestInsights />
+        {/* <LatestInsights /> */}
     </div>
   )
 }

@@ -1,7 +1,8 @@
-import { 
-  Target, 
-  CheckCircle, 
-  Settings, 
+import PopoverForm from '@/components/PopoverForm';
+import {
+  Target,
+  CheckCircle,
+  Settings,
   ArrowRight,
   TrendingUp,
   Map
@@ -49,18 +50,18 @@ const StrategicConsultingDetail = () => {
   return (
     <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
             <Target className="w-4 h-4 mr-2" />
             SERVICE CATEGORY
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
             Strategic <span className="font-semibold text-logo-teal">Consulting</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
             Tailor a GCC strategy designed to align perfectly with your global business goals.
           </p>
@@ -71,12 +72,12 @@ const StrategicConsultingDetail = () => {
           {subServices.map((service) => {
             const IconComponent = service.icon;
             return (
-              <div 
+              <div
                 key={service.id}
                 className="bg-white border border-gray-200 p-8 lg:p-10 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                  
+
                   {/* Service Header - 3 columns */}
                   <div className="lg:col-span-3 space-y-6">
                     {/* Number and Icon */}
@@ -90,20 +91,20 @@ const StrategicConsultingDetail = () => {
                         <IconComponent className="w-7 h-7 text-white" />
                       </div>
                     </div>
-                    
+
                     {/* Title */}
                     <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 leading-tight">
                       {service.title}
                     </h3>
                   </div>
-                  
+
                   {/* Description - 5 columns */}
                   <div className="lg:col-span-5">
                     <p className="text-gray-600 font-light leading-relaxed">
                       {service.description}
                     </p>
                   </div>
-                  
+
                   {/* Features - 4 columns */}
                   <div className="lg:col-span-4">
                     <h4 className="font-semibold text-lg text-gray-900 mb-4">
@@ -131,23 +132,26 @@ const StrategicConsultingDetail = () => {
           <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
             Ready to Craft Your <span className="font-semibold text-logo-teal">GCC Strategy?</span>
           </h3>
-          
+
           <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
             Our strategic consulting services are designed to ensure your GCC achieves measurable impact aligned with your business priorities. Reach out to explore your strategic options.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-              <Target className="w-5 h-5 mr-3" />
-              Explore Your GCC Strategy
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
 
-            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
-              <Settings className="w-5 h-5 mr-3" />
-              Book a Consultation
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
+
+            <PopoverForm
+              title="Book a Consultation"
+              subtitle="Let's discuss your GCC requirements and how we can help."
+              submitButtonText="Book a Consultation"
+              successMessage="Thank you! We'll contact you to schedule your consultation."
+            >
+              <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                <Target className="w-5 h-5 mr-3" />
+                Book a Consultation
+                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </button>
+            </PopoverForm>
           </div>
         </div>
       </div>

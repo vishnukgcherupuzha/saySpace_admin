@@ -1,3 +1,4 @@
+import PopoverForm from '@/components/PopoverForm';
 import {
   MapPin,
   Users,
@@ -229,17 +230,19 @@ const PremierLocationsIndia = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-              <MapPin className="w-5 h-5 mr-3" />
-              Explore Location Options
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
 
-            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
-              <Building2 className="w-5 h-5 mr-3" />
-              Schedule Site Visit
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
+            <PopoverForm
+              title="Explore Location Options"
+              subtitle="Let's discuss your GCC requirements and how we can help."
+              submitButtonText="Explore Location Options"
+              successMessage="Thank you! We'll contact you to schedule your consultation."
+            >
+              <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                <MapPin className="w-5 h-5 mr-3" />
+                Explore Location Options
+                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </button>
+            </PopoverForm>
           </div>
         </div>
       </div>

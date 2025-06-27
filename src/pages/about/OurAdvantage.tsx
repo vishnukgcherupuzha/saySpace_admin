@@ -1,3 +1,4 @@
+import PopoverForm from '@/components/PopoverForm';
 import {
     Target,
     Layers,
@@ -13,35 +14,35 @@ const OurAdvantage = () => {
         {
             id: 1,
             icon: Target,
-            title: "Dedicated GCC Expertise",
+            title: "GCC Expertise",
             description: "Unlike broad-based consultancies, we concentrate solely on the establishment and enhancement of GCCs, delivering specialized knowledge and highly customized solutions for this niche area.",
             highlights: ["Exclusively GCC Focused", "In-depth Domain Knowledge", "Customized Strategies"]
         },
         {
             id: 2,
             icon: Layers,
-            title: "Comprehensive Lifecycle Services",
+            title: "Lifecycle Services",
             description: "We provide end-to-end support throughout the entire GCC journey—from initial planning and setup to continuous management and refinement—ensuring smooth coordination and sustainable success.",
             highlights: ["Complete Lifecycle Coverage", "Integrated Solutions", "Sustained Growth"]
         },
         {
             id: 3,
             icon: Globe,
-            title: "Blending Local Insight with Global Vision",
+            title: "Global Insight",
             description: "Our team merges extensive understanding of the Indian market with international perspectives to deliver culturally aware solutions that effectively connect global operations.",
             highlights: ["Indian Market Expertise", "Worldwide Perspective", "Culturally Tuned"]
         },
         {
             id: 4,
             icon: Zap,
-            title: "Flexible and Responsive Execution",
+            title: "Agile Delivery",
             description: "As a boutique consultancy, we provide focused support, quick decision-making, and agility to adapt strategies to your specific needs, ensuring a personalized GCC approach.",
             highlights: ["Focused Support", "Swift Decision Process", "Adaptable Approaches"]
         },
         {
             id: 5,
             icon: Network,
-            title: "Robust Partner Ecosystem",
+            title: "Partner Network",
             description: "We have cultivated strong alliances with prominent real estate developers, legal experts, technology vendors, and educational bodies in India, granting clients immediate access to a thriving ecosystem.",
             highlights: ["Established Network", "Trusted Alliances", "Ready-Made Infrastructure"]
         }
@@ -182,10 +183,18 @@ const OurAdvantage = () => {
                                 <div className="text-sm opacity-80">Next Step</div>
                                 <div className="text-xl font-semibold">Strategic Consultation</div>
                             </div>
-                            <button className="cursor-pointer bg-white text-logo-teal hover:bg-gray-50 px-8 py-4 font-semibold transition-all duration-200 inline-flex items-center">
-                                Schedule Discussion
-                                <Award className="w-5 h-5 ml-3" />
-                            </button>
+                            <PopoverForm
+                                title="Schedule Discussion"
+                                subtitle="Let's discuss your GCC requirements and how we can help."
+                                submitButtonText="Schedule Discussion"
+                                successMessage="Thank you! We'll contact you to schedule your consultation."
+                            >
+                                <button className="cursor-pointer bg-white text-logo-teal hover:bg-gray-50 px-8 py-4 font-semibold transition-all duration-200 inline-flex items-center">
+                                    Schedule Discussion
+                                    <Award className="w-5 h-5 ml-3" />
+                                </button>
+                            </PopoverForm>
+
                         </div>
                     </div>
                 </div>

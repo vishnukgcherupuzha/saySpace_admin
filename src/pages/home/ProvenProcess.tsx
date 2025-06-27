@@ -1,10 +1,11 @@
+// import PopoverForm from '@/components/PopoverForm';
 import {
   Target,
   MapPin,
   Users,
   Settings,
   TrendingUp,
-  ArrowRight,
+  // ArrowRight,
   CheckCircle
 } from 'lucide-react';
 
@@ -109,12 +110,11 @@ const ProvenProcess = () => {
 
               return (
                 <div key={step.id} className="relative">
-
                   {/* Timeline Connector for Desktop */}
                   <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-4 border-logo-teal rounded-full z-10"></div>
 
                   {/* Step Card */}
-                  <div className="bg-white border border-gray-200 p-6 lg:p-8 hover:shadow-lg transition-all duration-300 group">
+                  <div className="bg-white border border-gray-200 p-6 lg:p-8 hover:shadow-lg transition-all duration-300 group h-full">
 
                     {/* Phase Label */}
                     <div className="text-xs text-gray-500 font-medium tracking-wide mb-4">
@@ -181,7 +181,7 @@ const ProvenProcess = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">Proven Methodology</h4>
-                    <p className="text-gray-600 font-light">50+ successful GCC implementations using our structured approach</p>
+                    <p className="text-gray-600 font-light">10+ successful GCC implementations using our structured approach</p>
                   </div>
                 </div>
 
@@ -222,7 +222,7 @@ const ProvenProcess = () => {
                 <div className="text-sm text-gray-600 font-medium tracking-wide">FASTER TIME-TO-MARKET</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-light text-gray-900 mb-2">50+</div>
+                <div className="text-4xl lg:text-5xl font-light text-gray-900 mb-2">10+</div>
                 <div className="text-sm text-gray-600 font-medium tracking-wide">SUCCESSFUL SETUPS</div>
               </div>
             </div>
@@ -230,17 +230,19 @@ const ProvenProcess = () => {
         </div>
 
         {/* Professional CTA */}
-        <div className="mt-16 lg:mt-20 text-center">
-          <div className="inline-flex flex-col sm:flex-row gap-4">
+        {/* <div className="mt-16 lg:mt-20 text-center">
+          <PopoverForm
+            title="Schedule Consultation"
+            subtitle="Let's discuss your GCC requirements and how we can help."
+            submitButtonText="Schedule Consultation"
+            successMessage="Thank you! We'll contact you to schedule your consultation."
+          >
             <button className="cursor-pointer group bg-logo-teal hover:bg-logo-teal/90 text-white px-8 py-4 font-semibold transition-all duration-200 inline-flex items-center">
               Start Your GCC Journey
               <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
             </button>
-            <button className="cursor-pointer border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold transition-all duration-200 hover:bg-logo-teal/5">
-              Download Process Guide
-            </button>
-          </div>
-        </div>
+          </PopoverForm>
+        </div> */}
       </div>
     </section>
   );

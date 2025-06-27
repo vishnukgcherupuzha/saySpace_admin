@@ -9,57 +9,35 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
+import { useNavigate } from 'react-router-dom';
 
 const LeadershipTeam = () => {
+  const navigate = useNavigate();
   const teamMembers = [
     {
       id: 1,
       name: "Era Chaturvedi",
       role: "Founder & CEO",
-      company: "Say Space",
-      expertise: "GCC Strategy & Implementation",
+      company: "SaySpace",
+      expertise: "AEC industry",
       experience: "15+ Years Experience",
       url: imageConstants.ABOUT.ERA
     },
     {
       id: 2,
-      name: "Sarah Mitchell",
-      role: "VP of Operations",
-      company: "Say Space",
-      expertise: "Operational Excellence & Process Design",
-      experience: "12+ Years Experience"
+      name: "Pankaj Kohli",
+      role: "Co Founder",
+      company: "SaySpace",
+      expertise: "Corporate Real Estate",
+      experience: "20+ Years Experience"
     },
     {
       id: 3,
-      name: "Rajesh Kumar",
-      role: "Head of Talent Acquisition",
-      company: "Say Space", 
-      expertise: "Executive Search & Team Building",
-      experience: "10+ Years Experience"
-    },
-    {
-      id: 4,
-      name: "Michael Chen",
-      role: "Director of Legal Affairs",
-      company: "Say Space",
-      expertise: "Regulatory Compliance & Corporate Law",
-      experience: "14+ Years Experience"
-    },
-    {
-      id: 5,
-      name: "Priya Sharma",
-      role: "Head of Client Success",
-      company: "Say Space",
-      expertise: "Client Relations & Strategic Growth",
-      experience: "11+ Years Experience"
-    },
-    {
-      id: 6,
-      name: "David Rodriguez",
-      role: "Technology Director",
-      company: "Say Space",
-      expertise: "IT Infrastructure & Digital Solutions",
-      experience: "13+ Years Experience"
+      name: "Arunkumar Ramakrishnan",
+      role: "Advisor",
+      company: "SaySpace", 
+      expertise: "Technology Leader",
+      experience: "15+ Years Experience"
     }
   ];
 
@@ -68,7 +46,7 @@ const LeadershipTeam = () => {
   };
 
   return (
-    <section className="py-20 lg:py-24 bg-white">
+    <section id="leadership-team" className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -158,7 +136,7 @@ const LeadershipTeam = () => {
             <div className="w-14 h-14 bg-logo-teal flex items-center justify-center mx-auto mb-6">
               <Users className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-3xl font-light text-gray-900 mb-2">75+</h3>
+            <h3 className="text-3xl font-light text-gray-900 mb-2">100+</h3>
             <p className="text-gray-600 font-medium">Years Combined Experience</p>
           </div>
           
@@ -166,7 +144,7 @@ const LeadershipTeam = () => {
             <div className="w-14 h-14 bg-cta-coral flex items-center justify-center mx-auto mb-6">
               <Building2 className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-3xl font-light text-gray-900 mb-2">50+</h3>
+            <h3 className="text-3xl font-light text-gray-900 mb-2">10+</h3>
             <p className="text-gray-600 font-medium">Successful GCC Implementations</p>
           </div>
           
@@ -174,7 +152,7 @@ const LeadershipTeam = () => {
             <div className="w-14 h-14 bg-gray-600 flex items-center justify-center mx-auto mb-6">
               <Globe className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-3xl font-light text-gray-900 mb-2">15+</h3>
+            <h3 className="text-3xl font-light text-gray-900 mb-2">5+</h3>
             <p className="text-gray-600 font-medium">Countries Served</p>
           </div>
         </div>
@@ -238,7 +216,7 @@ const LeadershipTeam = () => {
               </p>
             </div>
             <div className="lg:text-right">
-              <button className="cursor-pointer group bg-white text-logo-teal hover:bg-gray-50 px-8 py-4 font-semibold transition-all duration-200 inline-flex items-center">
+              <button onClick={() => navigate('/careers')} className="cursor-pointer group bg-white text-logo-teal hover:bg-gray-50 px-8 py-4 font-semibold transition-all duration-200 inline-flex items-center">
                 <Users className="w-5 h-5 mr-3" />
                 View Career Opportunities
                 <ExternalLink className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />

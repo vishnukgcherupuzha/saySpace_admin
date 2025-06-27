@@ -1,5 +1,6 @@
 import { ArrowRight, Building2, IndianRupee, TrendingUp } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
+import PopoverForm from '@/components/PopoverForm';
 
 const HeroSection = () => {
     return (
@@ -31,7 +32,7 @@ const HeroSection = () => {
                                 Why India Leads as the Top
                                 <br />
                                 <span className="font-semibold text-logo-teal">
-                                     GCC Location
+                                    GCC Location
                                 </span>
                             </h1>
 
@@ -46,11 +47,19 @@ const HeroSection = () => {
 
                         {/* Professional CTA Section */}
                         <div className="flex flex-col sm:flex-row gap-4 pt-8">
-                            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-                                <Building2 className="w-5 h-5 mr-3" />
-                                Discover India's Advantages
-                                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-                            </button>
+
+                            <PopoverForm
+                                title="Start your Journey"
+                                subtitle="Let's discuss your GCC requirements and how we can help."
+                                submitButtonText="Start your Journey"
+                                successMessage="Thank you! We'll contact you to schedule your consultation."
+                            >
+                                <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                                    <Building2 className="w-5 h-5 mr-3" />
+                                    Discover India's Advantages
+                                    <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+                                </button>
+                            </PopoverForm>
                         </div>
 
                         {/* Trust Indicators */}
@@ -83,8 +92,8 @@ const HeroSection = () => {
                         <div className="relative">
                             {/* Professional image container */}
                             <div className="relative bg-white shadow-2xl shadow-gray-900/10">
-                                <img 
-                                    src={imageConstants.WHY_INDIA.HERO} 
+                                <img
+                                    src={imageConstants.WHY_INDIA.HERO}
                                     alt="India GCC Destination"
                                     className="w-full h-auto"
                                 />

@@ -1,7 +1,27 @@
 import { ArrowRight, Building2, Settings2, Users, CheckCircle } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
+import PopoverForm from '@/components/PopoverForm';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
+    const navigate = useNavigate();
+    
+    const navigateToTeam = () => {
+        // Navigate to about page with hash for team section
+        navigate('/about#leadership-team');
+        
+        // Alternative approach: navigate and then scroll after a short delay
+        // This ensures the page has loaded before attempting to scroll
+        setTimeout(() => {
+            const teamSection = document.getElementById('leadership-team');
+            if (teamSection) {
+                teamSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }, 100);
+    };
     return (
         <section className="relative bg-white overflow-hidden">
             {/* Subtle Background Elements */}
@@ -48,15 +68,25 @@ const HeroSection = () => {
 
                         {/* Professional CTA Section */}
                         <div className="flex flex-col sm:flex-row gap-4 pt-8">
-                            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-                                <Building2 className="w-5 h-5 mr-3" />
-                                Start your Journey
-                                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-                            </button>
 
-                            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
+
+
+                            <PopoverForm
+                                title="Start your Journey"
+                                subtitle="Let's discuss your GCC requirements and how we can help."
+                                submitButtonText="Start your Journey"
+                                successMessage="Thank you! We'll contact you to schedule your consultation."
+                            >
+                                <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                                    <Building2 className="w-5 h-5 mr-3" />
+                                    Start your Journey
+                                    <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+                                </button>
+                            </PopoverForm>
+
+                            <button onClick={navigateToTeam} className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
                                 <Users className="w-5 h-5 mr-3" />
-                                Meet our team
+                                Meet Our Team
                                 <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
                             </button>
                         </div>

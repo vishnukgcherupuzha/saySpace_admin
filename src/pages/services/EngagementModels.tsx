@@ -1,3 +1,4 @@
+import PopoverForm from '@/components/PopoverForm';
 import {
   CheckCircle,
   ArrowRight,
@@ -126,7 +127,7 @@ const EngagementModels = () => {
                     </p>
 
                     {/* Features */}
-                    <div className="space-y-3 mb-8 pt-4 border-t border-gray-200">
+                    <div className="space-y-3 pt-4 border-t border-gray-200">
                       <h4 className="font-semibold text-sm text-gray-900 mb-3">
                         Key Features:
                       </h4>
@@ -141,13 +142,13 @@ const EngagementModels = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <button className={`group/btn w-full py-3 px-6 font-semibold text-base transition-all duration-300 flex items-center justify-center ${model.popular
+                    {/* <button className={`group/btn w-full py-3 px-6 font-semibold text-base transition-all duration-300 flex items-center justify-center ${model.popular
                       ? 'bg-cta-coral hover:bg-cta-coral/90 text-white shadow-sm hover:shadow-md'
                       : 'border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal hover:bg-logo-teal/5'
                       }`}>
                       {model.buttonText}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-0.5 transition-transform duration-200" />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>
@@ -156,7 +157,7 @@ const EngagementModels = () => {
         </div>
 
         {/* Comparison Section */}
-        <div className="bg-white border border-gray-200 p-8 lg:p-12">
+        {/* <div className="bg-white border border-gray-200 p-8 lg:p-12">
           <div className="text-center mb-8">
             <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
               Choose the Right <span className="font-semibold text-cta-coral">Model for You</span>
@@ -198,7 +199,7 @@ const EngagementModels = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Bottom CTA Section */}
         <div className="mt-16 lg:mt-20 bg-gray-50 p-8 lg:p-12 text-center">
@@ -212,17 +213,20 @@ const EngagementModels = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-              <Users className="w-5 h-5 mr-3" />
-              Schedule Consultation
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
 
-            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
-              <Target className="w-5 h-5 mr-3" />
-              Compare All Models
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
+
+            <PopoverForm
+              title="Schedule Consultation"
+              subtitle="Let's discuss your GCC requirements and how we can help."
+              submitButtonText="Schedule Consultation"
+              successMessage="Thank you! We'll contact you to schedule your consultation."
+            >
+              <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                <Users className="w-5 h-5 mr-3" />
+                Schedule Consultation
+                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </button>
+            </PopoverForm>
           </div>
         </div>
       </div>

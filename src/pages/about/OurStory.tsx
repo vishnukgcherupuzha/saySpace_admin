@@ -65,8 +65,8 @@ const OurStory = () => {
 
             {/* Main Story */}
             <div className="space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed font-light">
-                <span className="font-semibold text-gray-900">Say Space</span> is a niche advisory firm driven by senior professionals, focused on guiding global organizations through every phase of their Global Capability Center journey within India's vibrant tech ecosystem.
+              <p className=" text-gray-700 leading-relaxed font-light">
+                <span className="font-semibold text-gray-900">SaySpace</span> is a niche advisory firm driven by senior professionals, focused on guiding global organizations through every phase of their Global Capability Center journey within India's vibrant tech ecosystem.
               </p>
 
               <p className="text-gray-600 leading-relaxed font-light">
@@ -118,7 +118,7 @@ const OurStory = () => {
                   />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-1">Era Chaturvedi</h4>
-                <p className="text-sm text-gray-600 mb-4">Founder & CEO, Say Space</p>
+                <p className="text-sm text-gray-600 mb-4">Founder & CEO, SaySpace</p>
                 <div className="w-16 h-px bg-logo-teal mx-auto"></div>
               </div>
 
@@ -142,11 +142,11 @@ const OurStory = () => {
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
-                    <div className="text-2xl font-light text-gray-900 mb-1">15+</div>
+                    <div className="text-2xl font-light text-gray-900 mb-1">3+</div>
                     <div className="text-xs text-gray-600 font-medium">Years Experience</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-light text-gray-900 mb-1">50+</div>
+                    <div className="text-2xl font-light text-gray-900 mb-1">10+</div>
                     <div className="text-xs text-gray-600 font-medium">GCCs Established</div>
                   </div>
                 </div>

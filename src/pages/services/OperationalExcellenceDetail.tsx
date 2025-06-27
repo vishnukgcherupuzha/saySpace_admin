@@ -1,7 +1,8 @@
-import { 
-  Settings, 
-  CheckCircle, 
-  Cog, 
+import PopoverForm from '@/components/PopoverForm';
+import {
+  Settings,
+  CheckCircle,
+  Cog,
   ArrowRight,
   Monitor,
   TrendingUp
@@ -71,7 +72,7 @@ const OperationalExcellenceDetail = () => {
           {subServices.map((service) => {
             const IconComponent = service.icon;
             return (
-              <div 
+              <div
                 key={service.id}
                 className="bg-white border border-gray-200 p-6 lg:p-8 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
               >
@@ -129,17 +130,19 @@ const OperationalExcellenceDetail = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-              <Settings className="w-5 h-5 mr-3" />
-              Optimize Your GCC Operations
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
 
-            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
-              <TrendingUp className="w-5 h-5 mr-3" />
-              Performance Assessment
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
+            <PopoverForm
+              title="Optimize Your GCC Operations"
+              subtitle="Let's discuss your GCC requirements and how we can help."
+              submitButtonText="Optimize Your GCC Operations"
+              successMessage="Thank you! We'll contact you to schedule your consultation."
+            >
+              <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                <Settings className="w-5 h-5 mr-3" />
+                Optimize Your GCC Operations
+                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </button>
+            </PopoverForm>
           </div>
         </div>
       </div>

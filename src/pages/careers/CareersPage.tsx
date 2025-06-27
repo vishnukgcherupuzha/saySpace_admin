@@ -15,11 +15,12 @@ import {
   ArrowRight,
   Search,
   Filter,
-  ExternalLink,
+  // ExternalLink,
   Star,
-  Zap,
+  // Zap,
 } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
+import { useNavigate } from 'react-router-dom';
 
 // Type definitions
 interface JobOpening {
@@ -46,6 +47,34 @@ const CareersPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('All');
   const [selectedExperience, setSelectedExperience] = useState('All');
+
+  const scrollToTeam = () => {
+    const teamSection = document.getElementById('openings');
+    if (teamSection) {
+      teamSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+  const navigate = useNavigate();
+
+  const navigateToTeam = () => {
+    // Navigate to about page with hash for team section
+    navigate('/about#leadership-team');
+
+    // Alternative approach: navigate and then scroll after a short delay
+    // This ensures the page has loaded before attempting to scroll
+    setTimeout(() => {
+      const teamSection = document.getElementById('leadership-team');
+      if (teamSection) {
+        teamSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }, 100);
+  };
 
   const benefits: Benefit[] = [
     {
@@ -86,76 +115,7 @@ const CareersPage = () => {
     }
   ];
 
-  const jobOpenings: JobOpening[] = [
-    {
-      id: '1',
-      title: 'Senior GCC Strategy Consultant',
-      type: 'Full Time',
-      department: 'Consulting',
-      location: 'Bangalore (Hybrid)',
-      experience: '7+ Years',
-      postedDate: 'June 13, 2025',
-      skills: ['GCC Strategy', 'Business Transformation', '7+ Years'],
-      description: 'Lead strategic consulting engagements for Fortune 500 companies establishing GCCs in India.',
-      requirements: [
-        '7+ years in management consulting or strategy roles',
-        'Experience with GCC establishment and operations',
-        'Strong analytical and communication skills',
-        'MBA from tier-1 institution preferred'
-      ]
-    },
-    {
-      id: '2',
-      title: 'GCC Technology Architect',
-      type: 'Full Time',
-      department: 'Technology',
-      location: 'Bangalore (Hybrid)',
-      experience: '8+ Years',
-      postedDate: 'June 08, 2025',
-      skills: ['Solutions Architecture', 'Cloud', '8+ Years'],
-      description: 'Design and implement technology solutions for GCC infrastructure and operations.',
-      requirements: [
-        '8+ years in solutions architecture',
-        'Expertise in cloud platforms (AWS, Azure, GCP)',
-        'Experience with enterprise technology integration',
-        'Strong leadership and team management skills'
-      ]
-    },
-    {
-      id: '3',
-      title: 'GCC Operations Manager',
-      type: 'Full Time',
-      department: 'Operations',
-      location: 'Bangalore (Hybrid)',
-      experience: '5+ Years',
-      postedDate: 'June 05, 2025',
-      skills: ['Operations Management', 'Process Optimization', '5+ Years'],
-      description: 'Manage day-to-day operations and drive efficiency improvements across GCC functions.',
-      requirements: [
-        '5+ years in operations management',
-        'Experience with process optimization',
-        'Strong project management skills',
-        'Knowledge of GCC operations preferred'
-      ]
-    },
-    {
-      id: '4',
-      title: 'Senior Business Analyst',
-      type: 'Full Time',
-      department: 'Consulting',
-      location: 'Bangalore (Hybrid)',
-      experience: '4+ Years',
-      postedDate: 'June 01, 2025',
-      skills: ['Business Analysis', 'Data Analytics', '4+ Years'],
-      description: 'Analyze business requirements and provide insights for GCC transformation projects.',
-      requirements: [
-        '4+ years in business analysis',
-        'Strong analytical and problem-solving skills',
-        'Experience with data visualization tools',
-        'Knowledge of business process improvement'
-      ]
-    }
-  ];
+  const jobOpenings: JobOpening[] = [];
 
   const departments = ['All', ...Array.from(new Set(jobOpenings.map(job => job.department)))];
   const experienceLevels = ['All', ...Array.from(new Set(jobOpenings.map(job => job.experience)))];
@@ -214,7 +174,7 @@ const CareersPage = () => {
                   Shape Your Future with
                   <br />
                   <span className="font-semibold text-logo-teal">
-                    Say Space
+                    SaySpace
                   </span>
                 </h1>
 
@@ -246,13 +206,13 @@ const CareersPage = () => {
 
               {/* Professional CTA Section */}
               <div className="flex flex-col sm:flex-row gap-4 pt-8">
-                <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                <button onClick={scrollToTeam} className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
                   <Briefcase className="w-5 h-5 mr-3" />
                   Explore Opportunities
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
                 </button>
 
-                <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
+                <button onClick={navigateToTeam} className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
                   <Users className="w-5 h-5 mr-3" />
                   Meet Our Team
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
@@ -263,13 +223,13 @@ const CareersPage = () => {
               <div className="pt-8 border-t border-gray-200">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-8 space-y-4 sm:space-y-0">
                   <div className="flex items-center space-x-2">
-                    <div className="text-2xl font-light text-logo-teal">15+</div>
+                    <div className="text-2xl font-light text-logo-teal">5+</div>
                     <div className="text-sm text-gray-600 leading-tight">
                       Years of<br />Excellence
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="text-2xl font-light text-logo-teal">50+</div>
+                    <div className="text-2xl font-light text-logo-teal">10+</div>
                     <div className="text-sm text-gray-600 leading-tight">
                       Successful<br />Projects
                     </div>
@@ -291,7 +251,7 @@ const CareersPage = () => {
                 <div className="relative bg-white shadow-2xl shadow-gray-900/10">
                   <img
                     src={imageConstants.CAREER.HERO}
-                    alt="Say Space GCC Consulting Team"
+                    alt="SaySpace GCC Consulting Team"
                     className="w-full h-auto"
                   />
                   {/* Subtle overlay for professional look */}
@@ -340,7 +300,7 @@ const CareersPage = () => {
           <div className="text-center mb-16 lg:mb-20">
             <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
               <Star className="w-4 h-4 mr-2" />
-              WHY JOIN SAY SPACE
+              WHY JOIN SAYSPACE
             </div>
 
             <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
@@ -387,7 +347,7 @@ const CareersPage = () => {
       </section>
 
       {/* Current Openings Section - Professional Design */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white" id='openings'>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Section Header */}
@@ -428,7 +388,7 @@ const CareersPage = () => {
                 <select
                   value={selectedDepartment}
                   onChange={(e) => setSelectedDepartment(e.target.value)}
-                  className="pl-10 pr-8 py-3 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent min-w-[160px]"
+                  className="pl-10 pr-8 py-3 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent min-w-[160px] cursor-pointer"
                 >
                   {departments.map(dept => (
                     <option key={dept} value={dept}>{dept}</option>
@@ -442,7 +402,7 @@ const CareersPage = () => {
                 <select
                   value={selectedExperience}
                   onChange={(e) => setSelectedExperience(e.target.value)}
-                  className="pl-10 pr-8 py-3 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent min-w-[160px]"
+                  className="pl-10 pr-8 py-3 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent min-w-[160px] cursor-pointer"
                 >
                   {experienceLevels.map(level => (
                     <option key={level} value={level}>{level}</option>
@@ -533,7 +493,7 @@ const CareersPage = () => {
       </section>
 
       {/* CTA Section - Professional Design */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
           <div className="bg-white border border-gray-200 p-8 lg:p-12">
@@ -562,7 +522,7 @@ const CareersPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

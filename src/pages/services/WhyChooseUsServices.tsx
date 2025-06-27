@@ -1,3 +1,4 @@
+import PopoverForm from '@/components/PopoverForm';
 import {
   Target,
   Layers,
@@ -32,20 +33,20 @@ const WhyChooseUsServices = () => {
       title: "Global Insight with Local Precision",
       description:
         "Our approach blends in-depth understanding of India's business landscape with global business acumen to craft culturally relevant solutions.",
-      stats: { value: "15+", label: "Countries Served" }
+      stats: { value: "5+", label: "Countries Served" }
     },
     {
       id: 4,
       icon: Award,
       title: "Trusted by Industry Leaders",
       description:
-        "With 50+ GCCs launched and a stellar client retention rate, we bring a consistent track record of success across verticals.",
+        "With 10+ GCCs launched and a stellar client retention rate, we bring a consistent track record of success across verticals.",
       stats: { value: "95%", label: "Client Retention" }
     }
   ];
 
   return (
-    <section className="py-20 lg:py-24 bg-gray-50">
+    <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -174,7 +175,7 @@ const WhyChooseUsServices = () => {
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-cta-coral flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-600 font-light">50+ successful GCC implementations completed</span>
+                    <span className="text-gray-600 font-light">10+ successful GCC implementations completed</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-cta-coral flex-shrink-0 mt-0.5" />
@@ -201,17 +202,19 @@ const WhyChooseUsServices = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-              <Award className="w-5 h-5 mr-3" />
-              View Success Stories
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
 
-            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
-              <Globe className="w-5 h-5 mr-3" />
-              Schedule Discovery Call
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
+            <PopoverForm
+              title="Schedule Discovery Call"
+              subtitle="Let's discuss your GCC requirements and how we can help."
+              submitButtonText="Schedule Discovery Call"
+              successMessage="Thank you! We'll contact you to schedule your consultation."
+            >
+              <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                <Award className="w-5 h-5 mr-3" />
+                Schedule Discovery Call
+                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </button>
+            </PopoverForm>
           </div>
         </div>
       </div>
