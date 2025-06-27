@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Calculator, FileText, Phone, Target, ArrowRight } from 'lucide-react';
+import PopoverForm from '../../components/PopoverForm';
 
 // Type definitions
 interface CalculatorData {
@@ -418,6 +420,7 @@ const TimelineSelection: React.FC<TimelineSelectionProps> = ({
 
 // Information Sidebar Component
 const InformationSidebar: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="space-y-8">
       
@@ -504,7 +507,10 @@ const InformationSidebar: React.FC = () => {
         <p className="text-gray-600 font-light mb-6">
           Our GCC experts can provide a comprehensive cost analysis tailored to your specific requirements.
         </p>
-        <button className="cursor-pointer group w-full bg-cta-coral hover:bg-cta-coral/90 text-white px-6 py-3 font-semibold transition-all duration-200 shadow-sm hover:shadow-md flex items-center justify-center">
+        <button 
+          onClick={() => navigate('/contact#contact-form')}
+          className="cursor-pointer group w-full bg-cta-coral hover:bg-cta-coral/90 text-white px-6 py-3 font-semibold transition-all duration-200 shadow-sm hover:shadow-md flex items-center justify-center"
+        >
           <Phone className="w-4 h-4 mr-2" />
           Contact Our Team
           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-0.5 transition-transform duration-200" />
@@ -656,6 +662,7 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ estimate, teamSize }) =
 
 // Main Calculator Component
 const GCCCostCalculator: React.FC = () => {
+  const navigate = useNavigate();
   const [calculatorData, setCalculatorData] = useState<CalculatorData>({
     teamSize: 50,
     growthPlan: '',
@@ -858,12 +865,22 @@ const GCCCostCalculator: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-                <FileText className="w-5 h-5 mr-3" />
-                Schedule a Consultation
-                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-              </button>
-              <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
+              <PopoverForm
+                title="Schedule a Consultation"
+                subtitle="Share your GCC requirements and let's discuss how we can help you achieve your goals."
+                submitButtonText="Schedule Consultation"
+                successMessage="Thank you! We'll contact you soon to schedule your consultation."
+              >
+                <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                  <FileText className="w-5 h-5 mr-3" />
+                  Schedule a Consultation
+                  <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+                </button>
+              </PopoverForm>
+              <button 
+                onClick={() => navigate('/contact#contact-form')}
+                className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5"
+              >
                 <Phone className="w-5 h-5 mr-3" />
                 Contact Us
                 <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />

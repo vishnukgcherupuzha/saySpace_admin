@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 import {imageConstants} from '../../public/images/index'
 import { Button } from './ui/button';
 
@@ -7,26 +8,17 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isGccDropdownOpen, setIsGccDropdownOpen] = useState(false);
-  const [currentPath, setCurrentPath] = useState('');
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
     
-    // Set initial path and listen for changes
-    setCurrentPath(window.location.pathname);
-    
-    const handleLocationChange = () => {
-      setCurrentPath(window.location.pathname);
-    };
-    
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('popstate', handleLocationChange);
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('popstate', handleLocationChange);
     };
   }, []);
 
@@ -51,14 +43,14 @@ const Header = () => {
 
   // Check if current path matches or starts with the href
   const isActiveRoute = (href: string) => {
-    if (href === '/' && currentPath === '/') return true;
-    if (href !== '/' && currentPath.startsWith(href)) return true;
+    if (href === '/' && location.pathname === '/') return true;
+    if (href !== '/' && location.pathname.startsWith(href)) return true;
     return false;
   };
 
   // Check if any GCC policy is active
   const isGccActive = () => {
-    return currentPath.startsWith('/gcc-policies');
+    return location.pathname.startsWith('/gcc-policies');
   };
 
   return (
