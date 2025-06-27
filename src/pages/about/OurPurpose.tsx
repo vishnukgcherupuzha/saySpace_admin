@@ -72,7 +72,7 @@ const OurPurpose = () => {
               {/* Mission Statement */}
               <div className="space-y-8">
                 <p className="text-lg text-gray-700 leading-relaxed font-light">
-                  At <span className="font-semibold text-logo-teal">Say Space</span>, our mission is to design and implement 
+                  At <span className="font-semibold text-logo-teal">SaySpace</span>, our mission is to design and implement 
                   world-class GCCs that drive innovation, operational agility, and long-term strategic advantage for global companies.
                 </p>
                 
@@ -167,7 +167,7 @@ const OurPurpose = () => {
                         Era Chaturvedi
                       </div>
                       <div className="text-xs text-gray-600">
-                        Founder & CEO, Say Space
+                        Founder & CEO, SaySpace
                       </div>
                     </div>
                   </div>
@@ -194,7 +194,7 @@ const OurPurpose = () => {
                 <div className="text-sm text-gray-400 font-medium">Organizations by 2030</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-light text-white mb-2">15+</div>
+                <div className="text-3xl lg:text-4xl font-light text-white mb-2">3+</div>
                 <div className="text-sm text-gray-400 font-medium">Years of Proven Expertise</div>
               </div>
               <div className="text-center">

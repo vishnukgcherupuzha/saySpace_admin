@@ -3,7 +3,7 @@ import Advantages from "./Advantages";
 import PremierLocationsIndia from "./PremierLocationsIndia";
 import CityComparison from "./CityComparison";
 import SuccessStories from "./SuccessStories";
-import Testimonial from "./Testimonial";
+// import Testimonial from "./Testimonial";
 
 const WhyIndia: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const WhyIndia: React.FC = () => {
         <PremierLocationsIndia />
         <CityComparison />
         <SuccessStories />
-        <Testimonial />
+        {/* <Testimonial /> */}
     </div>
   );
 };

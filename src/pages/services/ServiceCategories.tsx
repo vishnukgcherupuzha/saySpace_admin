@@ -1,3 +1,4 @@
+import PopoverForm from '@/components/PopoverForm';
 import {
   Target,
   MapPin,
@@ -100,12 +101,12 @@ const ServiceCategories = () => {
                   </p>
 
                   {/* Learn More Link */}
-                  <div className="mt-6 pt-4 border-t border-gray-200">
+                  {/* <div className="mt-6 pt-4 border-t border-gray-200">
                     <button className={`group/btn inline-flex items-center text-${service.accent} font-semibold text-sm hover:text-${service.accent}/80 transition-colors duration-200`}>
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-0.5 transition-transform duration-200" />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             );
@@ -124,17 +125,19 @@ const ServiceCategories = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-              <Target className="w-5 h-5 mr-3" />
-              Start Your Journey
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
 
-            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
-              <Users className="w-5 h-5 mr-3" />
-              Schedule Consultation
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
+            <PopoverForm
+              title="Start your Journey"
+              subtitle="Let's discuss your GCC requirements and how we can help."
+              submitButtonText="Start your Journey"
+              successMessage="Thank you! We'll contact you to schedule your consultation."
+            >
+              <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                <Target className="w-5 h-5 mr-3" />
+                Start Your Journey
+                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </button>
+            </PopoverForm>
           </div>
         </div>
       </div>

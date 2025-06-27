@@ -1,7 +1,18 @@
 import { ArrowRight, Building2, Users, Award, Target } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
+import PopoverForm from '@/components/PopoverForm';
 
 const HeroSection = () => {
+    const scrollToTeam = () => {
+        const teamSection = document.getElementById('leadership-team');
+        if (teamSection) {
+            teamSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <section className="relative bg-white overflow-hidden">
             {/* Subtle Background Elements */}
@@ -22,7 +33,7 @@ const HeroSection = () => {
                         {/* Professional Badge */}
                         <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide">
                             <div className="w-2 h-2 bg-logo-teal rounded-full mr-2"></div>
-                            ABOUT SAY SPACE
+                            ABOUT SAYSPACE
                         </div>
 
                         {/* Main Headline - Enterprise Typography */}
@@ -59,20 +70,32 @@ const HeroSection = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-gray-900 mb-1">Proven Excellence</h3>
-                                    <p className="text-gray-600 text-sm font-light">50+ successful GCC implementations across industries</p>
+                                    <p className="text-gray-600 text-sm font-light">10+ successful GCC implementations across industries</p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Professional CTA Section */}
                         <div className="flex flex-col sm:flex-row gap-4 pt-8">
-                            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-                                <Building2 className="w-5 h-5 mr-3" />
-                                Start Your Journey
-                                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-                            </button>
 
-                            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
+
+                            <PopoverForm
+                                title="Schedule Consultation"
+                                subtitle="Let's discuss your GCC requirements and how we can help."
+                                submitButtonText="Schedule Consultation"
+                                successMessage="Thank you! We'll contact you to schedule your consultation."
+                            >
+                                <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                                    <Building2 className="w-5 h-5 mr-3" />
+                                    Start Your Journey
+                                    <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+                                </button>
+                            </PopoverForm>
+
+                            <button 
+                                onClick={scrollToTeam}
+                                className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5"
+                            >
                                 <Users className="w-5 h-5 mr-3" />
                                 Meet Our Team
                                 <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
@@ -87,7 +110,7 @@ const HeroSection = () => {
                             <div className="relative bg-white shadow-2xl shadow-gray-900/10">
                                 <img
                                     src={imageConstants.ABOUT.HERO}
-                                    alt="Say Space GCC Consulting Team"
+                                    alt="SaySpace GCC Consulting Team"
                                     className="w-full h-auto"
                                 />
                                 {/* Subtle overlay for professional look */}

@@ -1,3 +1,4 @@
+import PopoverForm from '@/components/PopoverForm';
 import {
   TrendingUp,
   CheckCircle,
@@ -133,17 +134,18 @@ const OngoingManagementDetail = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-              <TrendingUp className="w-5 h-5 mr-3" />
-              Manage Your GCC Effectively
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
-
-            <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
-              <BarChart3 className="w-5 h-5 mr-3" />
-              Growth Strategy Consultation
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
+            <PopoverForm
+              title="Manage Your GCC Effectively"
+              subtitle="Let's discuss your GCC requirements and how we can help."
+              submitButtonText="Manage Your GCC Effectively"
+              successMessage="Thank you! We'll contact you to schedule your consultation."
+            >
+              <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                <TrendingUp className="w-5 h-5 mr-3" />
+                Manage Your GCC Effectively
+                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </button>
+            </PopoverForm>
           </div>
         </div>
 
@@ -236,7 +238,7 @@ const OngoingManagementDetail = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-3xl lg:text-4xl font-light text-white mb-2">5+</div>
+                <div className="text-3xl lg:text-4xl font-light text-white mb-2">3+</div>
                 <div className="text-sm text-gray-400 font-medium">Years Average Partnership</div>
               </div>
               <div className="text-center">

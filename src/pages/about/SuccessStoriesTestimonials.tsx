@@ -18,12 +18,12 @@ const SuccessStoriesTestimonials = () => {
   const testimonials = [
     {
       id: 1,
-      quote: "Partnering with Say Space was one of the best strategic decisions we made. Their insight into India's tech landscape helped us launch a highly efficient delivery center with a strong leadership pipeline.",
+      quote: "Partnering with SaySpace was one of the best strategic decisions we made. Their insight into India's tech landscape helped us launch a highly efficient delivery center with a strong leadership pipeline.",
       name: "Anika Patel",
       role: "Director of Global Delivery",
       company: "NextWave Technologies",
       industry: "Information Technology",
-      location: "Pune",
+      location: "Bangalore",
       projectDetails: {
         timeline: "5 months",
         teamSize: "220+",
@@ -33,7 +33,7 @@ const SuccessStoriesTestimonials = () => {
     },
     {
       id: 2,
-      quote: "Say Space brought clarity and control to a very complex expansion process. From regulatory support to team onboarding, their execution was flawless. Our Indian GCC is now a core part of our global value chain.",
+      quote: "SaySpace brought clarity and control to a very complex expansion process. From regulatory support to team onboarding, their execution was flawless. Our Indian GCC is now a core part of our global value chain.",
       name: "Carlos Mendes",
       role: "Chief Operations Officer",
       company: "Sterling Capital Group",
@@ -48,7 +48,7 @@ const SuccessStoriesTestimonials = () => {
     },
     {
       id: 3,
-      quote: "Say Space provided us with a well-rounded launch strategy that covered legal, talent, and infrastructure planning. Their team’s responsiveness and professionalism gave us full confidence throughout the journey.",
+      quote: "SaySpace provided us with a well-rounded launch strategy that covered legal, talent, and infrastructure planning. Their team’s responsiveness and professionalism gave us full confidence throughout the journey.",
       name: "Lina Bergström",
       role: "VP, Business Transformation",
       company: "Nordic Health Systems",
@@ -276,7 +276,7 @@ const SuccessStoriesTestimonials = () => {
               <div className="text-sm text-gray-600 font-medium">Avg. Cost Savings</div>
             </div>
             <div>
-              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">50+</div>
+              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">10+</div>
               <div className="text-sm text-gray-600 font-medium">Successful GCCs</div>
             </div>
           </div>

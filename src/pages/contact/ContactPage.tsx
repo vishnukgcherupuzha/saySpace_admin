@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import {
   Mail,
@@ -17,6 +18,8 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
+import { sendContactFormEmail } from '../../lib/emailService';
+import { Button } from '@/components/ui/button';
 
 // Type definitions
 interface FormData {
@@ -38,6 +41,26 @@ interface FAQ {
 }
 
 const ContactPage = () => {
+  // Scroll functions for navigation
+  const scrollToContactForm = () => {
+    const contactSection = document.getElementById('contact-form');
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const scrollToOfficeLocation = () => {
+    const officeSection = document.getElementById('office-location');
+    if (officeSection) {
+      officeSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
   const [formData, setFormData] = useState<FormData>({
     fullName: '',
     email: '',
@@ -121,19 +144,14 @@ const ContactPage = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Console log the form data
-    console.log('Form Submission:', {
-      ...formData,
-      submittedAt: new Date().toISOString()
-    });
-
-    // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Send email using the reusable email service
+      await sendContactFormEmail(formData);
+
       setSubmitStatus('success');
 
       // Reset form after successful submission
@@ -151,8 +169,8 @@ const ContactPage = () => {
         setSubmitStatus('idle');
       }, 3000);
     } catch (error) {
+      console.error('Email sending error:', error);
       setSubmitStatus('error');
-      console.log(error)
       setTimeout(() => setSubmitStatus('idle'), 3000);
     } finally {
       setIsSubmitting(false);
@@ -165,8 +183,7 @@ const ContactPage = () => {
     ));
   };
 
-  const isFormValid = formData.fullName && formData.email && formData.company &&
-    formData.primaryInterest && formData.message && formData.consent;
+  const isFormValid = formData.fullName && formData.email && formData.message;
 
   return (
     <div className="min-h-screen bg-white">
@@ -233,15 +250,21 @@ const ContactPage = () => {
 
               {/* Professional CTA Section */}
               <div className="flex flex-col sm:flex-row gap-4 pt-8">
-                <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                <button 
+                  onClick={scrollToContactForm}
+                  className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md"
+                >
                   <MessageSquare className="w-5 h-5 mr-3" />
                   Start Conversation
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
                 </button>
 
-                <button className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5">
-                  <Phone className="w-5 h-5 mr-3" />
-                  Schedule Call
+                <button 
+                  onClick={scrollToOfficeLocation}
+                  className="cursor-pointer group border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-logo-teal/5"
+                >
+                  <MapPin className="w-5 h-5 mr-3" />
+                  Visit Our Office
                   <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
                 </button>
               </div>
@@ -250,20 +273,20 @@ const ContactPage = () => {
               <div className="pt-8 border-t border-gray-200">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-8 space-y-4 sm:space-y-0">
                   <div className="flex items-center space-x-2">
-                    <div className="text-2xl font-light text-logo-teal">24hr</div>
-                    <div className="text-sm text-gray-600 leading-tight">
+                    <div className="text-3xl font-bold text-logo-teal">24hr</div>
+                    <div className="text-sm text-gray-700 leading-tight font-medium">
                       Response<br />Time
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="text-2xl font-light text-logo-teal">15+</div>
-                    <div className="text-sm text-gray-600 leading-tight">
+                    <div className="text-3xl font-bold text-logo-teal">3+</div>
+                    <div className="text-sm text-gray-700 leading-tight font-medium">
                       Years<br />Experience
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="text-2xl font-light text-logo-teal">100%</div>
-                    <div className="text-sm text-gray-600 leading-tight">
+                    <div className="text-3xl font-bold text-logo-teal">100%</div>
+                    <div className="text-sm text-gray-700 leading-tight font-medium">
                       Client<br />Satisfaction
                     </div>
                   </div>
@@ -278,7 +301,7 @@ const ContactPage = () => {
                 <div className="relative bg-white shadow-2xl shadow-gray-900/10">
                   <img
                     src={imageConstants.CONTACT.HERO}
-                    alt="Say Space GCC Consulting Team"
+                    alt="SaySpace GCC Consulting Team"
                     className="w-full h-auto"
                   />
                   {/* Subtle overlay for professional look */}
@@ -320,7 +343,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Form & Info Section */}
-      <section className="py-20 lg:py-24 bg-gray-50">
+      <section id="contact-form" className="py-20 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
@@ -332,7 +355,7 @@ const ContactPage = () => {
                     Get in <span className="font-semibold text-logo-teal">Touch</span>
                   </h2>
                   <p className="text-gray-600 font-light">
-                    Fill out the form below and our team will get back to you within 24 hours.
+                    Fill out the form below and our team will get back to you.
                   </p>
                 </div>
 
@@ -374,16 +397,15 @@ const ContactPage = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-gray-900 font-medium mb-2">
-                        Company *
+                        Company
                       </label>
                       <input
                         type="text"
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        required
                         className="w-full px-4 py-3 border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent"
-                        placeholder="Company name"
+                        placeholder="Company name (optional)"
                       />
                     </div>
                     <div>
@@ -404,16 +426,15 @@ const ContactPage = () => {
                   {/* Primary Interest */}
                   <div>
                     <label className="block text-gray-900 font-medium mb-2">
-                      Primary Interest *
+                      Primary Interest
                     </label>
                     <select
                       name="primaryInterest"
                       value={formData.primaryInterest}
                       onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent cursor-pointer"
                     >
-                      <option value="">Select your primary interest</option>
+                      <option value="">Select your primary interest (optional)</option>
                       {primaryInterests.map((interest, index) => (
                         <option key={index} value={interest}>{interest}</option>
                       ))}
@@ -429,9 +450,9 @@ const ContactPage = () => {
                       name="timeframe"
                       value={formData.timeframe}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent cursor-pointer"
                     >
-                      <option value="">Select expected timeframe</option>
+                      <option value="">Select expected timeframe (optional)</option>
                       {timeframes.map((timeframe, index) => (
                         <option key={index} value={timeframe}>{timeframe}</option>
                       ))}
@@ -461,11 +482,10 @@ const ContactPage = () => {
                       name="consent"
                       checked={formData.consent}
                       onChange={handleInputChange}
-                      required
-                      className="mt-1 w-4 h-4 text-logo-teal focus:ring-logo-teal border-gray-300"
+                      className="mt-1 w-4 h-4 text-logo-teal focus:ring-logo-teal border-gray-300 cursor-pointer"
                     />
                     <label className="text-sm text-gray-600 font-light">
-                      I consent to having this website store my submitted information so they can respond to my inquiry. *
+                      I consent to having this website store my submitted information so they can respond to my inquiry.
                     </label>
                   </div>
 
@@ -474,8 +494,8 @@ const ContactPage = () => {
                     type="submit"
                     disabled={!isFormValid || isSubmitting}
                     className={`w-full flex items-center justify-center px-8 py-4 font-semibold text-base transition-all duration-200 shadow-sm hover:shadow-md ${isFormValid && !isSubmitting
-                        ? 'bg-logo-teal text-white hover:bg-logo-teal/90'
-                        : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                      ? 'bg-logo-teal text-white hover:bg-logo-teal/90 cursor-pointer'
+                      : 'bg-gray-200 text-gray-500 cursor-not-allowed'
                       }`}
                   >
                     {isSubmitting ? (
@@ -496,7 +516,7 @@ const ContactPage = () => {
                     <div className="flex items-center p-4 bg-green-50 border border-green-200">
                       <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
                       <span className="text-green-800 font-light">
-                        Thank you! Your inquiry has been submitted successfully. We'll get back to you within 24 hours.
+                        Thank you! Your inquiry has been submitted successfully. We'll get back to you.
                       </span>
                     </div>
                   )}
@@ -529,7 +549,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900 mb-1">Email</h4>
-                      <a href="mailto:support@sayspace.com" className="text-gray-600 hover:text-logo-teal transition-colors font-light">
+                      <a href="mailto:support@sayspace.com" className="text-gray-600 hover:text-logo-teal transition-colors font-light cursor-pointer">
                         support@sayspace.com
                       </a>
                     </div>
@@ -541,8 +561,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900 mb-1">Phone</h4>
-                      <a href="tel:+919876543210" className="text-gray-600 hover:text-cta-coral transition-colors font-light">
-                        +91 98765 43210
+                      <a href="tel:+919845324209" className="text-gray-600 hover:text-cta-coral transition-colors font-light cursor-pointer">
+                        +91 9845324209
                       </a>
                     </div>
                   </div>
@@ -555,7 +575,6 @@ const ContactPage = () => {
                       <h4 className="font-medium text-gray-900 mb-1">Office</h4>
                       <p className="text-gray-600 text-sm leading-relaxed font-light">
                         2nd Cross Road, 6th Main Road,<br />
-                        Motappana, AppareddyPalya Rd,<br />
                         HAL 2nd Stage, Indiranagar,<br />
                         Bengaluru, Karnataka 560038
                       </p>
@@ -596,14 +615,16 @@ const ContactPage = () => {
                   {socialLinks.map((social, index) => {
                     const IconComponent = social.icon;
                     return (
-                      <a
+                      <Button variant='ghost' disabled>
+                        <a
                         key={index}
                         href={social.url}
-                        className={`p-3 bg-gray-100 text-gray-600 transition-all duration-200 hover:scale-110 ${social.color}`}
+                        className={`p-3 bg-gray-100 text-gray-600 transition-all duration-200 hover:scale-110 cursor-pointer ${social.color}`}
                         aria-label={social.name}
                       >
                         <IconComponent className="w-5 h-5" />
                       </a>
+                      </Button>
                     );
                   })}
                 </div>
@@ -614,7 +635,7 @@ const ContactPage = () => {
       </section>
 
       {/* Google Maps Section */}
-      <section className="py-20 bg-white">
+      <section id="office-location" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
@@ -634,7 +655,7 @@ const ContactPage = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Say Space Bangalore Office Location"
+              title="SaySpace Bangalore Office Location"
             />
           </div>
         </div>
@@ -664,7 +685,7 @@ const ContactPage = () => {
               <div key={faq.id} className="bg-white border border-gray-200 overflow-hidden">
                 <button
                   onClick={() => toggleFAQ(faq.id)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200"
+                  className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
                 >
                   <h3 className="text-lg font-semibold text-gray-900 pr-4">
                     {faq.question}

@@ -18,8 +18,8 @@ const SuccessStories = () => {
   const testimonials = [
     {
       id: 1,
-      company: "NovaTech Systems Inc.",
-      role: "Director of Innovation",
+      company: "Fortune 500 Company",
+      role: "Co-Founder",
       name: "Ravi Mehra",
       quote: "Setting up our GCC with their team was smooth and highly efficient. We were operational within three months and have since expanded faster than projected.",
       stats: {
@@ -27,14 +27,14 @@ const SuccessStories = () => {
         savings: "42%",
         teamSize: "270+"
       },
-      industry: "Software & AI",
-      location: "Pune",
+      industry: "Industry – Travel",
+      location: "Bangalore",
       rating: 5
     },
     {
       id: 2,
-      company: "Axis Capital Partners",
-      role: "VP - Global Strategy",
+      company: "Top Fintech company",
+      role: "CEO",
       name: "Lena Thompson",
       quote: "Their end-to-end support — from compliance to workforce strategy — made our India expansion a strategic win. Their responsiveness and expertise stood out.",
       stats: {
@@ -246,7 +246,7 @@ const SuccessStories = () => {
         <div className="mt-16 lg:mt-20 pt-12 border-t border-gray-200">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">50+</div>
+              <div className="text-3xl lg:text-4xl font-light text-gray-900 mb-2">10+</div>
               <div className="text-sm text-gray-600 font-medium tracking-wide">SUCCESSFUL GCC SETUPS</div>
             </div>
             <div>

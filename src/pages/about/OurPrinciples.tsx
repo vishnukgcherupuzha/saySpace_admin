@@ -179,16 +179,16 @@ const OurPrinciples = () => {
                 </div>
                 <div>
                   <div className="font-semibold">Era Chaturvedi</div>
-                  <div className="text-sm opacity-80">Founder & CEO, Say Space</div>
+                  <div className="text-sm opacity-80">Founder & CEO, SaySpace</div>
                 </div>
               </div>
             </div>
 
-            <div className="text-center lg:text-right">
+            {/* <div className="text-center lg:text-right">
               <div className="text-4xl lg:text-5xl font-light mb-2">6</div>
               <div className="text-sm opacity-80 font-medium">Core Principles</div>
               <div className="text-xs opacity-60 mt-1">Guiding Every Decision</div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

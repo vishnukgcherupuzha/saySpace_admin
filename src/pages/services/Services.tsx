@@ -8,7 +8,7 @@ import OperationalExcellenceDetail from "./OperationalExcellenceDetail";
 import OngoingManagementDetail from "./OngoingManagementDetail";
 import EngagementModels from "./EngagementModels";
 import IndustryExpertise from "./IndustryExpertise";
-import TechnologyServices from "./TechnologyServices";
+// import TechnologyServices from "./TechnologyServices";
 import WhyChooseUsServices from "./WhyChooseUsServices";
 
 const Services: React.FC = () => {
@@ -24,7 +24,7 @@ const Services: React.FC = () => {
       <OngoingManagementDetail />
       <EngagementModels />
       <IndustryExpertise />
-      <TechnologyServices />
+      {/* <TechnologyServices /> */}
       <WhyChooseUsServices />
     </div>
   );

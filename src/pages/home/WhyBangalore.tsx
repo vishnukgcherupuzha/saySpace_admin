@@ -4,7 +4,7 @@ import {
   GraduationCap,
   DollarSign,
   MapPin,
-  ArrowRight,
+  // ArrowRight,
   Globe,
   CheckCircle,
   Users,
@@ -15,21 +15,21 @@ const WhyBangalore = () => {
   const advantages = [
     {
       icon: Building2,
-      number: "200+",
+      number: "880+",
       title: "Established GCC Presence",
       description: "A dynamic hub hosting a large concentration of multinational GCCs.",
       metric: "Active GCCs"
     },
     {
       icon: TrendingUp,
-      number: "57%",
+      number: "60%",
       title: "Commercial Expansion Rate",
       description: "Significant year-on-year growth in commercial real estate for tech and business operations.",
       metric: "YoY Growth"
     },
     {
       icon: GraduationCap,
-      number: "80,000+",
+      number: "120,000+",
       title: "Annual Talent Output",
       description: "A steady pipeline of talent from premier educational institutions across the region.",
       metric: "Skilled Professionals"
@@ -224,7 +224,7 @@ const WhyBangalore = () => {
         </div>
 
         {/* Professional CTA */}
-        <div className="mt-16 lg:mt-20 text-center">
+        {/* <div className="mt-16 lg:mt-20 text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <button className="cursor-pointer group bg-logo-teal hover:bg-logo-teal/90 text-white px-8 py-4 font-semibold transition-all duration-200 inline-flex items-center">
               Explore Bangalore Locations
@@ -234,7 +234,7 @@ const WhyBangalore = () => {
               Download Location Guide
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

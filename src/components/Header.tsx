@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import {imageConstants} from '../../public/images/index'
+import { Button } from './ui/button';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -82,7 +83,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className={`px-5 py-2 text-sm font-medium transition-colors duration-150 border-b-2 ${
+                className={`px-5 py-2 text-sm font-medium transition-colors duration-150 border-b-2 cursor-pointer ${
                   isActiveRoute(item.href)
                     ? 'text-logo-teal border-logo-teal bg-logo-teal/5'
                     : 'text-gray-700 border-transparent hover:text-logo-teal hover:border-gray-300'
@@ -97,7 +98,7 @@ const Header = () => {
               <button
                 onMouseEnter={() => setIsGccDropdownOpen(true)}
                 onMouseLeave={() => setIsGccDropdownOpen(false)}
-                className={`flex items-center px-5 py-2 text-sm font-medium transition-colors duration-150 border-b-2 ${
+                className={`flex items-center px-5 py-2 text-sm font-medium transition-colors duration-150 border-b-2 cursor-pointer ${
                   isGccActive()
                     ? 'text-logo-teal border-logo-teal bg-logo-teal/5'
                     : 'text-gray-700 border-transparent hover:text-logo-teal hover:border-gray-300'
@@ -122,10 +123,11 @@ const Header = () => {
               >
                 <div className="py-2">
                   {gccPolicies.map((policy, index) => (
-                    <a
+                    <Button variant='ghost' disabled>
+                      <a
                       key={index}
                       href={policy.href}
-                      className={`block px-4 py-3 text-sm transition-colors duration-150 ${
+                      className={`block px-4 py-3 text-sm transition-colors duration-150 cursor-pointer ${
                         isActiveRoute(policy.href)
                           ? 'text-logo-teal bg-logo-teal/10 border-r-2 border-logo-teal'
                           : 'text-gray-700 hover:bg-gray-50 hover:text-logo-teal'
@@ -133,6 +135,7 @@ const Header = () => {
                     >
                       {policy.name}
                     </a>
+                    </Button>
                   ))}
                 </div>
               </div>
@@ -149,7 +152,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-150"
+            className="lg:hidden p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-150 cursor-pointer"
             style={{ borderRadius: '4px' }}
           >
             {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -165,7 +168,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className={`block px-4 py-3 text-base font-medium transition-colors duration-150 border-l-3 ${
+                className={`block px-4 py-3 text-base font-medium transition-colors duration-150 border-l-3 cursor-pointer ${
                   isActiveRoute(item.href)
                     ? 'text-logo-teal bg-logo-teal/10 border-logo-teal'
                     : 'text-gray-700 border-transparent hover:bg-white hover:text-logo-teal hover:border-gray-300'
@@ -180,7 +183,7 @@ const Header = () => {
             <div className="px-4 py-2">
               <button
                 onClick={() => setIsGccDropdownOpen(!isGccDropdownOpen)}
-                className={`flex items-center justify-between w-full py-2 text-base font-medium transition-colors duration-150 ${
+                className={`flex items-center justify-between w-full py-2 text-base font-medium transition-colors duration-150 cursor-pointer ${
                   isGccActive()
                     ? 'text-logo-teal'
                     : 'text-gray-700 hover:text-logo-teal'
@@ -199,7 +202,7 @@ const Header = () => {
                   <a
                     key={index}
                     href={policy.href}
-                    className={`block px-4 py-2 text-sm transition-colors duration-150 ${
+                    className={`block px-4 py-2 text-sm transition-colors duration-150 cursor-pointer ${
                       isActiveRoute(policy.href)
                         ? 'text-logo-teal bg-logo-teal/10 border-r-2 border-logo-teal'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'

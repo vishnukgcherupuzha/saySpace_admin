@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
-import { 
-  Building2, 
-  Cpu, 
-  CreditCard, 
-  Factory, 
+import {
+  Building2,
+  Cpu,
+  CreditCard,
+  Factory,
   Heart,
-  Award,
+  // Award,
   Users,
   Globe,
-  ArrowRight,
+  // ArrowRight,
   ExternalLink,
   MapPin,
-  Briefcase
+  Briefcase,
+  Lightbulb
 } from 'lucide-react';
 
 // Type definitions
@@ -198,26 +199,26 @@ const SuccessStories = () => {
     }
   ];
 
-  const totalCompanies = industries.reduce((sum, industry) => sum + industry.companies.length, 0);
-  const totalEmployees = industries.reduce((sum, industry) => 
-    sum + industry.companies.reduce((empSum, company) => 
-      empSum + parseInt(company.employees?.replace(/[^0-9]/g, '') || '0'), 0), 0);
+  // const totalCompanies = industries.reduce((sum, industry) => sum + industry.companies.length, 0);
+  // const totalEmployees = industries.reduce((sum, industry) =>
+  //   sum + industry.companies.reduce((empSum, company) =>
+  //     empSum + parseInt(company.employees?.replace(/[^0-9]/g, '') || '0'), 0), 0);
 
   return (
     <section className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide mb-6">
             <MapPin className="w-4 h-4 mr-2" />
             SUCCESS STORIES
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
             Leading <span className="font-semibold text-logo-teal">GCCs in Bangalore</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto mb-8 font-light leading-relaxed">
             Bangalore hosts GCCs from Fortune 500 companies across various industries, establishing itself as a premier destination for global operations.
           </p>
@@ -227,23 +228,30 @@ const SuccessStories = () => {
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <Building2 className="w-5 h-5 text-logo-teal mr-2" />
-                <span className="text-3xl font-light text-gray-900">{totalCompanies}+</span>
+                <span className="text-3xl font-light text-gray-900">880+</span>
               </div>
-              <p className="text-sm text-gray-600 font-medium">Global Companies</p>
+              <p className="text-sm text-gray-600 font-medium">GCC Centers</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <Users className="w-5 h-5 text-cta-coral mr-2" />
-                <span className="text-3xl font-light text-gray-900">{Math.round(totalEmployees/1000)}K+</span>
+                <span className="text-3xl font-light text-gray-900">1.9M+</span>
               </div>
-              <p className="text-sm text-gray-600 font-medium">Employees</p>
+              <p className="text-sm text-gray-600 font-medium">Tech Professionals</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <Globe className="w-5 h-5 text-gray-600 mr-2" />
-                <span className="text-3xl font-light text-gray-900">4</span>
+                <span className="text-3xl font-light text-gray-900">385+</span>
               </div>
-              <p className="text-sm text-gray-600 font-medium">Key Industries</p>
+              <p className="text-sm text-gray-600 font-medium">Fortune 500 Companies</p>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-2">
+                <Lightbulb className="w-5 h-5 text-yellow-500 mr-2" />
+                <span className="text-3xl font-light text-gray-900">40+</span>
+              </div>
+              <p className="text-sm text-gray-600 font-medium">Unicorns</p>
             </div>
           </div>
         </div>
@@ -253,19 +261,17 @@ const SuccessStories = () => {
           {industries.map((industry) => {
             const IconComponent = industry.icon;
             const isActive = activeIndustry === industry.id;
-            
+
             return (
               <div
                 key={industry.id}
-                className={`group cursor-pointer transition-all duration-300 ${
-                  isActive ? 'scale-105' : 'hover:scale-102'
-                }`}
+                className={`group cursor-pointer transition-all duration-300 ${isActive ? 'scale-105' : 'hover:scale-102'
+                  }`}
                 onClick={() => setActiveIndustry(isActive ? null : industry.id)}
               >
-                <div className={`bg-white border p-6  hover:shadow-xl transition-all duration-300 ${
-                  isActive ? 'border-logo-teal shadow-xl' : 'border-gray-200 hover:border-gray-300'
-                }`}>
-                  
+                <div className={`bg-white border p-6  hover:shadow-xl transition-all duration-300 ${isActive ? 'border-logo-teal shadow-xl' : 'border-gray-200 hover:border-gray-300'
+                  }`}>
+
                   {/* Industry Header */}
                   <div className="flex items-center justify-between mb-4">
                     <div className={`${industry.bgColor} p-3`}>
@@ -307,7 +313,7 @@ const SuccessStories = () => {
                   </div>
 
                   {/* View More Button */}
-                  <button className={`w-full flex items-center justify-center py-2 px-4 border transition-all duration-200 ${
+                  {/* <button className={`w-full flex items-center justify-center py-2 px-4 border transition-all duration-200 ${
                     isActive 
                       ? `${industry.bgColor} text-white border-transparent` 
                       : `border-gray-300 text-gray-700 hover:border-logo-teal hover:text-logo-teal hover:bg-logo-teal/5`
@@ -318,7 +324,7 @@ const SuccessStories = () => {
                     <ArrowRight className={`w-4 h-4 transition-transform duration-200 ${
                       isActive ? 'rotate-90' : 'group-hover:translate-x-1'
                     }`} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             );
@@ -332,10 +338,10 @@ const SuccessStories = () => {
               .filter(industry => industry.id === activeIndustry)
               .map((industry) => {
                 const IconComponent = industry.icon;
-                
+
                 return (
                   <div key={industry.id} className="bg-white border border-gray-200 p-8 lg:p-10 shadow-xl">
-                    
+
                     {/* Industry Header */}
                     <div className="flex items-center mb-8">
                       <div className={`${industry.bgColor} p-3 mr-4`}>
@@ -355,7 +361,7 @@ const SuccessStories = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {industry.companies.map((company, idx) => (
                         <div key={idx} className="bg-gray-50 border border-gray-200 p-6 hover:shadow-md transition-all duration-200">
-                          
+
                           {/* Company Header */}
                           <div className="flex items-start justify-between mb-4">
                             <div>
@@ -406,19 +412,19 @@ const SuccessStories = () => {
         )}
 
         {/* Call to Action */}
-        <div className="text-center bg-white border border-gray-200 p-8 lg:p-12">
+        {/* <div className="text-center bg-white border border-gray-200 p-8 lg:p-12">
           <div className="flex items-center justify-center mb-4">
             <Award className="w-6 h-6 text-logo-teal mr-2" />
             <span className="text-xl lg:text-2xl font-semibold text-gray-900">
               Join the Success Story
             </span>
           </div>
-          
+
           <p className="text-gray-600 font-light mb-8 max-w-3xl mx-auto leading-relaxed">
-            Discover how these leading companies have built successful operations in Bangalore. 
+            Discover how these leading companies have built successful operations in Bangalore.
             Learn from their experiences and explore opportunities for your organization.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
               <Award className="w-5 h-5 mr-3" />
@@ -432,7 +438,7 @@ const SuccessStories = () => {
               <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

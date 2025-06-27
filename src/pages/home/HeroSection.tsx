@@ -1,6 +1,7 @@
 import { ArrowRight, Calendar, MapPin, CheckCircle } from 'lucide-react';
 import { imageConstants } from '../../../public/images';
 import { useNavigate } from 'react-router-dom';
+import PopoverForm from '../../components/PopoverForm';
 
 const HeroSection = () => {
     const navigate = useNavigate();
@@ -68,11 +69,18 @@ const HeroSection = () => {
 
                         {/* Professional CTA Section */}
                         <div className="flex flex-col sm:flex-row gap-4 pt-8">
-                            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-                                <Calendar className="w-5 h-5 mr-3" />
-                                Schedule Consultation
-                                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-                            </button>
+                            <PopoverForm
+                                title="Schedule Consultation"
+                                subtitle="Let's discuss your GCC requirements and how we can help."
+                                submitButtonText="Schedule Consultation"
+                                successMessage="Thank you! We'll contact you to schedule your consultation."
+                            >
+                                <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md w-full sm:w-auto">
+                                    <Calendar className="w-5 h-5 mr-3" />
+                                    Schedule Consultation
+                                    <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+                                </button>
+                            </PopoverForm>
 
                             <button 
                             onClick={() => navigate('/why-india')}
@@ -87,7 +95,7 @@ const HeroSection = () => {
                         <div className="pt-8 border-t border-gray-200">
                             <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-8 space-y-4 sm:space-y-0">
                                 <div className="flex items-center space-x-2">
-                                    <div className="text-2xl font-bold text-logo-teal">50+</div>
+                                    <div className="text-2xl font-bold text-logo-teal">10+</div>
                                     <div className="text-sm text-gray-600 leading-tight">
                                         Successful<br />GCC Setups
                                     </div>

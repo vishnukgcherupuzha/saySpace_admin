@@ -1,7 +1,8 @@
-import { 
-  MapPin, 
-  CheckCircle, 
-  Building2, 
+import PopoverForm from '@/components/PopoverForm';
+import {
+  MapPin,
+  CheckCircle,
+  Building2,
   ArrowRight,
   Search,
   Wifi
@@ -16,7 +17,7 @@ const LocationAdvisoryDetail = () => {
       description: "Thorough requirements gathering, exhaustive location screening, on-site inspections, and detailed evaluations tailored to your unique needs.",
       features: [
         "Requirements gathering",
-        "Exhaustive location screening", 
+        "Exhaustive location screening",
         "On-site inspections",
         "Detailed evaluations"
       ]
@@ -48,18 +49,18 @@ const LocationAdvisoryDetail = () => {
   return (
     <section className="py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
             <MapPin className="w-4 h-4 mr-2" />
             SERVICE CATEGORY
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
             Location <span className="font-semibold text-cta-coral">Advisory</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
             Discover the best location for your GCC in India’s leading technology hubs.
           </p>
@@ -70,7 +71,7 @@ const LocationAdvisoryDetail = () => {
           {subServices.map((service) => {
             const IconComponent = service.icon;
             return (
-              <div 
+              <div
                 key={service.id}
                 className="bg-white border border-gray-200 p-6 lg:p-8 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
               >
@@ -86,17 +87,17 @@ const LocationAdvisoryDetail = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   {/* Title */}
                   <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                     {service.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-gray-600 font-light leading-relaxed mb-6 flex-grow">
                     {service.description}
                   </p>
-                  
+
                   {/* Features */}
                   <div className="space-y-3 pt-4 border-t border-gray-200">
                     <h4 className="font-semibold text-sm text-gray-900 mb-3">
@@ -122,23 +123,25 @@ const LocationAdvisoryDetail = () => {
           <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
             Ready to Choose Your Ideal <span className="font-semibold text-cta-coral">GCC Location?</span>
           </h3>
-          
+
           <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
             Our location advisory specialists will guide you to India's prime tech corridors, helping you select the perfect site for your Global Capability Center.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
-              <MapPin className="w-5 h-5 mr-3" />
-              Explore Locations
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
 
-            <button className="cursor-pointer group border-2 border-gray-300 hover:border-cta-coral text-gray-700 hover:text-cta-coral px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center hover:bg-cta-coral/5">
-              <Building2 className="w-5 h-5 mr-3" />
-              Book a Site Visit
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
-            </button>
+            <PopoverForm
+              title="Book a Site Visit"
+              subtitle="Let's discuss your GCC requirements and how we can help."
+              submitButtonText="Book a Site Visit"
+              successMessage="Thank you! We'll contact you to schedule your consultation."
+            >
+              <button className="cursor-pointer group bg-cta-coral hover:bg-cta-coral/90 text-white px-8 py-4 font-semibold text-base transition-all duration-200 flex items-center justify-center shadow-sm hover:shadow-md">
+                <MapPin className="w-5 h-5 mr-3" />
+                Book a Site Visit
+                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </button>
+            </PopoverForm>
           </div>
         </div>
 

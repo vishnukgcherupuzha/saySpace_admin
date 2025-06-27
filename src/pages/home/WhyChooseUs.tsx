@@ -21,7 +21,7 @@ const WhyChooseUs = () => {
   },
   {
     icon: Users,
-    title: "Executive Talent Solutions",
+    title: "Talent Solutions",
     description: "Expert leadership and CXO hiring, with access to India’s 4M+ skilled professionals across diverse roles and industries.",
     number: "02"
   },
@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
   },
   {
     icon: TrendingUp,
-    title: "GCC Performance Management",
+    title: "Performance Management",
     description: "Proactive management and continuous improvement of GCC operations to maximize long-term value.",
     number: "05"
   },
@@ -60,13 +60,13 @@ const allianceExpertise = [
   },
   {
     icon: Calculator,
-    title: "Strategic Financial Services",
+    title: "Financial Services",
     description: "Expert financial services covering accounts setup, strategic planning, tax efficiency, and robust financial reporting for your GCC.",
     features: ["Strategic Financial Planning", "Tax Efficiency", "Advanced Reporting Systems"]
   },
   {
     icon: MapPin,
-    title: "Location Advisory & Real Estate",
+    title: "Real Estate & Location Advisory",
     description: "Guidance on selecting premium locations in India's leading tech hubs, featuring top-tier infrastructure and amenities.",
     features: ["Premium Locations", "High-Growth Tech Hubs", "Modern Infrastructure"]
   }
