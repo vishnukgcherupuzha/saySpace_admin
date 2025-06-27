@@ -18,7 +18,7 @@ import { Button } from './ui/button';
 const Footer = () => {
   const quickLinks = [
     { name: 'About Us', path: '/about' },
-    { name: 'Our Services', path: '/services' },
+    { name: 'Services', path: '/services' },
     { name: 'Why India', path: '/why-india' },
     { name: 'Careers', path: '/careers' }
   ];
