@@ -144,7 +144,10 @@ const Header = () => {
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:block">
-            <button className="cursor-pointer bg-cta-coral hover:bg-cta-coral/90 text-white px-6 py-2 text-sm font-semibold transition-all duration-150 border border-cta-coral hover:shadow-sm">
+            <button 
+              onClick={() => window.location.href = '/contact#contact-form'}
+              className="cursor-pointer bg-cta-coral hover:bg-cta-coral/90 text-white px-6 py-2 text-sm font-semibold transition-all duration-150 border border-cta-coral hover:shadow-sm"
+            >
               Get Started
             </button>
           </div>
@@ -217,7 +220,13 @@ const Header = () => {
             
             {/* Mobile CTA */}
             <div className="px-4 pt-4 border-t border-gray-200 mt-4">
-              <button className="cursor-pointer w-full bg-cta-coral hover:bg-cta-coral/90 text-white px-6 py-3 text-base font-semibold transition-all duration-150">
+              <button 
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  window.location.href = '/contact#contact-form';
+                }}
+                className="cursor-pointer w-full bg-cta-coral hover:bg-cta-coral/90 text-white px-6 py-3 text-base font-semibold transition-all duration-150"
+              >
                 Get Started
               </button>
             </div>
