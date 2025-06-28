@@ -4,6 +4,8 @@ import aboutHero from './about/hero.png'
 import servicesHero from './services/hero.jpg'
 import whyIndiaHero from './whyIndia/hero.jpeg'
 import Era from './about/Era.jpeg'
+import Pankaj from './about/pankaj.jpeg'
+import arun from './about/arun.jpeg'
 import CareerHero from './career/hero.png'
 import ContactHero from './contact/hero.jpg'
 
@@ -14,7 +16,9 @@ export const imageConstants = {
     },
     ABOUT : {
         HERO : aboutHero,
-        ERA : Era
+        ERA : Era,
+        PANKAJ: Pankaj,
+        ARUN: arun,
     },
     SERVICES : {
         HERO : servicesHero
