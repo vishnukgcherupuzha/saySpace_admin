@@ -1,7 +1,7 @@
-import { 
-  Users, 
-  Linkedin, 
-  Mail, 
+import {
+  Users,
+  Linkedin,
+  Mail,
   Award,
   Building2,
   Globe,
@@ -29,15 +29,17 @@ const LeadershipTeam = () => {
       role: "Co Founder",
       company: "SaySpace",
       expertise: "Corporate Real Estate",
-      experience: "20+ Years Experience"
+      experience: "20+ Years Experience",
+      url: imageConstants.ABOUT.PANKAJ
     },
     {
       id: 3,
       name: "Arunkumar Ramakrishnan",
       role: "Advisor",
-      company: "SaySpace", 
+      company: "SaySpace",
       expertise: "Technology Leader",
-      experience: "15+ Years Experience"
+      experience: "15+ Years Experience",
+      url: imageConstants.ABOUT.ARUN
     }
   ];
 
@@ -48,18 +50,18 @@ const LeadershipTeam = () => {
   return (
     <section id="leadership-team" className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-3 py-1.5 bg-cta-coral/5 border border-cta-coral/15 text-cta-coral text-sm font-medium tracking-wide mb-6">
             <Users className="w-4 h-4 mr-2" />
             LEADERSHIP TEAM
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
             Our <span className="font-semibold text-cta-coral">Expert Leaders</span>
           </h2>
-          
+
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
             Meet the experienced professionals driving innovation and excellence in Global Capability Center consulting
           </p>
@@ -68,20 +70,20 @@ const LeadershipTeam = () => {
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16 lg:mb-20">
           {teamMembers.map((member) => (
-            <div 
+            <div
               key={member.id}
               className="group bg-white border border-gray-200 hover:shadow-lg transition-all duration-300"
             >
               {/* Image Section */}
               <div className="bg-gray-100 aspect-[4/3] flex items-center justify-center relative overflow-hidden">
-                <div className="w-24 h-24 bg-gray-200 border border-gray-300 flex items-center justify-center overflow-hidden">
-                  {member.url ? (
-                    <img src={member.url} alt={member.name} className="w-full h-full object-cover" />
-                  ) : (
+                {member.url ? (
+                  <div className='flex w-full items-center justify-center'>
+                    <img src={member.url} alt={member.name} className="w-[270px] h-[270px] object-cover rounded-full border-8 border-white" />
+                  </div>
+                ) : (
+                  <div className="w-24 h-24 bg-gray-200 border border-gray-300 flex items-center justify-center overflow-hidden">
                     <span className="text-gray-600 font-semibold text-lg">{getInitials(member.name)}</span>
-                  )}
-                </div>
-                
+                  </div>)}
                 {/* Social Links Overlay */}
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4">
@@ -96,7 +98,7 @@ const LeadershipTeam = () => {
                   </div>
                 </div>
               </div>
-              
+
               {/* Content */}
               <div className="p-6 space-y-4">
                 <div>
@@ -110,7 +112,7 @@ const LeadershipTeam = () => {
                     {member.company}
                   </p>
                 </div>
-                
+
                 <div className="space-y-2">
                   <div className="flex items-start space-x-2">
                     <Award className="w-4 h-4 text-logo-teal flex-shrink-0 mt-0.5" />
@@ -139,7 +141,7 @@ const LeadershipTeam = () => {
             <h3 className="text-3xl font-light text-gray-900 mb-2">100+</h3>
             <p className="text-gray-600 font-medium">Years Combined Experience</p>
           </div>
-          
+
           <div className="text-center p-8 bg-gray-50 border border-gray-200">
             <div className="w-14 h-14 bg-cta-coral flex items-center justify-center mx-auto mb-6">
               <Building2 className="w-7 h-7 text-white" />
@@ -147,7 +149,7 @@ const LeadershipTeam = () => {
             <h3 className="text-3xl font-light text-gray-900 mb-2">10+</h3>
             <p className="text-gray-600 font-medium">Successful GCC Implementations</p>
           </div>
-          
+
           <div className="text-center p-8 bg-gray-50 border border-gray-200">
             <div className="w-14 h-14 bg-gray-600 flex items-center justify-center mx-auto mb-6">
               <Globe className="w-7 h-7 text-white" />
@@ -165,7 +167,7 @@ const LeadershipTeam = () => {
             </h3>
             <div className="w-16 h-px bg-logo-teal mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-              Our leadership team believes in collaborative excellence, bringing together diverse expertise 
+              Our leadership team believes in collaborative excellence, bringing together diverse expertise
               to deliver exceptional results for our clients worldwide.
             </p>
           </div>
@@ -211,7 +213,7 @@ const LeadershipTeam = () => {
                 Join Our <span className="font-semibold">Expert Team</span>
               </h3>
               <p className="text-lg opacity-90 font-light leading-relaxed">
-                We're always seeking talented professionals who share our passion for GCC excellence 
+                We're always seeking talented professionals who share our passion for GCC excellence
                 and transformational client outcomes.
               </p>
             </div>
