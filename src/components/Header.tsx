@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import {imageConstants} from '../../public/images/index'
-import { Button } from './ui/button';
+// import { Button } from './ui/button';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isGccDropdownOpen, setIsGccDropdownOpen] = useState(false);
+  // const [isGccDropdownOpen, setIsGccDropdownOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -22,15 +22,15 @@ const Header = () => {
     };
   }, []);
 
-  const gccPolicies = [
-    { name: 'Maharashtra IT & ITES Captive Center Policy', href: '/gcc-policies/maharashtra' },
-    { name: 'Karnataka GCC Policy', href: '/gcc-policies/karnataka' },
-    { name: 'Tamil Nadu GCC Policy', href: '/gcc-policies/tamil-nadu' },
-    { name: 'Gujarat GCC Policy', href: '/gcc-policies/gujarat' },
-    { name: 'Telangana GCC Policy', href: '/gcc-policies/telangana' },
-    { name: 'Madhya Pradesh GCC Policy', href: '/gcc-policies/madhya-pradesh' },
-    { name: 'Andhra Pradesh GCC Policy', href: '/gcc-policies/andhra-pradesh' }
-  ];
+  // const gccPolicies = [
+  //   { name: 'Maharashtra IT & ITES Captive Center Policy', href: '/gcc-policies/maharashtra' },
+  //   { name: 'Karnataka GCC Policy', href: '/gcc-policies/karnataka' },
+  //   { name: 'Tamil Nadu GCC Policy', href: '/gcc-policies/tamil-nadu' },
+  //   { name: 'Gujarat GCC Policy', href: '/gcc-policies/gujarat' },
+  //   { name: 'Telangana GCC Policy', href: '/gcc-policies/telangana' },
+  //   { name: 'Madhya Pradesh GCC Policy', href: '/gcc-policies/madhya-pradesh' },
+  //   { name: 'Andhra Pradesh GCC Policy', href: '/gcc-policies/andhra-pradesh' }
+  // ];
 
   const mainNavItems = [
     { name: 'Home', href: '/' },
@@ -49,9 +49,9 @@ const Header = () => {
   };
 
   // Check if any GCC policy is active
-  const isGccActive = () => {
-    return location.pathname.startsWith('/gcc-policies');
-  };
+  // const isGccActive = () => {
+  //   return location.pathname.startsWith('/gcc-policies');
+  // };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
@@ -86,7 +86,7 @@ const Header = () => {
             ))}
             
             {/* GCC Policies Dropdown */}
-            <div className="relative">
+            {/* <div className="relative">
               <button
                 onMouseEnter={() => setIsGccDropdownOpen(true)}
                 onMouseLeave={() => setIsGccDropdownOpen(false)}
@@ -102,7 +102,6 @@ const Header = () => {
                 }`} />
               </button>
               
-              {/* Dropdown Menu */}
               <div
                 onMouseEnter={() => setIsGccDropdownOpen(true)}
                 onMouseLeave={() => setIsGccDropdownOpen(false)}
@@ -131,7 +130,7 @@ const Header = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </div> */}
           </nav>
 
           {/* CTA Button - Desktop */}
@@ -175,7 +174,7 @@ const Header = () => {
             ))}
             
             {/* Mobile GCC Policies */}
-            <div className="px-4 py-2">
+            {/* <div className="px-4 py-2">
               <button
                 onClick={() => setIsGccDropdownOpen(!isGccDropdownOpen)}
                 className={`flex items-center justify-between w-full py-2 text-base font-medium transition-colors duration-150 cursor-pointer ${
@@ -208,7 +207,7 @@ const Header = () => {
                   </a>
                 ))}
               </div>
-            </div>
+            </div> */}
             
             {/* Mobile CTA */}
             <div className="px-4 pt-4 border-t border-gray-200 mt-4">
