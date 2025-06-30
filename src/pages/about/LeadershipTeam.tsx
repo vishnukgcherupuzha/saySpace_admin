@@ -17,29 +17,32 @@ const LeadershipTeam = () => {
     {
       id: 1,
       name: "Era Chaturvedi",
-      role: "Founder & CEO",
+      role: "Partner",
       company: "SaySpace",
       expertise: "AEC industry",
       experience: "15+ Years Experience",
-      url: imageConstants.ABOUT.ERA
+      url: imageConstants.ABOUT.ERA,
+      email: 'era@sayspace.co.in'
     },
     {
       id: 2,
       name: "Pankaj Kohli",
-      role: "Co Founder",
+      role: "Partner",
       company: "SaySpace",
       expertise: "Corporate Real Estate",
       experience: "20+ Years Experience",
-      url: imageConstants.ABOUT.PANKAJ
+      url: imageConstants.ABOUT.PANKAJ,
+      email: 'pankaj@sayspace.co.in'
     },
     {
       id: 3,
       name: "Arunkumar Ramakrishnan",
-      role: "Advisor",
+      role: "Business Advisor",
       company: "SaySpace",
       expertise: "Technology Leader",
       experience: "15+ Years Experience",
-      url: imageConstants.ABOUT.ARUN
+      url: imageConstants.ABOUT.ARUN,
+      email: 'arun@sayspace.co.in'
     }
   ];
 
@@ -88,12 +91,12 @@ const LeadershipTeam = () => {
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="flex justify-center space-x-3">
-                      <button className="cursor-pointer w-10 h-10 bg-white/90 hover:bg-white flex items-center justify-center transition-colors duration-200">
+                      <a className="cursor-pointer w-10 h-10 bg-white/90 hover:bg-white flex items-center justify-center transition-colors duration-200">
                         <Linkedin className="w-4 h-4 text-gray-700" />
-                      </button>
-                      <button className="cursor-pointer w-10 h-10 bg-white/90 hover:bg-white flex items-center justify-center transition-colors duration-200">
+                      </a>
+                      <a  href={`mailto:${member.email}`} className="cursor-pointer w-10 h-10 bg-white/90 hover:bg-white flex items-center justify-center transition-colors duration-200">
                         <Mail className="w-4 h-4 text-gray-700" />
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
