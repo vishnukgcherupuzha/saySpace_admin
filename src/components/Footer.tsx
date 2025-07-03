@@ -23,13 +23,13 @@ const Footer = () => {
     { name: 'Careers', path: '/careers' }
   ];
 
-  const gccPolicies = [
-    { name: 'Maharashtra Policy', path: '/gcc-policies/maharashtra' },
-    { name: 'Karnataka Policy', path: '/gcc-policies/karnataka' },
-    { name: 'Tamil Nadu Policy', path: '/gcc-policies/tamil-nadu' },
-    { name: 'Gujarat Policy', path: '/gcc-policies/gujarat' },
-    { name: 'Telangana Policy', path: '/gcc-policies/telangana' }
-  ];
+  // const gccPolicies = [
+  //   { name: 'Maharashtra Policy', path: '/gcc-policies/maharashtra' },
+  //   { name: 'Karnataka Policy', path: '/gcc-policies/karnataka' },
+  //   { name: 'Tamil Nadu Policy', path: '/gcc-policies/tamil-nadu' },
+  //   { name: 'Gujarat Policy', path: '/gcc-policies/gujarat' },
+  //   { name: 'Telangana Policy', path: '/gcc-policies/telangana' }
+  // ];
 
   const resources = [
     { name: 'GCC Setup Guide', path: '/resources/setup-guide' },
@@ -80,7 +80,7 @@ const Footer = () => {
       {/* Main Footer Content */}
       <div className="bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
 
             {/* Company Info */}
             <div className="lg:col-span-2 space-y-8">
@@ -175,7 +175,7 @@ const Footer = () => {
             </div>
 
             {/* GCC Policies */}
-            <div>
+            {/* <div>
               <h3 className="text-lg font-semibold text-white mb-6 pb-4 border-b border-gray-800">
                 GCC Policies
               </h3>
@@ -192,7 +192,7 @@ const Footer = () => {
                   </Button>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Resources */}
             <div>
