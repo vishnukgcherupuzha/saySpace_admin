@@ -96,7 +96,7 @@ const allianceExpertise = [
         <div className="mb-20 lg:mb-24">
           <div className="text-center mb-12 lg:mb-16">
             <h3 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
-              Our Core <span className="font-semibold text-cta-coral">Capabilities</span>
+              End-to-End & <span className="font-semibold text-cta-coral">Standalone Capabilities</span>
             </h3>
             <div className="w-24 h-px bg-cta-coral mx-auto"></div>
           </div>

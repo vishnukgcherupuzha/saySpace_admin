@@ -28,7 +28,7 @@ const SuccessStories = () => {
         teamSize: "270+"
       },
       industry: "Industry – Travel",
-      location: "Bangalore",
+      location: "Bengaluru",
       rating: 5
     },
     {

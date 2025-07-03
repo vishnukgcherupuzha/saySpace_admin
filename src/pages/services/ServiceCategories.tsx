@@ -71,7 +71,7 @@ const ServiceCategories = () => {
           </h2>
 
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
-            Comprehensive support covering all phases of your GCC development and growth
+            Comprehensive end-to-end solutions or individual standalone services—we support you at any stage of your GCC evolution
           </p>
         </div>
 
@@ -120,7 +120,7 @@ const ServiceCategories = () => {
           </h3>
 
           <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
-            Our comprehensive approach ensures your GCC delivers strategic value from day one.
+            Whether you need our full-spectrum approach or targeted support for specific areas, we ensure your GCC delivers strategic value at any stage of evolution.
             Let's discuss how we can accelerate your global expansion.
           </p>
 

@@ -43,7 +43,7 @@ const SuccessStories = () => {
       icon: Cpu,
       color: 'text-logo-teal',
       bgColor: 'bg-logo-teal',
-      description: 'Leading tech giants have established major development centers in Bangalore, leveraging the city\'s robust talent pool and innovation ecosystem.',
+      description: 'Leading tech giants have established major development centers in Bengaluru, leveraging the city\'s robust talent pool and innovation ecosystem.',
       companies: [
         {
           name: 'Microsoft',
@@ -71,7 +71,7 @@ const SuccessStories = () => {
         },
         {
           name: 'Persistent Systems',
-          description: 'Bangalore-headquartered global software company',
+          description: 'India-based global software company',
           employees: '8,000+',
           established: '1990'
         }
@@ -83,7 +83,7 @@ const SuccessStories = () => {
       icon: CreditCard,
       color: 'text-cta-coral',
       bgColor: 'bg-cta-coral',
-      description: 'Major financial institutions have set up operations in Bangalore to tap into the city\'s strong financial services talent and cost advantages.',
+      description: 'Major financial institutions have set up operations in Bengaluru to tap into the city\'s strong financial services talent and cost advantages.',
       companies: [
         {
           name: 'Barclays',
@@ -123,7 +123,7 @@ const SuccessStories = () => {
       icon: Factory,
       color: 'text-gray-600',
       bgColor: 'bg-gray-600',
-      description: 'Bangalore\'s manufacturing heritage attracts global industrial companies to establish R&D and engineering centers.',
+      description: 'Bengaluru\'s manufacturing heritage attracts global industrial companies to establish R&D and engineering centers.',
       companies: [
         {
           name: 'Cummins',
@@ -163,7 +163,7 @@ const SuccessStories = () => {
       icon: Heart,
       color: 'text-cta-coral',
       bgColor: 'bg-cta-coral',
-      description: 'Global healthcare and pharmaceutical companies leverage Bangalore\'s life sciences ecosystem and skilled workforce.',
+      description: 'Global healthcare and pharmaceutical companies leverage Bengaluru\'s life sciences ecosystem and skilled workforce.',
       companies: [
         {
           name: 'Bayer',
@@ -216,11 +216,11 @@ const SuccessStories = () => {
           </div>
 
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            Leading <span className="font-semibold text-logo-teal">GCCs in Bangalore</span>
+            Leading <span className="font-semibold text-logo-teal">GCCs in India</span>
           </h2>
 
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto mb-8 font-light leading-relaxed">
-            Bangalore hosts GCCs from Fortune 500 companies across various industries, establishing itself as a premier destination for global operations.
+            India hosts GCCs from Fortune 500 companies across various industries, establishing itself as the premier destination for global operations.
           </p>
 
           {/* Stats */}
@@ -421,7 +421,7 @@ const SuccessStories = () => {
           </div>
 
           <p className="text-gray-600 font-light mb-8 max-w-3xl mx-auto leading-relaxed">
-            Discover how these leading companies have built successful operations in Bangalore.
+            Discover how these leading companies have built successful operations in Bengaluru.
             Learn from their experiences and explore opportunities for your organization.
           </p>
 

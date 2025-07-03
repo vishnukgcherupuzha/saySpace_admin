@@ -200,7 +200,7 @@ const CareersPage = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-logo-teal flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">Bangalore Based</span>
+                  <span className="text-gray-700 font-medium">India Operations</span>
                 </div>
               </div>
 

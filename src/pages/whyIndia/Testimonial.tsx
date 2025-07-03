@@ -36,7 +36,7 @@ const ClientTestimonials = () => {
   const testimonials: Testimonial[] = [
     {
       id: '1',
-      quote: "Our decision to establish our GCC in Bangalore has been transformative for our business. The quality of talent, cost advantages, and supportive ecosystem have exceeded our expectations. Within just one year, our Bangalore center has become a crucial innovation hub driving our global digital initiatives.",
+      quote: "Our decision to establish our GCC in India has been transformative for our business. The quality of talent, cost advantages, and supportive ecosystem have exceeded our expectations. Within just one year, our India center has become a crucial innovation hub driving our global digital initiatives.",
       author: "Michel George",
       position: "CTO",
       company: "Fortune 500 Technology Company",
@@ -51,7 +51,7 @@ const ClientTestimonials = () => {
     },
     {
       id: '2',
-      quote: "Bangalore's talent pool is exceptional. We've been able to scale our operations rapidly while maintaining the highest quality standards. The city's infrastructure and business-friendly environment have made our expansion seamless and highly successful.",
+      quote: "India's talent pool is exceptional. We've been able to scale our operations rapidly while maintaining the highest quality standards. The country's infrastructure and business-friendly environment have made our expansion seamless and highly successful.",
       author: "Sarah Chen",
       position: "Global Head of Operations",
       company: "Leading Financial Services Firm",
@@ -66,7 +66,7 @@ const ClientTestimonials = () => {
     },
     {
       id: '3',
-      quote: "The engineering talent in Bangalore is world-class. Our R&D center here has become instrumental in developing next-generation products. The collaborative ecosystem and proximity to educational institutions have been game-changers for our innovation strategy.",
+      quote: "The engineering talent in India is world-class. Our R&D center here has become instrumental in developing next-generation products. The collaborative ecosystem and proximity to premier educational institutions have been game-changers for our innovation strategy.",
       author: "Dr. Rajesh Kumar",
       position: "VP of Engineering",
       company: "Global Manufacturing Giant",
@@ -81,7 +81,7 @@ const ClientTestimonials = () => {
     },
     {
       id: '4',
-      quote: "Establishing our healthcare innovation center in Bangalore was one of our best strategic decisions. The combination of skilled professionals, competitive costs, and regulatory expertise has accelerated our global product development timeline significantly.",
+      quote: "Establishing our healthcare innovation center in India was one of our best strategic decisions. The combination of skilled professionals, competitive costs, and regulatory expertise has accelerated our global product development timeline significantly.",
       author: "Dr. Amanda Foster",
       position: "Chief Innovation Officer",
       company: "Pharmaceutical Leader",
@@ -148,7 +148,7 @@ const ClientTestimonials = () => {
           </h2>
           
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
-            Hear from industry executives who have successfully established GCCs in Bangalore
+            Hear from industry executives who have successfully established GCCs in India
           </p>
         </div>
 
@@ -305,7 +305,7 @@ const ClientTestimonials = () => {
             Ready to Join Our <span className="font-semibold text-logo-teal">Success Stories?</span>
           </h3>
           <p className="text-lg text-gray-600 font-light mb-8 max-w-3xl mx-auto">
-            Discover how your organization can achieve similar success in Bangalore. 
+            Discover how your organization can achieve similar success in India. 
             Let's discuss your GCC establishment strategy today.
           </p>
           

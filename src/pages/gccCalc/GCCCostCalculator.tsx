@@ -264,7 +264,7 @@ const InfrastructureSelection: React.FC<InfrastructureSelectionProps> = ({
     { value: 'electronic-city', label: 'Electronic City' },
     { value: 'whitefield', label: 'Whitefield IT Hub' },
     { value: 'koramangala', label: 'Koramangala' },
-    { value: 'central-bangalore', label: 'Central Bangalore' }
+    { value: 'central-bengaluru', label: 'Central Bengaluru' }
   ];
 
   return (
@@ -481,19 +481,19 @@ const InformationSidebar: React.FC = () => {
           <div className="flex items-start">
             <div className="w-5 h-5 bg-logo-teal mt-0.5 mr-3 flex-shrink-0"></div>
             <p className="text-sm text-gray-600 font-light">
-              Companies can achieve <strong className="text-gray-900">30-40% cost savings</strong> by establishing their GCC in Bangalore compared to Western locations.
+              Companies can achieve <strong className="text-gray-900">30-40% cost savings</strong> by establishing their GCC in Bengaluru compared to Western locations.
             </p>
           </div>
           <div className="flex items-start">
             <div className="w-5 h-5 bg-cta-coral mt-0.5 mr-3 flex-shrink-0"></div>
             <p className="text-sm text-gray-600 font-light">
-              Bangalore offers <strong className="text-gray-900">15-20% lower operational costs</strong> than other major Indian cities like Mumbai or Delhi.
+              Bengaluru offers <strong className="text-gray-900">15-20% lower operational costs</strong> than other major Indian cities like Mumbai or Delhi.
             </p>
           </div>
           <div className="flex items-start">
             <div className="w-5 h-5 bg-gray-400 mt-0.5 mr-3 flex-shrink-0"></div>
             <p className="text-sm text-gray-600 font-light">
-              The average time to achieve full operational capability for a GCC in Bangalore is <strong className="text-gray-900">3-6 months</strong>.
+              The average time to achieve full operational capability for a GCC in Bengaluru is <strong className="text-gray-900">3-6 months</strong>.
             </p>
           </div>
         </div>
@@ -541,7 +541,7 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ estimate, teamSize }) =
             Your GCC <span className="font-semibold text-logo-teal">Cost Estimate</span>
           </h2>
           <p className="text-lg lg:text-xl text-gray-600 font-light">
-            Based on your requirements for a {teamSize}-person GCC in Bangalore
+            Based on your requirements for a {teamSize}-person GCC in Bengaluru
           </p>
         </div>
 
@@ -712,7 +712,7 @@ const GCCCostCalculator: React.FC = () => {
       'electronic-city': 0.9, 
       'whitefield': 1.0, 
       'koramangala': 1.2, 
-      'central-bangalore': 1.4 
+      'central-bengaluru': 1.4 
     };
     const timelineMultipliers: Record<string, number> = { 
       standard: 1.0, 
@@ -784,7 +784,7 @@ const GCCCostCalculator: React.FC = () => {
                     Calculate the Costs of Setting Up Your <span className="font-semibold text-logo-teal">Global Capability Center</span>
                   </h2>
                   <p className="text-gray-600 font-light">
-                    Fill in the details below to get a preliminary cost estimate for setting up and operating your GCC in Bangalore.
+                    Fill in the details below to get a preliminary cost estimate for setting up and operating your GCC in Bengaluru.
                   </p>
                 </div>
 

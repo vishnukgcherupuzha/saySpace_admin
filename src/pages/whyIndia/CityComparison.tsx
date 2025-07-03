@@ -53,12 +53,12 @@ const CityComparison = () => {
   const [activeTab, setActiveTab] = useState('quantitative');
 
   const cities: City[] = [
-    { name: 'Bangalore', color: 'bg-logo-teal', textColor: 'text-logo-teal' },
-    { name: 'Hyderabad', color: 'bg-cta-coral', textColor: 'text-cta-coral' },
-    { name: 'Delhi NCR', color: 'bg-gray-600', textColor: 'text-gray-600' },
-    { name: 'Mumbai', color: 'bg-logo-teal', textColor: 'text-logo-teal' },
-    { name: 'Chennai', color: 'bg-cta-coral', textColor: 'text-cta-coral' },
-    { name: 'Pune', color: 'bg-gray-600', textColor: 'text-gray-600' }
+    { name: 'Bengaluru', color: 'bg-blue-600', textColor: 'text-blue-600' },
+    { name: 'Hyderabad', color: 'bg-green-600', textColor: 'text-green-600' },
+    { name: 'Delhi NCR', color: 'bg-purple-600', textColor: 'text-purple-600' },
+    { name: 'Mumbai', color: 'bg-orange-600', textColor: 'text-orange-600' },
+    { name: 'Chennai', color: 'bg-red-600', textColor: 'text-red-600' },
+    { name: 'Pune', color: 'bg-indigo-600', textColor: 'text-indigo-600' }
   ];
 
   const comparisonData: ComparisonParameter[] = [
@@ -130,9 +130,9 @@ const CityComparison = () => {
 
   const qualitativeAnalysis: QualitativeCity[] = [
     {
-      city: 'Bangalore',
-      pros: ['Technology innovation hub', 'Largest talent pool', 'Established ecosystem', 'Strong startup culture', 'Global connectivity', 'R&D centers'],
-      cons: ['Higher costs', 'Traffic congestion', 'Infrastructure strain', 'Water scarcity issues'],
+      city: 'Bengaluru',
+      pros: ['Technology innovation hub', 'Large talent pool', 'Established GCC ecosystem', 'Strong startup culture', 'Global connectivity', 'Premier R&D centers'],
+      cons: ['Higher operational costs', 'Traffic congestion', 'Infrastructure challenges', 'Water management concerns'],
       score: 85,
       ecosystem: 95,
       infrastructure: 70,
@@ -197,17 +197,17 @@ const CityComparison = () => {
     }
   ];
 
-  // Prepare chart data with your color palette
+  // Prepare chart data with neutral color palette
   const talentPoolData = cities.map((city, index) => ({
     name: city.name,
     value: parseFloat(comparisonData[0].data[index].replace(/[^0-9.]/g, '')),
-    fill: index === 0 ? '#37474F' : index === 1 ? '#E07A5F' : index === 2 ? '#6B7280' : index === 3 ? '#37474F' : index === 4 ? '#E07A5F' : '#6B7280'
+    fill: index === 0 ? '#2563EB' : index === 1 ? '#059669' : index === 2 ? '#7C3AED' : index === 3 ? '#EA580C' : index === 4 ? '#DC2626' : '#4F46E5'
   }));
 
   const gccData = cities.map((city, index) => ({
     name: city.name,
     value: parseFloat(comparisonData[4].data[index].replace(/[^0-9.]/g, '')),
-    fill: index === 0 ? '#37474F' : index === 1 ? '#E07A5F' : index === 2 ? '#6B7280' : index === 3 ? '#37474F' : index === 4 ? '#E07A5F' : '#6B7280'
+    fill: index === 0 ? '#2563EB' : index === 1 ? '#059669' : index === 2 ? '#7C3AED' : index === 3 ? '#EA580C' : index === 4 ? '#DC2626' : '#4F46E5'
   }));
 
   const radarData = qualitativeAnalysis.map(city => ({
@@ -242,11 +242,11 @@ const CityComparison = () => {
           </div>
           
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            Bangalore vs. <span className="font-semibold text-logo-teal">Other Indian Cities</span>
+            Choose Your Ideal <span className="font-semibold text-logo-teal">GCC Location</span> in India
           </h2>
           
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto mb-8 font-light leading-relaxed">
-            A comprehensive comparison of key GCC factors across major Indian tech hubs
+            Explore and compare India's leading tech cities to find the perfect location for your Global Capability Center
           </p>
 
           {/* Tabs */}
@@ -352,8 +352,8 @@ const CityComparison = () => {
                     <Radar
                       name="Performance"
                       dataKey="Ecosystem"
-                      stroke="#37474F"
-                      fill="#37474F"
+                      stroke="#6366F1"
+                      fill="#6366F1"
                       fillOpacity={0.1}
                       strokeWidth={2}
                     />
@@ -388,11 +388,11 @@ const CityComparison = () => {
                   <div className="mb-6 space-y-2">
                     <div className="text-xs text-gray-600 mb-2 font-medium">Performance Metrics:</div>
                     {[
-                      { label: 'Ecosystem', value: city.ecosystem, color: 'bg-logo-teal' },
-                      { label: 'Infrastructure', value: city.infrastructure, color: 'bg-gray-400' },
-                      { label: 'Talent', value: city.talent, color: 'bg-cta-coral' },
-                      { label: 'Cost', value: city.cost, color: 'bg-logo-teal' },
-                      { label: 'Quality', value: city.quality, color: 'bg-cta-coral' }
+                      { label: 'Ecosystem', value: city.ecosystem, color: 'bg-blue-500' },
+                      { label: 'Infrastructure', value: city.infrastructure, color: 'bg-green-500' },
+                      { label: 'Talent', value: city.talent, color: 'bg-purple-500' },
+                      { label: 'Cost', value: city.cost, color: 'bg-orange-500' },
+                      { label: 'Quality', value: city.quality, color: 'bg-red-500' }
                     ].map((metric, idx) => (
                       <div key={idx} className="flex items-center justify-between text-xs">
                         <span className="text-gray-600">{metric.label}</span>
@@ -412,13 +412,13 @@ const CityComparison = () => {
                   {/* Pros */}
                   <div className="mb-6">
                     <h4 className="font-semibold text-sm text-gray-900 mb-3 flex items-center">
-                      <CheckCircle className="w-4 h-4 mr-2 text-logo-teal" />
+                      <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
                       Advantages
                     </h4>
                     <div className="space-y-2">
                       {city.pros.map((pro, idx) => (
                         <div key={idx} className="flex items-start space-x-2">
-                          <div className="w-2 h-2 bg-logo-teal mt-2 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0"></div>
                           <span className="text-sm text-gray-600 font-light">
                             {pro}
                           </span>
@@ -430,13 +430,13 @@ const CityComparison = () => {
                   {/* Cons */}
                   <div>
                     <h4 className="font-semibold text-sm text-gray-900 mb-3 flex items-center">
-                      <Info className="w-4 h-4 mr-2 text-cta-coral" />
+                      <Info className="w-4 h-4 mr-2 text-orange-600" />
                       Considerations
                     </h4>
                     <div className="space-y-2">
                       {city.cons.map((con, idx) => (
                         <div key={idx} className="flex items-start space-x-2">
-                          <div className="w-2 h-2 bg-cta-coral mt-2 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-orange-600 mt-2 flex-shrink-0"></div>
                           <span className="text-sm text-gray-600 font-light">
                             {con}
                           </span>
@@ -457,7 +457,7 @@ const CityComparison = () => {
             {/* Talent Pool Bar Chart */}
             <div className="bg-white border border-gray-200 p-8 ">
               <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-6 flex items-center">
-                <Users className="w-5 h-5 mr-2 text-logo-teal" />
+                <Users className="w-5 h-5 mr-2 text-blue-600" />
                 Tech Talent Pool Comparison (Millions)
               </h3>
               
@@ -481,7 +481,7 @@ const CityComparison = () => {
             {/* GCC Count Bar Chart */}
             <div className="bg-white border border-gray-200 p-8">
               <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-6 flex items-center">
-                <Building2 className="w-5 h-5 mr-2 text-cta-coral" />
+                <Building2 className="w-5 h-5 mr-2 text-green-600" />
                 Active GCCs Comparison
               </h3>
               
@@ -508,7 +508,7 @@ const CityComparison = () => {
               {/* Air Quality Comparison */}
               <div className="bg-white border border-gray-200 p-6">
                 <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <Wind className="w-5 h-5 mr-2 text-logo-teal" />
+                  <Wind className="w-5 h-5 mr-2 text-purple-600" />
                   Air Quality Index
                 </h4>
                 
@@ -518,7 +518,7 @@ const CityComparison = () => {
                     const numericValue = parseFloat(aqiValue.split('-')[0]);
                     const maxValue = 200;
                     const percentage = (numericValue / maxValue) * 100;
-                    const colorClass = numericValue < 100 ? 'bg-logo-teal' : numericValue < 150 ? 'bg-gray-400' : 'bg-cta-coral';
+                    const colorClass = numericValue < 100 ? 'bg-green-500' : numericValue < 150 ? 'bg-yellow-500' : 'bg-red-500';
                     
                     return (
                       <div key={index}>
@@ -545,7 +545,7 @@ const CityComparison = () => {
               {/* Traffic Congestion */}
               <div className="bg-white border border-gray-200 p-6">
                 <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <Car className="w-5 h-5 mr-2 text-cta-coral" />
+                  <Car className="w-5 h-5 mr-2 text-red-600" />
                   Traffic Congestion
                 </h4>
                 
@@ -554,7 +554,7 @@ const CityComparison = () => {
                     const trafficValue = comparisonData[5].data[index];
                     const numericValue = parseFloat(trafficValue.replace('%', ''));
                     const percentage = numericValue;
-                    const colorClass = numericValue < 50 ? 'bg-logo-teal' : numericValue < 60 ? 'bg-gray-400' : 'bg-cta-coral';
+                    const colorClass = numericValue < 50 ? 'bg-green-500' : numericValue < 60 ? 'bg-yellow-500' : 'bg-red-500';
                     
                     return (
                       <div key={index}>

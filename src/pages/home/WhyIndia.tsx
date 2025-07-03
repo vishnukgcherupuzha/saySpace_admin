@@ -11,7 +11,7 @@ import {
   Award
 } from 'lucide-react';
 
-const WhyBangalore = () => {
+const WhyIndia = () => {
   const advantages = [
     {
       icon: Building2,
@@ -73,11 +73,11 @@ const WhyBangalore = () => {
           </div>
 
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-            Why <span className="font-semibold text-logo-teal">Bangalore</span> for Your GCC
+            Why <span className="font-semibold text-logo-teal">India</span> for Your GCC
           </h2>
 
           <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
-            Bangalore has established itself as India’s leading destination for GCCs, providing exceptional strategic benefits to global enterprises.
+            India has established itself as the world's leading destination for GCCs, providing exceptional strategic benefits to global enterprises across multiple thriving cities. India’s leading destination for GCCs, providing exceptional strategic benefits to global enterprises.
           </p>
         </div>
 
@@ -138,8 +138,8 @@ const WhyBangalore = () => {
                 </h3>
                 <div className="w-16 h-px bg-logo-teal mb-6"></div>
                 <p className="text-lg text-gray-600 font-light leading-relaxed">
-                  Bangalore offers a unique combination of talent, infrastructure, and business environment
-                  that makes it the ideal location for your Global Capability Center.
+                  India offers a unique combination of talent, infrastructure, and business environment
+                  across multiple strategic cities that makes it the ideal location for your Global Capability Center.
                 </p>
               </div>
 
@@ -174,7 +174,7 @@ const WhyBangalore = () => {
                   height="300"
                   style={{ border: 0 }}
                   loading="lazy"
-                  title="Bangalore Location Map">
+                  title="India Business Hubs Map">
                 </iframe>
               </div>
 
@@ -227,7 +227,7 @@ const WhyBangalore = () => {
         {/* <div className="mt-16 lg:mt-20 text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <button className="cursor-pointer group bg-logo-teal hover:bg-logo-teal/90 text-white px-8 py-4 font-semibold transition-all duration-200 inline-flex items-center">
-              Explore Bangalore Locations
+              Explore Bengaluru Locations
               <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-0.5 transition-transform duration-200" />
             </button>
             <button className="cursor-pointer border-2 border-gray-300 hover:border-logo-teal text-gray-700 hover:text-logo-teal px-8 py-4 font-semibold transition-all duration-200 hover:bg-logo-teal/5">
@@ -240,4 +240,4 @@ const WhyBangalore = () => {
   );
 };
 
-export default WhyBangalore;
+export default WhyIndia;
