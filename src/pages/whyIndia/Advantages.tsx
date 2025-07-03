@@ -87,23 +87,23 @@ const Advantages = () => {
   ];
   const stats = [
     {
-      number: "880+",
-      label: "GCCs Operating in Bangalore",
+      number: "1,600+",
+      label: "GCCs Operating in India",
       icon: Building2
     },
     {
-      number: "1.9M+",
-      label: "Tech Professionals in Bangalore",
+      number: "5.1M+",
+      label: "Tech Professionals in India",
       icon: Users
     },
     {
-      number: "$22.2B",
-      label: "Bangalore GCC Market Size",
+      number: "$45.8B",
+      label: "India GCC Market Size",
       icon: DollarSign
     },
     {
-      number: "385+",
-      label: "Fortune 500 Companies in Bangalore",
+      number: "750+",
+      label: "Fortune 500 Companies in India",
       icon: Award
     }
   ];

@@ -79,19 +79,19 @@ const ContactPage = () => {
     {
       id: '1',
       question: 'What is the usual duration for establishing a GCC in India?',
-      answer: 'Setting up a GCC in Bangalore typically takes 6-12 months, depending on the operation’s scope and complexity. This includes forming the legal entity (2-3 months), arranging facilities (3-4 months), recruiting talent (2-6 months), and preparing for operations (1-2 months). Our end-to-end project management approach accelerates this timeline.',
+      answer: 'Setting up a GCC in India typically takes 6-12 months, depending on the operation’s scope and complexity. This includes forming the legal entity (2-3 months), arranging facilities (3-4 months), recruiting talent (2-6 months), and preparing for operations (1-2 months). Our end-to-end project management approach accelerates this timeline.',
       isExpanded: false
     },
     {
       id: '2',
-      question: 'Why is Bangalore a preferred choice for GCC operations compared to other Indian cities?',
-      answer: 'Bangalore stands out with key benefits: India’s largest tech workforce (over 5 million professionals), a mature ecosystem hosting 400+ GCCs, top-tier infrastructure, supportive government policies, a globalized culture, excellent transport links, and lower employee turnover than other major cities. It also balances cost efficiency with high operational standards.',
+      question: 'Why is India a preferred choice for GCC operations compared to other global locations?',
+      answer: 'India stands out with key benefits: India’s largest tech workforce (over 5 million professionals), a mature ecosystem hosting 1,600+ GCCs, top-tier infrastructure, supportive government policies, a globalized culture, excellent connectivity, and competitive cost structures across multiple cities. It also balances cost efficiency with high operational standards.',
       isExpanded: false
     },
     {
       id: '3',
-      question: 'Which types of businesses are setting up GCCs in Bangalore?',
-      answer: 'A wide range of companies establish GCCs in Bangalore, including leading tech firms (Microsoft, IBM, Cisco), major financial institutions (Goldman Sachs, JPMorgan), industrial leaders (GE, Siemens), healthcare companies (Johnson & Johnson, Novartis), and consultancies (McKinsey, Accenture). Both large corporations and mid-sized enterprises benefit from Bangalore’s capabilities.',
+      question: 'Which types of businesses are setting up GCCs in India?',
+      answer: 'A wide range of companies establish GCCs in India, including leading tech firms (Microsoft, IBM, Cisco), major financial institutions (Goldman Sachs, JPMorgan), industrial leaders (GE, Siemens), healthcare companies (Johnson & Johnson, Novartis), and consultancies (McKinsey, Accenture). Both large corporations and mid-sized enterprises benefit from Bengaluru’s capabilities.',
       isExpanded: false
     },
     {
@@ -109,7 +109,7 @@ const ContactPage = () => {
   ]);
 
   const primaryInterests = [
-    'Setting up a new GCC in Bangalore',
+    'Setting up a new GCC in India',
     'Expanding existing GCC operations',
     'GCC talent acquisition',
     'GCC real estate solutions',
@@ -244,7 +244,7 @@ const ContactPage = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-logo-teal flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">Bangalore Office</span>
+                  <span className="text-gray-700 font-medium">Bengaluru Office</span>
                 </div>
               </div>
 
@@ -639,10 +639,10 @@ const ContactPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl lg:text-3xl font-light text-gray-900 mb-4">
-              Visit Our <span className="font-semibold text-logo-teal">Bangalore Office</span>
+              Visit Our <span className="font-semibold text-logo-teal">Bengaluru Office</span>
             </h2>
             <p className="text-lg text-gray-600 font-light">
-              Located in the heart of Indiranagar, one of Bangalore's premier business districts
+              Located in the heart of Indiranagar, one of India's premier business districts
             </p>
           </div>
 
@@ -655,7 +655,7 @@ const ContactPage = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="SaySpace Bangalore Office Location"
+              title="SaySpace Bengaluru Office Location"
             />
           </div>
         </div>
@@ -676,7 +676,7 @@ const ContactPage = () => {
             </h2>
 
             <p className="text-lg lg:text-xl text-gray-600 font-light leading-relaxed">
-              Get quick answers about setting up a GCC in Bangalore
+              Get quick answers about setting up a GCC in India
             </p>
           </div>
 

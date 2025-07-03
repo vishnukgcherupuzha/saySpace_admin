@@ -23,7 +23,7 @@ const SuccessStoriesTestimonials = () => {
       role: "Director of Global Delivery",
       company: "NextWave Technologies",
       industry: "Information Technology",
-      location: "Bangalore",
+      location: "Bengaluru",
       projectDetails: {
         timeline: "5 months",
         teamSize: "220+",

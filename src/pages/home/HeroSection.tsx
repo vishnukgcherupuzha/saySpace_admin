@@ -143,7 +143,7 @@ const HeroSection = () => {
                                 </div>
                                 <div>
                                     <div className="font-semibold text-gray-900 text-sm">Prime Locations</div>
-                                    <div className="text-gray-600 text-xs">Bangalore • Hyderabad • Chennai</div>
+                                    <div className="text-gray-600 text-xs">Bengaluru • Hyderabad • Chennai</div>
                                 </div>
                             </div>
                         </div>

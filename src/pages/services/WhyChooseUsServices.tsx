@@ -22,9 +22,9 @@ const WhyChooseUsServices = () => {
     {
       id: 2,
       icon: Layers,
-      title: "Comprehensive Lifecycle Support",
+      title: "Flexible Lifecycle Support",
       description:
-        "From initial strategy to full-scale operations, we deliver seamless services across every phase of the GCC journey.",
+        "From initial strategy to full-scale operations, we deliver both comprehensive end-to-end solutions and targeted standalone services across any stage of your GCC evolution.",
       stats: { value: "360°", label: "Service Coverage" }
     },
     {

@@ -42,7 +42,7 @@ const HeroSection = () => {
                         {/* Professional Badge */}
                         <div className="inline-flex items-center px-3 py-1.5 bg-logo-teal/5 border border-logo-teal/15 text-logo-teal text-sm font-medium tracking-wide">
                             <div className="w-2 h-2 bg-logo-teal rounded-full mr-2"></div>
-                            END-TO-END SOLUTIONS
+                            COMPREHENSIVE & STANDALONE SOLUTIONS
                         </div>
 
                         {/* Main Headline - Enterprise Typography */}
@@ -57,11 +57,11 @@ const HeroSection = () => {
 
                             {/* Professional Subtitle */}
                             <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl font-light">
-                                We provide end-to-end support to establish, manage, and enhance your GCC operations in India, ensuring flawless execution and sustained success.
+                                We provide comprehensive end-to-end solutions and individual standalone services to support your GCC operations in India at any stage of evolution, ensuring flawless execution and sustained success.
                                 <br />
                                 <br />
                                 <span className='text-sm text-gray-500 font-light'>
-                                    Our holistic methodology encompasses every stage of the GCC journey—from initial strategy formulation through continuous improvement—delivering seamless integration and optimal value tailored to your industry, goals, and unique needs.
+                                    Whether you need complete lifecycle support or targeted assistance for specific challenges, our flexible approach encompasses every stage of the GCC journey—from initial strategy formulation through continuous improvement—delivering seamless integration and optimal value tailored to your current needs and future goals.
                                 </span>
                             </p>
                         </div>
