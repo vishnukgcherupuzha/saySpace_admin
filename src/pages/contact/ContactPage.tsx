@@ -549,8 +549,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900 mb-1">Email</h4>
-                      <a href="mailto:support@sayspace.com" className="text-gray-600 hover:text-logo-teal transition-colors font-light cursor-pointer">
-                        support@sayspace.com
+                      <a href="mailto:pankaj@sayspace.co.in" className="text-gray-600 hover:text-logo-teal transition-colors font-light cursor-pointer">
+                        pankaj@sayspace.co.in
                       </a>
                     </div>
                   </div>

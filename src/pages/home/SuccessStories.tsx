@@ -48,7 +48,7 @@ const SuccessStories = () => {
     },
     {
       id: 3,
-      company: "Medivia Group",
+      company: "Travel company",
       role: "Head of Global Infrastructure",
       name: "Dr. Tomasz Kowalski",
       quote: "They streamlined our setup process across legal, real estate, and hiring. Today, our India center plays a critical role in global R&D operations.",
