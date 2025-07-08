@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Calculator, FileText, Phone, Target, ArrowRight } from 'lucide-react';
+import { Calculator, FileText, Phone, Target, ArrowRight, Send } from 'lucide-react';
 import PopoverForm from '../../components/PopoverForm';
+import { sendSimpleEmail } from '../../lib/emailService';
 
 // Type definitions
 interface CalculatorData {
@@ -261,10 +262,10 @@ const InfrastructureSelection: React.FC<InfrastructureSelectionProps> = ({
   ];
 
   const locations = [
-    { value: 'electronic-city', label: 'Electronic City' },
-    { value: 'whitefield', label: 'Whitefield IT Hub' },
-    { value: 'koramangala', label: 'Koramangala' },
-    { value: 'central-bengaluru', label: 'Central Bengaluru' }
+    { value: 'Bengaluru', label: 'Bengaluru' },
+    { value: 'Hyderabad', label: 'Hyderabad' },
+    { value: 'Gurgaon', label: 'Gurgaon' },
+    { value: 'Pune', label: 'Pune' }
   ];
 
   return (
@@ -675,6 +676,15 @@ const GCCCostCalculator: React.FC = () => {
 
   const [estimate, setEstimate] = useState<CostEstimate | null>(null);
   const [showResults, setShowResults] = useState<boolean>(false);
+  const [showPopup, setShowPopup] = useState<boolean>(false);
+  const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [isCalculating, setIsCalculating] = useState<boolean>(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: ''
+  });
 
   const handleFunctionToggle = (func: string): void => {
     setCalculatorData(prev => ({
@@ -685,8 +695,89 @@ const GCCCostCalculator: React.FC = () => {
     }));
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const formatCurrency = (amount: number): string => {
+        return new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0
+        }).format(amount);
+      };
+
+      const calculationDetails = `
+GCC Cost Calculation Results:
+
+User Information:
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+
+Calculation Parameters:
+Team Size: ${calculatorData.teamSize}
+Growth Plan: ${calculatorData.growthPlan}
+Functions: ${calculatorData.functions.join(', ')}
+Office Type: ${calculatorData.officeType}
+Location: ${calculatorData.location}
+Timeline: ${calculatorData.timeline}
+Services: ${calculatorData.services}
+
+Cost Breakdown:
+Setup Costs:
+- Entity Formation: ${formatCurrency(estimate?.setupCosts.entity || 0)}
+- Office Setup: ${formatCurrency(estimate?.setupCosts.office || 0)}
+- IT Infrastructure: ${formatCurrency(estimate?.setupCosts.infrastructure || 0)}
+- Talent Acquisition: ${formatCurrency(estimate?.setupCosts.talent || 0)}
+- Legal & Compliance: ${formatCurrency(estimate?.setupCosts.legal || 0)}
+- Total Setup: ${formatCurrency(estimate?.setupCosts.total || 0)}
+
+Annual Operating Costs:
+- Salaries & Benefits: ${formatCurrency(estimate?.operatingCosts.salaries || 0)}
+- Office Lease: ${formatCurrency(estimate?.operatingCosts.office || 0)}
+- IT Services: ${formatCurrency(estimate?.operatingCosts.infrastructure || 0)}
+- Administration: ${formatCurrency(estimate?.operatingCosts.admin || 0)}
+- Compliance: ${formatCurrency(estimate?.operatingCosts.compliance || 0)}
+- Total Annual Operating: ${formatCurrency(estimate?.operatingCosts.total || 0)}
+
+Total First Year Investment: ${formatCurrency(estimate?.totalFirstYear || 0)}
+      `;
+
+      await sendSimpleEmail(formData.name, calculationDetails);
+      
+      setFormSubmitted(true);
+      setShowPopup(false);
+      
+      // Reset form data
+      setFormData({
+        name: '',
+        email: '',
+        phone: ''
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('There was an error submitting your details. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const isPopupFormValid = formData.name && formData.email && formData.phone;
+
   const calculateEstimate = (): void => {
-    const { teamSize, functions, officeType, location, timeline, services } = calculatorData;
+    setIsCalculating(true);
+    
+    // Add a small delay to show the loading state
+    setTimeout(() => {
+      const { teamSize, functions, officeType, location, timeline, services } = calculatorData;
     
     // Base costs (in USD)
     const baseCosts = {
@@ -709,10 +800,10 @@ const GCCCostCalculator: React.FC = () => {
       luxury: 1.6 
     };
     const locationMultipliers: Record<string, number> = { 
-      'electronic-city': 0.9, 
-      'whitefield': 1.0, 
-      'koramangala': 1.2, 
-      'central-bengaluru': 1.4 
+      'Bengaluru': 0.9, 
+      'Hyderabad': 1.0, 
+      'Gurgaon': 1.2, 
+      'Pune': 1.4 
     };
     const timelineMultipliers: Record<string, number> = { 
       standard: 1.0, 
@@ -755,12 +846,22 @@ const GCCCostCalculator: React.FC = () => {
 
     const totalFirstYear = setupCosts.total + operatingCosts.total;
 
-    setEstimate({
-      setupCosts,
-      operatingCosts,
-      totalFirstYear
-    });
-    setShowResults(true);
+      setEstimate({
+        setupCosts,
+        operatingCosts,
+        totalFirstYear
+      });
+      setShowResults(true);
+      setIsCalculating(false);
+      
+      // Auto-scroll to results section
+      setTimeout(() => {
+        const resultsElement = document.getElementById('results-section');
+        if (resultsElement) {
+          resultsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }, 1000); // 1 second delay to show calculation in progress
   };
 
   const isFormValid: boolean = calculatorData.teamSize > 0 && 
@@ -818,16 +919,25 @@ const GCCCostCalculator: React.FC = () => {
                   {/* Calculate Button */}
                   <button
                     onClick={calculateEstimate}
-                    disabled={!isFormValid}
+                    disabled={!isFormValid || isCalculating}
                     className={`w-full flex items-center justify-center px-8 py-4 font-semibold text-lg transition-all duration-200 shadow-lg hover:shadow-xl ${
-                      isFormValid
+                      isFormValid && !isCalculating
                         ? 'bg-cta-coral hover:bg-cta-coral/90 text-white'
                         : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                     }`}
                   >
-                    <Calculator className="w-5 h-5 mr-2" />
-                    Calculate Estimate
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    {isCalculating ? (
+                      <>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        Calculating...
+                      </>
+                    ) : (
+                      <>
+                        <Calculator className="w-5 h-5 mr-2" />
+                        Calculate Estimate
+                        <ArrowRight className="w-5 h-5 ml-2" />
+                      </>
+                    )}
                   </button>
                 </div>
               </div>
@@ -839,10 +949,136 @@ const GCCCostCalculator: React.FC = () => {
       </section>
 
       {showResults && (
-        <ResultsDisplay 
-          estimate={estimate} 
-          teamSize={calculatorData.teamSize} 
-        />
+        <div id="results-section" className="relative">
+          <div className="blur-sm">
+            <ResultsDisplay 
+              estimate={estimate} 
+              teamSize={calculatorData.teamSize} 
+            />
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center bg-black/10">
+            <div className="bg-white p-8 shadow-xl border border-gray-200 text-center max-w-md mx-4">
+              {!formSubmitted ? (
+                <>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    Get Your Detailed Cost Analysis
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    Please share your details, and one of our dedicated GCC experts will connect with you directly.
+                  </p>
+                  <button
+                    onClick={() => setShowPopup(true)}
+                    className="bg-logo-teal hover:bg-logo-teal/90 text-white px-6 py-3 font-semibold transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer flex items-center justify-center mx-auto"
+                  >
+                    <FileText className="w-5 h-5 mr-2" />
+                    Share Your Details
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </button>
+                </>
+              ) : (
+                <>
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    Thank You!
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    Your details have been submitted successfully. One of our GCC experts will contact you shortly with a detailed cost analysis.
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    We'll reach out to discuss your GCC requirements.
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Custom Popup for Email Collection */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
+          <div className="bg-white w-full max-w-md max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-200 animate-in fade-in zoom-in-95 duration-200">
+            {/* Header */}
+            <div className="p-6 border-b border-gray-200 text-center">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Get Your Detailed Cost Analysis</h3>
+              <p className="text-sm text-gray-600">
+                Please share your details, and one of our dedicated GCC experts will connect with you directly.
+              </p>
+            </div>
+
+            {/* Form */}
+            <form onSubmit={handleFormSubmit} className="p-6 space-y-4">
+              {/* Name */}
+              <div>
+                <label className="block text-gray-900 font-medium mb-2">Name *</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent"
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-gray-900 font-medium mb-2">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent"
+                  placeholder="Enter your email address"
+                />
+              </div>
+
+              {/* Phone */}
+              <div>
+                <label className="block text-gray-900 font-medium mb-2">Phone *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-logo-teal focus:border-transparent"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={!isPopupFormValid || isSubmitting}
+                className={`w-full flex items-center justify-center px-6 py-3 font-semibold text-base transition-all duration-200 ${
+                  isPopupFormValid && !isSubmitting
+                    ? 'bg-logo-teal text-white hover:bg-logo-teal/90 shadow-sm hover:shadow-md cursor-pointer'
+                    : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                }`}
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                    Submitting...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5 mr-2" />
+                    Submit
+                  </>
+                )}
+              </button>
+            </form>
+          </div>
+        </div>
       )}
 
       {/* Final CTA Section */}
